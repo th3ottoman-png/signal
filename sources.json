@@ -1,0 +1,53 @@
+{
+  "_comment": "Edit this file only. The fetcher reads it every run. Push a change and the site updates within one cron cycle. No code changes needed to add or remove anything.",
+
+  "site": {
+    "title": "Signal",
+    "subtitle": "Live feed: AI news, GitHub releases, trending repos",
+    "refresh_hours": 3
+  },
+
+  "news": [
+    { "name": "Hacker News", "url": "https://hnrss.org/frontpage", "tag": "community" },
+    { "name": "TechCrunch AI", "url": "https://techcrunch.com/category/artificial-intelligence/feed/", "tag": "news" },
+    { "name": "The Verge AI", "url": "https://www.theverge.com/rss/ai-artificial-intelligence/index.xml", "tag": "news" },
+    { "name": "Ars Technica", "url": "https://feeds.arstechnica.com/arstechnica/technology-lab", "tag": "news" },
+    { "name": "Simon Willison", "url": "https://simonwillison.net/atom/everything/", "tag": "blog" },
+    { "name": "GitHub Blog", "url": "https://github.blog/feed/", "tag": "platform" },
+    { "name": "OpenAI News", "url": "https://openai.com/news/rss.xml", "tag": "vendor" }
+  ],
+
+  "discovery": [
+    {
+      "name": "New AI repos",
+      "query": "topic:ai created:>{since_30d}",
+      "sort": "stars",
+      "limit": 12
+    },
+    {
+      "name": "Hot LLM tooling",
+      "query": "llm OR agents OR rag in:name,description pushed:>{since_7d} stars:>500",
+      "sort": "stars",
+      "limit": 12
+    },
+    {
+      "name": "Self-hosted gems",
+      "query": "topic:self-hosted pushed:>{since_14d} stars:>1000",
+      "sort": "updated",
+      "limit": 10
+    }
+  ],
+
+  "releases": [
+    "anthropics/claude-code",
+    "oven-sh/bun",
+    "ollama/ollama",
+    "n8n-io/n8n",
+    "langchain-ai/langchain",
+    "huggingface/transformers",
+    "microsoft/vscode",
+    "vercel/next.js",
+    "supabase/supabase",
+    "open-webui/open-webui"
+  ]
+}

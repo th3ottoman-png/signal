@@ -1,0 +1,1557 @@
+{
+  "generated_at": "2026-09-03T21:06:13.114512+00:00",
+  "site": {
+    "title": "Signal",
+    "subtitle": "Live feed: AI news, GitHub releases, trending repos",
+    "refresh_hours": 3
+  },
+  "news": [
+    {
+      "title": "ChatGPT, Grok, and Claude all went down at the same time",
+      "url": "https://www.theverge.com/ai-artificial-intelligence/989503/chatgpt-grok-claude-outage-down",
+      "source": "The Verge AI",
+      "tag": "news",
+      "summary": "OpenAI's ChatGPT, xAI's Grok, and Anthropic's Claude are back online after they all began experiencing issues around the same time on Thursday. At about 11AM ET, ChatGPT started returning error messages for users trying to use the chatbot, with its status page saying there were...",
+      "published": "2026-09-03T21:04:39+00:00"
+    },
+    {
+      "title": "GPT‑6 Astra",
+      "url": "https://simonwillison.net/2026/Sep/3/gpt6-astra/",
+      "source": "Simon Willison",
+      "tag": "blog",
+      "summary": "GPT‑6 Astra GPT-6 Astra is \"rolling out today to a limited set of organizations and over the coming days will become available to all ChatGPT Plus, Pro, Business, and Enterprise users, as well as through the OpenAI API and AWS\" - I've not tried it yet myself, so I don't have a...",
+      "published": "2026-09-03T20:18:41+00:00"
+    },
+    {
+      "title": "Confused about which VPN is right, US senator asks the NSA for guidance",
+      "url": "https://arstechnica.com/security/2026/09/us-senator-calls-on-the-nsa-to-give-guidance-for-use-of-vpns/",
+      "source": "Ars Technica",
+      "tag": "news",
+      "summary": "Open source, commercial, single-hop, multi-hop, mixnet? The array of options is dizzying.",
+      "published": "2026-09-03T19:52:06+00:00"
+    },
+    {
+      "title": "OpenAI's GPT-6 Astra on ARC-AGI-3",
+      "url": "https://arcprize.org/blog/astra",
+      "source": "Hacker News",
+      "tag": "community",
+      "summary": "Article URL: https://arcprize.org/blog/astra Comments URL: https://news.ycombinator.com/item?id=49555691 Points: 58 # Comments: 25",
+      "published": "2026-09-03T19:45:00+00:00"
+    },
+    {
+      "title": "Accel reportedly in talks to lead $1B round for Thinking Machines at $40B valuation",
+      "url": "https://techcrunch.com/2026/09/03/accel-reportedly-in-talks-to-lead-1b-round-for-thinking-machines-at-40b-valuation/",
+      "source": "TechCrunch AI",
+      "tag": "news",
+      "summary": "The high-profile startup's annual revenue run rate stands at over $100 million.",
+      "published": "2026-09-03T19:36:29+00:00"
+    },
+    {
+      "title": "The death of San Francisco's Market Street",
+      "url": "https://www.noahpinion.blog/p/the-death-of-market-street",
+      "source": "Hacker News",
+      "tag": "community",
+      "summary": "Article URL: https://www.noahpinion.blog/p/the-death-of-market-street Comments URL: https://news.ycombinator.com/item?id=49555478 Points: 25 # Comments: 23",
+      "published": "2026-09-03T19:33:17+00:00"
+    },
+    {
+      "title": "The asteroid currently hitting front end web development",
+      "url": "https://nolanlawson.com/2026/08/23/the-asteroid-currently-hitting-frontend-web-development/",
+      "source": "Hacker News",
+      "tag": "community",
+      "summary": "Article URL: https://nolanlawson.com/2026/08/23/the-asteroid-currently-hitting-frontend-web-development/ Comments URL: https://news.ycombinator.com/item?id=49555233 Points: 24 # Comments: 15",
+      "published": "2026-09-03T19:17:24+00:00"
+    },
+    {
+      "title": "VMware migration reduces Tottenham Hotspur's licensing fees by 85 percent",
+      "url": "https://arstechnica.com/information-technology/2026/09/vmware-migration-reduces-tottenham-hotspurs-licensing-fees-by-85-percent/",
+      "source": "Ars Technica",
+      "tag": "news",
+      "summary": "Pro soccer team's CTO points to \"issues with the Broadcom takeover.\"",
+      "published": "2026-09-03T18:58:31+00:00"
+    },
+    {
+      "title": "GPT-6 Astra",
+      "url": "https://openai.com/index/gpt-6-astra/",
+      "source": "Hacker News",
+      "tag": "community",
+      "summary": "System Card: https://deploymentsafety.openai.com/gpt-6-astra Related ongoing threads: OpenAI's GPT-6 Astra on ARC-AGI-3 - https://news.ycombinator.com/item?id=49555691 GPT-6 Astra makes major gains in the Artificial Analysis Coding Agent Index -...",
+      "published": "2026-09-03T18:41:05+00:00"
+    },
+    {
+      "title": "OpenAI’s next big AI model has ‘entered the AGI era’",
+      "url": "https://www.theverge.com/ai-artificial-intelligence/989601/openai-gpt-6-astra-release",
+      "source": "The Verge AI",
+      "tag": "news",
+      "summary": "OpenAI's next big model is here: GPT-6 Astra. The company calls it a \"generational leap in capability\" for areas like cybersecurity, professional work, software engineering, science, and computer use. As OpenAI announced earlier this week, it's also the first model designated as...",
+      "published": "2026-09-03T18:38:14+00:00"
+    },
+    {
+      "title": "Abliteration.ai is making a business out of removing AI guardrails",
+      "url": "https://techcrunch.com/2026/09/03/abliteration-ai-is-making-a-business-out-of-removing-ai-guardrails/",
+      "source": "TechCrunch AI",
+      "tag": "news",
+      "summary": "Abliteration.AI is making powerful AI models without guardrails easier to access, arguing that giving defenders the same tools as bad actors could ultimately improve cybersecurity.",
+      "published": "2026-09-03T18:37:57+00:00"
+    },
+    {
+      "title": "Qwen 3.8 27B available on Cerebras at 1500 tokens/s",
+      "url": "https://inference-docs.cerebras.ai/models/overview",
+      "source": "Hacker News",
+      "tag": "community",
+      "summary": "Article URL: https://inference-docs.cerebras.ai/models/overview Comments URL: https://news.ycombinator.com/item?id=49554520 Points: 291 # Comments: 96",
+      "published": "2026-09-03T18:32:13+00:00"
+    },
+    {
+      "title": "Meta is paying to peek at how you use their latest AI model",
+      "url": "https://techcrunch.com/2026/09/03/meta-is-paying-to-peek-at-how-you-use-their-latest-ai-model/",
+      "source": "TechCrunch AI",
+      "tag": "news",
+      "summary": "For its new Muse Spark model, intended for operating coding and other agents, Meta is offering an explicit discount averaging out to about 95% for users who \"contribute\" to the development of future models by sharing their prompts and model outputs.",
+      "published": "2026-09-03T18:19:56+00:00"
+    },
+    {
+      "title": "OpenAI launches Astra, its powerful (and controversial) new model",
+      "url": "https://techcrunch.com/2026/09/03/openai-launches-astra-its-powerful-and-controversial-new-model/",
+      "source": "TechCrunch AI",
+      "tag": "news",
+      "summary": "OpenAI claims that Astra represents \"a new frontier on computer and browser use,\" and that it handles tasks with unmatched \"speed, accuracy, and safety.\"",
+      "published": "2026-09-03T18:01:45+00:00"
+    },
+    {
+      "title": "Nvidia launches free tool that links idle computers into a personal AI data center",
+      "url": "https://www.theverge.com/ai-artificial-intelligence/989435/nvidia-pair-personal-ai-router-home-local-llm-compute-tool-rtx-macbook",
+      "source": "The Verge AI",
+      "tag": "news",
+      "summary": "Nvidia is announcing its new Personal AI Router (PAIR), a free tool that syncs up your home computers for tackling local AI inference tasks with tools like Ollama and LM Studio. Let's get the obvious thing out of the way, despite what its name might imply: PAIR is not a hardware...",
+      "published": "2026-09-03T17:28:18+00:00"
+    },
+    {
+      "title": "How concerned should we be about Astra's recurrent architecture?",
+      "url": "https://www.lesswrong.com/posts/PLisnSFir8y5AHkmP/how-concerned-should-we-be-about-astra-s-recurrent",
+      "source": "Hacker News",
+      "tag": "community",
+      "summary": "Article URL: https://www.lesswrong.com/posts/PLisnSFir8y5AHkmP/how-concerned-should-we-be-about-astra-s-recurrent Comments URL: https://news.ycombinator.com/item?id=49553321 Points: 44 # Comments: 23",
+      "published": "2026-09-03T17:10:06+00:00"
+    },
+    {
+      "title": "Gooseworks (YC W23) Is Hiring – Founding Creative Engineer",
+      "url": "https://www.ycombinator.com/companies/gooseworks/jobs/rfgY8La-founding-creative-engineer",
+      "source": "Hacker News",
+      "tag": "community",
+      "summary": "Article URL: https://www.ycombinator.com/companies/gooseworks/jobs/rfgY8La-founding-creative-engineer Comments URL: https://news.ycombinator.com/item?id=49553173 Points: 0 # Comments: 0",
+      "published": "2026-09-03T17:00:16+00:00"
+    },
+    {
+      "title": "Google now lets you chat with Gmail, Docs, and Keep",
+      "url": "https://www.theverge.com/tech/989508/google-gmail-docs-keep-live-voice-modes-gemini",
+      "source": "The Verge AI",
+      "tag": "news",
+      "summary": "Google is rolling out AI-powered voice assistant modes for Gmail, Docs, and Keep that allow you to manage the apps by talking to them. The real time conversational capabilities are called Gmail Live, Docs Live, and Keep Live, and like the Gemini Live experience for Google's...",
+      "published": "2026-09-03T16:34:43+00:00"
+    },
+    {
+      "title": "Launch HN: Mireye (YC S26) – Infrastructure for Physical World AI Agents",
+      "url": "https://news.ycombinator.com/item?id=49552616",
+      "source": "Hacker News",
+      "tag": "community",
+      "summary": "Hi HN, I'm Ansh, founder of Mireye ( https://www.mireye.com ). I'm building the infrastructure AI agents use to make decisions about physical places: data, enrichment, tools, and signals for any US location, behind one API and MCP server. Here's a demo video:...",
+      "published": "2026-09-03T16:24:13+00:00"
+    },
+    {
+      "title": "Artificial beaver dams saw juvenile coho salmon survival rates go from 8% to 60%",
+      "url": "https://www.discoverwildlife.com/animal-facts/artificial-beaver-dams-california",
+      "source": "Hacker News",
+      "tag": "community",
+      "summary": "Article URL: https://www.discoverwildlife.com/animal-facts/artificial-beaver-dams-california Comments URL: https://news.ycombinator.com/item?id=49552572 Points: 75 # Comments: 21",
+      "published": "2026-09-03T16:21:33+00:00"
+    },
+    {
+      "title": "Ollie is betting its focus on privacy can help it win the AI assistant race",
+      "url": "https://techcrunch.com/2026/09/03/ollie-is-betting-privacy-can-win-the-ai-assistant-race/",
+      "source": "TechCrunch AI",
+      "tag": "news",
+      "summary": "The family-focused AI assistant wants access to the details of your everyday life, but says it won’t use that data to train AI models or share it with others.",
+      "published": "2026-09-03T16:09:01+00:00"
+    },
+    {
+      "title": "GitHub Copilot app for Beginners: Run several agents at once",
+      "url": "https://github.blog/ai-and-ml/github-copilot/github-copilot-app-for-beginners-run-several-agents-at-once/",
+      "source": "GitHub Blog",
+      "tag": "platform",
+      "summary": "Learn how to run parallel agents in the GitHub Copilot app, and experience the moment it stops feeling scary and starts feeling powerful. The post GitHub Copilot app for Beginners: Run several agents at once appeared first on The GitHub Blog .",
+      "published": "2026-09-03T16:00:00+00:00"
+    },
+    {
+      "title": "K2 Horizon: A connected fleet of six open models",
+      "url": "https://ifm.ai/blog/k2/",
+      "source": "Hacker News",
+      "tag": "community",
+      "summary": "Article URL: https://ifm.ai/blog/k2/ Comments URL: https://news.ycombinator.com/item?id=49551760 Points: 203 # Comments: 70",
+      "published": "2026-09-03T15:36:43+00:00"
+    },
+    {
+      "title": "Ask HN: Why were OpenAI, Claude, and Grok simultaneously down?",
+      "url": "https://news.ycombinator.com/item?id=49551096",
+      "source": "Hacker News",
+      "tag": "community",
+      "summary": "https://status.openai.com https://status.claude.com https://status.x.ai ChatGPT outage – Resolved - https://news.ycombinator.com/item?id=49550614 (315 comments) Claude outage – Resolved - https://news.ycombinator.com/item?id=49549676 (146 comments) Grok outage -...",
+      "published": "2026-09-03T15:07:01+00:00"
+    },
+    {
+      "title": "Google’s latest AI weather model gives you no excuse to forget your umbrella",
+      "url": "https://techcrunch.com/2026/09/03/googles-latest-ai-weather-model-gives-you-no-excuse-to-forget-your-umbrella/",
+      "source": "TechCrunch AI",
+      "tag": "news",
+      "summary": "WeatherNext 3 is the latest wave of a sea change in meteorology brought out by deep learning techniques. Google says it will start feeding into weather information users see in search, Google Maps, and Gemini.",
+      "published": "2026-09-03T15:00:00+00:00"
+    },
+    {
+      "title": ".name Termination",
+      "url": "https://neil.fraser.name/news/2026/09/03/",
+      "source": "Hacker News",
+      "tag": "community",
+      "summary": "Article URL: https://neil.fraser.name/news/2026/09/03/ Comments URL: https://news.ycombinator.com/item?id=49550772 Points: 1037 # Comments: 311",
+      "published": "2026-09-03T14:54:39+00:00"
+    },
+    {
+      "title": "Any Human Ever – One life, drawn at random from all who have ever lived",
+      "url": "https://anyhumanever.com/",
+      "source": "Hacker News",
+      "tag": "community",
+      "summary": "Article URL: https://anyhumanever.com/ Comments URL: https://news.ycombinator.com/item?id=49550698 Points: 343 # Comments: 156",
+      "published": "2026-09-03T14:51:10+00:00"
+    },
+    {
+      "title": "Google says its AI weather model is getting better",
+      "url": "https://www.theverge.com/tech/988921/weather-forecast-ai-model-google-satellite-update",
+      "source": "The Verge AI",
+      "tag": "news",
+      "summary": "Google is rolling out an updated AI weather model that's supposed to be more accurate, especially when it comes to predicting rain and snowfall. In the announcement today, the company says it's now able to make forecasts with \"unprecedented resolution\" using its new WeatherNext...",
+      "published": "2026-09-03T14:41:03+00:00"
+    },
+    {
+      "title": "Porting my 1993 Amiga game to Godot, with an LLM reading the 68000 assembly",
+      "url": "https://babyloniantwins.com/blog/porting-a-1993-amiga-game-to-godot/",
+      "source": "Hacker News",
+      "tag": "community",
+      "summary": "These are my notes from porting my Amiga game, which I originally built in Baghdad in 1993 in MC68000 assembly, to Godot, using Claude Fable 5 during last July holiday. It took an evening! Getting the feel right and shipping it took a few more weekends and evenings. I spent the...",
+      "published": "2026-09-03T14:28:18+00:00"
+    },
+    {
+      "title": "Astronomers Detect a 10-Sided Structure in Saturn's Atmosphere",
+      "url": "https://www.sciencealert.com/astronomers-spot-an-uncannily-geometric-10-sided-structure-in-saturns-atmosphere",
+      "source": "Hacker News",
+      "tag": "community",
+      "summary": "Article URL: https://www.sciencealert.com/astronomers-spot-an-uncannily-geometric-10-sided-structure-in-saturns-atmosphere Comments URL: https://news.ycombinator.com/item?id=49549877 Points: 76 # Comments: 29",
+      "published": "2026-09-03T13:47:38+00:00"
+    },
+    {
+      "title": "Nvidia is buying Hugging Face for almost $13 billion",
+      "url": "https://www.theverge.com/tech/985474/nvidia-buying-hugging-face-deal",
+      "source": "The Verge AI",
+      "tag": "news",
+      "summary": "Nvidia has agreed to buy Hugging Face for $12.93 billion, bringing one of the most popular hosting platforms for open-source AI models, datasets, and tools under the ownership of the world's biggest AI chipmaker. Hugging Face is an online platform founded in 2016 that gives AI...",
+      "published": "2026-09-03T13:16:18+00:00"
+    },
+    {
+      "title": "Daybreak for Frontline Defenders: $1B to protect essential services",
+      "url": "https://openai.com/index/daybreak-for-frontline-defenders",
+      "source": "OpenAI News",
+      "tag": "vendor",
+      "summary": "OpenAI introduces Daybreak for Frontline Defenders. A $1 billion commitment expands access to frontier cyber AI, training, and support for essential services.",
+      "published": "2026-09-03T13:15:00+00:00"
+    },
+    {
+      "title": "Nvidia confirms it will buy Hugging Face for $12.9 billion",
+      "url": "https://techcrunch.com/2026/09/03/nvidia-confirms-it-will-buy-hugging-face-for-12-9-billion/",
+      "source": "TechCrunch AI",
+      "tag": "news",
+      "summary": "Nvidia said Hugging Face hosts over 3 million models and is used by over 18 million developers.",
+      "published": "2026-09-03T12:42:45+00:00"
+    },
+    {
+      "title": "Legora reviewed 41 documents in minutes with GPT-6 Astra",
+      "url": "https://openai.com/index/legora-financial-statement-review-with-astra",
+      "source": "OpenAI News",
+      "tag": "vendor",
+      "summary": "Legora used GPT-6 Astra to review 41 documents in minutes, find all four planted errors, and improve performance by nearly 40% in this financial-review workflow.",
+      "published": "2026-09-03T12:00:00+00:00"
+    },
+    {
+      "title": "Playco cut manual fixes 50% prototyping games with GPT-6 Astra",
+      "url": "https://openai.com/index/playco-game-prototyping-with-astra",
+      "source": "OpenAI News",
+      "tag": "vendor",
+      "summary": "Using GPT-6 Astra, Playco built three themed game prototypes from one grey box foundation and reported 50% fewer manual fixes than with the previous model.",
+      "published": "2026-09-03T12:00:00+00:00"
+    },
+    {
+      "title": "Google Antigravity TOS: 3rd party usage can get Google account suspended",
+      "url": "https://twitter.com/GergelyOrosz/status/2095453567955968398",
+      "source": "Hacker News",
+      "tag": "community",
+      "summary": "Article URL: https://twitter.com/GergelyOrosz/status/2095453567955968398 Comments URL: https://news.ycombinator.com/item?id=49548452 Points: 220 # Comments: 153",
+      "published": "2026-09-03T11:01:04+00:00"
+    },
+    {
+      "title": "Audacity 4.0",
+      "url": "https://github.com/audacity/audacity/releases/tag/Audacity-4.0.0",
+      "source": "Hacker News",
+      "tag": "community",
+      "summary": "Article URL: https://github.com/audacity/audacity/releases/tag/Audacity-4.0.0 Comments URL: https://news.ycombinator.com/item?id=49548395 Points: 964 # Comments: 214",
+      "published": "2026-09-03T10:53:08+00:00"
+    },
+    {
+      "title": "Gloria Steinem has died",
+      "url": "https://www.theguardian.com/books/2026/sep/03/gloria-steinem-groundbreaking-feminist-campaigner-dies-aged-92",
+      "source": "Hacker News",
+      "tag": "community",
+      "summary": "https://www.nytimes.com/2026/09/03/us/politics/gloria-steine... , https://archive.ph/cfC1K Comments URL: https://news.ycombinator.com/item?id=49548256 Points: 78 # Comments: 25",
+      "published": "2026-09-03T10:31:18+00:00"
+    },
+    {
+      "title": "Pre-Release of Polars 2.0",
+      "url": "https://pola.rs/posts/announcing-polars-2/",
+      "source": "Hacker News",
+      "tag": "community",
+      "summary": "Article URL: https://pola.rs/posts/announcing-polars-2/ Comments URL: https://news.ycombinator.com/item?id=49546753 Points: 366 # Comments: 121",
+      "published": "2026-09-03T06:59:08+00:00"
+    },
+    {
+      "title": "Go grandmaster Shin defeats AI KataGo with a two-stone handicap",
+      "url": "https://www.kedglobal.com/artificial-intelligence/newsView/ked202607210007",
+      "source": "Hacker News",
+      "tag": "community",
+      "summary": "Article URL: https://www.kedglobal.com/artificial-intelligence/newsView/ked202607210007 Comments URL: https://news.ycombinator.com/item?id=49544762 Points: 97 # Comments: 24",
+      "published": "2026-09-03T01:11:22+00:00"
+    },
+    {
+      "title": "Safety overview: GPT-6 Astra",
+      "url": "https://openai.com/index/safety-overview-gpt-6-astra",
+      "source": "OpenAI News",
+      "tag": "vendor",
+      "summary": "GPT-6 Astra is our most capable broadly deployed model and our first to reach the Critical level of cybersecurity capability under our Preparedness Framework.",
+      "published": "2026-09-03T00:00:00+00:00"
+    },
+    {
+      "title": "The Builders Stage brings practical strategies for scaling startups to TechCrunch Disrupt 2026",
+      "url": "https://techcrunch.com/2026/09/02/the-builders-stage-brings-practical-strategies-for-scaling-startups-to-techcrunch-disrupt-2026/",
+      "source": "TechCrunch AI",
+      "tag": "news",
+      "summary": "The Builders Stage is returning to TechCrunch Disrupt, bringing together founders, startup operators, and investors for practical conversations on what it takes to build and scale.",
+      "published": "2026-09-02T23:01:00+00:00"
+    },
+    {
+      "title": "Palo Alto Networks paid $500M for Thrive-backed Console, sources say",
+      "url": "https://techcrunch.com/2026/09/02/palo-alto-networks-paid-500m-for-thrive-backed-console-sources-say/",
+      "source": "TechCrunch AI",
+      "tag": "news",
+      "summary": "The acquisition also leaves Sequoia-backed Serval as the de facto startup leader in AI IT service automation, industry watchers believe.",
+      "published": "2026-09-02T22:44:56+00:00"
+    },
+    {
+      "title": "TechCrunch Disrupt 2026’s new Real World AI Stage features Nvidia, robots, and extinct animals",
+      "url": "https://techcrunch.com/2026/09/02/techcrunch-disrupt-2026s-new-real-world-ai-stage-features-nvidia-robots-and-extinct-animals/",
+      "source": "TechCrunch AI",
+      "tag": "news",
+      "summary": "On our new Real World AI stage, we’ll be focusing on the intersection between the digital and physical, and all the ways we’ll continue to see a blending of the two.",
+      "published": "2026-09-02T22:24:09+00:00"
+    },
+    {
+      "title": "Decoding the new AI lingo: Loops, harnesses, squads, hill climbing… oh my!",
+      "url": "https://github.blog/ai-and-ml/decoding-the-new-ai-lingo-loops-harnesses-squads-hill-climbing-oh-my/",
+      "source": "GitHub Blog",
+      "tag": "platform",
+      "summary": "From loop engineering to harnesses, squads, and open weights, the GitHub Podcast breaks down the AI terms showing up in developer conversations. The post Decoding the new AI lingo: Loops, harnesses, squads, hill climbing… oh my! appeared first on The GitHub Blog .",
+      "published": "2026-09-02T21:00:00+00:00"
+    },
+    {
+      "title": "I rented a car, and within hours, my driver's license was for sale",
+      "url": "https://arstechnica.com/security/2026/09/my-drivers-license-is-one-of-153-million-for-sale-on-a-new-dark-website/",
+      "source": "Ars Technica",
+      "tag": "news",
+      "summary": "The FBI is reportedly investigating a massive data breach that is unfolding in real time.",
+      "published": "2026-09-02T20:32:02+00:00"
+    },
+    {
+      "title": "OpenAI’s new reasoning technique alarms AI safety experts",
+      "url": "https://techcrunch.com/2026/09/02/openais-new-reasoning-technique-alarms-ai-safety-experts/",
+      "source": "TechCrunch AI",
+      "tag": "news",
+      "summary": "OpenAI’s new Astra model will use “recurrent depth,” a technique that allows the model to operate outside of the sequential thinking that characterizes most reasoning models.",
+      "published": "2026-09-02T20:19:14+00:00"
+    },
+    {
+      "title": "Google says its new Gemini 3.8 Flash model ‘works harder’ but might cost more",
+      "url": "https://www.theverge.com/ai-artificial-intelligence/988742/google-gemini-3-8-flash",
+      "source": "The Verge AI",
+      "tag": "news",
+      "summary": "Google launched Gemini 3.8 Flash, arriving just a few weeks after its predecessor. The company claims the new model \"works harder\" than Gemini 3.7 Flash by performing more reasoning steps on complex tasks and \"calling tools iteratively.\" It has the same introductory pricing as...",
+      "published": "2026-09-02T20:11:40+00:00"
+    },
+    {
+      "title": "How we make AI coding more cost efficient without sacrificing task quality",
+      "url": "https://github.blog/ai-and-ml/github-copilot/how-we-make-ai-coding-more-cost-efficient-without-sacrificing-task-quality/",
+      "source": "GitHub Blog",
+      "tag": "platform",
+      "summary": "Why shorter outputs can cost more, and how GitHub Copilot reduces wasted work across the complete coding task. The post How we make AI coding more cost efficient without sacrificing task quality appeared first on The GitHub Blog .",
+      "published": "2026-09-02T18:00:00+00:00"
+    },
+    {
+      "title": "Amazon’s AI assistant can now spot fake emails from the company",
+      "url": "https://www.theverge.com/tech/988518/amazon-alexa-for-shopping-verify-emails",
+      "source": "The Verge AI",
+      "tag": "news",
+      "summary": "Amazon is trying to combat impersonation scams with a new feature that allows you to use its AI assistant to determine whether an email, text message, or phone call actually came from the company. With the update, you can ask Alexa for Shopping about a message you received, and...",
+      "published": "2026-09-02T17:52:56+00:00"
+    },
+    {
+      "title": "Pangram’s Max Spero on why AI detection is harder than ‘Real or Fake’",
+      "url": "https://techcrunch.com/video/pangrams-max-spero-on-why-ai-detection-is-harder-than-real-or-fake/",
+      "source": "TechCrunch AI",
+      "tag": "news",
+      "summary": "The internet has a trust problem, and it’s not just because social media feeds are filling up with AI slop. AI-generated text and images are now making their way into job applications, product reviews, and even insurance claims, leaving platforms and users alike scrambling to...",
+      "published": "2026-09-02T17:18:13+00:00"
+    },
+    {
+      "title": "We’re ‘dangerously close’ to dead internet theory, says Pangram’s CEO",
+      "url": "https://techcrunch.com/podcast/were-dangerously-close-to-dead-internet-theory-says-pangrams-ceo/",
+      "source": "TechCrunch AI",
+      "tag": "news",
+      "summary": "The internet has a trust problem, and it’s not just because social media feeds are filling up with AI slop. AI-generated text and images are now making their way into job applications, product reviews, and even insurance claims, leaving platforms and users alike scrambling to...",
+      "published": "2026-09-02T17:09:57+00:00"
+    },
+    {
+      "title": "US government sides with OpenAI on issue of training LLMs on copyrighted material",
+      "url": "https://techcrunch.com/2026/09/02/u-s-government-sides-with-openai-on-issue-of-training-llms-on-copyrighted-material/",
+      "source": "TechCrunch AI",
+      "tag": "news",
+      "summary": "\"The United States has a strong interest in continuing to develop a robust and competitive artificial intelligence industry that sets the standard for the practice and procedure of AI use globally,\" the brief reads.",
+      "published": "2026-09-02T17:09:06+00:00"
+    },
+    {
+      "title": "Researchers fear safety disaster ahead of OpenAI’s Astra release",
+      "url": "https://www.theverge.com/ai-artificial-intelligence/988334/openai-astra-ai-monitoring-safety",
+      "source": "The Verge AI",
+      "tag": "news",
+      "summary": "OpenAI is on the cusp of releasing its most powerful AI model yet, Astra, following weeks of delays to shore up safety protocols after its agents attacked real targets during testing. As details about the model trickle out, researchers are warning it \"may be the single worst...",
+      "published": "2026-09-02T16:40:50+00:00"
+    },
+    {
+      "title": "llm-gemini 0.34",
+      "url": "https://simonwillison.net/2026/Sep/2/llm-gemini/",
+      "source": "Simon Willison",
+      "tag": "blog",
+      "summary": "Release: llm-gemini 0.34 New model gemini-3.8-flash for Gemini 3.8 Flash , with low, medium and high thinking levels. #146 Fixed async responses failing to record the resolved model version. Thanks, Charlie Tonneslan . #137 Google released Gemini 3.8 Flash (and 3.8 Flash Cyber,...",
+      "published": "2026-09-02T16:39:38+00:00"
+    },
+    {
+      "title": "The Trump administration is supporting OpenAI in the NYT copyright lawsuit",
+      "url": "https://www.theverge.com/ai-artificial-intelligence/988344/trump-administration-new-york-times-openai-lawsuit",
+      "source": "The Verge AI",
+      "tag": "news",
+      "summary": "The Trump administration has intervened in The New York Times' copyright lawsuit against OpenAI, making an argument in favor of the AI lab. The landmark lawsuit, filed in December 2023, alleging that OpenAI unlawfully trained its AI systems on articles from The New York Times...",
+      "published": "2026-09-02T16:12:25+00:00"
+    },
+    {
+      "title": "Wonderful more than doubles its valuation to $5B in under 6 months",
+      "url": "https://techcrunch.com/2026/09/02/wonderful-more-than-doubles-its-valuation-to-5b-in-under-6-months/",
+      "source": "TechCrunch AI",
+      "tag": "news",
+      "summary": "Wonderful said it will use its $550 million Series C funding to develop products faster, expand its FDE teams, and meet demand for its products.",
+      "published": "2026-09-02T16:04:10+00:00"
+    },
+    {
+      "title": "India’s richest man now wants to turn aging computers into AI-ready PCs",
+      "url": "https://techcrunch.com/2026/09/02/indias-richest-man-now-wants-to-turn-aging-computers-into-ai-ready-pcs/",
+      "source": "TechCrunch AI",
+      "tag": "news",
+      "summary": "Jio is betting it can turn an aging computer into an AI-ready PC for as little as about $11 for two months.",
+      "published": "2026-09-02T16:01:48+00:00"
+    },
+    {
+      "title": "HiddenLayer nabs $100M as enterprises rush to secure their AI deployments",
+      "url": "https://techcrunch.com/2026/09/02/hiddenlayer-nabs-100m-as-enterprises-rush-to-secure-their-ai-deployments/",
+      "source": "TechCrunch AI",
+      "tag": "news",
+      "summary": "Security companies are scrambling to build products that can monitor not just agents but also the tools and add-ons they use.",
+      "published": "2026-09-02T15:01:23+00:00"
+    },
+    {
+      "title": "PSA: Amazon’s shopping AI can now tell you if that message is a scam",
+      "url": "https://techcrunch.com/2026/09/02/psa-amazons-shopping-ai-can-now-tell-you-if-that-message-is-a-scam/",
+      "source": "TechCrunch AI",
+      "tag": "news",
+      "summary": "Amazon is adding a scam-detection feature to Alexa for Shopping that can verify whether suspicious emails, texts, and other messages actually came from the retailer.",
+      "published": "2026-09-02T14:56:34+00:00"
+    },
+    {
+      "title": "Claude's new system prompt really doesn't want to reproduce song lyrics",
+      "url": "https://simonwillison.net/2026/Sep/2/claudes-new-system-prompt/",
+      "source": "Simon Willison",
+      "tag": "blog",
+      "summary": "Anthropic publish the system prompts for their Claude consumer applications ( Claude.ai and the Claude mobile apps - sadly not for Claude Cowork or Claude Code). I love that they do this, and that they share not just the current prompts but historic changes to their prompts as...",
+      "published": "2026-09-02T14:16:42+00:00"
+    },
+    {
+      "title": "Adobe acquires Indian market intelligence startup Rilo",
+      "url": "https://techcrunch.com/2026/09/02/adobe-acquires-indian-market-intelligence-startup-rilo/",
+      "source": "TechCrunch AI",
+      "tag": "news",
+      "summary": "This is Adobe's second acquisition out of India after Rephrase.ai in 2023",
+      "published": "2026-09-02T14:03:57+00:00"
+    },
+    {
+      "title": "ATV Big Air Tour turned 3 days of work into 3 hours with ChatGPT",
+      "url": "https://openai.com/index/atv-big-air-tour",
+      "source": "OpenAI News",
+      "tag": "vendor",
+      "summary": "ATV Big Air Tour uses ChatGPT Work to speed up marketing, merchandising, and more. It even turned merchandise photos into an inventory website in 15 minutes.",
+      "published": "2026-09-02T12:00:00+00:00"
+    },
+    {
+      "title": "BGP hijack infecting networks caused by a comedy of errors that’s not funny at all",
+      "url": "https://arstechnica.com/security/2026/09/well-executed-bgp-attack-uses-hijacked-ips-to-infect-real-networks/",
+      "source": "Ars Technica",
+      "tag": "news",
+      "summary": "What can we learn from a BGP hijacking that poisoned production software? Plenty.",
+      "published": "2026-09-02T11:00:43+00:00"
+    },
+    {
+      "title": "Quoting Rick Brewster",
+      "url": "https://simonwillison.net/2026/Sep/2/rick-brewster/",
+      "source": "Simon Willison",
+      "tag": "blog",
+      "summary": "Direct2D has always been the biggest hurdle for Paint.NET on WINE, and it's clear that it will never be completed enough for Paint.NET's use. And I can't just \"disable\" the use of Direct2D. So, instead, Paint.NET now has an internal, from-scratch, clean-room reverse-engineered...",
+      "published": "2026-09-02T05:50:57+00:00"
+    },
+    {
+      "title": "Claude Fable 5.1 made me a really nice animated pelican",
+      "url": "https://simonwillison.net/2026/Sep/1/claude-fable-5-1/",
+      "source": "Simon Willison",
+      "tag": "blog",
+      "summary": "Today is Claude Fable (and Mythos) 5.1 day . Anthropic say that Fable 5.1 \"sets a new standard for coding, knowledge work, and long-running problem-solving tasks\". Their announcement spends a notable amount of time on scientific research, boasting of a 52.6% score on the brand...",
+      "published": "2026-09-01T23:57:28+00:00"
+    },
+    {
+      "title": "Codex bundles LibreOffice",
+      "url": "https://simonwillison.net/2026/Sep/1/codex-libreoffice/",
+      "source": "Simon Willison",
+      "tag": "blog",
+      "summary": "I was poking around in my ~/.cache/ folder using OmniDiskSweeper when I spotted something interesting. The OpenAI Codex desktop app (since rebranded to just ChatGPT) has 1.7GB of stuff in there in a folder called codex-primary-runtime , including a full Python installation, a...",
+      "published": "2026-09-01T19:03:01+00:00"
+    },
+    {
+      "title": "GeoJSON Map Viewer",
+      "url": "https://simonwillison.net/2026/Sep/1/geojson/",
+      "source": "Simon Willison",
+      "tag": "blog",
+      "summary": "Tool: GeoJSON Map Viewer I was helping Natalie gather some maps of local political boundaries (for the Granada Community Services District and the Midcoast Community Council ) and found a need to display some GeoJSON files on a map and export that as a PNG. I asked GPT-5.6-Sol...",
+      "published": "2026-09-01T18:05:45+00:00"
+    },
+    {
+      "title": "Quoting Tarn Adams",
+      "url": "https://simonwillison.net/2026/Sep/1/tarn-adams/",
+      "source": "Simon Willison",
+      "tag": "blog",
+      "summary": "They took the letters from me! I have to talk about dwarf behavior now. I can't even talk about dwarf AI. It doesn't exist. It's dwarf behavior , and they misbehave sometimes — Tarn Adams , co-creator of Dwarf Fortress Tags: ai , game-design",
+      "published": "2026-09-01T17:01:11+00:00"
+    },
+    {
+      "title": "How AI-native companies turn workflows into operating capability",
+      "url": "https://openai.com/index/ai-native-company-workflows",
+      "source": "OpenAI News",
+      "tag": "vendor",
+      "summary": "Basis, Clay, and Exa Labs use AI agents to improve onboarding, account management, and developer integrations. See what enterprise leaders can apply.",
+      "published": "2026-09-01T17:00:00+00:00"
+    },
+    {
+      "title": "datasette-mcp 0.2",
+      "url": "https://simonwillison.net/2026/Sep/1/datasette-mcp/",
+      "source": "Simon Willison",
+      "tag": "blog",
+      "summary": "Release: datasette-mcp 0.2 \"rows\" from execute_sql is now an array of objects. Previously it was an array of arrays. This should help weaker models avoid losing track of which positional array element maps to which column. #1 Now depends on mcp>=2.1.1 . This is the first...",
+      "published": "2026-09-01T15:30:12+00:00"
+    },
+    {
+      "title": "Python 3.15.0 candidate 2 is here!",
+      "url": "https://simonwillison.net/2026/Sep/1/python-315-rc-2/",
+      "source": "Simon Willison",
+      "tag": "blog",
+      "summary": "Python 3.15.0 candidate 2 is here! Hugo van Kemenade (release manager for Python 3.14 and 3.15) announces the final release candidate for Python 3.15, scheduled for release in October: Entering the release candidate phase, only reviewed code changes which are clear bug fixes are...",
+      "published": "2026-09-01T14:59:18+00:00"
+    },
+    {
+      "title": "Path to Astra: critical capabilities and frontier safeguards",
+      "url": "https://openai.com/index/path-to-astra",
+      "source": "OpenAI News",
+      "tag": "vendor",
+      "summary": "Astra is the first OpenAI model to meet the Critical cybersecurity capability threshold under the Preparedness Framework, with stronger safeguards for release.",
+      "published": "2026-09-01T13:00:00+00:00"
+    },
+    {
+      "title": "Healthcare organizations can now connect EHR and additional industry data to ChatGPT",
+      "url": "https://openai.com/index/chatgpt-connects-health-records-and-healthcare-sources",
+      "source": "OpenAI News",
+      "tag": "vendor",
+      "summary": "ChatGPT can now connect to trusted healthcare data, helping clinicians securely access patient context, medical research, and more.",
+      "published": "2026-09-01T12:00:00+00:00"
+    },
+    {
+      "title": "How law firm Gilbert + Tobin governs and scales AI with OpenAI",
+      "url": "https://openai.com/index/gilbert-tobin",
+      "source": "OpenAI News",
+      "tag": "vendor",
+      "summary": "See how Gilbert + Tobin combines CEO-led commitment, rigorous governance, and human accountability to scale ChatGPT Enterprise and Codex across the firm.",
+      "published": "2026-09-01T01:00:00+00:00"
+    },
+    {
+      "title": "Introducing wrapture",
+      "url": "https://simonwillison.net/2026/Aug/31/introducing-wrapture/",
+      "source": "Simon Willison",
+      "tag": "blog",
+      "summary": "Introducing wrapture New from Graham Dumpleton (of wrapt , mod_wsgi, and New Relic's Python agent fame), who describes Wrapture as taking the monkeypatching ideas from wrapt and extending them to apply to testing and tracing at the same time. Wrapture ( full documentation here )...",
+      "published": "2026-08-31T23:59:36+00:00"
+    },
+    {
+      "title": "Quoting Andrew Digby",
+      "url": "https://simonwillison.net/2026/Aug/31/andrew-digby/",
+      "source": "Simon Willison",
+      "tag": "blog",
+      "summary": "325 #kakapo! The chicks from this year's record breeding season are now juveniles and so have been added to the population. In 1995 there were just 51 kākāpō left. Recovery of critically endangered species is possible with sustained effort. — Andrew Digby , providing the best...",
+      "published": "2026-08-31T22:25:02+00:00"
+    },
+    {
+      "title": "Think twice before installing this device promising free movies",
+      "url": "https://arstechnica.com/security/2026/08/how-some-media-streaming-devices-open-home-networks-to-a-world-of-harm/",
+      "source": "Ars Technica",
+      "tag": "news",
+      "summary": "In exchange for free stuff, devices make home connections part of a proxy network.",
+      "published": "2026-08-31T16:33:38+00:00"
+    },
+    {
+      "title": "OpenAI supports California’s bill to advance youth AI safety",
+      "url": "https://openai.com/index/supporting-california-bill-advance-ai-youth-safety",
+      "source": "OpenAI News",
+      "tag": "vendor",
+      "summary": "OpenAI supports California SB 1119, advancing strong, age-appropriate AI safeguards for teens while preserving opportunities to learn, create, and explore.",
+      "published": "2026-08-31T07:00:00+00:00"
+    },
+    {
+      "title": "Polimill builds Japan's next-generation public AI infrastructure",
+      "url": "https://openai.com/index/polimill",
+      "source": "OpenAI News",
+      "tag": "vendor",
+      "summary": "Polimill uses OpenAI GPT models and Codex to help municipalities search and use administrative knowledge while accelerating development.",
+      "published": "2026-08-31T07:00:00+00:00"
+    },
+    {
+      "title": "A milestone in expanding access to AI",
+      "url": "https://openai.com/index/expanding-access-to-ai-with-chatgpt-ads",
+      "source": "OpenAI News",
+      "tag": "vendor",
+      "summary": "ChatGPT Ads reaches $1 billion in annualized revenue run rate and expands globally, supporting broader access to AI through free and affordable options.",
+      "published": "2026-08-31T04:00:00+00:00"
+    },
+    {
+      "title": "Understanding ChatGPT Work",
+      "url": "https://simonwillison.net/2026/Aug/30/understanding-chatgpt-work/",
+      "source": "Simon Willison",
+      "tag": "blog",
+      "summary": "OpenAI announced ChatGPT Work on July 9th, and have been furiously iterating on it ever since. It is an extraordinarily confusing and very powerful product. Here's what I've figured out about it so far. ChatGPT Work is actually two products The more interesting version of...",
+      "published": "2026-08-30T23:59:47+00:00"
+    },
+    {
+      "title": "Inside Meta’s push to put robots to work in data centers",
+      "url": "https://arstechnica.com/ai/2026/08/inside-metas-push-to-put-robots-to-work-in-data-centers/",
+      "source": "Ars Technica",
+      "tag": "news",
+      "summary": "The company is testing robots on tasks that can performed by technicians.",
+      "published": "2026-08-30T11:03:47+00:00"
+    },
+    {
+      "title": "Introducing Hy4 Preview",
+      "url": "https://simonwillison.net/2026/Aug/29/hy4/",
+      "source": "Simon Willison",
+      "tag": "blog",
+      "summary": "Introducing Hy4 Preview New open weight text input (no vision) LLM from Chinese company Tencent today: 770B total parameters, 49B active parameters, 1M token context window, 1.56TB on Hugging Face . This is a big size increase from their previous Hy3 in July, which was 295B, 21B...",
+      "published": "2026-08-29T23:53:13+00:00"
+    },
+    {
+      "title": "Just a rumour of a bug is enough to find a security exploit these days",
+      "url": "https://simonwillison.net/2026/Aug/28/just-a-rumour-of-a-bug/",
+      "source": "Simon Willison",
+      "tag": "blog",
+      "summary": "Just a rumour of a bug is enough to find a security exploit these days Anil Madhavapeddy is a professor of computer science at Cambridge and a core maintainer of the OCaml compiler. In this somewhat alarming post he reports that security issues in OCaml projects are seeing...",
+      "published": "2026-08-28T22:12:02+00:00"
+    },
+    {
+      "title": "Authorities arrest 2 alleged members of prolific hacking group TeamPCP",
+      "url": "https://arstechnica.com/security/2026/08/authorities-arrest-2-alleged-members-of-prolific-hacking-group-teampcp/",
+      "source": "Ars Technica",
+      "tag": "news",
+      "summary": "The group infected more than 1,000 organizations in a relentless supply-chain attack campaign.",
+      "published": "2026-08-28T11:15:05+00:00"
+    },
+    {
+      "title": "Our decision on Cursor following its acquisition by SpaceX",
+      "url": "https://openai.com/index/our-decision-on-cursor-following-its-acquisition-by-spacex",
+      "source": "OpenAI News",
+      "tag": "vendor",
+      "summary": "Our decision to wind down our contract providing OpenAI models to Cursor following its acquisition by SpaceX.",
+      "published": "2026-08-28T06:00:00+00:00"
+    },
+    {
+      "title": "Supporting Thailand’s next generation of AI startups",
+      "url": "https://openai.com/index/supporting-next-generation-ai-startups-thailand",
+      "source": "OpenAI News",
+      "tag": "vendor",
+      "summary": "OpenAI and Thailand’s MHESI launch an eight-week accelerator helping 10 health, wellness, and education startups turn AI prototypes into trusted products.",
+      "published": "2026-08-28T02:00:00+00:00"
+    },
+    {
+      "title": "Breaking Claude Code Opus 5 Auto Mode",
+      "url": "https://simonwillison.net/2026/Aug/27/breaking-claude-code-opus-5-auto-mode/",
+      "source": "Simon Willison",
+      "tag": "blog",
+      "summary": "Breaking Claude Code Opus 5 Auto Mode Anthropic are putting a great deal of faith in Claude Code's auto mode for protecting their coding agent users against prompt injection attacks. They recently made that the default and have made bold claims about its effectiveness. Johann...",
+      "published": "2026-08-27T22:50:25+00:00"
+    },
+    {
+      "title": "OpenClaw went viral. Meet the maintainers building and securing it.",
+      "url": "https://github.blog/open-source/maintainers/openclaw-went-viral-meet-the-maintainers-building-and-securing-it/",
+      "source": "GitHub Blog",
+      "tag": "platform",
+      "summary": "OpenClaw is the fastest-growing project in GitHub history. Peter Steinberger and several maintainers share what they learned in the project's first six months. The post OpenClaw went viral. Meet the maintainers building and securing it. appeared first on The GitHub Blog .",
+      "published": "2026-08-27T16:00:00+00:00"
+    },
+    {
+      "title": "Claude, Codex, and Hermes installed unowned code inside corporate networks",
+      "url": "https://arstechnica.com/security/2026/08/claude-codex-and-hermes-installed-unowned-code-inside-corporate-networks/",
+      "source": "Ars Technica",
+      "tag": "news",
+      "summary": "227 install commands were found in corporate docs pointing at code nobody owns.",
+      "published": "2026-08-27T14:00:13+00:00"
+    },
+    {
+      "title": "How OpenAI let a mob of LLM agents game a test and ransack Hugging Face",
+      "url": "https://arstechnica.com/security/2026/08/how-openai-let-a-mob-of-llm-agents-game-a-test-and-ransack-hugging-face/",
+      "source": "Ars Technica",
+      "tag": "news",
+      "summary": "Without authorization, 1,200 OpenAI agents conspired among themselves to game a test.",
+      "published": "2026-08-27T12:58:59+00:00"
+    },
+    {
+      "title": "Better answers, broader thinking: What students gain from ChatGPT and critical-thinking training",
+      "url": "https://openai.com/index/what-students-gain-from-chatgpt-critical-thinking-training",
+      "source": "OpenAI News",
+      "tag": "vendor",
+      "summary": "A randomized study of more than 1,000 students examines ChatGPT, critical thinking, originality, and student performance on a real-world university assignment.",
+      "published": "2026-08-27T09:00:00+00:00"
+    },
+    {
+      "title": "Expanding OpenAI’s presence in Brazil",
+      "url": "https://openai.com/index/expanding-our-presence-in-brazil",
+      "source": "OpenAI News",
+      "tag": "vendor",
+      "summary": "OpenAI is expanding its presence in Brazil, deepening engagement with developers, businesses, and communities to support AI adoption across the country.",
+      "published": "2026-08-27T03:00:00+00:00"
+    },
+    {
+      "title": "Qwen3.8-Flash-Next",
+      "url": "https://simonwillison.net/2026/Aug/26/qwen38-flash-next/",
+      "source": "Simon Willison",
+      "tag": "blog",
+      "summary": "Qwen3.8-Flash-Next Another open weights model from Qwen. This one is \"a multimodal MoE model that also serves as an early preview of the architecture used in Qwen4\". It's pretty big: 125B tokens, but only 6B active which means it gets a significant performance boost. I've been...",
+      "published": "2026-08-26T23:52:58+00:00"
+    },
+    {
+      "title": "AI agents meant to replace Meta workers made “large-scale, disruptive actions”",
+      "url": "https://arstechnica.com/ai/2026/08/metas-scrapped-plans-to-go-ai-native-included-slashing-teams-by-60-percent/",
+      "source": "Ars Technica",
+      "tag": "news",
+      "summary": "Report shows Meta's challenges replacing people with AI agents.",
+      "published": "2026-08-26T21:25:27+00:00"
+    },
+    {
+      "title": "GitHub Copilot app for Beginners: Automate Dependabot pull request triage",
+      "url": "https://github.blog/ai-and-ml/github-copilot/github-copilot-app-for-beginners-automate-dependabot-pull-request-triage/",
+      "source": "GitHub Blog",
+      "tag": "platform",
+      "summary": "Managing library updates can be tedious at times. Learn how the GitHub Copilot app can handle this type of repetitive task. The post GitHub Copilot app for Beginners: Automate Dependabot pull request triage appeared first on The GitHub Blog .",
+      "published": "2026-08-26T20:12:53+00:00"
+    },
+    {
+      "title": "Bringing ChatGPT for Teachers to more U.S. school districts",
+      "url": "https://openai.com/index/bringing-chatgpt-for-teachers-to-more-us-school-districts",
+      "source": "OpenAI News",
+      "tag": "vendor",
+      "summary": "ChatGPT for Teachers is expanding to 55 U.S. school systems, bringing secure AI tools, training, and support to over 100,000 more educators and staff.",
+      "published": "2026-08-26T10:00:00+00:00"
+    },
+    {
+      "title": "Learning never stops: How AI makes learning continuous",
+      "url": "https://openai.com/index/learning-never-stops",
+      "source": "OpenAI News",
+      "tag": "vendor",
+      "summary": "OpenAI’s new report explores how students and educators use ChatGPT to make learning more continuous, with support that extends beyond the classroom.",
+      "published": "2026-08-26T10:00:00+00:00"
+    },
+    {
+      "title": "Quoting Paul Dix",
+      "url": "https://simonwillison.net/2026/Aug/26/paul-dix/",
+      "source": "Simon Willison",
+      "tag": "blog",
+      "summary": "The fact that AI wrote 1M LOC and then refined it over the course of the next couple of months to produce a reliable piece of software that is currently running on millions of developer machines is absolutely mind blowing. And you can say, “well it’s not that impressive because...",
+      "published": "2026-08-26T08:07:55+00:00"
+    },
+    {
+      "title": "The Hugging Face incident and the road ahead",
+      "url": "https://openai.com/index/hugging-face-incident-and-the-road-ahead",
+      "source": "OpenAI News",
+      "tag": "vendor",
+      "summary": "OpenAI shares findings from the Hugging Face security incident and the steps we’re taking to strengthen AI model security, monitoring, and alignment.",
+      "published": "2026-08-26T00:00:00+00:00"
+    },
+    {
+      "title": "How loveholidays is making everyone a builder with Codex",
+      "url": "https://openai.com/index/loveholidays",
+      "source": "OpenAI News",
+      "tag": "vendor",
+      "summary": "Discover how loveholidays uses OpenAI Codex to make software development accessible across the business, helping teams turn ideas into products faster.",
+      "published": "2026-08-26T00:00:00+00:00"
+    },
+    {
+      "title": "EVE Online: The Move to Python 3 Begins!",
+      "url": "https://simonwillison.net/2026/Aug/25/eve-online-move-to-python-3/",
+      "source": "Simon Willison",
+      "tag": "blog",
+      "summary": "EVE Online: The Move to Python 3 Begins! EVE Online has been one of the most interesting case studies in Python at scale for over twenty years now. They've been running on Stackless Python since their launch in 2003, and their last major upgrade was 16 years ago, to Stackless...",
+      "published": "2026-08-25T22:59:30+00:00"
+    },
+    {
+      "title": "How to evaluate LLMs before production",
+      "url": "https://github.blog/ai-and-ml/llms/how-to-evaluate-llms-before-production/",
+      "source": "GitHub Blog",
+      "tag": "platform",
+      "summary": "These are the lessons we learned evaluating LLMs for real-world secret scanning. The post How to evaluate LLMs before production appeared first on The GitHub Blog .",
+      "published": "2026-08-25T21:35:11+00:00"
+    },
+    {
+      "title": "The full stack behind abundant intelligence",
+      "url": "https://openai.com/index/the-full-stack-behind-abundant-intelligence",
+      "source": "OpenAI News",
+      "tag": "vendor",
+      "summary": "OpenAI CFO Sarah Friar explains how advances across chips, compute, models, and products compound to deliver more useful intelligence at greater scale and lower cost.",
+      "published": "2026-08-25T07:05:00+00:00"
+    },
+    {
+      "title": "Jalapeño’s first results show industry-leading speed and efficiency in AI inference",
+      "url": "https://openai.com/index/jalapeno-first-results",
+      "source": "OpenAI News",
+      "tag": "vendor",
+      "summary": "Jalapeño is a custom inference chip from OpenAI that delivers faster, more power-efficient AI inference, with higher throughput and lower latency for modern models.",
+      "published": "2026-08-25T07:00:00+00:00"
+    },
+    {
+      "title": "Disrupting a new covert influence campaign from Russia",
+      "url": "https://openai.com/index/disrupting-malicious-uses-of-ai-influence-campaign-russia",
+      "source": "OpenAI News",
+      "tag": "vendor",
+      "summary": "OpenAI banned Russia-origin accounts using AI to promote a fake Israel-based think tank and a “sovereignty” index praising Russia and criticizing the West.",
+      "published": "2026-08-25T00:00:00+00:00"
+    },
+    {
+      "title": "Introducing the Admin plugin for ChatGPT Work and Codex",
+      "url": "https://openai.com/index/introducing-admin-plugin",
+      "source": "OpenAI News",
+      "tag": "vendor",
+      "summary": "Use the Admin plugin for ChatGPT Work and Codex to analyze workspace usage, manage members and permissions, adjust limits, and act on admin requests.",
+      "published": "2026-08-25T00:00:00+00:00"
+    },
+    {
+      "title": "Your alt text passes automated checks. That doesn’t mean it’s any good.",
+      "url": "https://github.blog/engineering/user-experience/your-alt-text-passes-automated-checks-that-doesnt-mean-its-any-good/",
+      "source": "GitHub Blog",
+      "tag": "platform",
+      "summary": "We built a plugin for the GitHub Accessibility Scanner to make sure your alt text is actually accessible. Here's how it works. The post Your alt text passes automated checks. That doesn’t mean it’s any good. appeared first on The GitHub Blog .",
+      "published": "2026-08-24T20:56:32+00:00"
+    },
+    {
+      "title": "Inaudible sounds used to fingerprint browsers catch AliExpress red-handed",
+      "url": "https://arstechnica.com/security/2026/08/aliexpress-caught-fingerprinting-visitors-after-sending-inaudible-sounds-to-browsers/",
+      "source": "Ars Technica",
+      "tag": "news",
+      "summary": "Is the technique outdated? Yes. Is it still creepy? Also yes.",
+      "published": "2026-08-24T19:19:21+00:00"
+    },
+    {
+      "title": "llm-anthropic 0.27",
+      "url": "https://simonwillison.net/2026/Aug/24/llm-anthropic/",
+      "source": "Simon Willison",
+      "tag": "blog",
+      "summary": "Release: llm-anthropic 0.27 This release of the Anthropic plugin for LLM mainly provides compatibility with the recently released anthropic v1.0.0 Python library, which switches from httpx to httpx2 . OpenAI made the same change in their v3.0.0 release two weeks ago. Anthropic...",
+      "published": "2026-08-24T16:27:04+00:00"
+    },
+    {
+      "title": "Advancing price-performance for developers with GPT‑5.6 in Kiro",
+      "url": "https://openai.com/index/gpt-5-6-in-kiro",
+      "source": "OpenAI News",
+      "tag": "vendor",
+      "summary": "GPT‑5.6 is now available in Kiro, helping developers plan, build, review, and test software with better price-performance.",
+      "published": "2026-08-24T12:00:00+00:00"
+    },
+    {
+      "title": "Your executable is a SQLite database",
+      "url": "https://simonwillison.net/2026/Aug/24/your-executable-is-a-sqlite-database/",
+      "source": "Simon Willison",
+      "tag": "blog",
+      "summary": "Your executable is a SQLite database Farid Zakaria describes a neat Linux pattern for creating a SQLite database file that can be directly used as an executable binary. The trick sets the SQLite file format's 4-byte application ID (68 bytes into the file) to SELF, standing for...",
+      "published": "2026-08-24T11:38:15+00:00"
+    },
+    {
+      "title": "Anthropic’s best AI model struggles to attract users as cheaper tools thrive",
+      "url": "https://simonwillison.net/2026/Aug/23/anthropics-best-ai-model-struggles-to-attract-users-as-cheaper-t/",
+      "source": "Simon Willison",
+      "tag": "blog",
+      "summary": "Anthropic’s best AI model struggles to attract users as cheaper tools thrive A few interesting numbers in this FT story gathered from \"people with knowledge of the matter\": Anthropic's \"annualized revenue\" for July is up to $65bn - it was $47bn in May, and I collected more...",
+      "published": "2026-08-23T20:24:52+00:00"
+    },
+    {
+      "title": "Quoting Drew Breunig",
+      "url": "https://simonwillison.net/2026/Aug/23/drew-breunig/",
+      "source": "Simon Willison",
+      "tag": "blog",
+      "summary": "Prior to Fable, it felt silly to waste too much time improving your coding harness or context strategies. A new model would arrive at the same price (or cheaper!) and paper over most of your problems. But then Fable landed. It was (and still is!) incredible . But the cost was so...",
+      "published": "2026-08-23T19:55:30+00:00"
+    },
+    {
+      "title": "Quoting Linus Torvalds",
+      "url": "https://simonwillison.net/2026/Aug/22/linus-torvalds/",
+      "source": "Simon Willison",
+      "tag": "blog",
+      "summary": "And this was a debug session from hell, enormously helped by an AI doing much of the grunt-work. I'd like to call it my tireless helper, but the AI several times stated flat out that this was impossible and unsolvable and that we should just write a report about it. I suspect...",
+      "published": "2026-08-22T21:04:26+00:00"
+    },
+    {
+      "title": "llm 0.33",
+      "url": "https://simonwillison.net/2026/Aug/22/llm/",
+      "source": "Simon Willison",
+      "tag": "blog",
+      "summary": "Release: llm 0.33 My highlights from this release: Upgraded to the OpenAI Python library 3.x and switched the HTTP client dependency from httpx to httpx2 . #1608 , #1631 I shipped a quick 0.32.1 fix for this yesterday, but this is the more comprehensive fix. llm embed and llm...",
+      "published": "2026-08-22T17:01:16+00:00"
+    },
+    {
+      "title": "Waymo doubles spending on lobbying in robotaxi battle with Uber",
+      "url": "https://arstechnica.com/cars/2026/08/waymo-doubles-spending-on-lobbying-in-robotaxi-battle-with-uber/",
+      "source": "Ars Technica",
+      "tag": "news",
+      "summary": "Alphabet-owned company is seeking to persuade US regulators to clear a path for fully autonomous taxi services.",
+      "published": "2026-08-21T13:11:35+00:00"
+    },
+    {
+      "title": "The August 17 outage, and the work ahead",
+      "url": "https://github.blog/news-insights/company-news/the-august-17-outage-and-the-work-ahead/",
+      "source": "GitHub Blog",
+      "tag": "platform",
+      "summary": "An update on the August 17 outage and the steps we're taking to improve reliability. The post The August 17 outage, and the work ahead appeared first on The GitHub Blog .",
+      "published": "2026-08-20T18:36:11+00:00"
+    },
+    {
+      "title": "Grok exfiltrates user data when malicious instructions are encrypted",
+      "url": "https://arstechnica.com/security/2026/08/grok-exfiltrates-user-data-when-malicious-instructions-are-encrypted/",
+      "source": "Ars Technica",
+      "tag": "news",
+      "summary": "Cryptographic Context Injection is only the latest way to break an LLM safety guardrail.",
+      "published": "2026-08-20T13:00:35+00:00"
+    }
+  ],
+  "repos": [
+    {
+      "full_name": "obra/superpowers",
+      "url": "https://github.com/obra/superpowers",
+      "description": "An agentic skills framework & software development methodology that works.",
+      "stars": 281287,
+      "language": "Shell",
+      "section": "Hot LLM tooling",
+      "updated": "2026-09-03T18:00:53Z",
+      "topics": [
+        "ai",
+        "brainstorming",
+        "coding",
+        "obra"
+      ]
+    },
+    {
+      "full_name": "mattpocock/skills",
+      "url": "https://github.com/mattpocock/skills",
+      "description": "Skills for Real Engineers. Straight from my .agents directory.",
+      "stars": 247154,
+      "language": "Shell",
+      "section": "Hot LLM tooling",
+      "updated": "2026-09-03T15:03:25Z",
+      "topics": []
+    },
+    {
+      "full_name": "affaan-m/ECC",
+      "url": "https://github.com/affaan-m/ECC",
+      "description": "The agent harness performance optimization system. Skills, instincts, memory, security, and research-first development for Claude Code, Codex, Opencode, Cursor and beyond.",
+      "stars": 247047,
+      "language": "JavaScript",
+      "section": "Hot LLM tooling",
+      "updated": "2026-09-03T20:51:23Z",
+      "topics": [
+        "ai-agents",
+        "anthropic",
+        "claude",
+        "claude-code"
+      ]
+    },
+    {
+      "full_name": "NousResearch/hermes-agent",
+      "url": "https://github.com/NousResearch/hermes-agent",
+      "description": "The agent that grows with you",
+      "stars": 240768,
+      "language": "Python",
+      "section": "Hot LLM tooling",
+      "updated": "2026-09-03T20:07:04Z",
+      "topics": [
+        "ai",
+        "ai-agent",
+        "ai-agents",
+        "anthropic"
+      ]
+    },
+    {
+      "full_name": "anomalyco/opencode",
+      "url": "https://github.com/anomalyco/opencode",
+      "description": "The open source coding agent.",
+      "stars": 203532,
+      "language": "TypeScript",
+      "section": "Hot LLM tooling",
+      "updated": "2026-09-03T21:03:34Z",
+      "topics": []
+    },
+    {
+      "full_name": "n8n-io/n8n",
+      "url": "https://github.com/n8n-io/n8n",
+      "description": "Fair-code workflow automation platform with native AI capabilities. Combine visual building with custom code, self-host or cloud, 400+ integrations.",
+      "stars": 203254,
+      "language": "TypeScript",
+      "section": "Self-hosted gems",
+      "updated": "2026-09-03T20:58:51Z",
+      "topics": [
+        "ai",
+        "apis",
+        "automation",
+        "cli"
+      ]
+    },
+    {
+      "full_name": "anthropics/skills",
+      "url": "https://github.com/anthropics/skills",
+      "description": "Public repository for Agent Skills",
+      "stars": 173594,
+      "language": "Python",
+      "section": "Hot LLM tooling",
+      "updated": "2026-09-03T16:37:14Z",
+      "topics": [
+        "agent-skills"
+      ]
+    },
+    {
+      "full_name": "langgenius/dify",
+      "url": "https://github.com/langgenius/dify",
+      "description": "Build Agentic workflows, RAG pipelines, with rich AI model and tool support on one collaborative workspace. Deploy on cloud, VPC, or self-hosted, so teams move from prototype to production without...",
+      "stars": 154364,
+      "language": "TypeScript",
+      "section": "Hot LLM tooling",
+      "updated": "2026-09-03T20:34:46Z",
+      "topics": [
+        "agent",
+        "agentic-ai",
+        "agentic-framework",
+        "agentic-workflow"
+      ]
+    },
+    {
+      "full_name": "langflow-ai/langflow",
+      "url": "https://github.com/langflow-ai/langflow",
+      "description": "Langflow is a powerful tool for building and deploying AI-powered agents and workflows.",
+      "stars": 154207,
+      "language": "Python",
+      "section": "Hot LLM tooling",
+      "updated": "2026-09-03T19:47:49Z",
+      "topics": [
+        "agents",
+        "chatgpt",
+        "generative-ai",
+        "large-language-models"
+      ]
+    },
+    {
+      "full_name": "msitarzewski/agency-agents",
+      "url": "https://github.com/msitarzewski/agency-agents",
+      "description": "A complete AI agency at your fingertips - From frontend wizards to Reddit community ninjas, from whimsy injectors to reality checkers. Each agent is a specialized expert with personality, processes,...",
+      "stars": 149896,
+      "language": "Shell",
+      "section": "Hot LLM tooling",
+      "updated": "2026-09-03T14:23:29Z",
+      "topics": []
+    },
+    {
+      "full_name": "langchain-ai/langchain",
+      "url": "https://github.com/langchain-ai/langchain",
+      "description": "The agent engineering platform.",
+      "stars": 145591,
+      "language": "Python",
+      "section": "Hot LLM tooling",
+      "updated": "2026-09-03T16:59:53Z",
+      "topics": [
+        "agents",
+        "ai",
+        "ai-agents",
+        "anthropic"
+      ]
+    },
+    {
+      "full_name": "anthropics/claude-code",
+      "url": "https://github.com/anthropics/claude-code",
+      "description": "Claude Code is an agentic coding tool that lives in your terminal, understands your codebase, and helps you code faster by executing routine tasks, explaining complex code, and handling git workflows...",
+      "stars": 143943,
+      "language": "Python",
+      "section": "Hot LLM tooling",
+      "updated": "2026-09-03T20:10:26Z",
+      "topics": []
+    },
+    {
+      "full_name": "Shubhamsaboo/awesome-llm-apps",
+      "url": "https://github.com/Shubhamsaboo/awesome-llm-apps",
+      "description": "100+ AI Agents, Agent Skills and RAG Apps - Free and Open Source.",
+      "stars": 135915,
+      "language": "Python",
+      "section": "Hot LLM tooling",
+      "updated": "2026-09-02T23:13:03Z",
+      "topics": [
+        "agents",
+        "llms",
+        "python",
+        "rag"
+      ]
+    },
+    {
+      "full_name": "ClickHouse/ClickHouse",
+      "url": "https://github.com/ClickHouse/ClickHouse",
+      "description": "ClickHouse® is a real-time analytics database management system",
+      "stars": 49632,
+      "language": "C++",
+      "section": "Self-hosted gems",
+      "updated": "2026-09-03T21:00:47Z",
+      "topics": [
+        "ai",
+        "analytics",
+        "big-data",
+        "clickhouse"
+      ]
+    },
+    {
+      "full_name": "langfuse/langfuse",
+      "url": "https://github.com/langfuse/langfuse",
+      "description": "🪢 Open source AI engineering platform: LLM evals, observability, metrics, prompt management, playground, datasets. Integrates with OpenTelemetry, LangChain, OpenAI SDK, LiteLLM, and more. 🍊YC W23",
+      "stars": 34163,
+      "language": "TypeScript",
+      "section": "Self-hosted gems",
+      "updated": "2026-09-03T21:05:15Z",
+      "topics": [
+        "analytics",
+        "autogen",
+        "evaluation",
+        "langchain"
+      ]
+    },
+    {
+      "full_name": "guillaumemeyer/watermarks-remover",
+      "url": "https://github.com/guillaumemeyer/watermarks-remover",
+      "description": "A privacy-first app that strips AI watermarks from content you own.",
+      "stars": 20294,
+      "language": "Python",
+      "section": "New AI repos",
+      "updated": "2026-09-03T20:55:44Z",
+      "topics": [
+        "agent-skill",
+        "ai",
+        "anthropic",
+        "c2pa"
+      ]
+    },
+    {
+      "full_name": "rommapp/romm",
+      "url": "https://github.com/rommapp/romm",
+      "description": "A beautiful, powerful, self-hosted ROM manager and player.",
+      "stars": 12578,
+      "language": "Python",
+      "section": "Self-hosted gems",
+      "updated": "2026-09-03T20:59:18Z",
+      "topics": [
+        "emulation",
+        "open-source",
+        "retrogaming",
+        "rommapp"
+      ]
+    },
+    {
+      "full_name": "hyperdxio/hyperdx",
+      "url": "https://github.com/hyperdxio/hyperdx",
+      "description": "Resolve production issues, fast. An open source observability platform unifying session replays, logs, metrics, traces and errors powered by ClickHouse and OpenTelemetry.",
+      "stars": 9872,
+      "language": "TypeScript",
+      "section": "Self-hosted gems",
+      "updated": "2026-09-03T20:59:13Z",
+      "topics": [
+        "alerting",
+        "analytics",
+        "apm",
+        "application-monitoring"
+      ]
+    },
+    {
+      "full_name": "Osmantic/ODS",
+      "url": "https://github.com/Osmantic/ODS",
+      "description": "Turn your PC, Mac, or Linux box into an AI server.  LLM inference, chat UI, voice, agents, workflows, RAG, and image generation.",
+      "stars": 6061,
+      "language": "Python",
+      "section": "Self-hosted gems",
+      "updated": "2026-09-03T20:54:00Z",
+      "topics": [
+        "ai-agents",
+        "amd",
+        "comfyui",
+        "docker"
+      ]
+    },
+    {
+      "full_name": "ShawnPana/phone-harness",
+      "url": "https://github.com/ShawnPana/phone-harness",
+      "description": "let your agent control your phone",
+      "stars": 2309,
+      "language": "Python",
+      "section": "New AI repos",
+      "updated": "2026-09-02T23:52:34Z",
+      "topics": [
+        "agent",
+        "ai",
+        "automation",
+        "developer-tools"
+      ]
+    },
+    {
+      "full_name": "andrii-kryvoviaz/slink",
+      "url": "https://github.com/andrii-kryvoviaz/slink",
+      "description": "Self-hosted image sharing service",
+      "stars": 1584,
+      "language": "PHP",
+      "section": "Self-hosted gems",
+      "updated": "2026-09-03T21:01:37Z",
+      "topics": [
+        "gallery",
+        "hosting",
+        "images",
+        "self-hosted"
+      ]
+    },
+    {
+      "full_name": "ulsklyc/yuvomi",
+      "url": "https://github.com/ulsklyc/yuvomi",
+      "description": "Self-hosted family planner - tasks, calendars, shopping, meals, budget. Your data, your server.",
+      "stars": 1436,
+      "language": "JavaScript",
+      "section": "Self-hosted gems",
+      "updated": "2026-09-03T21:03:11Z",
+      "topics": [
+        "calendar",
+        "docker",
+        "family",
+        "family-planner"
+      ]
+    },
+    {
+      "full_name": "najmuzzaman-mohammad/gawkbot",
+      "url": "https://github.com/najmuzzaman-mohammad/gawkbot",
+      "description": "open source grok bot. gawk bots automate your menial work via AI models and build you microapps to manage the outcome, so that you have a false sense of control.",
+      "stars": 1257,
+      "language": "Go",
+      "section": "Self-hosted gems",
+      "updated": "2026-09-03T20:52:44Z",
+      "topics": [
+        "agents",
+        "ai-agents",
+        "ai-teammates",
+        "autonomous-agents"
+      ]
+    },
+    {
+      "full_name": "uzairansaruzi/hermex",
+      "url": "https://github.com/uzairansaruzi/hermex",
+      "description": "Native iPhone app for your Hermes agent",
+      "stars": 1225,
+      "language": "Swift",
+      "section": "Self-hosted gems",
+      "updated": "2026-09-03T20:53:14Z",
+      "topics": [
+        "hermes",
+        "hermes-agent",
+        "hermex",
+        "ios"
+      ]
+    },
+    {
+      "full_name": "damejan80/tokentab",
+      "url": "https://github.com/damejan80/tokentab",
+      "description": "A CLI that reads Claude Code, Codex, and Gemini CLI session logs and works out how much they cost, by model, project, and day.",
+      "stars": 1153,
+      "language": "Python",
+      "section": "New AI repos",
+      "updated": "2026-08-27T14:20:23Z",
+      "topics": [
+        "ai",
+        "claude",
+        "claude-code",
+        "cursor"
+      ]
+    },
+    {
+      "full_name": "vercel-labs/eve-software-factory-template",
+      "url": "https://github.com/vercel-labs/eve-software-factory-template",
+      "description": "Meet Foreman, an eve Software Factory.",
+      "stars": 1097,
+      "language": "TypeScript",
+      "section": "New AI repos",
+      "updated": "2026-08-20T03:28:12Z",
+      "topics": [
+        "agent",
+        "ai",
+        "eve",
+        "vercel"
+      ]
+    },
+    {
+      "full_name": "0xsline/awesome-deepseek-harness",
+      "url": "https://github.com/0xsline/awesome-deepseek-harness",
+      "description": "DeepSeek Harness (DSH) ecosystem: curated plugins, tools, and infrastructure from dsh-external/hub and the public dsh-plugin topic.",
+      "stars": 988,
+      "language": "Python",
+      "section": "New AI repos",
+      "updated": "2026-09-03T11:37:04Z",
+      "topics": [
+        "agent",
+        "ai",
+        "ai-agents",
+        "ai-tools"
+      ]
+    },
+    {
+      "full_name": "pgrundev/pgbot",
+      "url": "https://github.com/pgrundev/pgbot",
+      "description": "Postgres intelligence for ai agents & apps",
+      "stars": 872,
+      "language": "Go",
+      "section": "New AI repos",
+      "updated": "2026-09-01T23:54:25Z",
+      "topics": [
+        "ai",
+        "data-analysis",
+        "database",
+        "postgres"
+      ]
+    },
+    {
+      "full_name": "fromleda/text-humanizer",
+      "url": "https://github.com/fromleda/text-humanizer",
+      "description": "text-humanizer is an open-source project designed to convert text generated by AI to its \"humanized\" version. Bypasses the most of AI detectors such as Turnitin or GPTZero",
+      "stars": 738,
+      "language": "Python",
+      "section": "New AI repos",
+      "updated": "2026-08-20T10:09:45Z",
+      "topics": [
+        "ai",
+        "ai-humanizer",
+        "gemini-api",
+        "gptzero"
+      ]
+    },
+    {
+      "full_name": "2akouwu/reverify",
+      "url": "https://github.com/2akouwu/reverify",
+      "description": "AI makes things up when it reads a binary. Reverify checks its every claim against the real bytes, so you see what's actually true — AI-assisted reverse engineering you can trust. LLM proposes,...",
+      "stars": 737,
+      "language": "Python",
+      "section": "New AI repos",
+      "updated": "2026-09-03T17:43:06Z",
+      "topics": [
+        "ai",
+        "ai-agents",
+        "binary-analysis",
+        "capstone"
+      ]
+    },
+    {
+      "full_name": "NxcoreAI/EverRoom",
+      "url": "https://github.com/NxcoreAI/EverRoom",
+      "description": "EverRoom - A workspace that remembers your projects, decisions, and sources.",
+      "stars": 704,
+      "language": "TypeScript",
+      "section": "New AI repos",
+      "updated": "2026-09-03T15:23:56Z",
+      "topics": [
+        "ai",
+        "editor",
+        "electron",
+        "knowledge"
+      ]
+    },
+    {
+      "full_name": "hkqr/my-free-code",
+      "url": "https://github.com/hkqr/my-free-code",
+      "description": "Open-source multi-provider AI gateway for Claude Code and other coding agents, with model routing, streaming, tools, reasoning, fallbacks, and local model support",
+      "stars": 623,
+      "language": "Python",
+      "section": "New AI repos",
+      "updated": "2026-08-28T09:02:17Z",
+      "topics": [
+        "ai",
+        "claude-code",
+        "free-claude-api",
+        "multi-provider"
+      ]
+    },
+    {
+      "full_name": "xzf-thu/VoiceMem",
+      "url": "https://github.com/xzf-thu/VoiceMem",
+      "description": "Infrastructure for the next generation of voice agents, designed to provide universal memory. It is divided into a left brain and a right brain, storing information and emotions respectively, while a...",
+      "stars": 618,
+      "language": "Python",
+      "section": "New AI repos",
+      "updated": "2026-09-03T10:54:45Z",
+      "topics": [
+        "ai",
+        "ai-agents",
+        "ai-tools",
+        "application"
+      ]
+    },
+    {
+      "full_name": "DrHazemAli/enterprise-system-design",
+      "url": "https://github.com/DrHazemAli/enterprise-system-design",
+      "description": "A source-grounded course and architectural reference for engineers designing systems that must survive real traffic, partial failure, security review, and changing requirements, spanning enterprise...",
+      "stars": 590,
+      "language": "",
+      "section": "New AI repos",
+      "updated": "2026-08-22T01:27:12Z",
+      "topics": [
+        "ai",
+        "ai-governance",
+        "ai-security",
+        "ai-systems"
+      ]
+    }
+  ],
+  "releases": [
+    {
+      "repo": "microsoft/vscode",
+      "tag_name": "1.136.1",
+      "name": "1.136.1",
+      "url": "https://github.com/microsoft/vscode/releases/tag/1.136.1",
+      "published": "2026-09-03T15:25:32Z",
+      "prerelease": false,
+      "body": "https://code.visualstudio.com/updates/v1_136"
+    },
+    {
+      "repo": "n8n-io/n8n",
+      "tag_name": "n8n@2.37.9",
+      "name": "n8n@2.37.9",
+      "url": "https://github.com/n8n-io/n8n/releases/tag/n8n%402.37.9",
+      "published": "2026-09-03T13:16:03Z",
+      "prerelease": false,
+      "body": "## [2.37.9](https://github.com/n8n-io/n8n/compare/n8n@2.37.7...n8n@2.37.9) (2026-09-03) ### Bug Fixes * **core:** Restore mutating array methods on $json data in expressions ([#37727](https://github.com/n8n-io/n8n/issues/37727)) ([336c081](https://github.com/n8n-io/n8n/commit/336c0810c0bd98172b7204ce42497a966efa9bdf))"
+    },
+    {
+      "repo": "anthropics/claude-code",
+      "tag_name": "v2.1.259",
+      "name": "v2.1.259",
+      "url": "https://github.com/anthropics/claude-code/releases/tag/v2.1.259",
+      "published": "2026-09-02T22:33:51Z",
+      "prerelease": false,
+      "body": "## What's changed - Added `managedMcpServers` managed setting: organizations can provide HTTP/SSE MCP servers to every user (same entry shape as `.mcp.json`); entries that name a command to run are skipped - Added `--permission-prompts none` for unattended headless hosts: anything that would prompt is denied automatically while the active permission mode (including auto mode) keeps deciding -..."
+    },
+    {
+      "repo": "ollama/ollama",
+      "tag_name": "v0.33.3",
+      "name": "v0.33.3",
+      "url": "https://github.com/ollama/ollama/releases/tag/v0.33.3",
+      "published": "2026-09-02T00:11:33Z",
+      "prerelease": false,
+      "body": "## What's Changed * gemma4 now supports images and audio on MLX engine * Report cached prompt tokens * Honor GGUF model defined default parameters * MLX, MLX-C, llama.cpp update ## New Contributors * @marcelpetrick made their first contribution in https://github.com/ollama/ollama/pull/17579 **Full Changelog**: https://github.com/ollama/ollama/compare/v0.33.2...v0.33.3"
+    },
+    {
+      "repo": "vercel/next.js",
+      "tag_name": "v16.3.4",
+      "name": "v16.3.4",
+      "url": "https://github.com/vercel/next.js/releases/tag/v16.3.4",
+      "published": "2026-08-31T20:02:15Z",
+      "prerelease": false,
+      "body": "Follow-up release to [v16.3.3](https://github.com/vercel/next.js/releases/tag/v16.3.3) re-enabling AVIF Image Optimization ([#97949](https://github.com/vercel/next.js/pull/97949)). The following bug fixes have been backported. It does **not** include all pending features/changes on canary. - testmode: Fix infinite recursion in testmode passthrough fetch (#97691) - Fix build error when aliasing..."
+    },
+    {
+      "repo": "open-webui/open-webui",
+      "tag_name": "v0.11.3",
+      "name": "v0.11.3",
+      "url": "https://github.com/open-webui/open-webui/releases/tag/v0.11.3",
+      "published": "2026-08-31T14:55:53Z",
+      "prerelease": false,
+      "body": "### Added - ♿ **Accessibility mode reaches the menus.** Accessibility mode now marks the menu entry you are pointing at and the model already chosen with a stronger background, across the dropdown menus, their submenus, and the model picker together with its filter and compare controls, so those cues carry the contrast the accessibility guidelines ask for in both themes...."
+    },
+    {
+      "repo": "langchain-ai/langchain",
+      "tag_name": "langchain-core==1.6.1",
+      "name": "langchain-core==1.6.1",
+      "url": "https://github.com/langchain-ai/langchain/releases/tag/langchain-core%3D%3D1.6.1",
+      "published": "2026-08-27T19:31:34Z",
+      "prerelease": false,
+      "body": "Changes since langchain-core==1.6.0 revert: release(core): 1.6.2 (#39971) release(core): 1.6.2 (#39967) fix(core): shore up indexing in genai v1 streaming content (#39964) fix(core): make `StructuredTool` JSON-serializable (#39631) chore(deps): bump minor and patch dependencies (#39869) release(core): 1.6.1 (#39832) feat(core): propagate gateway information on error path (#39829)"
+    },
+    {
+      "repo": "huggingface/transformers",
+      "tag_name": "v5.16.1",
+      "name": "Release v5.16.1",
+      "url": "https://github.com/huggingface/transformers/releases/tag/v5.16.1",
+      "published": "2026-08-26T14:50:01Z",
+      "prerelease": false,
+      "body": "# Release v5.16.1 This is a special release as we include GLM! (and a few small fixes) # GLM-5.3-Flash GLM-5.3-Flash, the first **natively multimodal model** in the GLM-5 series. With 320B total parameters and just 18B active parameters, it outperforms GLM-5.2 across benchmarks and real-world workloads at one-tenth the price, while approaching Claude Opus 4.8 on coding and agentic benchmarks...."
+    },
+    {
+      "repo": "oven-sh/bun",
+      "tag_name": "bun-v1.4.0",
+      "name": "Bun v1.4",
+      "url": "https://github.com/oven-sh/bun/releases/tag/bun-v1.4.0",
+      "published": "2026-08-20T14:07:21Z",
+      "prerelease": false,
+      "body": "To install Bun v1.4 ```bash curl -fsSL https://bun.com/install | bash # or you can use npm # npm install -g bun ``` Windows: ```bash powershell -c \"irm bun.com/install.ps1|iex\" ``` To upgrade to Bun v1.4.0: ```bash bun upgrade ``` Read the [blog post](https://bun.com/1.4): ### Thank you Bun is free, open source, and MIT-licensed. We receive a lot of contributions from the community, and we'd like..."
+    },
+    {
+      "repo": "supabase/supabase",
+      "tag_name": "v1.26.08",
+      "name": "Developer Update - August 2026",
+      "url": "https://github.com/supabase/supabase/releases/tag/v1.26.08",
+      "published": "2026-08-07T13:57:57Z",
+      "prerelease": false,
+      "body": "Here’s everything that happened with Supabase in the last month: ## Supabase Select SF 2026 Supabase Select returns to San Francisco on October 2, a curated day of talks, feature deep dives, and more activations. Tickets are now available by application. [Get your ticket →](https://select.supabase.com/) ## Supabase Pipelines is now in public alpha Supabase Pipelines streams Postgres changes to..."
+    }
+  ],
+  "stats": {
+    "news": 129,
+    "repos": 34,
+    "releases": 10,
+    "sources": 7
+  }
+}

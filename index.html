@@ -1,0 +1,612 @@
+<!DOCTYPE html>
+<html lang="en" data-page-node-id="hsHoJoY6SXUfFzHJ63dxhy">
+<head data-page-node-id="MCJbMbaBSd1cxRcnYcryh0">
+<meta charset="utf-8" data-page-node-id="z7htHNVWRuqlahfWVJMQ1J">
+<meta name="viewport" content="width=device-width, initial-scale=1" data-page-node-id="UUiamRJAcCb4vhFgo6zOLl">
+<title>Signal - Live Feed</title>
+<meta name="description" content="Auto-updating feed of AI news, GitHub releases and trending repos." data-page-node-id="86BZCK2FKQ7Aeal1tMJZ40">
+<link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100' data-page-node-id="D5BHUlxVPH41HFWi7EKCCF"><text y='.9em' font-size='90' data-page-node-id="UrCZUAOMQD6Bw790etgsnE">&#x1F4E1;</text></svg>">
+<style>
+  :root {
+    --bg: #0b0e14;
+    --bg-soft: #10141d;
+    --panel: #141924;
+    --card: #161b26;
+    --card-hover: #1b2130;
+    --border: #232a38;
+    --border-soft: #1c2230;
+    --text: #e6e9ef;
+    --muted: #8b94a7;
+    --dim: #5f6879;
+    --accent: #4da3ff;
+    --accent-soft: rgba(77, 163, 255, 0.12);
+    --green: #3fb950;
+    --amber: #d29922;
+    --violet: #a371f7;
+    --pink: #f778ba;
+    --radius: 12px;
+  }
+
+  * { box-sizing: border-box; margin: 0; padding: 0; }
+
+  body {
+    background: var(--bg);
+    color: var(--text);
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Inter, Roboto, "Helvetica Neue", sans-serif;
+    font-size: 15px;
+    line-height: 1.55;
+    -webkit-font-smoothing: antialiased;
+    min-height: 100vh;
+  }
+
+  body::before {
+    content: "";
+    position: fixed;
+    inset: 0 0 auto 0;
+    height: 320px;
+    background: radial-gradient(ellipse 80% 100% at 50% -40%, rgba(77,163,255,0.10), transparent 70%);
+    pointer-events: none;
+    z-index: 0;
+  }
+
+  .wrap { position: relative; z-index: 1; max-width: 1240px; margin: 0 auto; padding: 0 24px 80px; }
+
+  /* ---------- header ---------- */
+  header {
+    position: sticky;
+    top: 0;
+    z-index: 20;
+    background: rgba(11, 14, 20, 0.82);
+    backdrop-filter: blur(14px);
+    -webkit-backdrop-filter: blur(14px);
+    border-bottom: 1px solid var(--border-soft);
+    margin-bottom: 28px;
+  }
+
+  .head-inner { max-width: 1240px; margin: 0 auto; padding: 16px 24px; }
+
+  .brand-row { display: flex; align-items: center; gap: 12px; flex-wrap: wrap; }
+
+  h1 {
+    font-size: 19px;
+    font-weight: 650;
+    letter-spacing: -0.02em;
+    display: flex;
+    align-items: center;
+    gap: 9px;
+  }
+
+  .live {
+    display: inline-flex;
+    align-items: center;
+    gap: 6px;
+    font-size: 11px;
+    font-weight: 600;
+    letter-spacing: 0.04em;
+    color: var(--green);
+    background: rgba(63, 185, 80, 0.1);
+    border: 1px solid rgba(63, 185, 80, 0.25);
+    padding: 3px 9px;
+    border-radius: 99px;
+    text-transform: uppercase;
+  }
+
+  .dot {
+    width: 6px; height: 6px;
+    background: var(--green);
+    border-radius: 50%;
+    animation: pulse 2s ease-in-out infinite;
+  }
+
+  @keyframes pulse {
+    0%, 100% { opacity: 1; box-shadow: 0 0 0 0 rgba(63,185,80,0.5); }
+    50% { opacity: .55; box-shadow: 0 0 0 4px rgba(63,185,80,0); }
+  }
+
+  .sub { color: var(--muted); font-size: 13px; margin-left: auto; text-align: right; }
+  .sub b { color: var(--text); font-weight: 550; }
+
+  .stats { display: flex; gap: 18px; margin-top: 12px; flex-wrap: wrap; font-size: 12.5px; color: var(--muted); }
+  .stats span b {
+    color: var(--text);
+    font-variant-numeric: tabular-nums;
+    font-weight: 600;
+  }
+
+  /* ---------- controls ---------- */
+  .controls { display: flex; gap: 12px; margin-bottom: 18px; flex-wrap: wrap; align-items: center; }
+
+  .search {
+    position: relative;
+    flex: 1;
+    min-width: 240px;
+  }
+
+  .search input {
+    width: 100%;
+    background: var(--panel);
+    border: 1px solid var(--border);
+    color: var(--text);
+    padding: 10px 38px 10px 38px;
+    border-radius: 10px;
+    font-size: 14px;
+    font-family: inherit;
+    outline: none;
+    transition: border-color .15s, box-shadow .15s;
+  }
+
+  .search input:focus {
+    border-color: var(--accent);
+    box-shadow: 0 0 0 3px var(--accent-soft);
+  }
+
+  .search input::placeholder { color: var(--dim); }
+
+  .search .icon {
+    position: absolute; left: 13px; top: 50%;
+    transform: translateY(-50%);
+    color: var(--dim); font-size: 14px; pointer-events: none;
+  }
+
+  .search kbd {
+    position: absolute; right: 11px; top: 50%;
+    transform: translateY(-50%);
+    background: var(--card);
+    border: 1px solid var(--border);
+    border-radius: 5px;
+    padding: 1px 6px;
+    font-size: 11px;
+    color: var(--dim);
+    font-family: ui-monospace, SFMono-Regular, Menlo, monospace;
+  }
+
+  .tabs { display: flex; gap: 4px; background: var(--panel); padding: 4px; border-radius: 10px; border: 1px solid var(--border); }
+
+  .tab {
+    background: none; border: none;
+    color: var(--muted);
+    padding: 7px 15px;
+    border-radius: 7px;
+    font-size: 13.5px;
+    font-weight: 500;
+    font-family: inherit;
+    cursor: pointer;
+    transition: background .15s, color .15s;
+    white-space: nowrap;
+  }
+
+  .tab:hover { color: var(--text); }
+  .tab.active { background: var(--card-hover); color: var(--text); box-shadow: 0 1px 2px rgba(0,0,0,.3); }
+
+  /* ---------- cards ---------- */
+  .grid { display: grid; gap: 12px; }
+
+  .card {
+    background: var(--card);
+    border: 1px solid var(--border-soft);
+    border-radius: var(--radius);
+    padding: 16px 18px;
+    display: block;
+    text-decoration: none;
+    color: inherit;
+    transition: transform .15s, border-color .15s, background .15s;
+    position: relative;
+  }
+
+  .card:hover {
+    transform: translateY(-2px);
+    border-color: var(--accent);
+    background: var(--card-hover);
+  }
+
+  .card-top { display: flex; align-items: center; gap: 8px; margin-bottom: 7px; flex-wrap: wrap; }
+
+  .source {
+    font-size: 11.5px;
+    font-weight: 600;
+    letter-spacing: 0.02em;
+    color: var(--accent);
+    background: var(--accent-soft);
+    padding: 2px 8px;
+    border-radius: 5px;
+    white-space: nowrap;
+  }
+
+  .tag {
+    font-size: 11px;
+    color: var(--muted);
+    border: 1px solid var(--border);
+    padding: 1px 7px;
+    border-radius: 5px;
+    white-space: nowrap;
+  }
+
+  .new-badge {
+    font-size: 10px;
+    font-weight: 700;
+    letter-spacing: 0.06em;
+    color: #0b0e14;
+    background: var(--green);
+    padding: 2px 6px;
+    border-radius: 4px;
+    text-transform: uppercase;
+  }
+
+  .time { margin-left: auto; font-size: 12px; color: var(--dim); white-space: nowrap; font-variant-numeric: tabular-nums; }
+
+  .card h3 {
+    font-size: 15.5px;
+    font-weight: 600;
+    letter-spacing: -0.01em;
+    line-height: 1.4;
+    margin-bottom: 6px;
+    color: var(--text);
+  }
+
+  .card:hover h3 { color: var(--accent); }
+
+  .card p { font-size: 13.5px; color: var(--muted); line-height: 1.6; }
+
+  .meta { display: flex; align-items: center; gap: 14px; margin-top: 11px; font-size: 12.5px; color: var(--muted); flex-wrap: wrap; }
+  .meta .item { display: flex; align-items: center; gap: 5px; }
+  .meta .item b { color: var(--text); font-weight: 600; font-variant-numeric: tabular-nums; }
+
+  .lang-dot { width: 9px; height: 9px; border-radius: 50%; display: inline-block; flex-shrink: 0; }
+
+  .version {
+    font-family: ui-monospace, SFMono-Regular, Menlo, monospace;
+    font-size: 12.5px;
+    background: var(--bg-soft);
+    border: 1px solid var(--border);
+    padding: 2px 8px;
+    border-radius: 5px;
+    color: var(--violet);
+  }
+
+  .pre { color: var(--amber); border-color: rgba(210,153,34,.35); }
+
+  code.repo-name {
+    font-family: ui-monospace, SFMono-Regular, Menlo, monospace;
+    font-size: 13px;
+    color: var(--text);
+  }
+
+  /* ---------- states ---------- */
+  .empty { text-align: center; padding: 70px 20px; color: var(--muted); }
+  .empty .big { font-size: 34px; margin-bottom: 12px; opacity: .5; }
+  .empty h3 { font-size: 16px; margin-bottom: 6px; color: var(--text); }
+
+  .error-box {
+    background: var(--panel);
+    border: 1px solid var(--border);
+    border-left: 3px solid var(--amber);
+    border-radius: var(--radius);
+    padding: 20px 22px;
+    margin-bottom: 20px;
+  }
+  .error-box h3 { font-size: 15px; margin-bottom: 8px; }
+  .error-box p { font-size: 13.5px; color: var(--muted); margin-bottom: 10px; }
+  .error-box code {
+    font-family: ui-monospace, SFMono-Regular, Menlo, monospace;
+    background: var(--bg);
+    border: 1px solid var(--border);
+    padding: 2px 7px;
+    border-radius: 5px;
+    font-size: 12.5px;
+    color: var(--accent);
+  }
+
+  .section-label {
+    font-size: 12px;
+    font-weight: 600;
+    letter-spacing: 0.06em;
+    text-transform: uppercase;
+    color: var(--dim);
+    margin: 26px 0 12px;
+  }
+  .section-label:first-child { margin-top: 0; }
+
+  footer {
+    margin-top: 40px;
+    padding-top: 20px;
+    border-top: 1px solid var(--border-soft);
+    font-size: 12.5px;
+    color: var(--dim);
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    gap: 10px;
+  }
+
+  footer a { color: var(--muted); text-decoration: none; }
+  footer a:hover { color: var(--accent); }
+
+  @media (max-width: 640px) {
+    .wrap { padding: 0 16px 60px; }
+    .head-inner { padding: 14px 16px; }
+    .sub { display: none; }
+    .tabs { width: 100%; overflow-x: auto; }
+  }
+</style>
+</head>
+<body data-page-node-id="ZWtBk53nkurk9AcFLB7YQ0">
+
+<header data-page-node-id="B83neD1JpEIE5JQO7wAxcF">
+  <div class="head-inner" data-page-node-id="C1WtmOlv7bi3t29gZRpKVS">
+    <div class="brand-row" data-page-node-id="J54MggPXXX1BDRTFpdc75R">
+      <h1 data-page-node-id="4Wq7s3qS2XABWG1JXfbbR6"><span data-page-node-id="0goCauDDFiGAISMxHzIkA4">&#x1F4E1;</span> <span id="site-title" data-page-node-id="LeS41K4lYS2YmNXIh4ZocI">Signal</span></h1>
+      <span class="live" data-page-node-id="2Ant7eaUX0BVOHI1smrRQH"><span class="dot" data-page-node-id="WMzmmvNyNMkEufbCluTuo9"></span> Live</span>
+      <div class="sub" data-page-node-id="ocWFLRLzJ5AB12HdUmVYub">
+        Updated <b id="updated-ago" data-page-node-id="Hhx7vGySrnk70lOLW4BmNB">--</b> &middot; next refresh <b id="next-refresh" data-page-node-id="F953h3ccZTCzdAPbCxC23y">--</b>
+      </div>
+    </div>
+    <div class="stats" id="stats" data-page-node-id="JLg6OR8sRbThTAbGH64fS8"></div>
+  </div>
+</header>
+
+<div class="wrap" data-page-node-id="S4H7niGH9YAgrRw4WgFBTH">
+  <div id="error-slot" data-page-node-id="FmynojjTWPxHHZLiIy4wiW"></div>
+
+  <div class="controls" data-page-node-id="QdTClLu9qmQ87Em81CvzLU">
+    <div class="search" data-page-node-id="nADAuKZVpFnXZ6MPoHfH26">
+      <span class="icon" data-page-node-id="1DJhaF3cZGpe0R7TBcc4jX">&#x2315;</span>
+      <input id="q" type="text" placeholder="Filter across news, repos and releases..." autocomplete="off" data-page-node-id="KSDWVn4A6LWoOMiTo2pDAw">
+      <kbd data-page-node-id="9oiA82ePDQj4DFnAnuP3PR">/</kbd>
+    </div>
+    <div class="tabs" id="tabs" data-page-node-id="udItyGcUZQyHFDg8Zzv5Dl">
+      <button class="tab active" data-tab="all" data-page-node-id="5DWaueEgxIimhc3rDQYuSh">All</button>
+      <button class="tab" data-tab="news" data-page-node-id="SF1LYWnpAU3gDj9busKRQl">News</button>
+      <button class="tab" data-tab="repos" data-page-node-id="qUN7cTALNUFniDmohx2KED">Repos</button>
+      <button class="tab" data-tab="releases" data-page-node-id="jjIA27ZQ10IxOOFinwoGkF">Releases</button>
+    </div>
+  </div>
+
+  <div id="content" data-page-node-id="TefGHObXSgOfO2Vum3hgQO"><div class="empty" data-page-node-id="T3gdrBnMzWLJWDKUwOjjmB"><div class="big" data-page-node-id="hAZ4WUrWxXtmkT82GQ0S2x">&#x1F4E1;</div><h3 data-page-node-id="FrrP1Yy0SzDa3jBs1vK8tT">Loading feed...</h3></div></div>
+
+  <footer data-page-node-id="xOMigjob7OfgvUl823pACh">
+    <span id="foot-left" data-page-node-id="5uOGKg2pzUt2i6znwn50Y5">Auto-refreshing feed</span>
+    <span data-page-node-id="WMtXZTjMAF3KFzpkG5D6i3">Built for speed. Data regenerated on a schedule, no tracking.</span>
+  </footer>
+</div>
+
+<script>
+const LANG_COLORS = {
+  JavaScript: "#f1e05a", TypeScript: "#3178c6", Python: "#3572A5", Rust: "#dea584",
+  Go: "#00ADD8", Shell: "#89e051", C: "#555555", "C++": "#f34b7d", "C#": "#178600",
+  Java: "#b07219", Kotlin: "#A97BFF", Swift: "#F05138", Ruby: "#701516",
+  PHP: "#4F5D95", HTML: "#e34c26", CSS: "#563d7c", Vue: "#41b883",
+  Svelte: "#ff3e00", Dart: "#00B4AB", Lua: "#000080", Zig: "#ec915c",
+  Elixir: "#6e4a7e", Haskell: "#5e5086", Scala: "#c22d40", Julia: "#a270ba",
+  "Jupyter Notebook": "#DA5B0B", MDX: "#fcb32c", Nuxt: "#00DC82"
+};
+
+const esc = s => String(s == null ? "" : s).replace(/[&<>"']/g, c =>
+  ({ "&": "&amp;", "<": "&lt;", ">": "&gt;", '"': "&quot;", "'": "&#39;" }[c]));
+
+function ago(isoStr) {
+  if (!isoStr) return "";
+  const then = new Date(isoStr).getTime();
+  if (isNaN(then)) return "";
+  const secs = Math.max(0, (Date.now() - then) / 1000);
+  if (secs < 60) return "just now";
+  const m = Math.floor(secs / 60);
+  if (m < 60) return m + "m ago";
+  const h = Math.floor(m / 60);
+  if (h < 24) return h + "h ago";
+  const d = Math.floor(h / 24);
+  if (d < 30) return d + "d ago";
+  const mo = Math.floor(d / 30);
+  if (mo < 12) return mo + "mo ago";
+  return Math.floor(mo / 12) + "y ago";
+}
+
+function k(n) {
+  n = Number(n) || 0;
+  if (n >= 1000000) return (n / 1000000).toFixed(1).replace(/\.0$/, "") + "m";
+  if (n >= 1000) return (n / 1000).toFixed(1).replace(/\.0$/, "") + "k";
+  return String(n);
+}
+
+let FEED = null;
+let TAB = "all";
+let QUERY = "";
+let LAST_VISIT = Number(localStorage.getItem("signal_last_visit") || 0);
+
+function isNew(isoStr) {
+  if (!isoStr) return false;
+  const t = new Date(isoStr).getTime();
+  return !isNaN(t) && t > LAST_VISIT;
+}
+
+function newsCard(n) {
+  return `<a class="card" href="${esc(n.url)}" target="_blank" rel="noopener noreferrer">
+    <div class="card-top">
+      <span class="source">${esc(n.source)}</span>
+      ${n.tag ? `<span class="tag">${esc(n.tag)}</span>` : ""}
+      ${isNew(n.published) ? '<span class="new-badge">New</span>' : ""}
+      <span class="time">${ago(n.published)}</span>
+    </div>
+    <h3>${esc(n.title)}</h3>
+    ${n.summary ? `<p>${esc(n.summary)}</p>` : ""}
+  </a>`;
+}
+
+function repoCard(r) {
+  const color = LANG_COLORS[r.language] || "#5f6879";
+  return `<a class="card" href="${esc(r.url)}" target="_blank" rel="noopener noreferrer">
+    <div class="card-top">
+      <span class="source">${esc(r.section || "GitHub")}</span>
+      <code class="repo-name">${esc(r.full_name)}</code>
+      <span class="time">${ago(r.updated)}</span>
+    </div>
+    <h3>${esc(r.full_name.split("/")[1] || r.full_name)}</h3>
+    ${r.description ? `<p>${esc(r.description)}</p>` : ""}
+    <div class="meta">
+      <span class="item"><b>&#x2605; ${k(r.stars)}</b> stars</span>
+      ${r.language ? `<span class="item"><span class="lang-dot" style="background:${color}"></span>${esc(r.language)}</span>` : ""}
+      ${(r.topics || []).length ? `<span class="item">${(r.topics || []).map(t => `<span class="tag">${esc(t)}</span>`).join(" ")}</span>` : ""}
+    </div>
+  </a>`;
+}
+
+function releaseCard(r) {
+  return `<a class="card" href="${esc(r.url)}" target="_blank" rel="noopener noreferrer">
+    <div class="card-top">
+      <span class="source">Release</span>
+      <code class="repo-name">${esc(r.repo)}</code>
+      <span class="version ${r.prerelease ? "pre" : ""}">${esc(r.tag_name)}</span>
+      ${isNew(r.published) ? '<span class="new-badge">New</span>' : ""}
+      <span class="time">${ago(r.published)}</span>
+    </div>
+    <h3>${esc(r.name || r.tag_name)}</h3>
+    ${r.body ? `<p>${esc(r.body)}</p>` : ""}
+  </a>`;
+}
+
+function matches(haystacks) {
+  if (!QUERY) return true;
+  return haystacks.some(h => String(h || "").toLowerCase().includes(QUERY));
+}
+
+function render() {
+  if (!FEED) return;
+  const box = document.getElementById("content");
+  let html = "";
+
+  if (TAB === "all") {
+    const news = FEED.news.filter(n => matches([n.title, n.summary, n.source])).slice(0, 25);
+    const rel = FEED.releases.filter(r => matches([r.repo, r.name, r.tag_name, r.body])).slice(0, 8);
+    const repos = FEED.repos.filter(r => matches([r.full_name, r.description, r.section, (r.topics || []).join(" ")])).slice(0, 8);
+
+    if (!news.length && !rel.length && !repos.length) { html = emptyState(); }
+    else {
+      if (rel.length) html += `<div class="section-label">Latest releases</div><div class="grid">${rel.map(releaseCard).join("")}</div>`;
+      if (news.length) html += `<div class="section-label">Top stories</div><div class="grid">${news.map(newsCard).join("")}</div>`;
+      if (repos.length) html += `<div class="section-label">Trending repos</div><div class="grid">${repos.map(repoCard).join("")}</div>`;
+    }
+  } else if (TAB === "news") {
+    const items = FEED.news.filter(n => matches([n.title, n.summary, n.source, n.tag]));
+    html = items.length
+      ? `<div class="grid">${items.map(newsCard).join("")}</div>`
+      : emptyState();
+  } else if (TAB === "repos") {
+    const items = FEED.repos.filter(r => matches([r.full_name, r.description, r.section, (r.topics || []).join(" ")]));
+    html = items.length
+      ? `<div class="grid">${items.map(repoCard).join("")}</div>`
+      : emptyState();
+  } else {
+    const items = FEED.releases.filter(r => matches([r.repo, r.name, r.tag_name, r.body]));
+    html = items.length
+      ? `<div class="grid">${items.map(releaseCard).join("")}</div>`
+      : emptyState();
+  }
+
+  box.innerHTML = html;
+}
+
+function emptyState() {
+  return `<div class="empty">
+    <div class="big">&#x1F50D;</div>
+    <h3>Nothing matches${QUERY ? ` "${esc(QUERY)}"` : ""}</h3>
+    <p>Try a different search term or switch tabs.</p>
+  </div>`;
+}
+
+function renderStats() {
+  const s = FEED.stats || {};
+  const fresh = FEED.news.filter(isNew).length + FEED.releases.filter(isNew).length;
+  document.getElementById("stats").innerHTML = `
+    <span><b>${s.news || 0}</b> articles</span>
+    <span><b>${s.releases || 0}</b> releases</span>
+    <span><b>${s.repos || 0}</b> repos tracked</span>
+    <span><b>${s.sources || 0}</b> news sources</span>
+    ${fresh ? `<span style="color:var(--green)"><b>${fresh}</b> new since your last visit</span>` : ""}
+  `;
+}
+
+function tickClock() {
+  if (!FEED) return;
+  document.getElementById("updated-ago").textContent = ago(FEED.generated_at) || "just now";
+
+  const hours = (FEED.site && FEED.site.refresh_hours) || 3;
+  const gen = new Date(FEED.generated_at).getTime();
+  const next = gen + hours * 3600 * 1000;
+  const diff = next - Date.now();
+  if (diff > 0) {
+    const m = Math.floor(diff / 60000);
+    document.getElementById("next-refresh").textContent =
+      m >= 60 ? `~${Math.floor(m / 60)}h ${m % 60}m` : `~${m}m`;
+  } else {
+    document.getElementById("next-refresh").textContent = "on next commit";
+  }
+}
+
+function showError(msg) {
+  document.getElementById("error-slot").innerHTML = `
+    <div class="error-box">
+      <h3>Could not load feed data</h3>
+      <p>${msg}</p>
+      <p>This page reads a static <code>data/feed.json</code>. Generate it by running <code>python3 fetch.py</code> in the project folder, then reload.</p>
+    </div>`;
+}
+
+async function boot() {
+  try {
+    const res = await fetch("data/feed.json", { cache: "no-store" });
+    if (!res.ok) throw new Error("HTTP " + res.status);
+    FEED = await res.json();
+  } catch (err) {
+    showError(esc(err.message) + ". If you opened this file directly from disk, the browser blocks local file reads. Serve the folder over HTTP instead.");
+    document.getElementById("content").innerHTML = "";
+    return;
+  }
+
+  if (FEED.site && FEED.site.title) {
+    document.getElementById("site-title").textContent = FEED.site.title;
+    document.title = FEED.site.title + " - Live Feed";
+  }
+  if (FEED.site && FEED.site.subtitle) {
+    document.getElementById("foot-left").textContent = FEED.site.subtitle;
+  }
+
+  renderStats();
+  render();
+  tickClock();
+  setInterval(tickClock, 30000);
+
+  window.setTimeout(() => {
+    localStorage.setItem("signal_last_visit", String(Date.now()));
+  }, 30000);
+}
+
+document.getElementById("tabs").addEventListener("click", e => {
+  const btn = e.target.closest(".tab");
+  if (!btn) return;
+  TAB = btn.dataset.tab;
+  document.querySelectorAll(".tab").forEach(t => t.classList.toggle("active", t === btn));
+  render();
+});
+
+const qInput = document.getElementById("q");
+qInput.addEventListener("input", e => {
+  QUERY = e.target.value.trim().toLowerCase();
+  render();
+});
+
+document.addEventListener("keydown", e => {
+  if (e.key === "/" && document.activeElement !== qInput) {
+    e.preventDefault();
+    qInput.focus();
+  }
+  if (e.key === "Escape" && document.activeElement === qInput) {
+    qInput.value = "";
+    QUERY = "";
+    render();
+    qInput.blur();
+  }
+});
+
+boot();
+</script>
+</body>
+</html>
