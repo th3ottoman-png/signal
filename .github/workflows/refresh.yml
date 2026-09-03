@@ -53,6 +53,12 @@ jobs:
 
       - name: Configure Pages
         uses: actions/configure-pages@v5
+        with:
+          # Turn Pages on if it is not already. Without this the step 404s with
+          # "Get Pages site failed" on a fresh repo, because the very first run
+          # is triggered by the push that creates the workflow, before Pages has
+          # finished provisioning.
+          enablement: true
 
       - name: Upload site
         uses: actions/upload-pages-artifact@v3
