@@ -1,45 +1,107 @@
 {
-  "_comment": "Edit this file only. The fetcher reads it every run. Push a change and the site updates within one cron cycle. No code changes needed to add or remove anything.",
+  "_comment": "The only file you need to edit. weight 1-5 drives how high an item ranks in Top. limit caps items pulled per source. Add or remove freely, push, and it updates.",
 
   "site": {
     "title": "Signal",
-    "subtitle": "Live feed: AI news, GitHub releases, trending repos",
+    "subtitle": "AI news, agents, research and releases. Refreshes every 3 hours.",
     "refresh_hours": 3
   },
 
   "news": [
-    { "name": "Hacker News", "url": "https://hnrss.org/frontpage", "tag": "community" },
-    { "name": "TechCrunch AI", "url": "https://techcrunch.com/category/artificial-intelligence/feed/", "tag": "news" },
-    { "name": "The Verge AI", "url": "https://www.theverge.com/rss/ai-artificial-intelligence/index.xml", "tag": "news" },
-    { "name": "Ars Technica", "url": "https://feeds.arstechnica.com/arstechnica/technology-lab", "tag": "news" },
-    { "name": "Simon Willison", "url": "https://simonwillison.net/atom/everything/", "tag": "blog" },
-    { "name": "GitHub Blog", "url": "https://github.blog/feed/", "tag": "platform" },
-    { "name": "OpenAI News", "url": "https://openai.com/news/rss.xml", "tag": "vendor" }
+    { "name": "GNews: AI agents", "url": "https://news.google.com/rss/search?q=AI+agents&hl=en-US&gl=US&ceid=US:en", "category": "agents", "weight": 5, "limit": 20, "trim_publisher": true },
+    { "name": "GNews: Agent harnesses", "url": "https://news.google.com/rss/search?q=%22coding+agent%22+OR+%22agent+harness%22+OR+%22agentic+workflow%22&hl=en-US&gl=US&ceid=US:en", "category": "agents", "weight": 5, "limit": 20, "trim_publisher": true },
+    { "name": "GNews: Claude Code / Cursor", "url": "https://news.google.com/rss/search?q=%22Claude+Code%22+OR+%22Cursor+AI%22+OR+Codex+CLI&hl=en-US&gl=US&ceid=US:en", "category": "agents", "weight": 5, "limit": 15, "trim_publisher": true },
+    { "name": "GNews: LLM releases", "url": "https://news.google.com/rss/search?q=LLM+model+release+OR+%22frontier+model%22&hl=en-US&gl=US&ceid=US:en", "category": "agents", "weight": 4, "limit": 15, "trim_publisher": true },
+
+    { "name": "The Rundown", "url": "https://www.therundown.ai/feed", "category": "news", "weight": 4, "limit": 12 },
+    { "name": "Ben's Bites", "url": "https://bensbites.substack.com/feed", "category": "news", "weight": 4, "limit": 10 },
+    { "name": "The Neuron", "url": "https://theneuron.ai/feed", "category": "news", "weight": 3, "limit": 8 },
+    { "name": "TechCrunch AI", "url": "https://techcrunch.com/category/artificial-intelligence/feed/", "category": "news", "weight": 4, "limit": 15 },
+    { "name": "The Verge AI", "url": "https://www.theverge.com/rss/ai-artificial-intelligence/index.xml", "category": "news", "weight": 4, "limit": 12 },
+    { "name": "MIT Tech Review AI", "url": "https://www.technologyreview.com/topic/artificial-intelligence/feed", "category": "news", "weight": 4, "limit": 10 },
+    { "name": "Ars Technica", "url": "https://feeds.arstechnica.com/arstechnica/technology-lab", "category": "news", "weight": 3, "limit": 12 },
+    { "name": "Wired AI", "url": "https://www.wired.com/feed/tag/ai/latest/rss", "category": "news", "weight": 3, "limit": 10 },
+    { "name": "The Register AI", "url": "https://www.theregister.com/software/ai_ml/headlines.atom", "category": "news", "weight": 3, "limit": 10 },
+
+    { "name": "OpenAI", "url": "https://openai.com/news/rss.xml", "category": "vendors", "weight": 5, "limit": 15 },
+    { "name": "GNews: Anthropic", "url": "https://news.google.com/rss/search?q=Anthropic+Claude&hl=en-US&gl=US&ceid=US:en", "category": "vendors", "weight": 5, "limit": 15, "trim_publisher": true },
+    { "name": "Google DeepMind", "url": "https://deepmind.google/blog/rss.xml", "category": "vendors", "weight": 4, "limit": 12 },
+    { "name": "Google AI Blog", "url": "https://blog.google/technology/ai/rss/", "category": "vendors", "weight": 4, "limit": 10 },
+    { "name": "Hugging Face Blog", "url": "https://huggingface.co/blog/feed.xml", "category": "vendors", "weight": 3, "limit": 10 },
+    { "name": "NVIDIA Blog", "url": "https://blogs.nvidia.com/feed/", "category": "vendors", "weight": 3, "limit": 8 },
+    { "name": "GitHub Blog", "url": "https://github.blog/feed/", "category": "vendors", "weight": 4, "limit": 10 },
+    { "name": "AWS ML Blog", "url": "https://aws.amazon.com/blogs/machine-learning/feed/", "category": "vendors", "weight": 2, "limit": 8 },
+
+    { "name": "Simon Willison", "url": "https://simonwillison.net/atom/everything/", "category": "analysis", "weight": 5, "limit": 15 },
+    { "name": "Import AI", "url": "https://importai.substack.com/feed", "category": "analysis", "weight": 5, "limit": 10 },
+    { "name": "Latent Space", "url": "https://www.latent.space/feed", "category": "analysis", "weight": 5, "limit": 8 },
+    { "name": "Interconnects", "url": "https://www.interconnects.ai/feed", "category": "analysis", "weight": 5, "limit": 8 },
+    { "name": "SemiAnalysis", "url": "https://semianalysis.com/feed/", "category": "analysis", "weight": 5, "limit": 8 },
+    { "name": "Stratechery", "url": "https://stratechery.com/feed/", "category": "analysis", "weight": 5, "limit": 5 },
+    { "name": "AI Snake Oil", "url": "https://www.aisnakeoil.com/feed", "category": "analysis", "weight": 4, "limit": 6 },
+    { "name": "Platformer", "url": "https://www.platformer.news/feed", "category": "analysis", "weight": 4, "limit": 8 },
+    { "name": "Transformer", "url": "https://www.transformernews.ai/feed", "category": "analysis", "weight": 4, "limit": 10 },
+    { "name": "Benedict Evans", "url": "https://www.ben-evans.com/benedictevans?format=rss", "category": "analysis", "weight": 4, "limit": 6 },
+    { "name": "Garrison Lovely", "url": "https://www.obsolete.pub/feed", "category": "analysis", "weight": 4, "limit": 6 },
+    { "name": "Sequoia AI", "url": "https://www.sequoiacap.com/feed/", "category": "analysis", "weight": 3, "limit": 8 },
+
+    { "name": "Hacker News", "url": "https://hnrss.org/frontpage", "category": "community", "weight": 4, "limit": 20 },
+    { "name": "HN Best", "url": "https://hnrss.org/best?points=100", "category": "community", "weight": 5, "limit": 20 },
+    { "name": "Lobsters AI", "url": "https://lobste.rs/t/ai.rss", "category": "community", "weight": 3, "limit": 15 },
+    { "name": "Product Hunt", "url": "https://www.producthunt.com/feed", "category": "community", "weight": 3, "limit": 12 },
+    { "name": "Dev.to AI", "url": "https://dev.to/feed/tag/ai", "category": "community", "weight": 2, "limit": 10 },
+
+    { "name": "arXiv cs.AI", "url": "http://export.arxiv.org/rss/cs.AI", "category": "research", "weight": 4, "limit": 15 },
+    { "name": "arXiv cs.LG", "url": "http://export.arxiv.org/rss/cs.LG", "category": "research", "weight": 4, "limit": 15 },
+    { "name": "arXiv cs.CL", "url": "http://export.arxiv.org/rss/cs.CL", "category": "research", "weight": 3, "limit": 12 },
+    { "name": "arXiv cs.MA", "url": "http://export.arxiv.org/rss/cs.MA", "category": "research", "weight": 5, "limit": 12 }
+  ],
+
+  "json_sources": [
+    {
+      "name": "HF Daily Papers",
+      "url": "https://huggingface.co/api/daily_papers",
+      "category": "research",
+      "weight": 4,
+      "limit": 15,
+      "type": "hf_papers"
+    }
   ],
 
   "discovery": [
     {
+      "name": "Agent frameworks",
+      "query": "topic:agents pushed:>{since_14d} stars:>400",
+      "sort": "stars",
+      "limit": 12,
+      "category": "agents"
+    },
+    {
       "name": "New AI repos",
       "query": "topic:ai created:>{since_30d}",
       "sort": "stars",
-      "limit": 12
+      "limit": 12,
+      "category": "repos"
     },
     {
       "name": "Hot LLM tooling",
       "query": "llm OR agents OR rag in:name,description pushed:>{since_7d} stars:>500",
       "sort": "stars",
-      "limit": 12
+      "limit": 12,
+      "category": "repos"
     },
     {
       "name": "Self-hosted gems",
       "query": "topic:self-hosted pushed:>{since_14d} stars:>1000",
       "sort": "updated",
-      "limit": 10
+      "limit": 10,
+      "category": "repos"
     }
   ],
 
   "releases": [
     "anthropics/claude-code",
+    "openai/codex",
     "oven-sh/bun",
     "ollama/ollama",
     "n8n-io/n8n",
@@ -48,6 +110,10 @@
     "microsoft/vscode",
     "vercel/next.js",
     "supabase/supabase",
-    "open-webui/open-webui"
+    "open-webui/open-webui",
+    "OpenHands/OpenHands",
+    "Aider-AI/aider",
+    "continuedev/continue",
+    "aaif-goose/goose"
   ]
 }

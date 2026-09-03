@@ -1,37 +1,65 @@
 # Signal
 
-A single link that always shows the latest AI news, GitHub releases and trending repos. It updates itself. No server, no database, no monthly bill.
+One link that always shows the latest AI news, agent coverage, research, GitHub releases and trending repos. It refreshes itself. No database, no build step, no dependencies.
+
+## What it tracks
+
+62 inputs, six categories.
+
+| Section | Sources | What lands there |
+|---|---|---|
+| Agents | 4 | Agent frameworks, harnesses, Claude Code / Cursor / Codex coverage |
+| News | 9 | General AI news wires |
+| Vendors | 8 | OpenAI, Google, Microsoft, Meta and friends |
+| Analysis | 12 | Simon Willison, Import AI, Stratechery, SemiAnalysis, AI Snake Oil |
+| Research | 4 | arXiv cs.AI / cs.LG / cs.CL / cs.MA, Hugging Face Daily Papers |
+| Community | 5 | Hacker News, HN Best, Lobsters, Product Hunt, Dev.to |
+
+Plus 4 GitHub search queries (agent frameworks, new AI repos, hot LLM tooling, self-hosted) and 15 release watches.
+
+A typical run: **482 raw items, 28 duplicates merged into clusters, 400 stories, 43 repos, 15 releases. About 27 seconds.**
 
 ## How it works
 
-Three pieces, that's it.
-
 ```
-sources.json   ->   fetch.py   ->   data/feed.json   ->   index.html
-(your config)      (the cron)      (the data)            (the link)
+sources.json  ->  fetch.py  ->  data/feed.json  ->  server.py  ->  index.html
+ (config)        (fetcher)       (data + state)     (serves)       (the UI)
 ```
 
-A GitHub Action runs `fetch.py` every 3 hours. It pulls every RSS feed, queries the GitHub API, writes one JSON file, commits it, and republishes the page. The HTML is static and just reads that JSON.
+`fetch.py` is standard library only. It pulls every feed concurrently, clusters duplicate stories, scores them, and writes one JSON file.
 
-Because the output is static, you can host it on GitHub Pages, Cloudflare Pages, Netlify, or Vercel. All free tiers. Pick one, point it at the repo, done.
+## Two ways to run it
 
-## Run it locally
+### 1. Always-on server (recommended)
 
 ```bash
-python3 fetch.py          # writes data/feed.json
-python3 -m http.server 8000
+python3 server.py          # or: PORT=8000 python3 server.py
 ```
 
-Open `http://localhost:8000`. That's it. No pip install, no dependencies, standard library only.
+This is the real "it updates itself" mode. The server:
+
+- refreshes the feed in a background thread whenever it goes stale
+- stores your read and saved items in `data/state.json`, so read state follows you across devices instead of drifting per browser
+- exposes `POST /api/refresh` to force an update
+
+It binds `0.0.0.0` and honours `$PORT`, so it drops straight into any container host.
+
+### 2. Static site + GitHub Actions cron
+
+The `.github/workflows/refresh.yml` workflow runs `fetch.py` on a cron, commits `data/feed.json`, and deploys to GitHub Pages. Host the output anywhere static.
+
+Read and saved state falls back to `localStorage` when no server is present, which works but is per-browser.
 
 ## Change what it tracks
 
-Edit `sources.json`. Nothing else. Push the change and the site picks it up on the next cycle (or immediately, since pushes to main trigger a rebuild).
+Edit `sources.json`. Nothing else.
 
 ```jsonc
 {
   "news": [
-    { "name": "Hacker News", "url": "https://hnrss.org/frontpage", "tag": "community" }
+    { "name": "Hacker News", "url": "https://hnrss.org/frontpage",
+      "category": "community", "weight": 3, "limit": 20,
+      "trim_publisher": true }   // strips the trailing " - Publisher"
   ],
 
   // GitHub search syntax. {since_30d} expands to a real date at runtime.
@@ -39,7 +67,7 @@ Edit `sources.json`. Nothing else. Push the change and the site picks it up on t
     { "name": "New AI repos", "query": "topic:ai created:>{since_30d}", "sort": "stars", "limit": 12 }
   ],
 
-  // Latest release per repo, via the GitHub releases API.
+  // Latest release per repo, read from /releases.atom (not rate limited).
   "releases": [
     "anthropics/claude-code",
     "oven-sh/bun"
@@ -47,34 +75,61 @@ Edit `sources.json`. Nothing else. Push the change and the site picks it up on t
 }
 ```
 
-Add a feed, delete a feed, change a search query, swap the release watchlist. All from that one file.
+`weight` (1-5) biases ranking. `limit` caps items per feed. `category` picks the sidebar section.
 
-## Deploy
+## Story clustering
 
-1. Create a GitHub repo, push this folder.
-2. Settings, Pages, Source: **GitHub Actions**.
-3. Trigger the `Refresh feed` workflow once manually.
+The same event hits eight outlets. Showing it eight times is noise, so near-duplicate headlines merge into one story with a coverage count and an "also covered by" line.
 
-You get a permanent URL. It updates every 3 hours forever, at zero cost.
+How it works: tokenise each headline, drop stopwords, weight terms by inverse document frequency, then union-find any pair clearing a similarity threshold. Two guards stop false merges:
 
-### Rate limits
+- `MIN_SHARED_TOKENS = 2` - headlines must share at least two distinctive words
+- `RARE_DF = 12` - at least one shared word must be genuinely rare
 
-Unauthenticated GitHub API is 60 requests/hour per IP. One full run uses about 13, so it works fine without a token. The workflow already passes the built-in `GITHUB_TOKEN`, which raises it to 1000/hour. If you add a lot of repos later, drop a personal access token into repo secrets as `GH_TOKEN`.
+Without the rarity guard, unrelated stories merge on phrases like "large language models" that are common across the whole corpus. With it too tight, a genuinely big story covered by seven outlets fails to merge. Both constants were tuned against a real 482-item run, not guessed.
+
+Ranking blends three signals:
+
+```
+recency (exponential decay, ~1 day half-life) * 3.0
++ outlet coverage (capped at 5) * 0.55
++ source weight * 0.5
+```
+
+## API
+
+Only in server mode.
+
+| Endpoint | Method | Purpose |
+|---|---|---|
+| `/api/state` | GET | Read saved and read item IDs |
+| `/api/state` | POST | Write them back |
+| `/api/status` | GET | Feed age, next refresh, last error |
+| `/api/refresh` | POST | Force a refresh now |
+
+## Rate limits
+
+Releases read `github.com/{repo}/releases.atom`, which is **not rate limited**. This is deliberate: the REST API caps at 60 requests/hour unauthenticated, and 15 release lookups burned a quarter of that budget on every run, enough to starve the section completely.
+
+Only GitHub repo discovery touches the API, about 43 calls per run. The workflow passes the built-in `GITHUB_TOKEN`, which raises the cap to 1000/hour. Without a token, 60/hour still covers a run every 3 hours, but not much headroom for retries.
+
+If a run does fail partway, `keep_last_good` preserves the previous section contents rather than blanking them. A bad hour degrades to stale data, never to an empty page.
 
 ## Costs
 
 | Thing | Cost |
 |---|---|
-| GitHub Actions (8 runs/day, ~1 min each) | Free, well under the 2000 min/month limit |
-| GitHub Pages / Cloudflare Pages hosting | Free |
+| GitHub Actions (8 runs/day, ~1 min each) | Free, well under 2000 min/month |
+| GitHub Pages / Cloudflare Pages | Free |
+| Container host for server mode | Free tier on most, or ~5 GBP/month |
 | Domain (optional) | ~10 GBP/year |
 
-Total: zero, unless you buy a domain.
+Total: zero if you use Actions plus static hosting.
 
 ## Notes
 
-- Rename the site by editing `site.title` and `site.subtitle` in `sources.json`.
-- `refresh_hours` in `sources.json` should match your cron cadence. It only drives the "next refresh" countdown in the header.
+- Rename it by editing `site.title` and `site.subtitle` in `sources.json`.
+- `refresh_hours` should match your cron cadence. It drives the auto-refresh and the header countdown.
 - Dead feeds are skipped, not fatal. One broken source never kills a run.
-- News is deduped by URL. Repos are deduped by full name.
-- The "New" badge compares item dates against your last visit, stored in `localStorage`. Per browser, per device.
+- Transferred repos are detected on fetch and reported as `MOVED -> owner/repo` so the config can be corrected.
+- Prereleases are detected from the tag name with a regex, since the Atom feed carries no flag. Tags matching `alpha`, `beta`, `rc`, `canary`, `nightly`, `preview`, `.dev`, `-pre` are marked.
