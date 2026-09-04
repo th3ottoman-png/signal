@@ -302,9 +302,11 @@
     content: "";
     position: absolute;
     left: 0; top: 13px; bottom: 13px;
-    width: 2px;
+    width: 3px;
     border-radius: 0 2px 2px 0;
-    background: var(--accent);
+    /* Per-card source colour, set inline as --item-color by the render
+       functions. The fallback only ever shows if a card ships no source. */
+    background: var(--item-color, var(--accent));
     opacity: 0;
     transition: opacity .15s;
   }
@@ -845,9 +847,10 @@ function itemCard(x) {
     }${x.also.length > 5 ? " &amp; others" : ""}</div>`;
   }
   const read = STATE.read.has(x._id);
-  return `<div class="item ${read ? "read" : "unread"}" data-id="${x._id}" data-url="${esc(x.url)}">
+  const sc = srcColor(x.source);
+  return `<div class="item ${read ? "read" : "unread"}" data-id="${x._id}" data-url="${esc(x.url)}" style="--item-color:${sc}">
     <div class="item-top">
-      <span class="src" style="color:${srcColor(x.source)}">${esc(x.source)}</span>
+      <span class="src" style="color:${sc}">${esc(x.source)}</span>
       <span class="sep">&middot;</span>
       <span class="when">${ago(x.published)}</span>
       ${n > 1 ? `<span class="coverage ${n >= 5 ? "hot" : ""}">${n} outlets</span>` : ""}
@@ -862,9 +865,10 @@ function itemCard(x) {
 function repoCard(x) {
   const color = LANG_COLORS[x.language] || "#545e70";
   const read = STATE.read.has(x._id);
-  return `<div class="item ${read ? "read" : "unread"}" data-id="${x._id}" data-url="${esc(x.url)}">
+  const sc = srcColor(x.section || "GitHub");
+  return `<div class="item ${read ? "read" : "unread"}" data-id="${x._id}" data-url="${esc(x.url)}" style="--item-color:${sc}">
     <div class="item-top">
-      <span class="src" style="color:${srcColor(x.section || "GitHub")}">${esc(x.section || "GitHub")}</span>
+      <span class="src" style="color:${sc}">${esc(x.section || "GitHub")}</span>
       <span class="sep">&middot;</span>
       <span class="when">${ago(x.updated)}</span>
       ${actionsHtml(x)}
@@ -880,7 +884,10 @@ function repoCard(x) {
 
 function releaseCard(x) {
   const read = STATE.read.has(x._id);
-  return `<div class="item ${read ? "read" : "unread"}" data-id="${x._id}" data-url="${esc(x.url)}">
+  // Coloured by repo, not by the word "Release". Every release has the same
+  // label, so keying off it would paint the whole section one colour and
+  // defeat the point. The repo is the thing that actually differs.
+  return `<div class="item ${read ? "read" : "unread"}" data-id="${x._id}" data-url="${esc(x.url)}" style="--item-color:${srcColor(x.repo)}">
     <div class="item-top">
       <span class="src">Release</span>
       <span class="sep">&middot;</span>
