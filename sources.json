@@ -51,6 +51,13 @@
     { "name": "Product Hunt", "url": "https://www.producthunt.com/feed", "category": "community", "weight": 3, "limit": 12 },
     { "name": "Dev.to AI", "url": "https://dev.to/feed/tag/ai", "category": "community", "weight": 2, "limit": 10 },
 
+    { "name": "Reddit: LocalLLaMA", "url": "https://www.reddit.com/r/LocalLLaMA/.rss", "category": "community", "weight": 4, "limit": 15 },
+    { "name": "EleutherAI", "url": "https://blog.eleuther.ai/index.xml", "category": "research", "weight": 3, "limit": 8 },
+    { "name": "Allen AI", "url": "https://allenai.org/rss.xml", "category": "research", "weight": 4, "limit": 10 },
+    { "name": "GitHub Changelog", "url": "https://github.blog/changelog/feed/", "category": "vendors", "weight": 4, "limit": 10 },
+    { "name": "The Decoder", "url": "https://the-decoder.com/feed/", "category": "news", "weight": 4, "limit": 10 },
+    { "name": "MarkTechPost", "url": "https://www.marktechpost.com/feed/", "category": "news", "weight": 4, "limit": 10 },
+
     { "name": "arXiv cs.AI", "url": "http://export.arxiv.org/rss/cs.AI", "category": "research", "weight": 4, "limit": 15 },
     { "name": "arXiv cs.LG", "url": "http://export.arxiv.org/rss/cs.LG", "category": "research", "weight": 4, "limit": 15 },
     { "name": "arXiv cs.CL", "url": "http://export.arxiv.org/rss/cs.CL", "category": "research", "weight": 3, "limit": 12 },
@@ -114,6 +121,13 @@
     "OpenHands/OpenHands",
     "Aider-AI/aider",
     "continuedev/continue",
-    "aaif-goose/goose"
+    "aaif-goose/goose",
+
+    "ggml-org/llama.cpp",
+    "vllm-project/vllm",
+    "sgl-project/sglang",
+    "microsoft/autogen",
+    "browser-use/browser-use",
+    "modelcontextprotocol/servers"
   ]
 }
