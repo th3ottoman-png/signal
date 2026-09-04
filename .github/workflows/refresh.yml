@@ -44,6 +44,11 @@ jobs:
           git config user.name "github-actions[bot]"
           git config user.email "github-actions[bot]@users.noreply.github.com"
           git add data/feed.json
+          # Optional. Only present in the repo after a local server run has
+          # written it. Pages can serve it as a read-only seed so a browser
+          # with no marks of its own starts from somewhere. Guarded because
+          # git add on a missing path is a hard error, not a no-op.
+          if [ -f data/state.json ]; then git add data/state.json; fi
           if git diff --staged --quiet; then
             echo "No data change this run."
           else

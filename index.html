@@ -130,6 +130,50 @@
   }
   .side-foot b { color: var(--muted); font-weight: 600; }
 
+  /* Where read/saved marks live, plus the manual transfer controls.
+     Only meaningful on a static host: with the Python server there is a real
+     backend and state syncs on its own. */
+  .side-state {
+    margin-top: 11px;
+    padding-top: 10px;
+    border-top: 1px solid var(--border-soft);
+  }
+  .side-state-row { margin-bottom: 8px; cursor: help; }
+  .side-state-btns { display: flex; gap: 6px; }
+  .mini {
+    flex: 1;
+    background: #131a26;
+    border: 1px solid var(--border);
+    color: var(--muted);
+    padding: 5px 0;
+    border-radius: 6px;
+    font-size: 11px;
+    font-family: inherit;
+    font-weight: 500;
+    cursor: pointer;
+    transition: background .12s, color .12s, border-color .12s;
+  }
+  .mini:hover { background: var(--card-hover); color: var(--text); border-color: #2b3547; }
+
+  #toast {
+    position: fixed;
+    left: 50%;
+    bottom: 26px;
+    transform: translate(-50%, 14px);
+    background: #18202e;
+    border: 1px solid var(--border);
+    color: var(--text);
+    padding: 9px 16px;
+    border-radius: 9px;
+    font-size: 13px;
+    z-index: 200;
+    opacity: 0;
+    pointer-events: none;
+    transition: opacity .18s ease, transform .18s ease;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, .45);
+  }
+  #toast.show { opacity: 1; transform: translate(-50%, 0); }
+
   /* ---------------- main ---------------- */
   main { flex: 1; min-width: 0; display: flex; flex-direction: column; }
 
@@ -453,6 +497,15 @@
     <div data-page-node-id="LVQGQBAQEJS3mtJv2w3b7L">Updated <b id="foot-updated" data-page-node-id="8XmCYLiMWqtKEW2jrr8GNq">--</b></div>
     <div data-page-node-id="wBrDcS0cGb254Q6J8MsAlk">Next refresh <b id="foot-next" data-page-node-id="mjc1PjhMqEfahEtvB1Ajpy">--</b></div>
     <div style="margin-top:7px" data-page-node-id="3GCoBTqorZjO5DBk8L3sZo"><b id="foot-sources" data-page-node-id="bBzN15I4vtLGRJWRY6JfxA">--</b> sources</div>
+
+    <div class="side-state">
+      <div class="side-state-row" id="state-where">State: --</div>
+      <div class="side-state-btns">
+        <button class="mini" id="btn-export" title="Download your read + saved marks as a JSON file">Export</button>
+        <button class="mini" id="btn-import" title="Merge read + saved marks from a previously exported file">Import</button>
+      </div>
+      <input type="file" id="file-import" accept="application/json,.json" hidden>
+    </div>
   </div>
 </aside>
 
@@ -552,12 +605,24 @@ let SRC_FILTER = new Set();
 let SHOWN = PAGE;
 let STATE = { read: new Set(), saved: new Set() };
 let API = true;
+// "server" = a backend is answering, state syncs on its own.
+// "seeded"  = static host, fresh browser bootstrapped from a committed file.
+// "local"   = static host, this browser only, and authoritative.
+let STATE_MODE = "local";
 
 const $ = id => document.getElementById(id);
 
 /* ---------------- state ---------------- */
 
+function readLocal() {
+  try {
+    return JSON.parse(localStorage.getItem("signal_state") || "{}") || {};
+  } catch (e) { return {}; }
+}
+
 async function loadState() {
+  // 1. Backend present. Full read and write, shared by every device that
+  //    hits the same server.
   try {
     const r = await fetch("api/state", { cache: "no-store" });
     if (!r.ok) throw new Error(r.status);
@@ -565,24 +630,55 @@ async function loadState() {
     STATE.read = new Set(d.read || []);
     STATE.saved = new Set(d.saved || []);
     API = true;
+    STATE_MODE = "server";
+    return;
   } catch (e) {
     API = false;
-    try {
-      const raw = JSON.parse(localStorage.getItem("signal_state") || "{}");
-      STATE.read = new Set(raw.read || []);
-      STATE.saved = new Set(raw.saved || []);
-    } catch (e2) { /* first run */ }
   }
+
+  // 2. Static host (GitHub Pages). No backend can accept a write, so the
+  //    browser is the only place that can hold state.
+  const local = readLocal();
+
+  if (Array.isArray(local.read) || Array.isArray(local.saved)) {
+    // Local wins outright once it exists. Merging the seed in on every load
+    // would mean un-marking an item silently reverts at the next reload,
+    // because the seed would hand it straight back.
+    STATE.read = new Set(local.read || []);
+    STATE.saved = new Set(local.saved || []);
+    STATE_MODE = "local";
+    return;
+  }
+
+  // 3. Fresh browser. Bootstrap from a state.json committed by a server run,
+  //    then absorb it so the seed only ever applies once.
+  try {
+    const rs = await fetch("data/state.json", { cache: "no-store" });
+    if (!rs.ok) throw new Error(rs.status);
+    const d = await rs.json();
+    if (!Array.isArray(d.read) && !Array.isArray(d.saved)) throw new Error("shape");
+    STATE.read = new Set(d.read || []);
+    STATE.saved = new Set(d.saved || []);
+    STATE_MODE = "seeded";
+  } catch (e) {
+    STATE.read = new Set();
+    STATE.saved = new Set();
+    STATE_MODE = "local";
+  }
+  writeLocal();
+}
+
+function writeLocal() {
+  try {
+    localStorage.setItem("signal_state", JSON.stringify({
+      read: [...STATE.read], saved: [...STATE.saved]
+    }));
+  } catch (e) { /* private mode or quota, marks stay in memory for this session */ }
 }
 
 let saveTimer = null;
 function persist() {
-  if (!API) {
-    localStorage.setItem("signal_state", JSON.stringify({
-      read: [...STATE.read], saved: [...STATE.saved]
-    }));
-    return;
-  }
+  if (!API) { writeLocal(); return; }
   clearTimeout(saveTimer);
   saveTimer = setTimeout(() => {
     fetch("api/state", {
@@ -591,6 +687,91 @@ function persist() {
       body: JSON.stringify({ read: [...STATE.read], saved: [...STATE.saved] })
     }).catch(() => {});
   }, 350);
+}
+
+/* ---------------- state transfer ----------------
+   On a static host there is no server to POST to, so moving marks between
+   devices has to be a file. Export writes one, Import merges it back. Kept
+   available even with a backend, because it is also the backup. */
+
+function exportState() {
+  const stamp = new Date().toISOString().slice(0, 10);
+  const payload = JSON.stringify({
+    exported_at: new Date().toISOString(),
+    read: [...STATE.read],
+    saved: [...STATE.saved]
+  }, null, 2);
+
+  const url = URL.createObjectURL(new Blob([payload], { type: "application/json" }));
+  const a = document.createElement("a");
+  a.href = url;
+  a.download = `signal-state-${stamp}.json`;
+  document.body.appendChild(a);
+  a.click();
+  a.remove();
+  // Revoke on a later tick. Doing it synchronously cancels the download in
+  // Safari before it has started.
+  setTimeout(() => URL.revokeObjectURL(url), 1000);
+
+  toast(`Exported ${STATE.read.size} read, ${STATE.saved.size} saved`);
+}
+
+function importState(file) {
+  const fr = new FileReader();
+  fr.onerror = () => toast("Could not read that file");
+  fr.onload = () => {
+    let d;
+    try { d = JSON.parse(String(fr.result)); }
+    catch (e) { toast("That file is not valid JSON"); return; }
+
+    if (!d || (!Array.isArray(d.read) && !Array.isArray(d.saved))) {
+      toast("That is not a Signal state file");
+      return;
+    }
+
+    const before = STATE.read.size + STATE.saved.size;
+    (d.read || []).forEach(x => STATE.read.add(x));
+    (d.saved || []).forEach(x => STATE.saved.add(x));
+    const added = (STATE.read.size + STATE.saved.size) - before;
+
+    // With a backend this pushes the merged set up to the server, which is
+    // how marks hop from a static-host browser onto the shared instance.
+    persist();
+    renderCounts(); renderFilters(); render(); renderStatus();
+    toast(added > 0 ? `Merged ${added} new marks` : "Nothing new in that file");
+  };
+  fr.readAsText(file);
+}
+
+/* ---------------- toast ---------------- */
+
+let toastTimer = null;
+function toast(msg) {
+  let el = $("toast");
+  if (!el) {
+    el = document.createElement("div");
+    el.id = "toast";
+    document.body.appendChild(el);
+  }
+  el.textContent = msg;
+  el.classList.add("show");
+  clearTimeout(toastTimer);
+  toastTimer = setTimeout(() => el.classList.remove("show"), 2600);
+}
+
+function renderStateWhere() {
+  const el = $("state-where");
+  if (!el) return;
+  if (STATE_MODE === "server") {
+    el.innerHTML = `State: <b>server</b> &middot; shared`;
+    el.title = "Read and saved marks are stored on the server. Every device using this link shares them.";
+  } else if (STATE_MODE === "seeded") {
+    el.innerHTML = `State: <b>this browser</b> &middot; seeded`;
+    el.title = "Bootstrapped from a committed state file. Marks now live in this browser only. Use Export and Import to move them to another device.";
+  } else {
+    el.innerHTML = `State: <b>this browser</b> only`;
+    el.title = "GitHub Pages cannot store anything. Marks live in this browser only. Use Export and Import to move them to another device.";
+  }
 }
 
 /* ---------------- selection ---------------- */
@@ -861,10 +1042,23 @@ document.addEventListener("keydown", e => {
   }
 });
 
+$("btn-export").addEventListener("click", exportState);
+
+$("btn-import").addEventListener("click", () => $("file-import").click());
+
+$("file-import").addEventListener("change", e => {
+  const f = e.target.files && e.target.files[0];
+  if (f) importState(f);
+  // Clear it, otherwise picking the same file twice in a row fires no event
+  // the second time because the value never changed.
+  e.target.value = "";
+});
+
 /* ---------------- boot ---------------- */
 
 async function boot() {
   await loadState();
+  renderStateWhere();
   try {
     const r = await fetch("data/feed.json", { cache: "no-store" });
     if (!r.ok) throw new Error("HTTP " + r.status);
