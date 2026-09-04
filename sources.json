@@ -10,8 +10,8 @@
   "news": [
     { "name": "GNews: AI agents", "url": "https://news.google.com/rss/search?q=AI+agents&hl=en-US&gl=US&ceid=US:en", "category": "agents", "weight": 5, "limit": 20, "trim_publisher": true },
     { "name": "GNews: Agent harnesses", "url": "https://news.google.com/rss/search?q=%22coding+agent%22+OR+%22agent+harness%22+OR+%22agentic+workflow%22&hl=en-US&gl=US&ceid=US:en", "category": "agents", "weight": 5, "limit": 20, "trim_publisher": true },
-    { "name": "GNews: Claude Code / Cursor", "url": "https://news.google.com/rss/search?q=%22Claude+Code%22+OR+%22Cursor+AI%22+OR+Codex+CLI&hl=en-US&gl=US&ceid=US:en", "category": "agents", "weight": 5, "limit": 15, "trim_publisher": true },
-    { "name": "GNews: LLM releases", "url": "https://news.google.com/rss/search?q=LLM+model+release+OR+%22frontier+model%22&hl=en-US&gl=US&ceid=US:en", "category": "agents", "weight": 4, "limit": 15, "trim_publisher": true },
+    { "name": "GNews: AI coding IDEs", "url": "https://news.google.com/rss/search?q=%22Cursor%22+OR+%22Claude+Code%22+OR+%22Windsurf%22+OR+%22Cline%22&hl=en-US&gl=US&ceid=US:en", "category": "agents", "weight": 5, "limit": 15, "trim_publisher": true },
+    { "name": "GNews: Model launches", "url": "https://news.google.com/rss/search?q=%22new+AI+model%22+OR+%22model+launch%22&hl=en-US&gl=US&ceid=US:en", "category": "agents", "weight": 4, "limit": 15, "trim_publisher": true },
 
     { "name": "The Rundown", "url": "https://www.therundown.ai/feed", "category": "news", "weight": 4, "limit": 12 },
     { "name": "Ben's Bites", "url": "https://bensbites.substack.com/feed", "category": "news", "weight": 4, "limit": 10 },
@@ -25,12 +25,17 @@
 
     { "name": "OpenAI", "url": "https://openai.com/news/rss.xml", "category": "vendors", "weight": 5, "limit": 15 },
     { "name": "GNews: Anthropic", "url": "https://news.google.com/rss/search?q=Anthropic+Claude&hl=en-US&gl=US&ceid=US:en", "category": "vendors", "weight": 5, "limit": 15, "trim_publisher": true },
+    { "name": "GNews: Meta", "url": "https://news.google.com/rss/search?q=Meta+AI+model+OR+%22Meta+Superintelligence%22&hl=en-US&gl=US&ceid=US:en", "category": "vendors", "weight": 4, "limit": 12, "trim_publisher": true },
+    { "name": "GNews: Mistral / xAI", "url": "https://news.google.com/rss/search?q=%22Mistral%22+OR+%22xAI%22+OR+%22Grok%22&hl=en-US&gl=US&ceid=US:en", "category": "vendors", "weight": 4, "limit": 12, "trim_publisher": true },
+    { "name": "GNews: DeepSeek / Qwen", "url": "https://news.google.com/rss/search?q=DeepSeek+OR+Qwen&hl=en-US&gl=US&ceid=US:en", "category": "vendors", "weight": 4, "limit": 12, "trim_publisher": true },
     { "name": "Google DeepMind", "url": "https://deepmind.google/blog/rss.xml", "category": "vendors", "weight": 4, "limit": 12 },
     { "name": "Google AI Blog", "url": "https://blog.google/technology/ai/rss/", "category": "vendors", "weight": 4, "limit": 10 },
     { "name": "Hugging Face Blog", "url": "https://huggingface.co/blog/feed.xml", "category": "vendors", "weight": 3, "limit": 10 },
     { "name": "NVIDIA Blog", "url": "https://blogs.nvidia.com/feed/", "category": "vendors", "weight": 3, "limit": 8 },
     { "name": "GitHub Blog", "url": "https://github.blog/feed/", "category": "vendors", "weight": 4, "limit": 10 },
     { "name": "AWS ML Blog", "url": "https://aws.amazon.com/blogs/machine-learning/feed/", "category": "vendors", "weight": 2, "limit": 8 },
+    { "name": "LangChain Blog", "url": "https://blog.langchain.com/rss.xml", "category": "vendors", "weight": 3, "limit": 8 },
+    { "name": "Together AI", "url": "https://www.together.ai/blog/rss.xml", "category": "vendors", "weight": 3, "limit": 8 },
 
     { "name": "Simon Willison", "url": "https://simonwillison.net/atom/everything/", "category": "analysis", "weight": 5, "limit": 15 },
     { "name": "Import AI", "url": "https://importai.substack.com/feed", "category": "analysis", "weight": 5, "limit": 10 },
@@ -44,6 +49,9 @@
     { "name": "Benedict Evans", "url": "https://www.ben-evans.com/benedictevans?format=rss", "category": "analysis", "weight": 4, "limit": 6 },
     { "name": "Garrison Lovely", "url": "https://www.obsolete.pub/feed", "category": "analysis", "weight": 4, "limit": 6 },
     { "name": "Sequoia AI", "url": "https://www.sequoiacap.com/feed/", "category": "analysis", "weight": 3, "limit": 8 },
+    { "name": "Sebastian Raschka", "url": "https://magazine.sebastianraschka.com/feed", "category": "analysis", "weight": 5, "limit": 8 },
+    { "name": "Lilian Weng", "url": "https://lilianweng.github.io/index.xml", "category": "analysis", "weight": 4, "limit": 8 },
+    { "name": "Eugene Yan", "url": "https://eugeneyan.com/rss/", "category": "analysis", "weight": 4, "limit": 8 },
 
     { "name": "Hacker News", "url": "https://hnrss.org/frontpage", "category": "community", "weight": 4, "limit": 20 },
     { "name": "HN Best", "url": "https://hnrss.org/best?points=100", "category": "community", "weight": 5, "limit": 20 },
@@ -61,7 +69,8 @@
     { "name": "arXiv cs.AI", "url": "http://export.arxiv.org/rss/cs.AI", "category": "research", "weight": 4, "limit": 15 },
     { "name": "arXiv cs.LG", "url": "http://export.arxiv.org/rss/cs.LG", "category": "research", "weight": 4, "limit": 15 },
     { "name": "arXiv cs.CL", "url": "http://export.arxiv.org/rss/cs.CL", "category": "research", "weight": 3, "limit": 12 },
-    { "name": "arXiv cs.MA", "url": "http://export.arxiv.org/rss/cs.MA", "category": "research", "weight": 5, "limit": 12 }
+    { "name": "arXiv cs.MA", "url": "http://export.arxiv.org/rss/cs.MA", "category": "research", "weight": 5, "limit": 12 },
+    { "name": "arXiv cs.SE", "url": "http://export.arxiv.org/rss/cs.SE", "category": "research", "weight": 3, "limit": 10 }
   ],
 
   "json_sources": [
