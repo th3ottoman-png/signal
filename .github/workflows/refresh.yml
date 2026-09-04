@@ -32,8 +32,20 @@ jobs:
         with:
           node-version: lts/*
 
-      - name: Run tests
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+
+      # Two suites, because the project has two languages. tests/*.test.js
+      # drive the page script in a Node vm; tests/*.test.py cover fetch.py
+      # ranking. Both live here, not in build-and-deploy, so a regression goes
+      # red without ever blocking the feed refresh.
+      - name: Run UI tests
         run: node tests/run.js
+
+      - name: Run ranking tests
+        run: python3 tests/ranking.test.py
 
   build-and-deploy:
     runs-on: ubuntu-latest

@@ -47,6 +47,21 @@ MIN_SHARED_TOKENS = 2
 # generic wording like "large language models".
 RARE_DF = 12
 
+# Hard cap on stories in the payload.
+MAX_ITEMS = 400
+# Every source gets at least this many slots before that cap applies. See
+# apply_source_floor: recency-weighted ranking structurally starves anything
+# that posts slower than daily, and a configured source that silently renders
+# nothing is worse than one that is not configured at all.
+SOURCE_FLOOR = 1
+
+# Recency decay time constant, in hours. A story is ~1/e as relevant after
+# this long. See source_cadence_tau for why this is a floor, not a constant.
+RECENCY_TAU_HOURS = 30.0
+# Ceiling on the per-source constant. Without it a yearly poster gets a
+# year-long horizon and genuinely ancient posts float back to the top.
+RECENCY_TAU_MAX_HOURS = 720.0
+
 
 # ---------------------------------------------------------------- http
 
@@ -438,13 +453,14 @@ def build_clusters(items):
     return list(groups.values())
 
 
-def score(item, cluster_size, now):
+def score(item, cluster_size, now, tau_hours=RECENCY_TAU_HOURS):
     """Rank for the Top view: fresh, well-covered, from a trusted source."""
     published = parse_date(item.get("published"))
     age_hours = 999.0
     if published:
         age_hours = max(0.0, (now - published).total_seconds() / 3600.0)
-    recency = math.exp(-age_hours / 30.0)          # decays over ~a day
+    # decays over tau_hours, normally ~a day but per-source for slow posters
+    recency = math.exp(-age_hours / tau_hours)
     coverage = min(cluster_size, 5) * 0.55          # more outlets = bigger story
     weight = item.get("weight", 3) * 0.5
     return round(recency * 3.0 + coverage + weight, 3)
@@ -477,6 +493,84 @@ def dedupe(items, keyfn):
         seen.add(k)
         out.append(it)
     return out
+
+
+def source_cadence_tau(items):
+    """Per-source recency time constant, in hours.
+
+    The default 30h decay quietly assumes every source posts daily. For a
+    monthly poster that makes everything it publishes score ~0 forever:
+    exp(-1488/30) is about 1e-21. Its best work can then never reach the feed
+    no matter how high the weight, because weight tops out at 2.5 and the
+    recency gap is around 3 points. Lilian Weng, Eugene Yan and EleutherAI all
+    landed here: configured, fetching fine, rendering nothing.
+
+    Scaling the constant to each source's own rhythm means "new for them"
+    reads as fresh. The max() guard leaves daily sources on the default, so
+    nothing about the fast feeds changes at all.
+    """
+    by_source = {}
+    for it in items:
+        by_source.setdefault(it["source"], []).append(it.get("published") or "")
+
+    tau = {}
+    for source, dates in by_source.items():
+        stamps = sorted(d for d in dates if d)
+        # Two posts is one gap, and one gap is not a cadence. Need three.
+        if len(stamps) < 3:
+            continue
+        parsed = [p for p in (parse_date(d) for d in stamps) if p]
+        if len(parsed) < 3:
+            continue
+        gaps = [g for g in ((b - a).total_seconds() / 3600.0
+                            for a, b in zip(parsed, parsed[1:])) if g > 0]
+        if not gaps:
+            continue
+        gaps.sort()
+        tau[source] = min(RECENCY_TAU_MAX_HOURS,
+                          max(RECENCY_TAU_HOURS, gaps[len(gaps) // 2]))
+    return tau
+
+
+def apply_source_floor(items, floor, cap):
+    """Guarantee every source a minimum number of slots, then cap.
+
+    `items` must already be sorted by score descending, since each source's
+    reserved picks are taken in that order.
+
+    The reserve has to come out of the cap *first*. Cutting to `cap` and then
+    appending the floored items gets them trimmed straight back off by the very
+    cap they are meant to survive, and the whole thing silently does nothing.
+    """
+    if floor <= 0:
+        return items[:cap]
+
+    by_source = {}
+    for it in items:
+        by_source.setdefault(it["source"], []).append(it)
+
+    budget = max(0, cap - floor * len(by_source))
+    ranked = list(items[:budget])
+    taken = {id(it) for it in ranked}
+
+    for source, group in by_source.items():
+        have = sum(1 for it in group if id(it) in taken)
+        for it in group[have:floor]:
+            ranked.append(it)
+            taken.add(id(it))
+
+    # Sources already inside the budget never spent their reserved slot. Hand
+    # the space back to the next best stories so the page ships full rather
+    # than short.
+    for it in items:
+        if len(ranked) >= cap:
+            break
+        if id(it) not in taken:
+            ranked.append(it)
+            taken.add(id(it))
+
+    ranked.sort(key=lambda x: x["score"], reverse=True)
+    return ranked
 
 
 def main():
@@ -520,6 +614,9 @@ def main():
 
     now = datetime.now(timezone.utc)
     clusters = build_clusters(raw)
+    # Computed from raw, before clustering collapses duplicates, because the
+    # rhythm is a property of the source's own output, not of the merge.
+    tau = source_cadence_tau(raw)
 
     items = []
     merged = 0
@@ -536,14 +633,15 @@ def main():
 
         primary["cluster_size"] = len(group_items)
         primary["also"] = [{"source": o["source"], "url": o["url"], "title": o["title"]} for o in others]
-        primary["score"] = score(primary, len(group_items), now)
+        primary["score"] = score(primary, len(group_items), now,
+                                 tau.get(primary["source"], RECENCY_TAU_HOURS))
         primary["id"] = hashlib.sha1(primary["url"].encode("utf-8")).hexdigest()[:12]
         items.append(primary)
 
     items.sort(key=lambda x: x["score"], reverse=True)
     items = keep_last_good(items, previous.get("items", []), "items")
     # Cap here rather than in the payload, so stats match what is actually served.
-    items = items[:400]
+    items = apply_source_floor(items, SOURCE_FLOOR, MAX_ITEMS)
 
     categories = Counter(it["category"] for it in items)
 
