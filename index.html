@@ -462,6 +462,15 @@
     .brand, .nav-label, .side-foot { display: none; }
     .nav-item { width: auto; white-space: nowrap; }
     .nav-item .count { margin-left: 5px; }
+    /* .side-foot is hidden above, so the transfer controls sit outside it and
+       ride at the end of the scrolling nav strip. On a static host this strip
+       is the only way to move marks off the phone, so it cannot vanish. */
+    .side-state {
+      margin-top: 0; padding-top: 0; border-top: none;
+      display: flex; align-items: center; gap: 6px; flex: none;
+    }
+    .side-state-row { display: none; }
+    .mini { flex: none; padding: 10px 14px; font-size: 12.5px; }
     .topbar { padding: 11px 16px; }
     .content { padding: 16px 16px 48px; }
     .status { display: none; }
@@ -497,15 +506,18 @@
     <div data-page-node-id="LVQGQBAQEJS3mtJv2w3b7L">Updated <b id="foot-updated" data-page-node-id="8XmCYLiMWqtKEW2jrr8GNq">--</b></div>
     <div data-page-node-id="wBrDcS0cGb254Q6J8MsAlk">Next refresh <b id="foot-next" data-page-node-id="mjc1PjhMqEfahEtvB1Ajpy">--</b></div>
     <div style="margin-top:7px" data-page-node-id="3GCoBTqorZjO5DBk8L3sZo"><b id="foot-sources" data-page-node-id="bBzN15I4vtLGRJWRY6JfxA">--</b> sources</div>
+  </div>
 
-    <div class="side-state">
-      <div class="side-state-row" id="state-where">State: --</div>
-      <div class="side-state-btns">
-        <button class="mini" id="btn-export" title="Download your read + saved marks as a JSON file">Export</button>
-        <button class="mini" id="btn-import" title="Merge read + saved marks from a previously exported file">Import</button>
-      </div>
-      <input type="file" id="file-import" accept="application/json,.json" hidden>
+  <!-- Deliberately a sibling of .side-foot, not a child. The mobile layout
+       hides .side-foot entirely, and these are the only way to carry marks
+       between devices on a static host, so they must survive on a phone. -->
+  <div class="side-state">
+    <div class="side-state-row" id="state-where">State: --</div>
+    <div class="side-state-btns">
+      <button class="mini" id="btn-export" title="Download your read + saved marks as a JSON file">Export</button>
+      <button class="mini" id="btn-import" title="Merge read + saved marks from a previously exported file">Import</button>
     </div>
+    <input type="file" id="file-import" accept="application/json,.json" hidden>
   </div>
 </aside>
 
