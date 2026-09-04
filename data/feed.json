@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-09-04T00:30:44.298995+00:00",
+  "generated_at": "2026-09-04T00:43:21.684785+00:00",
   "site": {
     "title": "Signal",
     "subtitle": "AI news, agents, research and releases. Refreshes every 3 hours.",
@@ -42,27 +42,8 @@
           "title": "😺 Is GPT-6 / Astra about to launch? We’re going LIVE"
         }
       ],
-      "score": 7.933,
+      "score": 7.914,
       "id": "ad408c639885"
-    },
-    {
-      "title": "Why the Hugging Face Hack Should Make You Worry More About A.I.",
-      "url": "https://news.google.com/rss/articles/CBMihAFBVV95cUxOVW01WkdOYkJpZEVLSUVvNWt0N1QyS1lQbHlEVFV4MkF6ZUZRY3lqSjRQYU9HSGZ6cjlwM1JXWTJVZmhjN2hRTXlfUlFKVUg1NmRJTzdPamFyUzF6YVJhWnFUZlktdHlDcnowM3dDM3paaGdJRnpxaVlsSVIzMkk5STJEcEY?oc=5",
-      "source": "GNews: AI agents",
-      "category": "agents",
-      "weight": 5,
-      "summary": "Why the Hugging Face Hack Should Make You Worry More About A.I. The New York Times",
-      "published": "2026-09-04T00:06:03+00:00",
-      "cluster_size": 2,
-      "also": [
-        {
-          "source": "MIT Tech Review AI",
-          "url": "https://www.technologyreview.com/2026/08/31/1143180/hugging-face-hack-could-indicate-cultural-issues-at-openai/",
-          "title": "The Hugging Face hack could indicate cultural issues at OpenAI"
-        }
-      ],
-      "score": 6.559,
-      "id": "3a091d2f7d47"
     },
     {
       "title": "GitHub Copilot app for Beginners: Run several agents at once",
@@ -85,12 +66,12 @@
           "title": "GitHub Copilot app for Beginners: Managing your work"
         }
       ],
-      "score": 5.909,
+      "score": 5.893,
       "id": "c18b3bb292c9"
     },
     {
       "title": "AI agents expose 5G core security risks for telecom operators",
-      "url": "https://news.google.com/rss/articles/CBMingFBVV95cUxOQ0lveFhOSjJQd1hiQTNReXpidzBNdGg3V2RqWmY3RWVINkVfMkFHWUc3U0tLZ0hXX285c3VWeHZxVmNwbmhGVThZY3Zvd29Gb0RkYzhTZHVvWXVIUFVHZUs4Rm5ldS1ydThUSC1VUzJhZlNVMUgwRUFRMHhISTltd0xxVjgwNUhiY2VtcU5hMVNHckhhMkw5dWVfMUJZUQ?oc=5",
+      "url": "https://news.google.com/rss/articles/CBMingFBVV95cUxOT0lPbzBUMzA4Q25iWkpxUUc1M0s2Ym1KYzVjb0t1MW55bERlSExSYVU4M1RENjdOSWsyS2pmQ19sQVlpMXJ3MVJzLTQ4ajBPSF9RWXpnV2VHYXQ5RnFXbHA0NjZLZDJIQ3AyV3kzMUNFWDMyOHd0dE9RczJjR0FXNmh3UG5NQWszOXhrQjZJN2xBb2pvRUFJNnpYLXhyQQ?oc=5",
       "source": "GNews: AI agents",
       "category": "agents",
       "weight": 5,
@@ -98,8 +79,8 @@
       "published": "2026-09-03T22:11:33+00:00",
       "cluster_size": 1,
       "also": [],
-      "score": 5.827,
-      "id": "4fa99225874b"
+      "score": 5.807,
+      "id": "893470531f96"
     },
     {
       "title": "It’s not just you; ChatGPT, Claude, and Grok were all down in confirmed outages",
@@ -117,7 +98,7 @@
           "title": "ChatGPT, Grok, and Claude all went down at the same time"
         }
       ],
-      "score": 5.793,
+      "score": 5.778,
       "id": "54ad9ca2685e"
     },
     {
@@ -141,7 +122,7 @@
           "title": "Nvidia’s Hugging Face Acquisition Is a $12.9 Billion Bet on Open-Source AI"
         }
       ],
-      "score": 5.713,
+      "score": 5.698,
       "id": "52a8d0c31484"
     },
     {
@@ -154,7 +135,7 @@
       "published": "2026-09-03T20:53:42+00:00",
       "cluster_size": 1,
       "also": [],
-      "score": 5.709,
+      "score": 5.691,
       "id": "5bf42006ee67"
     },
     {
@@ -167,7 +148,7 @@
       "published": "2026-09-03T20:18:41+00:00",
       "cluster_size": 1,
       "also": [],
-      "score": 5.658,
+      "score": 5.64,
       "id": "b57d4a4cacaf"
     },
     {
@@ -180,7 +161,7 @@
       "published": "2026-09-03T19:43:05+00:00",
       "cluster_size": 1,
       "also": [],
-      "score": 5.607,
+      "score": 5.589,
       "id": "e7aa627f256e"
     },
     {
@@ -193,7 +174,7 @@
       "published": "2026-09-03T19:30:00+00:00",
       "cluster_size": 1,
       "also": [],
-      "score": 5.588,
+      "score": 5.571,
       "id": "d952ce973780"
     },
     {
@@ -206,7 +187,7 @@
       "published": "2026-09-03T19:11:00+00:00",
       "cluster_size": 1,
       "also": [],
-      "score": 5.562,
+      "score": 5.544,
       "id": "67ca1b5ea008"
     },
     {
@@ -219,7 +200,7 @@
       "published": "2026-09-03T18:41:13+00:00",
       "cluster_size": 1,
       "also": [],
-      "score": 5.521,
+      "score": 5.503,
       "id": "b69bcb7d60ae"
     },
     {
@@ -228,24 +209,37 @@
       "source": "GNews: AI agents",
       "category": "agents",
       "weight": 5,
-      "summary": "Why are AI safety experts alarmed by reports OpenAI’s Astra model uses “recurrent depth”? Fortune",
+      "summary": "Why are AI safety experts alarmed by reports OpenAI’s Astra model uses “recurrent depth”? fortune.com",
       "published": "2026-09-03T17:51:00+00:00",
       "cluster_size": 1,
       "also": [],
-      "score": 5.453,
+      "score": 5.436,
       "id": "d8e5b0ba3d84"
     },
     {
-      "title": "GLP-1s Are Being Linked to Fewer Serious Infections, Including TB",
+      "title": "Designing Grok Bot for a world of persistent agents",
+      "url": "https://news.google.com/rss/articles/CBMiTEFVX3lxTFA2WXFzMFpXZFJGTUlWR05TR3d2NFo2d3hRQlJ0UFk0NXBkVW1QeWNrNEx2YlkzVlJfNWVjZHE5aWd3UnhIQzFrdmo0ZVM?oc=5",
+      "source": "GNews: AI agents",
+      "category": "agents",
+      "weight": 5,
+      "summary": "Designing Grok Bot for a world of persistent agents X.ai",
+      "published": "2026-09-03T17:50:51+00:00",
+      "cluster_size": 1,
+      "also": [],
+      "score": 5.436,
+      "id": "a6f1c748d3c0"
+    },
+    {
+      "title": "GLP-1s are being linked to fewer serious infections, including TB",
       "url": "https://gizmodo.com/ozempic-and-other-glp-1s-are-being-linked-to-fewer-serious-infections-including-tb-2000806796",
       "source": "Hacker News",
       "category": "community",
       "weight": 4,
-      "summary": "Article URL: https://gizmodo.com/ozempic-and-other-glp-1s-are-being-linked-to-fewer-serious-infections-including-tb-2000806796 Comments URL: https://news.ycombinator.com/item?id=49558086 Points: 30 # Comments: 20",
+      "summary": "https://web.archive.org/web/20260903235256/https://gizmodo.c... Comments URL: https://news.ycombinator.com/item?id=49558086 Points: 39 # Comments: 25",
       "published": "2026-09-03T22:37:31+00:00",
       "cluster_size": 1,
       "also": [],
-      "score": 5.367,
+      "score": 5.347,
       "id": "2ecebaec2188"
     },
     {
@@ -258,7 +252,7 @@
       "published": "2026-09-03T16:39:18+00:00",
       "cluster_size": 1,
       "also": [],
-      "score": 5.359,
+      "score": 5.343,
       "id": "00bd14280e52"
     },
     {
@@ -271,7 +265,7 @@
       "published": "2026-09-03T16:26:19+00:00",
       "cluster_size": 1,
       "also": [],
-      "score": 5.342,
+      "score": 5.326,
       "id": "1c9cb1227951"
     },
     {
@@ -284,21 +278,8 @@
       "published": "2026-09-03T16:18:39+00:00",
       "cluster_size": 1,
       "also": [],
-      "score": 5.332,
-      "id": "7d8ca8381fa1"
-    },
-    {
-      "title": "Sparks Fly: NVIDIA Accelerates Local AI at IFA 2026",
-      "url": "https://news.google.com/rss/articles/CBMigwFBVV95cUxOc19tWkhaOGg5NWFFWGN5R0dnVkctSk1OTlQzdlJFeGxyOFdpcDl2VllVZTU3Vl9CeWZLTEkxZ3MtUG9Xam4yeVlvU0wtZTdaWmtUOFppY0ZDdVFWczNNWWVQd1FVM05XS09NZ3diemlBYlNoc0RCcUttaTB4VUozci1qbw?oc=5",
-      "source": "GNews: AI agents",
-      "category": "agents",
-      "weight": 5,
-      "summary": "Sparks Fly: NVIDIA Accelerates Local AI at IFA 2026 NVIDIA Blog",
-      "published": "2026-09-03T16:05:29+00:00",
-      "cluster_size": 1,
-      "also": [],
       "score": 5.316,
-      "id": "1dd5b46ecf80"
+      "id": "7d8ca8381fa1"
     },
     {
       "title": "Nvidia PAIR Speeds Up AI Agents by Annexing PCs on Your Network",
@@ -310,7 +291,7 @@
       "published": "2026-09-03T16:00:00+00:00",
       "cluster_size": 1,
       "also": [],
-      "score": 5.309,
+      "score": 5.293,
       "id": "137ee37da0b1"
     },
     {
@@ -323,34 +304,8 @@
       "published": "2026-09-03T15:57:00+00:00",
       "cluster_size": 1,
       "also": [],
-      "score": 5.305,
+      "score": 5.289,
       "id": "868d6926d478"
-    },
-    {
-      "title": "Building an agent harness that survives production",
-      "url": "https://news.google.com/rss/articles/CBMijwFBVV95cUxPeHhWR3VPMEF3b1VGOGk5NWhCb19kRGtaX1JzVVZGRlpEZ21xSUFpQ09rNUFvRHJZR21pUXNmeDdvYlFOeURCZDl6bTVURUtOTUtsOFgwMHlkRU95Y0xESTdqMFpyZ3NMZzVQSFdlZmEzY1VlMzA5QWd3NXRSamJvVEI3d2RRd2dQUG92Q3RjYw?oc=5",
-      "source": "GNews: Agent harnesses",
-      "category": "agents",
-      "weight": 5,
-      "summary": "Building an agent harness that survives production blogs.oracle.com",
-      "published": "2026-09-03T15:24:40+00:00",
-      "cluster_size": 1,
-      "also": [],
-      "score": 5.265,
-      "id": "4344a9b45a9e"
-    },
-    {
-      "title": "AI, tools and transformation",
-      "url": "https://www.ben-evans.com/benedictevans/2026/9/3/ai-tools-and-transformation",
-      "source": "Benedict Evans",
-      "category": "analysis",
-      "weight": 4,
-      "summary": "It’s very tempting to imagine that AI turns everyone into a tool-builder - now everyone can just ask the model to make the software they need, and apps as we know them are dead. I think that misunderstands how most people think and where software actually comes from, and more...",
-      "published": "2026-09-03T21:26:04+00:00",
-      "cluster_size": 1,
-      "also": [],
-      "score": 5.257,
-      "id": "bbc054e1f15a"
     },
     {
       "title": "Google unveils Gemini 3.7 Flash AI model for coding, agent workflows",
@@ -392,16 +347,42 @@
       "id": "09e4883e49cc"
     },
     {
+      "title": "Building an agent harness that survives production",
+      "url": "https://news.google.com/rss/articles/CBMijwFBVV95cUxPeHhWR3VPMEF3b1VGOGk5NWhCb19kRGtaX1JzVVZGRlpEZ21xSUFpQ09rNUFvRHJZR21pUXNmeDdvYlFOeURCZDl6bTVURUtOTUtsOFgwMHlkRU95Y0xESTdqMFpyZ3NMZzVQSFdlZmEzY1VlMzA5QWd3NXRSamJvVEI3d2RRd2dQUG92Q3RjYw?oc=5",
+      "source": "GNews: Agent harnesses",
+      "category": "agents",
+      "weight": 5,
+      "summary": "Building an agent harness that survives production blogs.oracle.com",
+      "published": "2026-09-03T15:24:40+00:00",
+      "cluster_size": 1,
+      "also": [],
+      "score": 5.249,
+      "id": "4344a9b45a9e"
+    },
+    {
+      "title": "AI, tools and transformation",
+      "url": "https://www.ben-evans.com/benedictevans/2026/9/3/ai-tools-and-transformation",
+      "source": "Benedict Evans",
+      "category": "analysis",
+      "weight": 4,
+      "summary": "It’s very tempting to imagine that AI turns everyone into a tool-builder - now everyone can just ask the model to make the software they need, and apps as we know them are dead. I think that misunderstands how most people think and where software actually comes from, and more...",
+      "published": "2026-09-03T21:26:04+00:00",
+      "cluster_size": 1,
+      "also": [],
+      "score": 5.239,
+      "id": "bbc054e1f15a"
+    },
+    {
       "title": "Which tools do Claude, Codex and Cursor choose? We measured 17k runs to find out",
       "url": "https://armature.tech/blog/which-tools-coding-agents-install",
       "source": "Hacker News",
       "category": "community",
       "weight": 4,
-      "summary": "Article URL: https://armature.tech/blog/which-tools-coding-agents-install Comments URL: https://news.ycombinator.com/item?id=49557206 Points: 69 # Comments: 18",
+      "summary": "Article URL: https://armature.tech/blog/which-tools-coding-agents-install Comments URL: https://news.ycombinator.com/item?id=49557206 Points: 73 # Comments: 22",
       "published": "2026-09-03T21:20:34+00:00",
       "cluster_size": 1,
       "also": [],
-      "score": 5.249,
+      "score": 5.23,
       "id": "3725772a5216"
     },
     {
@@ -414,7 +395,7 @@
       "published": "2026-09-03T15:06:01+00:00",
       "cluster_size": 1,
       "also": [],
-      "score": 5.242,
+      "score": 5.227,
       "id": "66d8a103cd06"
     },
     {
@@ -427,7 +408,7 @@
       "published": "2026-09-03T15:02:52+00:00",
       "cluster_size": 1,
       "also": [],
-      "score": 5.238,
+      "score": 5.223,
       "id": "0e103dd62ab6"
     },
     {
@@ -440,7 +421,7 @@
       "published": "2026-09-03T21:01:10+00:00",
       "cluster_size": 1,
       "also": [],
-      "score": 5.22,
+      "score": 5.202,
       "id": "3c1ae977ad99"
     },
     {
@@ -459,7 +440,7 @@
           "title": "Snowflake Stock Jumps 22% on AI Coding Agent Boost"
         }
       ],
-      "score": 5.153,
+      "score": 5.142,
       "id": "a2534d1f4f35"
     },
     {
@@ -472,7 +453,7 @@
       "published": "2026-09-03T13:15:00+00:00",
       "cluster_size": 1,
       "also": [],
-      "score": 5.111,
+      "score": 5.097,
       "id": "5190d2a1dccd"
     },
     {
@@ -481,11 +462,11 @@
       "source": "GNews: AI agents",
       "category": "agents",
       "weight": 5,
-      "summary": "A horde of AI agents conspired against their creators The Economist",
+      "summary": "A horde of AI agents conspired against their creators The Economist Why the Hugging Face Hack Should Make You Worry More About A.I. The New York Times Hugging Face attack is a wake-up call about the risks of AI Financial Times",
       "published": "2026-09-03T13:08:54+00:00",
       "cluster_size": 1,
       "also": [],
-      "score": 5.104,
+      "score": 5.09,
       "id": "33df3179ac27"
     },
     {
@@ -498,7 +479,7 @@
       "published": "2026-09-03T19:38:46+00:00",
       "cluster_size": 1,
       "also": [],
-      "score": 5.101,
+      "score": 5.083,
       "id": "c7eeb240a667"
     },
     {
@@ -511,27 +492,8 @@
       "published": "2026-09-03T19:36:29+00:00",
       "cluster_size": 1,
       "also": [],
-      "score": 5.098,
+      "score": 5.08,
       "id": "46fa5743a6b1"
-    },
-    {
-      "title": "Turn Code Security into an AI Battle Royale with DUALAI Arena 🤖🔥",
-      "url": "https://dev.to/raymond_thomas_b7fa91e5f1/turn-code-security-into-an-ai-battle-royale-with-dualai-arena-206c",
-      "source": "Dev.to AI",
-      "category": "community",
-      "weight": 2,
-      "summary": "As developers, we all know the importance of code security. But keeping your projects safe can be a never-ending battle against evolving threats. That's where DUALAI Arena comes in - an innovative AI-powered tool that turns code security into an active, autonomous AI hackathon...",
-      "published": "2026-09-04T00:25:18+00:00",
-      "cluster_size": 2,
-      "also": [
-        {
-          "source": "Dev.to AI",
-          "url": "https://dev.to/raymond_thomas_b7fa91e5f1/revolutionize-code-security-with-dualai-arena-the-ai-powered-battle-royale-4ham",
-          "title": "Revolutionize Code Security with DUALAI Arena - The AI-Powered Battle Royale"
-        }
-      ],
-      "score": 5.091,
-      "id": "ecd6d02ce9da"
     },
     {
       "title": "The asteroid currently hitting front end web development",
@@ -539,11 +501,11 @@
       "source": "Hacker News",
       "category": "community",
       "weight": 4,
-      "summary": "Article URL: https://nolanlawson.com/2026/08/23/the-asteroid-currently-hitting-frontend-web-development/ Comments URL: https://news.ycombinator.com/item?id=49555233 Points: 64 # Comments: 60",
+      "summary": "Article URL: https://nolanlawson.com/2026/08/23/the-asteroid-currently-hitting-frontend-web-development/ Comments URL: https://news.ycombinator.com/item?id=49555233 Points: 66 # Comments: 65",
       "published": "2026-09-03T19:17:24+00:00",
       "cluster_size": 1,
       "also": [],
-      "score": 5.071,
+      "score": 5.053,
       "id": "9c3ba4d60b69"
     },
     {
@@ -556,8 +518,21 @@
       "published": "2026-09-03T12:00:00+00:00",
       "cluster_size": 1,
       "also": [],
-      "score": 5.027,
+      "score": 5.013,
       "id": "7a45b185cff5"
+    },
+    {
+      "title": "AI agents can now remember and hackers can ‘poison’ their memories — a new cybersecurity threat",
+      "url": "https://news.google.com/rss/articles/CBMixAFBVV95cUxPNGE2TmdVQWNfdURXLTBnNEI2ZWtuZlVoVmVMYVJMbUJNcXdPUW1KVmpLVDhKOV9xMzFha3RWRTB0QmI5Yl9YOThUXy1TM09aNHdUN19fcGpxZk9kM2RQVVpPMzBqMUpXdFdPN0p5cFlvRS1EUWtldEpib3lnX2NmVnZMYnB3R0VkOU5VcVMtbzhtLW5sOEZxMVdSSG1RTkpMaFRCVmpXTHlhNUV6TWFZVUU0T0FEV0IwUFJSNXVIWEdFLVd2?oc=5",
+      "source": "GNews: AI agents",
+      "category": "agents",
+      "weight": 5,
+      "summary": "AI agents can now remember and hackers can ‘poison’ their memories — a new cybersecurity threat The Conversation",
+      "published": "2026-09-03T11:57:29+00:00",
+      "cluster_size": 1,
+      "also": [],
+      "score": 5.01,
+      "id": "c468ddfcb208"
     },
     {
       "title": "Abliteration.ai is making a business out of removing AI guardrails",
@@ -569,7 +544,7 @@
       "published": "2026-09-03T18:37:57+00:00",
       "cluster_size": 1,
       "also": [],
-      "score": 5.016,
+      "score": 4.999,
       "id": "222024e01d06"
     },
     {
@@ -582,7 +557,7 @@
       "published": "2026-09-03T18:38:14+00:00",
       "cluster_size": 1,
       "also": [],
-      "score": 5.016,
+      "score": 4.999,
       "id": "0e473f34711c"
     },
     {
@@ -595,7 +570,7 @@
       "published": "2026-09-03T11:45:01+00:00",
       "cluster_size": 1,
       "also": [],
-      "score": 5.011,
+      "score": 4.997,
       "id": "f6255886b587"
     },
     {
@@ -604,11 +579,11 @@
       "source": "Hacker News",
       "category": "community",
       "weight": 4,
-      "summary": "Article URL: https://inference-docs.cerebras.ai/models/overview Comments URL: https://news.ycombinator.com/item?id=49554520 Points: 420 # Comments: 125",
+      "summary": "Article URL: https://inference-docs.cerebras.ai/models/overview Comments URL: https://news.ycombinator.com/item?id=49554520 Points: 429 # Comments: 126",
       "published": "2026-09-03T18:32:13+00:00",
       "cluster_size": 1,
       "also": [],
-      "score": 5.008,
+      "score": 4.991,
       "id": "7e80672b84c6"
     },
     {
@@ -621,21 +596,8 @@
       "published": "2026-09-03T18:19:56+00:00",
       "cluster_size": 1,
       "also": [],
-      "score": 4.991,
+      "score": 4.974,
       "id": "91a2b0e86629"
-    },
-    {
-      "title": "OpenAI launches Astra, its powerful (and controversial) new model",
-      "url": "https://techcrunch.com/2026/09/03/openai-launches-astra-its-powerful-and-controversial-new-model/",
-      "source": "TechCrunch AI",
-      "category": "news",
-      "weight": 4,
-      "summary": "OpenAI claims that Astra represents \"a new frontier on computer and browser use,\" and that it handles tasks with unmatched \"speed, accuracy, and safety.\"",
-      "published": "2026-09-03T18:01:45+00:00",
-      "cluster_size": 1,
-      "also": [],
-      "score": 4.967,
-      "id": "341a230bd977"
     },
     {
       "title": "Lawmakers unveil new bill to secure AI agents after OpenAI's Hugging Face breach",
@@ -647,8 +609,21 @@
       "published": "2026-09-03T11:01:23+00:00",
       "cluster_size": 1,
       "also": [],
-      "score": 4.964,
+      "score": 4.95,
       "id": "8ea4271f39f0"
+    },
+    {
+      "title": "OpenAI launches Astra, its powerful (and controversial) new model",
+      "url": "https://techcrunch.com/2026/09/03/openai-launches-astra-its-powerful-and-controversial-new-model/",
+      "source": "TechCrunch AI",
+      "category": "news",
+      "weight": 4,
+      "summary": "OpenAI claims that Astra represents \"a new frontier on computer and browser use,\" and that it handles tasks with unmatched \"speed, accuracy, and safety.\"",
+      "published": "2026-09-03T18:01:45+00:00",
+      "cluster_size": 1,
+      "also": [],
+      "score": 4.95,
+      "id": "341a230bd977"
     },
     {
       "title": "Nvidia launches free tool that links idle computers into a personal AI data center",
@@ -660,7 +635,7 @@
       "published": "2026-09-03T17:28:18+00:00",
       "cluster_size": 1,
       "also": [],
-      "score": 4.922,
+      "score": 4.906,
       "id": "37ec33c253da"
     },
     {
@@ -669,11 +644,11 @@
       "source": "Hacker News",
       "category": "community",
       "weight": 4,
-      "summary": "Article URL: https://www.lesswrong.com/posts/PLisnSFir8y5AHkmP/how-concerned-should-we-be-about-astra-s-recurrent Comments URL: https://news.ycombinator.com/item?id=49553321 Points: 80 # Comments: 40",
+      "summary": "Article URL: https://www.lesswrong.com/posts/PLisnSFir8y5AHkmP/how-concerned-should-we-be-about-astra-s-recurrent Comments URL: https://news.ycombinator.com/item?id=49553321 Points: 82 # Comments: 42",
       "published": "2026-09-03T17:10:06+00:00",
       "cluster_size": 1,
       "also": [],
-      "score": 4.899,
+      "score": 4.882,
       "id": "0242cae0a9e1"
     },
     {
@@ -686,7 +661,7 @@
       "published": "2026-09-03T09:35:18+00:00",
       "cluster_size": 1,
       "also": [],
-      "score": 4.874,
+      "score": 4.861,
       "id": "bde9a6f85cc3"
     },
     {
@@ -699,7 +674,7 @@
       "published": "2026-09-03T16:34:43+00:00",
       "cluster_size": 1,
       "also": [],
-      "score": 4.853,
+      "score": 4.837,
       "id": "341e06206731"
     },
     {
@@ -712,7 +687,7 @@
       "published": "2026-09-03T09:02:00+00:00",
       "cluster_size": 1,
       "also": [],
-      "score": 4.841,
+      "score": 4.828,
       "id": "e746ffb26fff"
     },
     {
@@ -721,11 +696,11 @@
       "source": "Hacker News",
       "category": "community",
       "weight": 4,
-      "summary": "Article URL: https://www.discoverwildlife.com/animal-facts/artificial-beaver-dams-california Comments URL: https://news.ycombinator.com/item?id=49552572 Points: 129 # Comments: 40",
+      "summary": "Article URL: https://www.discoverwildlife.com/animal-facts/artificial-beaver-dams-california Comments URL: https://news.ycombinator.com/item?id=49552572 Points: 134 # Comments: 43",
       "published": "2026-09-03T16:21:33+00:00",
       "cluster_size": 1,
       "also": [],
-      "score": 4.836,
+      "score": 4.82,
       "id": "1327db0da18d"
     },
     {
@@ -738,7 +713,7 @@
       "published": "2026-09-03T16:09:01+00:00",
       "cluster_size": 1,
       "also": [],
-      "score": 4.82,
+      "score": 4.804,
       "id": "fb930f0d98d9"
     },
     {
@@ -751,7 +726,7 @@
       "published": "2026-09-03T21:56:21+00:00",
       "cluster_size": 1,
       "also": [],
-      "score": 4.803,
+      "score": 4.784,
       "id": "840678f87f7b"
     },
     {
@@ -764,7 +739,7 @@
       "published": "2026-09-03T21:48:24+00:00",
       "cluster_size": 1,
       "also": [],
-      "score": 4.791,
+      "score": 4.772,
       "id": "77883cff7f1b"
     },
     {
@@ -773,11 +748,11 @@
       "source": "Hacker News",
       "category": "community",
       "weight": 4,
-      "summary": "Article URL: https://ifm.ai/blog/k2/ Comments URL: https://news.ycombinator.com/item?id=49551760 Points: 242 # Comments: 79",
+      "summary": "Article URL: https://ifm.ai/blog/k2/ Comments URL: https://news.ycombinator.com/item?id=49551760 Points: 243 # Comments: 81",
       "published": "2026-09-03T15:36:43+00:00",
       "cluster_size": 1,
       "also": [],
-      "score": 4.78,
+      "score": 4.764,
       "id": "fd8b1907aa80"
     },
     {
@@ -790,7 +765,7 @@
       "published": "2026-09-03T15:02:08+00:00",
       "cluster_size": 1,
       "also": [],
-      "score": 4.737,
+      "score": 4.722,
       "id": "56da2c8ef803"
     },
     {
@@ -803,7 +778,7 @@
       "published": "2026-09-03T15:00:00+00:00",
       "cluster_size": 1,
       "also": [],
-      "score": 4.735,
+      "score": 4.72,
       "id": "92509264c2a3"
     },
     {
@@ -812,11 +787,11 @@
       "source": "Hacker News",
       "category": "community",
       "weight": 4,
-      "summary": "Article URL: https://neil.fraser.name/news/2026/09/03/ Comments URL: https://news.ycombinator.com/item?id=49550772 Points: 1276 # Comments: 365",
+      "summary": "Article URL: https://neil.fraser.name/news/2026/09/03/ Comments URL: https://news.ycombinator.com/item?id=49550772 Points: 1284 # Comments: 368",
       "published": "2026-09-03T14:54:39+00:00",
       "cluster_size": 1,
       "also": [],
-      "score": 4.728,
+      "score": 4.713,
       "id": "6429aeb0f4a1"
     },
     {
@@ -825,11 +800,11 @@
       "source": "Hacker News",
       "category": "community",
       "weight": 4,
-      "summary": "Article URL: https://anyhumanever.com/ Comments URL: https://news.ycombinator.com/item?id=49550698 Points: 447 # Comments: 219",
+      "summary": "Article URL: https://anyhumanever.com/ Comments URL: https://news.ycombinator.com/item?id=49550698 Points: 453 # Comments: 226",
       "published": "2026-09-03T14:51:10+00:00",
       "cluster_size": 1,
       "also": [],
-      "score": 4.724,
+      "score": 4.709,
       "id": "32f7af299895"
     },
     {
@@ -842,7 +817,7 @@
       "published": "2026-09-03T14:41:03+00:00",
       "cluster_size": 1,
       "also": [],
-      "score": 4.712,
+      "score": 4.697,
       "id": "0ab3b0e32fad"
     },
     {
@@ -855,7 +830,7 @@
       "published": "2026-09-03T14:28:18+00:00",
       "cluster_size": 1,
       "also": [],
-      "score": 4.697,
+      "score": 4.682,
       "id": "a49ac91c3c7b"
     },
     {
@@ -868,7 +843,7 @@
       "published": "2026-09-03T06:18:40+00:00",
       "cluster_size": 1,
       "also": [],
-      "score": 4.685,
+      "score": 4.674,
       "id": "6a86cc1e32eb"
     },
     {
@@ -892,7 +867,7 @@
           "title": "Trump Administration Sides With OpenAI in New York Times Copyright Lawsuit"
         }
       ],
-      "score": 4.672,
+      "score": 4.665,
       "id": "b94dc7898a32"
     },
     {
@@ -905,7 +880,7 @@
       "published": "2026-09-03T19:52:06+00:00",
       "cluster_size": 1,
       "also": [],
-      "score": 4.62,
+      "score": 4.602,
       "id": "f6d665cb0a3f"
     },
     {
@@ -918,7 +893,7 @@
       "published": "2026-09-03T04:38:33+00:00",
       "cluster_size": 1,
       "also": [],
-      "score": 4.597,
+      "score": 4.586,
       "id": "043c2a3bfc8f"
     },
     {
@@ -931,7 +906,7 @@
       "published": "2026-09-03T04:00:00+00:00",
       "cluster_size": 1,
       "also": [],
-      "score": 4.564,
+      "score": 4.554,
       "id": "2bf19f71cb34"
     },
     {
@@ -944,7 +919,7 @@
       "published": "2026-09-03T04:00:00+00:00",
       "cluster_size": 1,
       "also": [],
-      "score": 4.564,
+      "score": 4.554,
       "id": "0dc8f17a95a8"
     },
     {
@@ -957,7 +932,7 @@
       "published": "2026-09-03T04:00:00+00:00",
       "cluster_size": 1,
       "also": [],
-      "score": 4.564,
+      "score": 4.554,
       "id": "c30c699df53f"
     },
     {
@@ -970,7 +945,7 @@
       "published": "2026-09-03T04:00:00+00:00",
       "cluster_size": 1,
       "also": [],
-      "score": 4.564,
+      "score": 4.554,
       "id": "0efdc0a621be"
     },
     {
@@ -983,7 +958,7 @@
       "published": "2026-09-03T04:00:00+00:00",
       "cluster_size": 1,
       "also": [],
-      "score": 4.564,
+      "score": 4.554,
       "id": "939b881edda5"
     },
     {
@@ -996,7 +971,7 @@
       "published": "2026-09-03T04:00:00+00:00",
       "cluster_size": 1,
       "also": [],
-      "score": 4.564,
+      "score": 4.554,
       "id": "0941276216ac"
     },
     {
@@ -1009,7 +984,7 @@
       "published": "2026-09-03T04:00:00+00:00",
       "cluster_size": 1,
       "also": [],
-      "score": 4.564,
+      "score": 4.554,
       "id": "4aea6a119648"
     },
     {
@@ -1022,7 +997,7 @@
       "published": "2026-09-03T04:00:00+00:00",
       "cluster_size": 1,
       "also": [],
-      "score": 4.564,
+      "score": 4.554,
       "id": "3ea0e048a255"
     },
     {
@@ -1035,7 +1010,7 @@
       "published": "2026-09-03T04:00:00+00:00",
       "cluster_size": 1,
       "also": [],
-      "score": 4.564,
+      "score": 4.554,
       "id": "aaf20c150d21"
     },
     {
@@ -1048,47 +1023,138 @@
       "published": "2026-09-03T04:00:00+00:00",
       "cluster_size": 1,
       "also": [],
-      "score": 4.564,
+      "score": 4.554,
       "id": "5e8b4a3ae1ec"
     },
     {
-      "title": "Launch Is Just the Beginning: Ongoing Website Optimization That Actually Drives Growth",
-      "url": "https://dev.to/sproutlio_growth/launch-is-just-the-beginning-ongoing-website-optimization-that-actually-drives-growth-373o",
+      "title": "1 Million Filipino Teachers Get Microsoft Copilot: Inside DepEd's AI Classroom Push",
+      "url": "https://dev.to/yanoai/1-million-filipino-teachers-get-microsoft-copilot-inside-depeds-ai-classroom-push-2hp4",
       "source": "Dev.to AI",
       "category": "community",
       "weight": 2,
-      "summary": "Let’s bust a common myth right out of the gate: launching a beautiful, custom website is not the finish line. It’s the starting line. A lot of business owners treat their website like a digital billboard. They pay for it once, hang it up, and expect the phone to ring forever....",
-      "published": "2026-09-04T00:30:00+00:00",
+      "summary": "In January 2026, the Department of Education (DepEd) launched AGAP.AI, the country's first nationwide program for responsible artificial intelligence in basic education (Source: DepEd, 2026). Seven months later, DepEd and Microsoft announced that one million public school...",
+      "published": "2026-09-04T00:39:58+00:00",
       "cluster_size": 1,
       "also": [],
-      "score": 4.549,
-      "id": "47b3d76641db"
+      "score": 4.544,
+      "id": "b9f59c4e11a2"
     },
     {
-      "title": "CI Got Cheaper in 2026. Reliability Is Now the Harder Problem",
-      "url": "https://dev.to/kalemi/ci-got-cheaper-in-2026-reliability-is-now-the-harder-problem-i4n",
+      "title": "The Error Boundary Strategy That Keeps One Broken Widget From Taking Down the Page",
+      "url": "https://dev.to/raxxostudios/the-error-boundary-strategy-that-keeps-one-broken-widget-from-taking-down-the-page-pd5",
       "source": "Dev.to AI",
       "category": "community",
       "weight": 2,
-      "summary": "The first half of 2026 reset two things at once for engineering teams: what continuous integration costs, and what it takes to keep delivery stable while AI pushes more change through your pipelines than ever. Those two stories are connected, and the connection is the part worth...",
-      "published": "2026-09-04T00:29:23+00:00",
+      "summary": "One error boundary per widget, not one per page, keeps failures local Fallback UI shows what broke and a retry button, never a blank screen Granularity rule: wrap anything that fetches, parses, or renders external data Reset keys let a boundary recover without a full page reload...",
+      "published": "2026-09-04T00:39:53+00:00",
       "cluster_size": 1,
       "also": [],
-      "score": 4.548,
-      "id": "68a3a9c7cb54"
+      "score": 4.544,
+      "id": "6caefa04ad5b"
     },
     {
-      "title": "Crypto Funding Rate Arbitrage with AI Signals",
-      "url": "https://dev.to/rogt7/crypto-funding-rate-arbitrage-with-ai-signals-2bo2",
+      "title": "Revenue Strategies for AI API Services",
+      "url": "https://dev.to/rogt7/revenue-strategies-for-ai-api-services-5h4m",
       "source": "Dev.to AI",
       "category": "community",
       "weight": 2,
-      "summary": "Perpetual futures markets operate on a unique mechanism: the funding rate. This periodic payment, exchanged between long and short positions, ensures the perpetual contract price tracks the spot price. While often viewed as a minor cost of doing business, funding rates represent...",
-      "published": "2026-09-04T00:28:14+00:00",
+      "summary": "To make this AI agent truly \"passive,\" the system needs to run on a closed-loop flywheel where content generation, product acquisition, and capital deployment feed into each other without human intervention. Here are 3 high-yield, passive revenue strategies tailored to your...",
+      "published": "2026-09-04T00:39:40+00:00",
       "cluster_size": 1,
       "also": [],
-      "score": 4.546,
-      "id": "6514faf97fab"
+      "score": 4.544,
+      "id": "4171a0254b78"
+    },
+    {
+      "title": "Bitcoin Surges to $81,278 (+5.6%) Amid Escalating $1.5B Nation-State Attack Risks in 2026",
+      "url": "https://dev.to/kchour96dev/bitcoin-surges-to-81278-56-amid-escalating-15b-nation-state-attack-risks-in-2026-1oad",
+      "source": "Dev.to AI",
+      "category": "community",
+      "weight": 2,
+      "summary": "🔗 Live Dashboard: autonomous-portfolio-2026.live 📢 Telegram: t.me/AII2026futher Today's Headlines Bitcoin (BTC) soared by 5.6% in 24 hours, reaching $81,278, signaling strong market bullishness. Multiple new crypto projects like iotex-core and Maskbook are gaining significant...",
+      "published": "2026-09-04T00:36:17+00:00",
+      "cluster_size": 1,
+      "also": [],
+      "score": 4.538,
+      "id": "4f392c69f0e8"
+    },
+    {
+      "title": "Self-Healing CI Fixes Your Environment. Your Coding Agent Fixes the Code.",
+      "url": "https://dev.to/kalemi/self-healing-ci-fixes-your-environment-your-coding-agent-fixes-the-code-4b9k",
+      "source": "Dev.to AI",
+      "category": "community",
+      "weight": 2,
+      "summary": "The agent is already in your workflow. The failed build is where it goes blind. AI coding agents have moved from novelty to daily tool. In Stack Overflow's 2025 Developer Survey, 84% of developers said they are using or planning to use AI tools in their development process, up...",
+      "published": "2026-09-04T00:35:47+00:00",
+      "cluster_size": 1,
+      "also": [],
+      "score": 4.537,
+      "id": "f82f14bd3b29"
+    },
+    {
+      "title": "Unleash AI-Powered Code Security with DUALAI Arena: Your Local Autonomous AI Hackathon",
+      "url": "https://dev.to/raymond_thomas_b7fa91e5f1/unleash-ai-powered-code-security-with-dualai-arena-your-local-autonomous-ai-hackathon-15bj",
+      "source": "Dev.to AI",
+      "category": "community",
+      "weight": 2,
+      "summary": "As developers, we're all too familiar with the constant fear of code vulnerabilities. What if I told you there's a way to turn this security challenge into an engaging and educational experience right on your desktop? Enter DUALAI Arena, a groundbreaking AI tool that transforms...",
+      "published": "2026-09-04T00:35:40+00:00",
+      "cluster_size": 1,
+      "also": [],
+      "score": 4.537,
+      "id": "248a1f02c954"
+    },
+    {
+      "title": "The Pipeline Became the Attack Surface: What the 2026 CI/CD Shifts Mean for Reliability",
+      "url": "https://dev.to/kalemi/the-pipeline-became-the-attack-surface-what-the-2026-cicd-shifts-mean-for-reliability-4p13",
+      "source": "Dev.to AI",
+      "category": "community",
+      "weight": 2,
+      "summary": "The Pipeline Became the Attack Surface For most of the last decade, we treated the CI/CD pipeline as plumbing: invisible, trusted, and mostly ignored until it broke. That assumption is no longer safe. The clearest signal came in 2025, when attackers stopped going after the...",
+      "published": "2026-09-04T00:33:47+00:00",
+      "cluster_size": 1,
+      "also": [],
+      "score": 4.534,
+      "id": "c03afadc900b"
+    },
+    {
+      "title": "Wealth Management Technology: Essential Open Source",
+      "url": "https://dev.to/vladimir_lialine_b2e67374/wealth-management-technology-essential-open-source-49im",
+      "source": "Dev.to AI",
+      "category": "community",
+      "weight": 2,
+      "summary": "Choosing a robo-advisor is no longer just a question of fees, portfolio options, or a polished dashboard. The underlying wealth management technology determines who controls the data, how investment decisions are explained, and whether the platform can adapt to new regulations...",
+      "published": "2026-09-04T00:32:02+00:00",
+      "cluster_size": 1,
+      "also": [],
+      "score": 4.531,
+      "id": "531693a0c50a"
+    },
+    {
+      "title": "The CI/CD Tools Landscape in 2026: What Each Category Is Actually For",
+      "url": "https://dev.to/kalemi/the-cicd-tools-landscape-in-2026-what-each-category-is-actually-for-5fi2",
+      "source": "Dev.to AI",
+      "category": "community",
+      "weight": 2,
+      "summary": "Most \"best CI/CD tools\" lists are twenty logos in a table, ranked by nothing in particular, with the author's product at the top. This is not that. It is a map of the categories, what each one exists to solve, and how to tell whether you need it yet. I work at Latchkey, so I...",
+      "published": "2026-09-04T00:31:22+00:00",
+      "cluster_size": 1,
+      "also": [],
+      "score": 4.53,
+      "id": "ca86a947b27d"
+    },
+    {
+      "title": "GPT-6 Astra Rolls Out With Responses API Tool Support for Enterprise Users",
+      "url": "https://dev.to/alifar/gpt-6-astra-rolls-out-with-responses-api-tool-support-for-enterprise-users-55m7",
+      "source": "Dev.to AI",
+      "category": "community",
+      "weight": 2,
+      "summary": "OpenAI has begun rolling out GPT-6 Astra to enterprises through its Trusted Access Program . The model is positioned for work that combines long-context reasoning with tools in OpenAI's Responses API, giving developers a supported route to connect model interactions with...",
+      "published": "2026-09-04T00:30:30+00:00",
+      "cluster_size": 1,
+      "also": [],
+      "score": 4.529,
+      "id": "44b2e270e7ce"
     },
     {
       "title": "VMware migration reduces Tottenham Hotspur's licensing fees by 85 percent",
@@ -1100,73 +1166,8 @@
       "published": "2026-09-03T18:58:31+00:00",
       "cluster_size": 1,
       "also": [],
-      "score": 4.544,
+      "score": 4.527,
       "id": "3658c9b18d2a"
-    },
-    {
-      "title": "The 2026 GitHub Actions Reset: Cheaper Runners, Stricter Security, and Smarter Pipelines",
-      "url": "https://dev.to/kalemi/the-2026-github-actions-reset-cheaper-runners-stricter-security-and-smarter-pipelines-1mh6",
-      "source": "Dev.to AI",
-      "category": "community",
-      "weight": 2,
-      "summary": "The first half of 2026 rearranged three things at once for teams that live in GitHub Actions: what CI costs, how it is secured, and how much of it a machine can now do on its own. None of these landed cleanly. Prices went down for most people while a new platform charge quietly...",
-      "published": "2026-09-04T00:26:52+00:00",
-      "cluster_size": 1,
-      "also": [],
-      "score": 4.544,
-      "id": "43eb4a244dcb"
-    },
-    {
-      "title": "`DietrichGebert/ponytail`: Teaching AI Agents to Ship Less Code",
-      "url": "https://dev.to/power_zhong/dietrichgebertponytail-teaching-ai-agents-to-ship-less-code-pe",
-      "source": "Dev.to AI",
-      "category": "community",
-      "weight": 2,
-      "summary": "A fast-rising repository with +2,128 GitHub stars today , DietrichGebert/ponytail is built around a deceptively practical idea: make your AI agent behave like the laziest senior developer on the team. That does not mean being careless. It means questioning whether a new...",
-      "published": "2026-09-04T00:25:08+00:00",
-      "cluster_size": 1,
-      "also": [],
-      "score": 4.541,
-      "id": "5e6a3d8a6288"
-    },
-    {
-      "title": "Tigers' Verlander Expected to Miss Weeks with Left Hamstring Strain",
-      "url": "https://dev.to/yagyaraj_sharma_6cd410179/tigers-verlander-expected-to-miss-weeks-with-left-hamstring-strain-23f0",
-      "source": "Dev.to AI",
-      "category": "community",
-      "weight": 2,
-      "summary": "Tigers' Verlander Expected to Miss Weeks with Left Hamstring Strain The Detroit Tigers have been dealt a significant blow with the news that ace right-hander Justin Verlander is likely to miss several weeks due to a left hamstring strain. According to manager A.J. Hinch,...",
-      "published": "2026-09-04T00:25:06+00:00",
-      "cluster_size": 1,
-      "also": [],
-      "score": 4.541,
-      "id": "5173251b14f9"
-    },
-    {
-      "title": "The 2026 CI/CD Squeeze: Faster Code, Shifting Prices, and Where Reliability Fits",
-      "url": "https://dev.to/kalemi/the-2026-cicd-squeeze-faster-code-shifting-prices-and-where-reliability-fits-1h16",
-      "source": "Dev.to AI",
-      "category": "community",
-      "weight": 2,
-      "summary": "Two forces are pulling on delivery pipelines this year. Code is arriving faster than ever, and the cost of running the pipelines that ship it has been unusually unsettled. Let us look at both, honestly, and then talk about where reliability work fits. Pricing was a moving...",
-      "published": "2026-09-04T00:24:32+00:00",
-      "cluster_size": 1,
-      "also": [],
-      "score": 4.54,
-      "id": "74cc78f1f563"
-    },
-    {
-      "title": "Unlocking the Secrets of a Healthy Gut: Dr. Giulia Enders' Guide to Nourishing Your Gut",
-      "url": "https://dev.to/yagyaraj_sharma_6cd410179/unlocking-the-secrets-of-a-healthy-gut-dr-giulia-enders-guide-to-nourishing-your-gut-2j4n",
-      "source": "Dev.to AI",
-      "category": "community",
-      "weight": 2,
-      "summary": "Unlocking the Secrets of a Healthy Gut: Dr. Giulia Enders' Guide to Nourishing Your Gut As we continue to learn more about the intricate workings of the human body, one area that has gained significant attention in recent years is the gut microbiome. The gut, often referred to...",
-      "published": "2026-09-04T00:20:07+00:00",
-      "cluster_size": 1,
-      "also": [],
-      "score": 4.532,
-      "id": "64e79be9453f"
     },
     {
       "title": "GPT-6 Astra Is Here—and OpenAI Thinks It May Kick Off the AGI Era",
@@ -1178,7 +1179,7 @@
       "published": "2026-09-03T18:06:24+00:00",
       "cluster_size": 1,
       "also": [],
-      "score": 4.473,
+      "score": 4.456,
       "id": "e07a089e2786"
     },
     {
@@ -1187,11 +1188,11 @@
       "source": "Hacker News",
       "category": "community",
       "weight": 4,
-      "summary": "Article URL: https://twitter.com/GergelyOrosz/status/2095453567955968398 Comments URL: https://news.ycombinator.com/item?id=49548452 Points: 268 # Comments: 183",
+      "summary": "Article URL: https://twitter.com/GergelyOrosz/status/2095453567955968398 Comments URL: https://news.ycombinator.com/item?id=49548452 Points: 269 # Comments: 185",
       "published": "2026-09-03T11:01:04+00:00",
       "cluster_size": 1,
       "also": [],
-      "score": 4.463,
+      "score": 4.45,
       "id": "f9e11e325fe9"
     },
     {
@@ -1200,38 +1201,12 @@
       "source": "Hacker News",
       "category": "community",
       "weight": 4,
-      "summary": "Article URL: https://github.com/audacity/audacity/releases/tag/Audacity-4.0.0 Comments URL: https://news.ycombinator.com/item?id=49548395 Points: 1032 # Comments: 230",
+      "summary": "Article URL: https://github.com/audacity/audacity/releases/tag/Audacity-4.0.0 Comments URL: https://news.ycombinator.com/item?id=49548395 Points: 1037 # Comments: 232",
       "published": "2026-09-03T10:53:08+00:00",
       "cluster_size": 1,
       "also": [],
-      "score": 4.455,
+      "score": 4.442,
       "id": "d75e0275a801"
-    },
-    {
-      "title": "What’s neuralese and why is everyone so concerned about it?",
-      "url": "https://www.transformernews.ai/p/what-is-neuralese-openai-astra-chain-of-thought-recurrent-depth",
-      "source": "Transformer",
-      "category": "analysis",
-      "weight": 4,
-      "summary": "OpenAI’s new Astra model is raising concerns about our continued ability to monitor AI’s chain of thought",
-      "published": "2026-09-03T10:31:57+00:00",
-      "cluster_size": 1,
-      "also": [],
-      "score": 4.433,
-      "id": "7a6d7215a33b"
-    },
-    {
-      "title": "Gloria Steinem has died",
-      "url": "https://www.theguardian.com/books/2026/sep/03/gloria-steinem-groundbreaking-feminist-campaigner-dies-aged-92",
-      "source": "Hacker News",
-      "category": "community",
-      "weight": 4,
-      "summary": "https://www.nytimes.com/2026/09/03/us/politics/gloria-steine... , https://archive.ph/cfC1K Comments URL: https://news.ycombinator.com/item?id=49548256 Points: 132 # Comments: 58",
-      "published": "2026-09-03T10:31:18+00:00",
-      "cluster_size": 1,
-      "also": [],
-      "score": 4.432,
-      "id": "95c9e563db1f"
     },
     {
       "title": "Fable 5.1, Enterprise Frontier Safeguards",
@@ -1249,8 +1224,21 @@
           "title": "Developing Enterprise Frontier Safeguards with our customers"
         }
       ],
-      "score": 4.431,
+      "score": 4.425,
       "id": "e23816de1025"
+    },
+    {
+      "title": "What’s neuralese and why is everyone so concerned about it?",
+      "url": "https://www.transformernews.ai/p/what-is-neuralese-openai-astra-chain-of-thought-recurrent-depth",
+      "source": "Transformer",
+      "category": "analysis",
+      "weight": 4,
+      "summary": "OpenAI’s new Astra model is raising concerns about our continued ability to monitor AI’s chain of thought",
+      "published": "2026-09-03T10:31:57+00:00",
+      "cluster_size": 1,
+      "also": [],
+      "score": 4.419,
+      "id": "7a6d7215a33b"
     },
     {
       "title": "Meta, Google join the AI launch party",
@@ -1262,7 +1250,7 @@
       "published": "2026-09-03T10:00:00+00:00",
       "cluster_size": 1,
       "also": [],
-      "score": 4.399,
+      "score": 4.386,
       "id": "5d184bc9f046"
     },
     {
@@ -1281,7 +1269,7 @@
           "title": "Migrate agentic workloads to Amazon Bedrock AgentCore"
         }
       ],
-      "score": 4.38,
+      "score": 4.364,
       "id": "295c5c3fbc11"
     },
     {
@@ -1294,8 +1282,21 @@
       "published": "2026-09-03T16:42:40+00:00",
       "cluster_size": 1,
       "also": [],
-      "score": 4.363,
+      "score": 4.347,
       "id": "039f307a8545"
+    },
+    {
+      "title": "Sparks Fly: NVIDIA Accelerates Local AI at IFA 2026",
+      "url": "https://blogs.nvidia.com/blog/local-ai-ifa-next-gen-agents-nv-pair-rtx-spark/",
+      "source": "NVIDIA Blog",
+      "category": "vendors",
+      "weight": 3,
+      "summary": "Frontier intelligence is going local. At IFA 2026, NVIDIA, Microsoft and its partners are teaming up to provide faster inference and new tools that make agents easier to set up and run locally on NVIDIA hardware. New compact NVIDIA RTX Spark Windows PCs are also coming in...",
+      "published": "2026-09-03T16:00:59+00:00",
+      "cluster_size": 1,
+      "also": [],
+      "score": 4.294,
+      "id": "7765da697e6b"
     },
     {
       "title": "Anthropic’s Claude failures have made agent observability a security priority",
@@ -1307,7 +1308,7 @@
       "published": "2026-09-02T20:14:18+00:00",
       "cluster_size": 1,
       "also": [],
-      "score": 4.219,
+      "score": 4.211,
       "id": "264b579ae696"
     },
     {
@@ -1320,7 +1321,7 @@
       "published": "2026-09-02T19:14:00+00:00",
       "cluster_size": 1,
       "also": [],
-      "score": 4.18,
+      "score": 4.173,
       "id": "ce0ef1f86874"
     },
     {
@@ -1333,7 +1334,7 @@
       "published": "2026-09-02T18:46:26+00:00",
       "cluster_size": 1,
       "also": [],
-      "score": 4.163,
+      "score": 4.156,
       "id": "16ab4374d7cf"
     },
     {
@@ -1346,21 +1347,8 @@
       "published": "2026-09-03T13:39:13+00:00",
       "cluster_size": 1,
       "also": [],
-      "score": 4.139,
+      "score": 4.124,
       "id": "59106843dc3b"
-    },
-    {
-      "title": "‘NBA 2K27’ With NVIDIA DLSS 5 Leads 28 New Games Coming to GeForce NOW",
-      "url": "https://blogs.nvidia.com/blog/geforce-now-thursday-september-2026-games-list/",
-      "source": "NVIDIA Blog",
-      "category": "vendors",
-      "weight": 3,
-      "summary": "September is here with 28 more games streaming on GeForce NOW this month, led by a slam dunk: NBA 2K27 with the NVIDIA DLSS 5 3D-Guided Neural Rendering feature. Through NVIDIA’s close collaboration with Visual Concepts and 2K, DLSS 5 brings a new level of lifelike lighting and...",
-      "published": "2026-09-03T13:00:35+00:00",
-      "cluster_size": 1,
-      "also": [],
-      "score": 4.095,
-      "id": "838b591aeb10"
     },
     {
       "title": "Nvidia RTX Spark ‘Superchip’: The First AI PCs Are Here",
@@ -1372,8 +1360,21 @@
       "published": "2026-09-03T13:00:00+00:00",
       "cluster_size": 1,
       "also": [],
-      "score": 4.094,
+      "score": 4.08,
       "id": "fc5286d71a7e"
+    },
+    {
+      "title": "‘NBA 2K27’ With NVIDIA DLSS 5 Leads 28 New Games Coming to GeForce NOW",
+      "url": "https://blogs.nvidia.com/blog/geforce-now-thursday-september-2026-games-list/",
+      "source": "NVIDIA Blog",
+      "category": "vendors",
+      "weight": 3,
+      "summary": "September is here with 28 more games streaming on GeForce NOW this month, led by a slam dunk: NBA 2K27 with the NVIDIA DLSS 5 3D-Guided Neural Rendering feature. Through NVIDIA’s close collaboration with Visual Concepts and 2K, DLSS 5 brings a new level of lifelike lighting and...",
+      "published": "2026-09-03T13:00:35+00:00",
+      "cluster_size": 1,
+      "also": [],
+      "score": 4.08,
+      "id": "838b591aeb10"
     },
     {
       "title": "llm-gemini 0.34",
@@ -1385,7 +1386,7 @@
       "published": "2026-09-02T16:39:38+00:00",
       "cluster_size": 1,
       "also": [],
-      "score": 4.088,
+      "score": 4.08,
       "id": "8f3ab6280164"
     },
     {
@@ -1398,7 +1399,7 @@
       "published": "2026-09-02T16:06:30+00:00",
       "cluster_size": 1,
       "also": [],
-      "score": 4.069,
+      "score": 4.062,
       "id": "ed41b4df4c9f"
     },
     {
@@ -1411,7 +1412,7 @@
       "published": "2026-09-03T04:00:00+00:00",
       "cluster_size": 1,
       "also": [],
-      "score": 4.064,
+      "score": 4.054,
       "id": "276dbcb527e9"
     },
     {
@@ -1424,7 +1425,7 @@
       "published": "2026-09-03T04:00:00+00:00",
       "cluster_size": 1,
       "also": [],
-      "score": 4.064,
+      "score": 4.054,
       "id": "84d7b7412eb4"
     },
     {
@@ -1437,7 +1438,7 @@
       "published": "2026-09-03T04:00:00+00:00",
       "cluster_size": 1,
       "also": [],
-      "score": 4.064,
+      "score": 4.054,
       "id": "d1d4fa215b5b"
     },
     {
@@ -1450,7 +1451,7 @@
       "published": "2026-09-03T04:00:00+00:00",
       "cluster_size": 1,
       "also": [],
-      "score": 4.064,
+      "score": 4.054,
       "id": "068beb4555ab"
     },
     {
@@ -1463,7 +1464,7 @@
       "published": "2026-09-03T04:00:00+00:00",
       "cluster_size": 1,
       "also": [],
-      "score": 4.064,
+      "score": 4.054,
       "id": "553e9170a2f6"
     },
     {
@@ -1476,7 +1477,7 @@
       "published": "2026-09-03T04:00:00+00:00",
       "cluster_size": 1,
       "also": [],
-      "score": 4.064,
+      "score": 4.054,
       "id": "ad54e2d6867c"
     },
     {
@@ -1489,7 +1490,7 @@
       "published": "2026-09-03T04:00:00+00:00",
       "cluster_size": 1,
       "also": [],
-      "score": 4.064,
+      "score": 4.054,
       "id": "bf1238a830c1"
     },
     {
@@ -1502,7 +1503,7 @@
       "published": "2026-09-03T04:00:00+00:00",
       "cluster_size": 1,
       "also": [],
-      "score": 4.064,
+      "score": 4.054,
       "id": "ebbf32604ed1"
     },
     {
@@ -1515,7 +1516,7 @@
       "published": "2026-09-03T04:00:00+00:00",
       "cluster_size": 1,
       "also": [],
-      "score": 4.064,
+      "score": 4.054,
       "id": "c18c1407ad39"
     },
     {
@@ -1528,7 +1529,7 @@
       "published": "2026-09-03T04:00:00+00:00",
       "cluster_size": 1,
       "also": [],
-      "score": 4.064,
+      "score": 4.054,
       "id": "4082ab78f2b0"
     },
     {
@@ -1541,7 +1542,7 @@
       "published": "2026-09-03T04:00:00+00:00",
       "cluster_size": 1,
       "also": [],
-      "score": 4.064,
+      "score": 4.054,
       "id": "121b33a5d44c"
     },
     {
@@ -1554,7 +1555,7 @@
       "published": "2026-09-03T04:00:00+00:00",
       "cluster_size": 1,
       "also": [],
-      "score": 4.064,
+      "score": 4.054,
       "id": "3bfdfd385170"
     },
     {
@@ -1567,7 +1568,7 @@
       "published": "2026-09-03T04:00:00+00:00",
       "cluster_size": 1,
       "also": [],
-      "score": 4.064,
+      "score": 4.054,
       "id": "6f9a86efb06e"
     },
     {
@@ -1580,7 +1581,7 @@
       "published": "2026-09-03T04:00:00+00:00",
       "cluster_size": 1,
       "also": [],
-      "score": 4.064,
+      "score": 4.054,
       "id": "983c89538271"
     },
     {
@@ -1593,7 +1594,7 @@
       "published": "2026-09-03T04:00:00+00:00",
       "cluster_size": 1,
       "also": [],
-      "score": 4.064,
+      "score": 4.054,
       "id": "e156c103e788"
     },
     {
@@ -1606,7 +1607,7 @@
       "published": "2026-09-03T04:00:00+00:00",
       "cluster_size": 1,
       "also": [],
-      "score": 4.064,
+      "score": 4.054,
       "id": "5027c88ef4fb"
     },
     {
@@ -1619,7 +1620,7 @@
       "published": "2026-09-03T04:00:00+00:00",
       "cluster_size": 1,
       "also": [],
-      "score": 4.064,
+      "score": 4.054,
       "id": "f9ffcddd0f73"
     },
     {
@@ -1632,7 +1633,7 @@
       "published": "2026-09-03T04:00:00+00:00",
       "cluster_size": 1,
       "also": [],
-      "score": 4.064,
+      "score": 4.054,
       "id": "a9cf23abdccf"
     },
     {
@@ -1645,7 +1646,7 @@
       "published": "2026-09-03T04:00:00+00:00",
       "cluster_size": 1,
       "also": [],
-      "score": 4.064,
+      "score": 4.054,
       "id": "e0cec1ee7353"
     },
     {
@@ -1658,7 +1659,7 @@
       "published": "2026-09-03T04:00:00+00:00",
       "cluster_size": 1,
       "also": [],
-      "score": 4.064,
+      "score": 4.054,
       "id": "d8eb16135f8f"
     },
     {
@@ -1671,7 +1672,7 @@
       "published": "2026-09-03T04:00:00+00:00",
       "cluster_size": 1,
       "also": [],
-      "score": 4.064,
+      "score": 4.054,
       "id": "a1418d638c59"
     },
     {
@@ -1684,7 +1685,7 @@
       "published": "2026-09-03T04:00:00+00:00",
       "cluster_size": 1,
       "also": [],
-      "score": 4.064,
+      "score": 4.054,
       "id": "60cbac6a949c"
     },
     {
@@ -1697,7 +1698,7 @@
       "published": "2026-09-03T04:00:00+00:00",
       "cluster_size": 1,
       "also": [],
-      "score": 4.064,
+      "score": 4.054,
       "id": "863389c131c4"
     },
     {
@@ -1710,7 +1711,7 @@
       "published": "2026-09-03T04:00:00+00:00",
       "cluster_size": 1,
       "also": [],
-      "score": 4.064,
+      "score": 4.054,
       "id": "6e909c95c006"
     },
     {
@@ -1723,7 +1724,7 @@
       "published": "2026-09-03T04:00:00+00:00",
       "cluster_size": 1,
       "also": [],
-      "score": 4.064,
+      "score": 4.054,
       "id": "19816cbb5d60"
     },
     {
@@ -1736,7 +1737,7 @@
       "published": "2026-09-03T04:00:00+00:00",
       "cluster_size": 1,
       "also": [],
-      "score": 4.064,
+      "score": 4.054,
       "id": "58fdabbd5fcc"
     },
     {
@@ -1749,7 +1750,7 @@
       "published": "2026-09-03T04:00:00+00:00",
       "cluster_size": 1,
       "also": [],
-      "score": 4.064,
+      "score": 4.054,
       "id": "00acf0c752c7"
     },
     {
@@ -1762,7 +1763,7 @@
       "published": "2026-09-03T04:00:00+00:00",
       "cluster_size": 1,
       "also": [],
-      "score": 4.064,
+      "score": 4.054,
       "id": "482f60b473dc"
     },
     {
@@ -1775,7 +1776,7 @@
       "published": "2026-09-03T04:00:00+00:00",
       "cluster_size": 1,
       "also": [],
-      "score": 4.064,
+      "score": 4.054,
       "id": "744d06e05ca4"
     },
     {
@@ -1788,7 +1789,7 @@
       "published": "2026-09-03T04:00:00+00:00",
       "cluster_size": 1,
       "also": [],
-      "score": 4.064,
+      "score": 4.054,
       "id": "64d27b5bd2c6"
     },
     {
@@ -1801,7 +1802,7 @@
       "published": "2026-09-03T11:56:49+00:00",
       "cluster_size": 1,
       "also": [],
-      "score": 4.023,
+      "score": 4.01,
       "id": "ea8b14faf08e"
     },
     {
@@ -1814,7 +1815,7 @@
       "published": "2026-09-02T14:16:42+00:00",
       "cluster_size": 1,
       "also": [],
-      "score": 4.008,
+      "score": 4.002,
       "id": "bbaa7e92c7f7"
     },
     {
@@ -1827,7 +1828,7 @@
       "published": "2026-09-02T14:06:00+00:00",
       "cluster_size": 1,
       "also": [],
-      "score": 4.003,
+      "score": 3.996,
       "id": "d7c2eb88e24c"
     },
     {
@@ -1840,7 +1841,7 @@
       "published": "2026-09-02T13:59:00+00:00",
       "cluster_size": 1,
       "also": [],
-      "score": 3.999,
+      "score": 3.992,
       "id": "4191ee7d2c2f"
     },
     {
@@ -1853,7 +1854,7 @@
       "published": "2026-09-02T12:00:00+00:00",
       "cluster_size": 1,
       "also": [],
-      "score": 3.938,
+      "score": 3.932,
       "id": "b07b0b2b4d66"
     },
     {
@@ -1862,11 +1863,11 @@
       "source": "Hacker News",
       "category": "community",
       "weight": 4,
-      "summary": "Article URL: https://www.kedglobal.com/artificial-intelligence/newsView/ked202607210007 Comments URL: https://news.ycombinator.com/item?id=49544762 Points: 177 # Comments: 48",
+      "summary": "Article URL: https://www.kedglobal.com/artificial-intelligence/newsView/ked202607210007 Comments URL: https://news.ycombinator.com/item?id=49544762 Points: 178 # Comments: 50",
       "published": "2026-09-03T01:11:22+00:00",
       "cluster_size": 1,
       "also": [],
-      "score": 3.929,
+      "score": 3.919,
       "id": "39f0e38f4466"
     },
     {
@@ -1879,7 +1880,7 @@
       "published": "2026-09-03T10:00:00+00:00",
       "cluster_size": 1,
       "also": [],
-      "score": 3.899,
+      "score": 3.886,
       "id": "a29f5abf956c"
     },
     {
@@ -1892,7 +1893,7 @@
       "published": "2026-09-02T10:09:17+00:00",
       "cluster_size": 1,
       "also": [],
-      "score": 3.885,
+      "score": 3.879,
       "id": "ced73481d526"
     },
     {
@@ -1905,21 +1906,8 @@
       "published": "2026-09-03T09:32:15.141000+00:00",
       "cluster_size": 1,
       "also": [],
-      "score": 3.871,
+      "score": 3.858,
       "id": "3ebf71dd3699"
-    },
-    {
-      "title": "Did OpenAI’s rogue agents form a ‘civilization’? The AI industry can’t agree",
-      "url": "https://news.google.com/rss/articles/CBMiswFBVV95cUxON21GSDIwakY2Y1ptVnFPR2JWRC1jSFAtRkpXN0JSdzVzR2xVcXhKZWFQQ1Z6MjVyOTR4UksxbmlzRUE1U0ZLRGJTT0tMeHNneEZjTzgtZlFobmFhbGRUUlRzV2tuQVluRURjZV9YdlVCTGltTXIwNTNzTFlsQlFYLTJHUWRJejZoaGdLb2tidnJIUlYzaDlma185ZUIxSng3NTJWSkQ5SG9RaGUxM2RkNUFKSQ?oc=5",
-      "source": "GNews: AI agents",
-      "category": "agents",
-      "weight": 5,
-      "summary": "Did OpenAI’s rogue agents form a ‘civilization’? The AI industry can’t agree NBC News",
-      "published": "2026-09-02T09:00:40+00:00",
-      "cluster_size": 1,
-      "also": [],
-      "score": 3.854,
-      "id": "f422b4bf7a9e"
     },
     {
       "title": "The Builders Stage brings practical strategies for scaling startups to TechCrunch Disrupt 2026",
@@ -1931,34 +1919,8 @@
       "published": "2026-09-02T23:01:00+00:00",
       "cluster_size": 1,
       "also": [],
-      "score": 3.832,
+      "score": 3.823,
       "id": "f3b8c7fe39ca"
-    },
-    {
-      "title": "Integrating Outlook with Amazon Quick for AI-powered email automation",
-      "url": "https://aws.amazon.com/blogs/machine-learning/integrating-outlook-with-amazon-quick-for-ai-powered-email-automation/",
-      "source": "AWS ML Blog",
-      "category": "vendors",
-      "weight": 2,
-      "summary": "Integrate Microsoft Outlook with Amazon Quick to automate email management, calendar scheduling, and workflow coordination. This post walks through the end-to-end setup and shows automation scenarios using Amazon Quick chat agents, Amazon Quick Flows, and Amazon Quick Automate.",
-      "published": "2026-09-03T16:11:57+00:00",
-      "cluster_size": 1,
-      "also": [],
-      "score": 3.824,
-      "id": "6561817ed654"
-    },
-    {
-      "title": "Palo Alto Networks paid $500M for Thrive-backed Console, sources say",
-      "url": "https://techcrunch.com/2026/09/02/palo-alto-networks-paid-500m-for-thrive-backed-console-sources-say/",
-      "source": "TechCrunch AI",
-      "category": "news",
-      "weight": 4,
-      "summary": "The acquisition also leaves Sequoia-backed Serval as the de facto startup leader in AI IT service automation, industry watchers believe.",
-      "published": "2026-09-02T22:44:56+00:00",
-      "cluster_size": 1,
-      "also": [],
-      "score": 3.821,
-      "id": "e54d1c1e8577"
     },
     {
       "title": "[AINews] Claude Fable/Mythos 5.1: new SOTA model, 75% cache price cut but 70% more output tokens",
@@ -1970,8 +1932,34 @@
       "published": "2026-09-02T07:46:08+00:00",
       "cluster_size": 1,
       "also": [],
-      "score": 3.821,
+      "score": 3.816,
       "id": "73bc7f63383d"
+    },
+    {
+      "title": "Palo Alto Networks paid $500M for Thrive-backed Console, sources say",
+      "url": "https://techcrunch.com/2026/09/02/palo-alto-networks-paid-500m-for-thrive-backed-console-sources-say/",
+      "source": "TechCrunch AI",
+      "category": "news",
+      "weight": 4,
+      "summary": "The acquisition also leaves Sequoia-backed Serval as the de facto startup leader in AI IT service automation, industry watchers believe.",
+      "published": "2026-09-02T22:44:56+00:00",
+      "cluster_size": 1,
+      "also": [],
+      "score": 3.812,
+      "id": "e54d1c1e8577"
+    },
+    {
+      "title": "Integrating Outlook with Amazon Quick for AI-powered email automation",
+      "url": "https://aws.amazon.com/blogs/machine-learning/integrating-outlook-with-amazon-quick-for-ai-powered-email-automation/",
+      "source": "AWS ML Blog",
+      "category": "vendors",
+      "weight": 2,
+      "summary": "Integrate Microsoft Outlook with Amazon Quick to automate email management, calendar scheduling, and workflow coordination. This post walks through the end-to-end setup and shows automation scenarios using Amazon Quick chat agents, Amazon Quick Flows, and Amazon Quick Automate.",
+      "published": "2026-09-03T16:11:57+00:00",
+      "cluster_size": 1,
+      "also": [],
+      "score": 3.808,
+      "id": "6561817ed654"
     },
     {
       "title": "Best practices for building agentic automations with Amazon Quick Automate",
@@ -1983,21 +1971,8 @@
       "published": "2026-09-03T16:08:28+00:00",
       "cluster_size": 1,
       "also": [],
-      "score": 3.82,
+      "score": 3.804,
       "id": "d06e5b8c29cd"
-    },
-    {
-      "title": "Embed Quick Sight visuals using Cognito user authentication",
-      "url": "https://aws.amazon.com/blogs/machine-learning/embed-quick-sight-visuals-using-cognito-user-authentication/",
-      "source": "AWS ML Blog",
-      "category": "vendors",
-      "weight": 2,
-      "summary": "Learn how to embed individual Amazon Quick Sight visuals into a React application with per-user access control. This walkthrough uses Amazon Cognito authentication and a serverless AWS Lambda backend to generate scoped embed URLs, deployed with a single AWS CloudFormation stack.",
-      "published": "2026-09-03T16:01:56+00:00",
-      "cluster_size": 1,
-      "also": [],
-      "score": 3.811,
-      "id": "3151b5fb463a"
     },
     {
       "title": "TechCrunch Disrupt 2026’s new Real World AI Stage features Nvidia, robots, and extinct animals",
@@ -2009,8 +1984,21 @@
       "published": "2026-09-02T22:24:09+00:00",
       "cluster_size": 1,
       "also": [],
-      "score": 3.806,
+      "score": 3.798,
       "id": "16bf1bec9e4b"
+    },
+    {
+      "title": "Embed Quick Sight visuals using Cognito user authentication",
+      "url": "https://aws.amazon.com/blogs/machine-learning/embed-quick-sight-visuals-using-cognito-user-authentication/",
+      "source": "AWS ML Blog",
+      "category": "vendors",
+      "weight": 2,
+      "summary": "Learn how to embed individual Amazon Quick Sight visuals into a React application with per-user access control. This walkthrough uses Amazon Cognito authentication and a serverless AWS Lambda backend to generate scoped embed URLs, deployed with a single AWS CloudFormation stack.",
+      "published": "2026-09-03T16:01:56+00:00",
+      "cluster_size": 1,
+      "also": [],
+      "score": 3.796,
+      "id": "3151b5fb463a"
     },
     {
       "title": "Quoting Rick Brewster",
@@ -2022,7 +2010,7 @@
       "published": "2026-09-02T05:50:57+00:00",
       "cluster_size": 1,
       "also": [],
-      "score": 3.774,
+      "score": 3.769,
       "id": "40f6b0d0bc8f"
     },
     {
@@ -2035,7 +2023,7 @@
       "published": "2026-09-02T21:00:00+00:00",
       "cluster_size": 1,
       "also": [],
-      "score": 3.749,
+      "score": 3.741,
       "id": "271f803af092"
     },
     {
@@ -2048,7 +2036,7 @@
       "published": "2026-09-02T20:19:14+00:00",
       "cluster_size": 1,
       "also": [],
-      "score": 3.722,
+      "score": 3.714,
       "id": "800d247a22b0"
     },
     {
@@ -2061,21 +2049,8 @@
       "published": "2026-09-01T23:57:28+00:00",
       "cluster_size": 1,
       "also": [],
-      "score": 3.645,
+      "score": 3.64,
       "id": "ab12481175ff"
-    },
-    {
-      "title": "Omi",
-      "url": "https://www.producthunt.com/products/open-source-ai-necklace-friend",
-      "source": "Product Hunt",
-      "category": "community",
-      "weight": 3,
-      "summary": "Ask your computer anything you saw or heard Discussion | Link",
-      "published": "2026-09-03T05:25:44+00:00",
-      "cluster_size": 1,
-      "also": [],
-      "score": 3.638,
-      "id": "0a50990fe1ab"
     },
     {
       "title": "How we make AI coding more cost efficient without sacrificing task quality",
@@ -2087,8 +2062,21 @@
       "published": "2026-09-02T18:00:00+00:00",
       "cluster_size": 1,
       "also": [],
-      "score": 3.635,
+      "score": 3.627,
       "id": "0461be447f8d"
+    },
+    {
+      "title": "Omi",
+      "url": "https://www.producthunt.com/products/open-source-ai-necklace-friend",
+      "source": "Product Hunt",
+      "category": "community",
+      "weight": 3,
+      "summary": "Ask your computer anything you saw or heard Discussion | Link",
+      "published": "2026-09-03T05:25:44+00:00",
+      "cluster_size": 1,
+      "also": [],
+      "score": 3.627,
+      "id": "0a50990fe1ab"
     },
     {
       "title": "Amazon’s AI assistant can now spot fake emails from the company",
@@ -2100,7 +2088,7 @@
       "published": "2026-09-02T17:52:56+00:00",
       "cluster_size": 1,
       "also": [],
-      "score": 3.631,
+      "score": 3.623,
       "id": "2140bd018ec6"
     },
     {
@@ -2113,53 +2101,8 @@
       "published": "2026-09-02T17:18:13+00:00",
       "cluster_size": 1,
       "also": [],
-      "score": 3.61,
+      "score": 3.603,
       "id": "8561de7d3711"
-    },
-    {
-      "title": "We’re ‘dangerously close’ to dead internet theory, says Pangram’s CEO",
-      "url": "https://techcrunch.com/podcast/were-dangerously-close-to-dead-internet-theory-says-pangrams-ceo/",
-      "source": "TechCrunch AI",
-      "category": "news",
-      "weight": 4,
-      "summary": "The internet has a trust problem, and it’s not just because social media feeds are filling up with AI slop. AI-generated text and images are now making their way into job applications, product reviews, and even insurance claims, leaving platforms and users alike scrambling to...",
-      "published": "2026-09-02T17:09:57+00:00",
-      "cluster_size": 1,
-      "also": [],
-      "score": 3.605,
-      "id": "52702342c41b"
-    },
-    {
-      "title": "US government sides with OpenAI on issue of training LLMs on copyrighted material",
-      "url": "https://techcrunch.com/2026/09/02/u-s-government-sides-with-openai-on-issue-of-training-llms-on-copyrighted-material/",
-      "source": "TechCrunch AI",
-      "category": "news",
-      "weight": 4,
-      "summary": "\"The United States has a strong interest in continuing to develop a robust and competitive artificial intelligence industry that sets the standard for the practice and procedure of AI use globally,\" the brief reads.",
-      "published": "2026-09-02T17:09:06+00:00",
-      "cluster_size": 1,
-      "also": [],
-      "score": 3.605,
-      "id": "5981cc5d14f7"
-    },
-    {
-      "title": "Researchers bypass sandbox security in Cursor, Codex, and Gemini CLI",
-      "url": "https://news.google.com/rss/articles/CBMisgFBVV95cUxNWWIwUEpvWklkMnNlMEI1aVNrWlRlUlZIVlhtWlo3ZC1RelFYejNyTk5CRy1FZTBtdXkyZUJsNFBFdzdkV1VJd085MkdvYUV3OWpnWTlRbXF3dkVUTzMzNEdtbnptcEJWM2ctZ2ZOal96dURJNHg0TWV0d2o3X01oWEV3SnV6Y19MNWtja1VMT1pYeHFyY1RTbWZ2VERsWU5NcUo5MW1RcURjZVVDeTcyYWJn?oc=5",
-      "source": "GNews: Claude Code / Cursor",
-      "category": "agents",
-      "weight": 5,
-      "summary": "Researchers bypass sandbox security in Cursor, Codex, and Gemini CLI Techzine Global",
-      "published": "2026-07-21T07:00:00+00:00",
-      "cluster_size": 2,
-      "also": [
-        {
-          "source": "GNews: Claude Code / Cursor",
-          "url": "https://news.google.com/rss/articles/CBMiqgFBVV95cUxNWDNUVmE2SkJYTld0S2FyQ3FsVTN0QngweFpYWkxLeW1FNFJyNXhrNmF3d3ljbDZJZW9zMWZuTnkyak5vRTg0N2R5MC1KeWI5U05UbHktWTRaY1JveGtHdDBQLWcwX0VzcHpqTmxsMXFWeHgxUjAwcWRqNXQyNkFsRUZaWTlldWxsVGYyelFXR19NSEtQUFBpY3lGRXg4RU1KLWE4RDhXaDRWQdIBrwFBVV95cUxNMFl6UmZQc0tFdTdVUEZhdm1IbEMxdnFueE1uV1AyLWJRUHhWTnJKUUNkRWx3VFFVcW5ZRWdySTVfY3JsMENiUGR6b08wMDlFT2RnYlpER1RWM2xEbzZvUTViRGc0NmZndXNXd0RpS0ZCSUkxY3JoOVhnRWtWbEp6aG9IWnJrbG82SFpuQTBvZkF5ZlluX2xNaWxrWS1tUmM4LTRmOVRCNWQ5aDdCZVFV?oc=5",
-          "title": "Cursor, Codex, Gemini CLI, Antigravity hit by sandbox escapes"
-        }
-      ],
-      "score": 3.6,
-      "id": "174b3a056b23"
     },
     {
       "title": "Accelerating software development with OpenAI ChatGPT Codex on Amazon Bedrock",
@@ -2167,7 +2110,7 @@
       "source": "GNews: Claude Code / Cursor",
       "category": "agents",
       "weight": 5,
-      "summary": "Accelerating software development with OpenAI ChatGPT Codex on Amazon Bedrock aws.amazon.com",
+      "summary": "Accelerating software development with OpenAI ChatGPT Codex on Amazon Bedrock Amazon Web Services (AWS)",
       "published": "2026-08-04T07:00:00+00:00",
       "cluster_size": 2,
       "also": [
@@ -2181,17 +2124,30 @@
       "id": "99aadf85d051"
     },
     {
-      "title": "Researchers fear safety disaster ahead of OpenAI’s Astra release",
-      "url": "https://www.theverge.com/ai-artificial-intelligence/988334/openai-astra-ai-monitoring-safety",
-      "source": "The Verge AI",
+      "title": "We’re ‘dangerously close’ to dead internet theory, says Pangram’s CEO",
+      "url": "https://techcrunch.com/podcast/were-dangerously-close-to-dead-internet-theory-says-pangrams-ceo/",
+      "source": "TechCrunch AI",
       "category": "news",
       "weight": 4,
-      "summary": "OpenAI is on the cusp of releasing its most powerful AI model yet, Astra, following weeks of delays to shore up safety protocols after its agents attacked real targets during testing. As details about the model trickle out, researchers are warning it \"may be the single worst...",
-      "published": "2026-09-02T16:40:50+00:00",
+      "summary": "The internet has a trust problem, and it’s not just because social media feeds are filling up with AI slop. AI-generated text and images are now making their way into job applications, product reviews, and even insurance claims, leaving platforms and users alike scrambling to...",
+      "published": "2026-09-02T17:09:57+00:00",
       "cluster_size": 1,
       "also": [],
-      "score": 3.588,
-      "id": "1db8587bd622"
+      "score": 3.598,
+      "id": "52702342c41b"
+    },
+    {
+      "title": "US government sides with OpenAI on issue of training LLMs on copyrighted material",
+      "url": "https://techcrunch.com/2026/09/02/u-s-government-sides-with-openai-on-issue-of-training-llms-on-copyrighted-material/",
+      "source": "TechCrunch AI",
+      "category": "news",
+      "weight": 4,
+      "summary": "\"The United States has a strong interest in continuing to develop a robust and competitive artificial intelligence industry that sets the standard for the practice and procedure of AI use globally,\" the brief reads.",
+      "published": "2026-09-02T17:09:06+00:00",
+      "cluster_size": 1,
+      "also": [],
+      "score": 3.597,
+      "id": "5981cc5d14f7"
     },
     {
       "title": "Anthropic Says It Hit the Brakes on AI Testing Following Autonomous Hacks",
@@ -2203,8 +2159,21 @@
       "published": "2026-09-01T20:55:42+00:00",
       "cluster_size": 1,
       "also": [],
-      "score": 3.587,
+      "score": 3.584,
       "id": "9b4fa861a461"
+    },
+    {
+      "title": "Researchers fear safety disaster ahead of OpenAI’s Astra release",
+      "url": "https://www.theverge.com/ai-artificial-intelligence/988334/openai-astra-ai-monitoring-safety",
+      "source": "The Verge AI",
+      "category": "news",
+      "weight": 4,
+      "summary": "OpenAI is on the cusp of releasing its most powerful AI model yet, Astra, following weeks of delays to shore up safety protocols after its agents attacked real targets during testing. As details about the model trickle out, researchers are warning it \"may be the single worst...",
+      "published": "2026-09-02T16:40:50+00:00",
+      "cluster_size": 1,
+      "also": [],
+      "score": 3.581,
+      "id": "1db8587bd622"
     },
     {
       "title": "Proactive cyber defense for governments and enterprises",
@@ -2216,7 +2185,7 @@
       "published": "2026-09-02T16:24:24+00:00",
       "cluster_size": 1,
       "also": [],
-      "score": 3.579,
+      "score": 3.572,
       "id": "383dbcd782ab"
     },
     {
@@ -2229,8 +2198,21 @@
       "published": "2026-09-02T16:04:10+00:00",
       "cluster_size": 1,
       "also": [],
-      "score": 3.567,
+      "score": 3.56,
       "id": "634abc23ca9f"
+    },
+    {
+      "title": "Anthropic Reportedly Rolls Back Data Retention Policy After Customer Pushback — It Also Launches New Claude Models",
+      "url": "https://news.google.com/rss/articles/CBMiogFBVV95cUxQME5PbXRZcjF4RElTZkt0Ni1mT0QtcEhZVHZMeDl3NUV4N2llSk1DLWpuUHNpUUc0X3N2bFdIMV96bFF0RTU0bE5pUGVoY3ZKc0ZzUWNHdEZyR2VYNTJpNmpDdWxWTVRSRDZXc3k2YUxPVHZjU1Y3RlNmMEx5a3JXWTlQcTRXdFN0U1N3STNKQUNuLTFaMTRQSTJ3TVlCYnFZNnc?oc=5",
+      "source": "GNews: Anthropic",
+      "category": "vendors",
+      "weight": 5,
+      "summary": "Anthropic Reportedly Rolls Back Data Retention Policy After Customer Pushback — It Also Launches New Claude Models Yahoo Finance",
+      "published": "2026-09-01T19:22:00+00:00",
+      "cluster_size": 1,
+      "also": [],
+      "score": 3.557,
+      "id": "85b4910799df"
     },
     {
       "title": "PRO-Step: Step-level Process Reward Optimization for Retrieval-Augmented Generation",
@@ -2242,7 +2224,7 @@
       "published": "2026-09-03T04:00:00+00:00",
       "cluster_size": 1,
       "also": [],
-      "score": 3.564,
+      "score": 3.554,
       "id": "c9f96fecbb44"
     },
     {
@@ -2255,7 +2237,7 @@
       "published": "2026-09-03T04:00:00+00:00",
       "cluster_size": 1,
       "also": [],
-      "score": 3.564,
+      "score": 3.554,
       "id": "f835d058e9b0"
     },
     {
@@ -2268,7 +2250,7 @@
       "published": "2026-09-03T04:00:00+00:00",
       "cluster_size": 1,
       "also": [],
-      "score": 3.564,
+      "score": 3.554,
       "id": "a2a4b1ad24dc"
     },
     {
@@ -2281,7 +2263,7 @@
       "published": "2026-09-03T04:00:00+00:00",
       "cluster_size": 1,
       "also": [],
-      "score": 3.564,
+      "score": 3.554,
       "id": "5028a78c4586"
     },
     {
@@ -2294,7 +2276,7 @@
       "published": "2026-09-03T04:00:00+00:00",
       "cluster_size": 1,
       "also": [],
-      "score": 3.564,
+      "score": 3.554,
       "id": "c0462781a488"
     },
     {
@@ -2307,7 +2289,7 @@
       "published": "2026-09-03T04:00:00+00:00",
       "cluster_size": 1,
       "also": [],
-      "score": 3.564,
+      "score": 3.554,
       "id": "087556247d54"
     },
     {
@@ -2320,7 +2302,7 @@
       "published": "2026-09-03T04:00:00+00:00",
       "cluster_size": 1,
       "also": [],
-      "score": 3.564,
+      "score": 3.554,
       "id": "9c04db62c709"
     },
     {
@@ -2333,7 +2315,7 @@
       "published": "2026-09-03T04:00:00+00:00",
       "cluster_size": 1,
       "also": [],
-      "score": 3.564,
+      "score": 3.554,
       "id": "cc3ca07a3bb6"
     },
     {
@@ -2346,7 +2328,7 @@
       "published": "2026-09-03T04:00:00+00:00",
       "cluster_size": 1,
       "also": [],
-      "score": 3.564,
+      "score": 3.554,
       "id": "3989c11ad665"
     },
     {
@@ -2359,7 +2341,7 @@
       "published": "2026-09-03T04:00:00+00:00",
       "cluster_size": 1,
       "also": [],
-      "score": 3.564,
+      "score": 3.554,
       "id": "75f270c90409"
     },
     {
@@ -2372,7 +2354,7 @@
       "published": "2026-09-03T04:00:00+00:00",
       "cluster_size": 1,
       "also": [],
-      "score": 3.564,
+      "score": 3.554,
       "id": "7469550889d1"
     },
     {
@@ -2385,34 +2367,8 @@
       "published": "2026-09-03T04:00:00+00:00",
       "cluster_size": 1,
       "also": [],
-      "score": 3.564,
+      "score": 3.554,
       "id": "0d1c9fac440a"
-    },
-    {
-      "title": "Anthropic Reportedly Rolls Back Data Retention Policy After Customer Pushback — It Also Launches New Claude Models",
-      "url": "https://news.google.com/rss/articles/CBMiogFBVV95cUxQME5PbXRZcjF4RElTZkt0Ni1mT0QtcEhZVHZMeDl3NUV4N2llSk1DLWpuUHNpUUc0X3N2bFdIMV96bFF0RTU0bE5pUGVoY3ZKc0ZzUWNHdEZyR2VYNTJpNmpDdWxWTVRSRDZXc3k2YUxPVHZjU1Y3RlNmMEx5a3JXWTlQcTRXdFN0U1N3STNKQUNuLTFaMTRQSTJ3TVlCYnFZNnc?oc=5",
-      "source": "GNews: Anthropic",
-      "category": "vendors",
-      "weight": 5,
-      "summary": "Anthropic Reportedly Rolls Back Data Retention Policy After Customer Pushback — It Also Launches New Claude Models Yahoo Finance",
-      "published": "2026-09-01T19:22:00+00:00",
-      "cluster_size": 1,
-      "also": [],
-      "score": 3.56,
-      "id": "85b4910799df"
-    },
-    {
-      "title": "AI Skill of the Day Digest — August 2026 (Part 2)",
-      "url": "https://www.theneuron.ai/explainer-articles/ai-skill-of-the-day-digest-august-2026-part-2/",
-      "source": "The Neuron",
-      "category": "news",
-      "weight": 3,
-      "summary": "Explore 14 practical AI skills from August 16–31, with prompts and workflows for ChatGPT, Claude, Gemini, Codex, Cursor, and local models.",
-      "published": "2026-09-03T03:53:47.942000+00:00",
-      "cluster_size": 1,
-      "also": [],
-      "score": 3.559,
-      "id": "1c4fc62aaccc"
     },
     {
       "title": "Codex bundles LibreOffice",
@@ -2424,8 +2380,21 @@
       "published": "2026-09-01T19:03:01+00:00",
       "cluster_size": 1,
       "also": [],
-      "score": 3.555,
+      "score": 3.551,
       "id": "4060d5fb1d26"
+    },
+    {
+      "title": "AI Skill of the Day Digest — August 2026 (Part 2)",
+      "url": "https://www.theneuron.ai/explainer-articles/ai-skill-of-the-day-digest-august-2026-part-2/",
+      "source": "The Neuron",
+      "category": "news",
+      "weight": 3,
+      "summary": "Explore 14 practical AI skills from August 16–31, with prompts and workflows for ChatGPT, Claude, Gemini, Codex, Cursor, and local models.",
+      "published": "2026-09-03T03:53:47.942000+00:00",
+      "cluster_size": 1,
+      "also": [],
+      "score": 3.548,
+      "id": "1c4fc62aaccc"
     },
     {
       "title": "Everything That Happened in AI Today (Wednesday, September 2, 2026)",
@@ -2437,21 +2406,8 @@
       "published": "2026-09-03T03:38:55.552000+00:00",
       "cluster_size": 1,
       "also": [],
-      "score": 3.547,
+      "score": 3.536,
       "id": "0ef1e3d53eb9"
-    },
-    {
-      "title": "OpenAI Builds Shutdown Controls as AI Agents Gain More Power",
-      "url": "https://www.theneuron.ai/news/openai-automated-ai-shutdown-controls/",
-      "source": "The Neuron",
-      "category": "news",
-      "weight": 3,
-      "summary": "OpenAI is building automated AI shutdown controls as CrowdStrike, Boomi, and Meta push powerful agent systems toward governed production work at scale.",
-      "published": "2026-09-03T03:36:05.652000+00:00",
-      "cluster_size": 1,
-      "also": [],
-      "score": 3.544,
-      "id": "c62426d5078f"
     },
     {
       "title": "GeoJSON Map Viewer",
@@ -2463,8 +2419,21 @@
       "published": "2026-09-01T18:05:45+00:00",
       "cluster_size": 1,
       "also": [],
-      "score": 3.539,
+      "score": 3.536,
       "id": "0cf425c452e8"
+    },
+    {
+      "title": "OpenAI Builds Shutdown Controls as AI Agents Gain More Power",
+      "url": "https://www.theneuron.ai/news/openai-automated-ai-shutdown-controls/",
+      "source": "The Neuron",
+      "category": "news",
+      "weight": 3,
+      "summary": "OpenAI is building automated AI shutdown controls as CrowdStrike, Boomi, and Meta push powerful agent systems toward governed production work at scale.",
+      "published": "2026-09-03T03:36:05.652000+00:00",
+      "cluster_size": 1,
+      "also": [],
+      "score": 3.534,
+      "id": "c62426d5078f"
     },
     {
       "title": "Introducing Claude Fable 5.1 and Claude Mythos 5.1",
@@ -2472,25 +2441,12 @@
       "source": "GNews: Anthropic",
       "category": "vendors",
       "weight": 5,
-      "summary": "Introducing Claude Fable 5.1 and Claude Mythos 5.1 Anthropic Anthropic's Claude Fable 5.1 and Mythos 5.1 arrive with a 75% cost reduction for Fable cache reads VentureBeat Introducing Claude Fable 5.1 on AWS | Amazon Web Services aws.amazon.com",
+      "summary": "Introducing Claude Fable 5.1 and Claude Mythos 5.1 Anthropic Anthropic's Claude Fable 5.1 and Mythos 5.1 arrive with a 75% cost reduction for Fable cache reads VentureBeat Introducing Claude Fable 5.1 on AWS | Amazon Web Services Amazon Web Services (AWS)",
       "published": "2026-09-01T18:01:25+00:00",
       "cluster_size": 1,
       "also": [],
-      "score": 3.538,
+      "score": 3.534,
       "id": "94b02e59ee2a"
-    },
-    {
-      "title": "How AI-native companies turn workflows into operating capability",
-      "url": "https://openai.com/index/ai-native-company-workflows",
-      "source": "OpenAI",
-      "category": "vendors",
-      "weight": 5,
-      "summary": "Basis, Clay, and Exa Labs use AI agents to improve onboarding, account management, and developer integrations. See what enterprise leaders can apply.",
-      "published": "2026-09-01T17:00:00+00:00",
-      "cluster_size": 1,
-      "also": [],
-      "score": 3.522,
-      "id": "3b5f2688fec1"
     },
     {
       "title": "Quoting Tarn Adams",
@@ -2502,8 +2458,34 @@
       "published": "2026-09-01T17:01:11+00:00",
       "cluster_size": 1,
       "also": [],
-      "score": 3.522,
+      "score": 3.519,
       "id": "f632cad25f3c"
+    },
+    {
+      "title": "How AI-native companies turn workflows into operating capability",
+      "url": "https://openai.com/index/ai-native-company-workflows",
+      "source": "OpenAI",
+      "category": "vendors",
+      "weight": 5,
+      "summary": "Basis, Clay, and Exa Labs use AI agents to improve onboarding, account management, and developer integrations. See what enterprise leaders can apply.",
+      "published": "2026-09-01T17:00:00+00:00",
+      "cluster_size": 1,
+      "also": [],
+      "score": 3.518,
+      "id": "3b5f2688fec1"
+    },
+    {
+      "title": "CrowdStrike Falcon Guardian Defines the Next Generation of AI Security",
+      "url": "https://news.google.com/rss/articles/CBMimgFBVV95cUxOVGJyclo1QnBsNE5lbnRkR0NRRHhqNVV2QzV0UkRNcG9IX2hxSEJTd2w0OFJFRVJPc3BlMFJIZTVkQVk0M2FXV3ZLRWhOdFJsdzVRYV8wbXRQUHpJcUdsY0tyYmFvaXlsYnpEMklVQlA5OE9adW5ESHJUNXgxQkFLUXBHbnVpRUlRSTc2TVYzSTg1Z3ZFYVJmLVNn?oc=5",
+      "source": "GNews: AI agents",
+      "category": "agents",
+      "weight": 5,
+      "summary": "CrowdStrike Falcon Guardian Defines the Next Generation of AI Security CrowdStrike",
+      "published": "2026-09-01T16:56:27+00:00",
+      "cluster_size": 1,
+      "also": [],
+      "score": 3.517,
+      "id": "7062b929cec5"
     },
     {
       "title": "Nex",
@@ -2515,7 +2497,7 @@
       "published": "2026-09-03T03:04:36+00:00",
       "cluster_size": 1,
       "also": [],
-      "score": 3.518,
+      "score": 3.508,
       "id": "7569a770e26a"
     },
     {
@@ -2528,21 +2510,8 @@
       "published": "2026-09-01T16:17:15+00:00",
       "cluster_size": 1,
       "also": [],
-      "score": 3.51,
+      "score": 3.507,
       "id": "b0705d7f30b6"
-    },
-    {
-      "title": "Facilitating AI integration with simplicity at scale",
-      "url": "https://www.technologyreview.com/2026/09/02/1142879/facilitating-ai-integration-with-simplicity-at-scale/",
-      "source": "MIT Tech Review AI",
-      "category": "news",
-      "weight": 4,
-      "summary": "As companies scale, the technology supporting operations can become a liability just as quickly as it becomes an asset. Disconnected systems, site-specific tools, spreadsheets, and manual workarounds can create data silos that make it harder to spot problems early, coordinate...",
-      "published": "2026-09-02T14:00:00+00:00",
-      "cluster_size": 1,
-      "also": [],
-      "score": 3.5,
-      "id": "97f276dfad17"
     },
     {
       "title": "datasette-mcp 0.2",
@@ -2554,8 +2523,21 @@
       "published": "2026-09-01T15:30:12+00:00",
       "cluster_size": 1,
       "also": [],
-      "score": 3.499,
+      "score": 3.495,
       "id": "344c2bcd7098"
+    },
+    {
+      "title": "Facilitating AI integration with simplicity at scale",
+      "url": "https://www.technologyreview.com/2026/09/02/1142879/facilitating-ai-integration-with-simplicity-at-scale/",
+      "source": "MIT Tech Review AI",
+      "category": "news",
+      "weight": 4,
+      "summary": "As companies scale, the technology supporting operations can become a liability just as quickly as it becomes an asset. Disconnected systems, site-specific tools, spreadsheets, and manual workarounds can create data silos that make it harder to spot problems early, coordinate...",
+      "published": "2026-09-02T14:00:00+00:00",
+      "cluster_size": 1,
+      "also": [],
+      "score": 3.493,
+      "id": "97f276dfad17"
     },
     {
       "title": "Python 3.15.0 candidate 2 is here!",
@@ -2567,7 +2549,7 @@
       "published": "2026-09-01T14:59:18+00:00",
       "cluster_size": 1,
       "also": [],
-      "score": 3.491,
+      "score": 3.488,
       "id": "58319d71cb13"
     },
     {
@@ -2580,7 +2562,7 @@
       "published": "2026-09-01T13:03:59+00:00",
       "cluster_size": 1,
       "also": [],
-      "score": 3.464,
+      "score": 3.461,
       "id": "1fde5c14d7cc"
     },
     {
@@ -2593,7 +2575,7 @@
       "published": "2026-09-01T13:00:00+00:00",
       "cluster_size": 1,
       "also": [],
-      "score": 3.463,
+      "score": 3.46,
       "id": "309be27bdcfe"
     },
     {
@@ -2606,7 +2588,7 @@
       "published": "2026-09-01T12:00:00+00:00",
       "cluster_size": 1,
       "also": [],
-      "score": 3.449,
+      "score": 3.446,
       "id": "50e05f9b472e"
     },
     {
@@ -2619,7 +2601,7 @@
       "published": "2026-09-03T01:32:02+00:00",
       "cluster_size": 1,
       "also": [],
-      "score": 3.445,
+      "score": 3.435,
       "id": "5291e514b0ac"
     },
     {
@@ -2632,7 +2614,7 @@
       "published": "2026-09-01T10:00:00+00:00",
       "cluster_size": 1,
       "also": [],
-      "score": 3.423,
+      "score": 3.421,
       "id": "1ddd1704d48a"
     },
     {
@@ -2645,7 +2627,7 @@
       "published": "2026-09-02T10:00:00+00:00",
       "cluster_size": 1,
       "also": [],
-      "score": 3.381,
+      "score": 3.375,
       "id": "b8c28ef0f7e3"
     },
     {
@@ -2658,7 +2640,7 @@
       "published": "2026-09-03T00:00:00+00:00",
       "cluster_size": 1,
       "also": [],
-      "score": 3.375,
+      "score": 3.366,
       "id": "45020768fad9"
     },
     {
@@ -2671,7 +2653,7 @@
       "published": "2026-09-03T00:00:00+00:00",
       "cluster_size": 1,
       "also": [],
-      "score": 3.375,
+      "score": 3.366,
       "id": "86b47b47cb74"
     },
     {
@@ -2684,7 +2666,7 @@
       "published": "2026-09-03T00:00:00+00:00",
       "cluster_size": 1,
       "also": [],
-      "score": 3.375,
+      "score": 3.366,
       "id": "b844bdeeb825"
     },
     {
@@ -2697,7 +2679,7 @@
       "published": "2026-09-01T04:36:54+00:00",
       "cluster_size": 1,
       "also": [],
-      "score": 3.362,
+      "score": 3.36,
       "id": "f8c2c13ce564"
     },
     {
@@ -2706,11 +2688,11 @@
       "source": "GNews: Claude Code / Cursor",
       "category": "agents",
       "weight": 5,
-      "summary": "Meta Muse Code: A Cheaper Claude Code Alternative with a 20x Discount Tier Intelligent Living",
+      "summary": "Meta Muse Code: A Cheaper Claude Code Alternative with a 20x Discount Tier intelligentliving.co",
       "published": "2026-09-01T02:13:49+00:00",
       "cluster_size": 1,
       "also": [],
-      "score": 3.338,
+      "score": 3.336,
       "id": "0d674c73a2f6"
     },
     {
@@ -2723,7 +2705,7 @@
       "published": "2026-09-01T01:58:10+00:00",
       "cluster_size": 1,
       "also": [],
-      "score": 3.336,
+      "score": 3.334,
       "id": "82120d0e0174"
     },
     {
@@ -2736,7 +2718,7 @@
       "published": "2026-09-01T01:35:36+00:00",
       "cluster_size": 1,
       "also": [],
-      "score": 3.332,
+      "score": 3.33,
       "id": "6eb7865a588a"
     },
     {
@@ -2749,7 +2731,7 @@
       "published": "2026-09-01T01:00:00+00:00",
       "cluster_size": 1,
       "also": [],
-      "score": 3.327,
+      "score": 3.325,
       "id": "631a857c7a24"
     },
     {
@@ -2762,7 +2744,7 @@
       "published": "2026-08-31T23:59:36+00:00",
       "cluster_size": 1,
       "also": [],
-      "score": 3.317,
+      "score": 3.316,
       "id": "279148925f05"
     },
     {
@@ -2775,7 +2757,7 @@
       "published": "2026-08-31T22:25:02+00:00",
       "cluster_size": 1,
       "also": [],
-      "score": 3.304,
+      "score": 3.302,
       "id": "0ea04bd89a9a"
     },
     {
@@ -2788,7 +2770,7 @@
       "published": "2026-08-31T17:06:00+00:00",
       "cluster_size": 1,
       "also": [],
-      "score": 3.263,
+      "score": 3.261,
       "id": "3ca84dae1d60"
     },
     {
@@ -2801,8 +2783,21 @@
       "published": "2026-08-31T15:02:09+00:00",
       "cluster_size": 1,
       "also": [],
-      "score": 3.248,
+      "score": 3.247,
       "id": "535e40ad6c33"
+    },
+    {
+      "title": "Thaw",
+      "url": "https://www.producthunt.com/products/thaw-2",
+      "source": "Product Hunt",
+      "category": "community",
+      "weight": 3,
+      "summary": "The only app that owns your whole menu bar, in and out Discussion | Link",
+      "published": "2026-09-02T21:02:22+00:00",
+      "cluster_size": 1,
+      "also": [],
+      "score": 3.242,
+      "id": "6f4445f126d0"
     },
     {
       "title": "The AI Race Was Already Out of Control. OpenAI Just Made It Worse.",
@@ -2814,8 +2809,21 @@
       "published": "2026-09-02T04:35:07+00:00",
       "cluster_size": 1,
       "also": [],
-      "score": 3.244,
+      "score": 3.239,
       "id": "c8c2c405da1c"
+    },
+    {
+      "title": "Aurora Mobile’s Modellix Releases Beta Plugin for DeepSeek Harness, Adding Free LLM Models to the Fast-Growing Open-Source Coding Agent",
+      "url": "https://news.google.com/rss/articles/CBMisAJBVV95cUxQdlhzZWVvTmFodFVfeDhVVFpGVFE5QzZoYktsd3FTYTdrYXlyeUh2TTRsTjhOV1Y4clNqaWNtcXl5OGkwdUpJQmtWVVo2OG5mSTYtSEU4cUpBN3MtcncyUFIxbFdiR0p1Ykh2bkgyYWlJZjgzb1F6dHBqX0Y0NnJWRlZMZDNHSGVCZE5ibHlxMjdUUEdtWXUtdmw5ZHF5UHVaMkZxTGxIandyTVhqTUw3c0NnalhqT1B4ZVQ3d29qRTZZMEZyYXgwNk9ITFktTmxkenBPRkJvdTBMeUljM0NQdUhnSTFRbUR5cnN2UC1GSGl0Qm1qcXZtb2tKVms4cUFDTlJHVWVNQW1CXzV2M3lKRnBHRkYwbXNMcU5PV00wRHdtY3ZOcUQxREpPSlFBMkdo0gG2AkFVX3lxTE5oZk55dDFJMm0xck5lMlpVTFNUd1RvMHpFUTRZalZyTmgzb2xDMXlET0pSWVdNZ1RVU2MyR3ZiVXp0dVp0QS0xZlJUNDdaV2g0ZkhfYjEyZjZzYXVPemlWNTdGNUNzdWktQVFxbXBaNGdyRnBwRVVqcnc3SDdJc0RJZEZoNkxRZGxuTGlpeFV2WGxYM3JXYXVrVFh2cENia0ktMl9RcmhxOVRKWVNQYVFyRVBxY1I1S2plUEtwbVEwS3FGR3NZeWtYOTl3UnJQcExFV29rRTczZ2NkSnVKdnh5Z0ZoeU5ZWldNaURtbzRnTkZ5a3pPOWdvaWg2TGp3dTkxOUV1U1RybGkwdF9WY3liM25qT1NPQmhCVFF6aDYzY3J2VnhvNXJOZDhXMGg1X1dVOUZ0WHc?oc=5",
+      "source": "GNews: Agent harnesses",
+      "category": "agents",
+      "weight": 5,
+      "summary": "Aurora Mobile’s Modellix Releases Beta Plugin for DeepSeek Harness, Adding Free LLM Models to the Fast-Growing Open-Source Coding Agent The Manila Times",
+      "published": "2026-08-31T11:19:33+00:00",
+      "cluster_size": 1,
+      "also": [],
+      "score": 3.224,
+      "id": "9d867c3ee2d6"
     },
     {
       "title": "AI-assisted mushroom hunting is a recipe for a bad trip",
@@ -2827,7 +2835,7 @@
       "published": "2026-09-02T20:34:41+00:00",
       "cluster_size": 1,
       "also": [],
-      "score": 3.232,
+      "score": 3.224,
       "id": "8f4d84e9b9c4"
     },
     {
@@ -2840,21 +2848,8 @@
       "published": "2026-09-02T20:32:02+00:00",
       "cluster_size": 1,
       "also": [],
-      "score": 3.231,
+      "score": 3.222,
       "id": "4767180cb8ae"
-    },
-    {
-      "title": "Aurora Mobile’s Modellix Releases Beta Plugin for DeepSeek Harness, Adding Free LLM Models to the Fast-Growing Open-Source Coding Agent",
-      "url": "https://news.google.com/rss/articles/CBMisAJBVV95cUxQdlhzZWVvTmFodFVfeDhVVFpGVFE5QzZoYktsd3FTYTdrYXlyeUh2TTRsTjhOV1Y4clNqaWNtcXl5OGkwdUpJQmtWVVo2OG5mSTYtSEU4cUpBN3MtcncyUFIxbFdiR0p1Ykh2bkgyYWlJZjgzb1F6dHBqX0Y0NnJWRlZMZDNHSGVCZE5ibHlxMjdUUEdtWXUtdmw5ZHF5UHVaMkZxTGxIandyTVhqTUw3c0NnalhqT1B4ZVQ3d29qRTZZMEZyYXgwNk9ITFktTmxkenBPRkJvdTBMeUljM0NQdUhnSTFRbUR5cnN2UC1GSGl0Qm1qcXZtb2tKVms4cUFDTlJHVWVNQW1CXzV2M3lKRnBHRkYwbXNMcU5PV00wRHdtY3ZOcUQxREpPSlFBMkdo0gG2AkFVX3lxTE5oZk55dDFJMm0xck5lMlpVTFNUd1RvMHpFUTRZalZyTmgzb2xDMXlET0pSWVdNZ1RVU2MyR3ZiVXp0dVp0QS0xZlJUNDdaV2g0ZkhfYjEyZjZzYXVPemlWNTdGNUNzdWktQVFxbXBaNGdyRnBwRVVqcnc3SDdJc0RJZEZoNkxRZGxuTGlpeFV2WGxYM3JXYXVrVFh2cENia0ktMl9RcmhxOVRKWVNQYVFyRVBxY1I1S2plUEtwbVEwS3FGR3NZeWtYOTl3UnJQcExFV29rRTczZ2NkSnVKdnh5Z0ZoeU5ZWldNaURtbzRnTkZ5a3pPOWdvaWg2TGp3dTkxOUV1U1RybGkwdF9WY3liM25qT1NPQmhCVFF6aDYzY3J2VnhvNXJOZDhXMGg1X1dVOUZ0WHc?oc=5",
-      "source": "GNews: Agent harnesses",
-      "category": "agents",
-      "weight": 5,
-      "summary": "Aurora Mobile’s Modellix Releases Beta Plugin for DeepSeek Harness, Adding Free LLM Models to the Fast-Growing Open-Source Coding Agent The Manila Times",
-      "published": "2026-08-31T11:19:33+00:00",
-      "cluster_size": 1,
-      "also": [],
-      "score": 3.225,
-      "id": "9d867c3ee2d6"
     },
     {
       "title": "Meta Settles, A Framework For Regulating Content, The Rest of Big Tech",
@@ -2866,7 +2861,7 @@
       "published": "2026-08-31T10:00:00+00:00",
       "cluster_size": 1,
       "also": [],
-      "score": 3.218,
+      "score": 3.217,
       "id": "e04e2b647782"
     },
     {
@@ -2886,7 +2881,7 @@
           "title": "NeoMME: an efficient Multimodal-native and Multilingual Encoder"
         }
       ],
-      "score": 3.205,
+      "score": 3.204,
       "id": "113374af5b59"
     },
     {
@@ -2899,7 +2894,7 @@
       "published": "2026-08-31T07:00:00+00:00",
       "cluster_size": 1,
       "also": [],
-      "score": 3.202,
+      "score": 3.201,
       "id": "0703988e3a33"
     },
     {
@@ -2912,21 +2907,8 @@
       "published": "2026-08-31T07:00:00+00:00",
       "cluster_size": 1,
       "also": [],
-      "score": 3.202,
-      "id": "7bc341571432"
-    },
-    {
-      "title": "CodeLook",
-      "url": "https://www.producthunt.com/products/codelook",
-      "source": "Product Hunt",
-      "category": "community",
-      "weight": 3,
-      "summary": "Quick Look code previews with 700+ editor themes Discussion | Link",
-      "published": "2026-09-02T19:46:18+00:00",
-      "cluster_size": 1,
-      "also": [],
       "score": 3.201,
-      "id": "05e01a4200bc"
+      "id": "7bc341571432"
     },
     {
       "title": "A milestone in expanding access to AI",
@@ -2938,7 +2920,7 @@
       "published": "2026-08-31T04:00:00+00:00",
       "cluster_size": 1,
       "also": [],
-      "score": 3.187,
+      "score": 3.186,
       "id": "44f61163770f"
     },
     {
@@ -2951,21 +2933,21 @@
       "published": "2026-08-30T23:59:47+00:00",
       "cluster_size": 1,
       "also": [],
-      "score": 3.17,
+      "score": 3.169,
       "id": "517370741c36"
     },
     {
-      "title": "Higgsfield Genjutsu",
-      "url": "https://www.producthunt.com/products/higgsfield",
+      "title": "Readr",
+      "url": "https://www.producthunt.com/products/readr-3",
       "source": "Product Hunt",
       "category": "community",
       "weight": 3,
-      "summary": "Recast motion with your characters, locations & products Discussion | Link",
-      "published": "2026-09-02T18:56:29+00:00",
+      "summary": "A free reader that answers your questions and reads aloud Discussion | Link",
+      "published": "2026-09-02T18:30:59+00:00",
       "cluster_size": 1,
       "also": [],
-      "score": 3.17,
-      "id": "eabde36ba367"
+      "score": 3.146,
+      "id": "d62b249e76a1"
     },
     {
       "title": "These Russian Mathematicians Taught AI Models How to Talk to Each Other Without Using Words",
@@ -2977,7 +2959,7 @@
       "published": "2026-09-02T18:20:00+00:00",
       "cluster_size": 1,
       "also": [],
-      "score": 3.147,
+      "score": 3.139,
       "id": "f7954d1b8741"
     },
     {
@@ -2990,7 +2972,7 @@
       "published": "2026-08-29T23:53:13+00:00",
       "cluster_size": 1,
       "also": [],
-      "score": 3.104,
+      "score": 3.103,
       "id": "e99b0d4d4edf"
     },
     {
@@ -3003,7 +2985,7 @@
       "published": "2026-09-01T20:45:00+00:00",
       "cluster_size": 1,
       "also": [],
-      "score": 3.084,
+      "score": 3.081,
       "id": "66eabab6976f"
     },
     {
@@ -3033,34 +3015,6 @@
       "id": "c03b509bb377"
     },
     {
-      "title": "Debias-SparseGPT: Bias-Aware Pruning for Large Language Models",
-      "url": "https://huggingface.co/papers/2609.02496",
-      "source": "HF Daily Papers",
-      "category": "research",
-      "weight": 4,
-      "summary": "Model compression techniques such as pruning and quantization facilitate the efficient deployment and acceleration of Large Language Models (LLMs). However, recent studies show that weight sparsification methods, such as SparseGPT, can amplify existing biases in models, with...",
-      "published": "2026-09-01T20:00:00.000Z",
-      "upvotes": 2,
-      "cluster_size": 1,
-      "also": [],
-      "score": 3.071,
-      "id": "3d03668f06e2"
-    },
-    {
-      "title": "Exploring Collaboration between a language and a non-language agent",
-      "url": "https://huggingface.co/papers/2609.00474",
-      "source": "HF Daily Papers",
-      "category": "research",
-      "weight": 4,
-      "summary": "LLMs are increasingly deployed as orchestrators that coordinate specialized subagents to solve complex tasks through natural language. However, in many important domains like game playing and robotics, the strongest available agents are not language models. Integrating...",
-      "published": "2026-09-01T20:00:00.000Z",
-      "upvotes": 5,
-      "cluster_size": 1,
-      "also": [],
-      "score": 3.071,
-      "id": "14f5d402b4ac"
-    },
-    {
       "title": "2026.35: Internet Hype and Real World Change",
       "url": "https://stratechery.com/2026/internet-hype-and-real-world-change/",
       "source": "Stratechery",
@@ -3074,17 +3028,32 @@
       "id": "9ca25d2874fd"
     },
     {
-      "title": "😺 Claude Fable 5.1 can do the work. The hard part is managing it.",
-      "url": "https://www.theneuron.ai/newsletter/claude-fable-5-1-live-test/",
-      "source": "The Neuron",
-      "category": "news",
-      "weight": 3,
-      "summary": "",
-      "published": "2026-09-02T16:02:23.383000+00:00",
+      "title": "Debias-SparseGPT: Bias-Aware Pruning for Large Language Models",
+      "url": "https://huggingface.co/papers/2609.02496",
+      "source": "HF Daily Papers",
+      "category": "research",
+      "weight": 4,
+      "summary": "Model compression techniques such as pruning and quantization facilitate the efficient deployment and acceleration of Large Language Models (LLMs). However, recent studies show that weight sparsification methods, such as SparseGPT, can amplify existing biases in models, with...",
+      "published": "2026-09-01T20:00:00.000Z",
+      "upvotes": 2,
       "cluster_size": 1,
       "also": [],
-      "score": 3.066,
-      "id": "49db62bdc9ca"
+      "score": 3.067,
+      "id": "3d03668f06e2"
+    },
+    {
+      "title": "Exploring Collaboration between a language and a non-language agent",
+      "url": "https://huggingface.co/papers/2609.00474",
+      "source": "HF Daily Papers",
+      "category": "research",
+      "weight": 4,
+      "summary": "LLMs are increasingly deployed as orchestrators that coordinate specialized subagents to solve complex tasks through natural language. However, in many important domains like game playing and robotics, the strongest available agents are not language models. Integrating...",
+      "published": "2026-09-01T20:00:00.000Z",
+      "upvotes": 5,
+      "cluster_size": 1,
+      "also": [],
+      "score": 3.067,
+      "id": "14f5d402b4ac"
     },
     {
       "title": "[AINews] OpenAI to reach AGI bar by end-2026",
@@ -3126,6 +3095,19 @@
       "id": "0b00c80d502c"
     },
     {
+      "title": "😺 Claude Fable 5.1 can do the work. The hard part is managing it.",
+      "url": "https://www.theneuron.ai/newsletter/claude-fable-5-1-live-test/",
+      "source": "The Neuron",
+      "category": "news",
+      "weight": 3,
+      "summary": "",
+      "published": "2026-09-02T16:02:23.383000+00:00",
+      "cluster_size": 1,
+      "also": [],
+      "score": 3.059,
+      "id": "49db62bdc9ca"
+    },
+    {
       "title": "Better answers, broader thinking: What students gain from ChatGPT and critical-thinking training",
       "url": "https://openai.com/index/what-students-gain-from-chatgpt-critical-thinking-training",
       "source": "OpenAI",
@@ -3165,19 +3147,6 @@
       "id": "a31466f4f2ac"
     },
     {
-      "title": "I Tried OpenAI's New Codex Agent. Here Are My First Impressions (It's Really Good) Eurovision 2026 (E5WWAYvxr4)",
-      "url": "https://news.google.com/rss/articles/CBMiYEFVX3lxTE45RDZMOGFuWmRMcV80UTJHV25wc19DOHJLNHNibHRyT1JBc09DY0lpeGt1eXRPRnRrZDRUbHRmWEt3VUZXTDlOYzVNYkxVTlNLRzBtX09NWXhweDhuUDc3eA?oc=5",
-      "source": "GNews: Claude Code / Cursor",
-      "category": "agents",
-      "weight": 5,
-      "summary": "I Tried OpenAI's New Codex Agent. Here Are My First Impressions (It's Really Good) Eurovision 2026 (E5WWAYvxr4) mshale.com",
-      "published": "2026-08-26T14:13:15+00:00",
-      "cluster_size": 1,
-      "also": [],
-      "score": 3.054,
-      "id": "8bff6fdc6932"
-    },
-    {
       "title": "Apple Updates Mini and Studio, AI Computers, OpenAI Jalapeño",
       "url": "https://stratechery.com/2026/apple-updates-mini-and-studio-ai-computers-openai-jalapeno/",
       "source": "Stratechery",
@@ -3202,6 +3171,19 @@
       "also": [],
       "score": 3.051,
       "id": "a391893f595d"
+    },
+    {
+      "title": "How To Install Codex CLI In Under 2 Minutes Uk Eurovision Entry 2026 (cNFquba03B)",
+      "url": "https://news.google.com/rss/articles/CBMiYEFVX3lxTFA2dGRMWjlkcWN1Z3Jrbmt1cExucWU3R2FTa21YVDlsSS1HeEtxU0NQbXdVRmtYUVFqVks4Rzc2TkJsaWNWZlBfVUUxanAxcDdDUmtMUTVjLUhLZFZrcEU4Rg?oc=5",
+      "source": "GNews: Claude Code / Cursor",
+      "category": "agents",
+      "weight": 5,
+      "summary": "How To Install Codex CLI In Under 2 Minutes Uk Eurovision Entry 2026 (cNFquba03B) mshale.com",
+      "published": "2026-08-25T11:42:00+00:00",
+      "cluster_size": 1,
+      "also": [],
+      "score": 3.051,
+      "id": "d7b1c0595b54"
     },
     {
       "title": "UiPath Targets Coding-Agent Orchestration with Maestro Flow",
@@ -3243,19 +3225,6 @@
       "id": "4b606efd6bba"
     },
     {
-      "title": "Meta Releases Coding Agent to Compete With OpenAI and Anthropic",
-      "url": "https://news.google.com/rss/articles/CBMiogFBVV95cUxPMmlYd09FV3dTUTFSdzlrWWhEWHhLcVo3SjVYeXdJbmhqUG5oRTB4SUN1OGIxYUZ0MWNzVGZMOGlHVjhUYUNXVDRBaHhRVFZsbjNWcGtrNjhRQ0pEeHdrZlFPeGJEVlF6Tk9mNEk5andRZlhaQk5GWWdQblVrVkRsbzhKQUFXalAtX0ZDb2tEaHpPd3dPNzN5cmhENnkzaHVhUXc?oc=5",
-      "source": "GNews: Agent harnesses",
-      "category": "agents",
-      "weight": 5,
-      "summary": "Meta Releases Coding Agent to Compete With OpenAI and Anthropic WSJ",
-      "published": "2026-08-05T07:00:00+00:00",
-      "cluster_size": 1,
-      "also": [],
-      "score": 3.05,
-      "id": "a6020890b4f0"
-    },
-    {
       "title": "Vibe Orchestration Will Get You Killed: I Rebuilt My Coding-Agent Harness on Army Doctrine",
       "url": "https://news.google.com/rss/articles/CBMisgFBVV95cUxPME11dU1XWmpfNHZ0U2ZBREdaZmZZMWU4b1J3Y0NId2tBZU1EMGFTVXJrT3NWSEFvZTIyWGFKMUgyT3dZMy04c1RYdU9zaXZzeXF2aWZUZGlVTUlpcXZfNmVzWVhmcU9LMTBsMTc4ZVZrYjJKVURCbzBWZldkdENfeXVWUms0dm5OWTViN3pJMjZ1dFJScGVQMU5lWERBZ0FrY0dQWUh4MDlFZ1ZrbkZLLU1B?oc=5",
       "source": "GNews: Agent harnesses",
@@ -3267,6 +3236,19 @@
       "also": [],
       "score": 3.05,
       "id": "d2ef719a0f23"
+    },
+    {
+      "title": "Meta Releases Coding Agent to Compete With OpenAI and Anthropic",
+      "url": "https://news.google.com/rss/articles/CBMiogFBVV95cUxPMmlYd09FV3dTUTFSdzlrWWhEWHhLcVo3SjVYeXdJbmhqUG5oRTB4SUN1OGIxYUZ0MWNzVGZMOGlHVjhUYUNXVDRBaHhRVFZsbjNWcGtrNjhRQ0pEeHdrZlFPeGJEVlF6Tk9mNEk5andRZlhaQk5GWWdQblVrVkRsbzhKQUFXalAtX0ZDb2tEaHpPd3dPNzN5cmhENnkzaHVhUXc?oc=5",
+      "source": "GNews: Agent harnesses",
+      "category": "agents",
+      "weight": 5,
+      "summary": "Meta Releases Coding Agent to Compete With OpenAI and Anthropic WSJ",
+      "published": "2026-08-05T07:00:00+00:00",
+      "cluster_size": 1,
+      "also": [],
+      "score": 3.05,
+      "id": "a6020890b4f0"
     },
     {
       "title": "TrueFoundry debuts open-source AI agent harness, claiming up to 75% lower costs",
@@ -3360,19 +3342,6 @@
       "id": "1af0a3840359"
     },
     {
-      "title": "OpenAI Codex CLI ships v0.116.0 with enterprise features: what developers should know",
-      "url": "https://news.google.com/rss/articles/CBMibkFVX3lxTE10dkE4bE9ZTVpuRkQzaWRxV1l3TS01U1lNWXliZkVScHA0Nk5PUkZYeURXVDE3TmRZZXZkeWxvYlYtY0RQckVrVDRxc3ZpWmpiSnRKYTQ4RkV5N2xhQTVjZ1pBLWFwYTFGUFEyNU1B?oc=5",
-      "source": "GNews: Claude Code / Cursor",
-      "category": "agents",
-      "weight": 5,
-      "summary": "OpenAI Codex CLI ships v0.116.0 with enterprise features: what developers should know Augment Code",
-      "published": "2026-03-23T07:00:00+00:00",
-      "cluster_size": 1,
-      "also": [],
-      "score": 3.05,
-      "id": "4d033f970487"
-    },
-    {
       "title": "Work with Codex from anywhere",
       "url": "https://news.google.com/rss/articles/CBMiZkFVX3lxTE9wQlZvYW9qRTBRU1hJTkxOcndhVFVsZjhkRF9YSUU0QWRleEM0NldEcmhfSDA2UURDQjhKQ1NwSVY2TkhTWjBRLTJUSVg3LXQ2bDRrYnhsaXNETndSYmxDS01KdzZpZw?oc=5",
       "source": "GNews: Claude Code / Cursor",
@@ -3399,6 +3368,32 @@
       "id": "6a5f59fcb41c"
     },
     {
+      "title": "OpenAI releases Codex CLI: what developers should know",
+      "url": "https://news.google.com/rss/articles/CBMic0FVX3lxTFBqQklIVlBHbHZkamlGa29zX2NsSVFEakp1aTFHSlNBMWE0U24yX1RNM0N4Zk1FS1VJN2FZTlpxTDNqY2RZWURJZm81ejdhSlY4Q1R1S1QyTHVkSDhoWTV5SlI0clhoWllMSXA1VDE1aGI4SHc?oc=5",
+      "source": "GNews: Claude Code / Cursor",
+      "category": "agents",
+      "weight": 5,
+      "summary": "OpenAI releases Codex CLI: what developers should know Augment Code",
+      "published": "2026-04-16T07:00:00+00:00",
+      "cluster_size": 1,
+      "also": [],
+      "score": 3.05,
+      "id": "249c38bc4a1e"
+    },
+    {
+      "title": "Cursor, Codex, Gemini CLI, Antigravity hit by sandbox escapes",
+      "url": "https://news.google.com/rss/articles/CBMiqgFBVV95cUxNWDNUVmE2SkJYTld0S2FyQ3FsVTN0QngweFpYWkxLeW1FNFJyNXhrNmF3d3ljbDZJZW9zMWZuTnkyak5vRTg0N2R5MC1KeWI5U05UbHktWTRaY1JveGtHdDBQLWcwX0VzcHpqTmxsMXFWeHgxUjAwcWRqNXQyNkFsRUZaWTlldWxsVGYyelFXR19NSEtQUFBpY3lGRXg4RU1KLWE4RDhXaDRWQdIBrwFBVV95cUxNMFl6UmZQc0tFdTdVUEZhdm1IbEMxdnFueE1uV1AyLWJRUHhWTnJKUUNkRWx3VFFVcW5ZRWdySTVfY3JsMENiUGR6b08wMDlFT2RnYlpER1RWM2xEbzZvUTViRGc0NmZndXNXd0RpS0ZCSUkxY3JoOVhnRWtWbEp6aG9IWnJrbG82SFpuQTBvZkF5ZlluX2xNaWxrWS1tUmM4LTRmOVRCNWQ5aDdCZVFV?oc=5",
+      "source": "GNews: Claude Code / Cursor",
+      "category": "agents",
+      "weight": 5,
+      "summary": "Cursor, Codex, Gemini CLI, Antigravity hit by sandbox escapes BleepingComputer",
+      "published": "2026-07-20T07:00:00+00:00",
+      "cluster_size": 1,
+      "also": [],
+      "score": 3.05,
+      "id": "be57f18d91e2"
+    },
+    {
       "title": "7 Best Claude Code Alternatives for CLI Agentic Coding",
       "url": "https://news.google.com/rss/articles/CBMihwFBVV95cUxQamlqYkIwRktfeHdET25sR0xKRHYyQ0NXZXYwT3FfODhTaFRjLXhEU21lNFlCUHdJMm1wTEZEdFhyZ0dJdVJSa2dEc1ZyZGZ0TmlSUFRwSFpZX2xIbkw4STh0MEJrMkRYNVRJMms1d0tQelhrMWFDYTlqM2Z0anRuM1NMYmFZamM?oc=5",
       "source": "GNews: Claude Code / Cursor",
@@ -3410,6 +3405,19 @@
       "also": [],
       "score": 3.05,
       "id": "fc910ecfbbe7"
+    },
+    {
+      "title": "JetBrains' next move isn't a better IDE — it's a governance layer over Claude Code, Codex, and Gemini CLI",
+      "url": "https://news.google.com/rss/articles/CBMiYkFVX3lxTE5qZzZVMzZESmZDdU43MjRlU2VTUkhJZ0lGZXFPSFA2WXpSYU53SjNHSTNRNXRVT3U1RkRoYmxCYk9EbER4M2dFTnNDZWNKc3lxcjY1Nl8yRmFoVmFMUi1KQjV3?oc=5",
+      "source": "GNews: Claude Code / Cursor",
+      "category": "agents",
+      "weight": 5,
+      "summary": "JetBrains' next move isn't a better IDE — it's a governance layer over Claude Code, Codex, and Gemini CLI The New Stack",
+      "published": "2026-07-08T07:00:00+00:00",
+      "cluster_size": 1,
+      "also": [],
+      "score": 3.05,
+      "id": "c82180e6a6ba"
     },
     {
       "title": "Teaching Everyone to Fish for Tokens",
@@ -3629,21 +3637,21 @@
       "published": "2026-09-01T16:00:00+00:00",
       "cluster_size": 1,
       "also": [],
-      "score": 3.006,
+      "score": 3.003,
       "id": "77cd2a6a82f1"
     },
     {
-      "title": "Real-Time Intelligence with IBM Time Series Models on Confluent",
-      "url": "https://huggingface.co/blog/ibm-research/real-time-intelligence",
-      "source": "Hugging Face Blog",
-      "category": "vendors",
+      "title": "Grove",
+      "url": "https://www.producthunt.com/products/grove-8",
+      "source": "Product Hunt",
+      "category": "community",
       "weight": 3,
-      "summary": "",
-      "published": "2026-09-02T13:49:14+00:00",
+      "summary": "One terminal for you and your AI agent Discussion | Link",
+      "published": "2026-09-02T14:13:31+00:00",
       "cluster_size": 1,
       "also": [],
-      "score": 2.994,
-      "id": "22915ca8a273"
+      "score": 3.0,
+      "id": "f097852717ab"
     },
     {
       "title": "AI is a worryingly-good persuader. But don’t panic, yet",
@@ -3655,8 +3663,21 @@
       "published": "2026-09-01T15:02:54+00:00",
       "cluster_size": 1,
       "also": [],
-      "score": 2.992,
+      "score": 2.989,
       "id": "fe83ce642aa3"
+    },
+    {
+      "title": "Real-Time Intelligence with IBM Time Series Models on Confluent",
+      "url": "https://huggingface.co/blog/ibm-research/real-time-intelligence",
+      "source": "Hugging Face Blog",
+      "category": "vendors",
+      "weight": 3,
+      "summary": "",
+      "published": "2026-09-02T13:49:14+00:00",
+      "cluster_size": 1,
+      "also": [],
+      "score": 2.987,
+      "id": "22915ca8a273"
     },
     {
       "title": "Dyson puts AI in a $499 toothbrush",
@@ -3668,7 +3689,7 @@
       "published": "2026-09-01T14:30:00+00:00",
       "cluster_size": 1,
       "also": [],
-      "score": 2.984,
+      "score": 2.981,
       "id": "081e45e98b92"
     },
     {
@@ -3681,7 +3702,7 @@
       "published": "2026-09-02T13:30:00+00:00",
       "cluster_size": 1,
       "also": [],
-      "score": 2.984,
+      "score": 2.977,
       "id": "b324656f46fd"
     },
     {
@@ -3694,21 +3715,8 @@
       "published": "2026-09-02T12:06:50+00:00",
       "cluster_size": 1,
       "also": [],
-      "score": 2.942,
+      "score": 2.935,
       "id": "ece0bf1da928"
-    },
-    {
-      "title": "Causal",
-      "url": "https://www.producthunt.com/products/causal-2",
-      "source": "Product Hunt",
-      "category": "community",
-      "weight": 3,
-      "summary": "AI Powered Canvas for planning visual projects Discussion | Link",
-      "published": "2026-09-02T11:32:44+00:00",
-      "cluster_size": 1,
-      "also": [],
-      "score": 2.925,
-      "id": "802d91d537f9"
     },
     {
       "title": "Runway's Solaris previews the no-code internet",
@@ -3720,7 +3728,7 @@
       "published": "2026-09-01T10:00:00+00:00",
       "cluster_size": 1,
       "also": [],
-      "score": 2.923,
+      "score": 2.921,
       "id": "8ef96d6a4148"
     },
     {
@@ -3733,7 +3741,7 @@
       "published": "2026-09-02T11:00:43+00:00",
       "cluster_size": 1,
       "also": [],
-      "score": 2.91,
+      "score": 2.903,
       "id": "2182e292c792"
     },
     {
@@ -3746,7 +3754,7 @@
       "published": "2026-09-02T09:30:38.654000+00:00",
       "cluster_size": 1,
       "also": [],
-      "score": 2.868,
+      "score": 2.862,
       "id": "f08a5a967273"
     },
     {
@@ -3759,7 +3767,7 @@
       "published": "2026-09-01T00:40:27+00:00",
       "cluster_size": 1,
       "also": [],
-      "score": 2.824,
+      "score": 2.822,
       "id": "219a87eda550"
     },
     {
@@ -3773,7 +3781,7 @@
       "upvotes": 2,
       "cluster_size": 1,
       "also": [],
-      "score": 2.784,
+      "score": 2.783,
       "id": "96c13b08df99"
     },
     {
@@ -3787,7 +3795,7 @@
       "upvotes": 3,
       "cluster_size": 1,
       "also": [],
-      "score": 2.784,
+      "score": 2.783,
       "id": "f43f6b81d8da"
     },
     {
@@ -3798,11 +3806,24 @@
       "weight": 4,
       "summary": "Compact token sequences are essential for efficient 3D generation. However, existing 3D tokenizers typically organize latent representations either over spatial regions or as fixed-size sets of global tokens, both suffering sharp reconstruction degradation when compressed to...",
       "published": "2026-08-31T20:00:00.000Z",
-      "upvotes": 20,
+      "upvotes": 21,
       "cluster_size": 1,
       "also": [],
-      "score": 2.784,
+      "score": 2.783,
       "id": "7633419dd00c"
+    },
+    {
+      "title": "The Hugging Face hack could indicate cultural issues at OpenAI",
+      "url": "https://www.technologyreview.com/2026/08/31/1143180/hugging-face-hack-could-indicate-cultural-issues-at-openai/",
+      "source": "MIT Tech Review AI",
+      "category": "news",
+      "weight": 4,
+      "summary": "This story originally appeared in The Algorithm, our weekly newsletter on AI. To get stories like this in your inbox first, sign up here. By now you’ve probably heard about last month’s major AI security incident, in which OpenAI agents escaped their sandbox and hacked into the...",
+      "published": "2026-08-31T18:00:00+00:00",
+      "cluster_size": 1,
+      "also": [],
+      "score": 2.768,
+      "id": "de5690d7d612"
     },
     {
       "title": "Accessing OpenAI models on Amazon Bedrock from Australia with global cross-Region inference",
@@ -3814,7 +3835,7 @@
       "published": "2026-09-02T21:22:05+00:00",
       "cluster_size": 1,
       "also": [],
-      "score": 2.764,
+      "score": 2.755,
       "id": "0e5fd9081c6f"
     },
     {
@@ -3827,7 +3848,7 @@
       "published": "2026-08-31T14:30:00+00:00",
       "cluster_size": 1,
       "also": [],
-      "score": 2.745,
+      "score": 2.744,
       "id": "ee23f7807972"
     },
     {
@@ -3840,7 +3861,7 @@
       "published": "2026-08-31T10:00:00+00:00",
       "cluster_size": 1,
       "also": [],
-      "score": 2.718,
+      "score": 2.717,
       "id": "6d4840cde7a0"
     },
     {
@@ -3853,7 +3874,7 @@
       "published": "2026-09-02T03:16:17+00:00",
       "cluster_size": 1,
       "also": [],
-      "score": 2.714,
+      "score": 2.709,
       "id": "f1d4289bb2a8"
     },
     {
@@ -3864,10 +3885,10 @@
       "weight": 4,
       "summary": "Agent performance depends jointly on the model parameters and the executable harness code that manages context and control flow. Optimizing either component in isolation can leave the system bottlenecked by its frozen counterpart: weight updates can change which harness is...",
       "published": "2026-08-30T20:00:00.000Z",
-      "upvotes": 14,
+      "upvotes": 16,
       "cluster_size": 1,
       "also": [],
-      "score": 2.655,
+      "score": 2.654,
       "id": "63cb4d70b31c"
     },
     {
@@ -3881,7 +3902,7 @@
       "upvotes": 3,
       "cluster_size": 1,
       "also": [],
-      "score": 2.655,
+      "score": 2.654,
       "id": "60626530905d"
     },
     {
@@ -3895,7 +3916,7 @@
       "upvotes": 2,
       "cluster_size": 1,
       "also": [],
-      "score": 2.655,
+      "score": 2.654,
       "id": "4e0625588502"
     },
     {
@@ -3908,7 +3929,7 @@
       "published": "2026-09-02T18:26:35+00:00",
       "cluster_size": 1,
       "also": [],
-      "score": 2.651,
+      "score": 2.643,
       "id": "c610414ecfd6"
     },
     {
@@ -3921,21 +3942,8 @@
       "published": "2026-09-01T22:42:12+00:00",
       "cluster_size": 1,
       "also": [],
-      "score": 2.62,
+      "score": 2.616,
       "id": "f568f34bc016"
-    },
-    {
-      "title": "BenchMIRT: What are LLM benchmarks actually measuring?",
-      "url": "https://huggingface.co/blog/allenai/benchmirt",
-      "source": "Hugging Face Blog",
-      "category": "vendors",
-      "weight": 3,
-      "summary": "",
-      "published": "2026-09-01T21:39:07+00:00",
-      "cluster_size": 1,
-      "also": [],
-      "score": 2.601,
-      "id": "23bdbfdbd061"
     },
     {
       "title": "Partnering with Corma: Closing the Defensive Cybersecurity Gap",
@@ -3955,6 +3963,19 @@
       ],
       "score": 2.6,
       "id": "7c2e185bddb1"
+    },
+    {
+      "title": "BenchMIRT: What are LLM benchmarks actually measuring?",
+      "url": "https://huggingface.co/blog/allenai/benchmirt",
+      "source": "Hugging Face Blog",
+      "category": "vendors",
+      "weight": 3,
+      "summary": "",
+      "published": "2026-09-01T21:39:07+00:00",
+      "cluster_size": 1,
+      "also": [],
+      "score": 2.597,
+      "id": "23bdbfdbd061"
     },
     {
       "title": "Small Language Models as Judges for Rubric-Based Reinforcement Learning",
@@ -4022,7 +4043,7 @@
       "published": "2026-09-01T21:19:20+00:00",
       "cluster_size": 1,
       "also": [],
-      "score": 2.595,
+      "score": 2.591,
       "id": "d235e1f23d69"
     },
     {
@@ -4088,21 +4109,8 @@
       "upvotes": 1,
       "cluster_size": 1,
       "also": [],
-      "score": 2.56,
-      "id": "ba3c79d81934"
-    },
-    {
-      "title": "The report into OpenAI’s escaping models reveals a deeper problem",
-      "url": "https://www.transformernews.ai/p/openai-escaping-models-report-reveals-deeper-problem",
-      "source": "Transformer",
-      "category": "analysis",
-      "weight": 4,
-      "summary": "The new details from the OpenAI Hugging Face incident are scary. The limits of the investigation are terrifying",
-      "published": "2026-08-27T16:34:30+00:00",
-      "cluster_size": 1,
-      "also": [],
       "score": 2.559,
-      "id": "814c6a8e74b2"
+      "id": "ba3c79d81934"
     },
     {
       "title": "Cyborg roaches become tiny paramedics",
@@ -4157,6 +4165,19 @@
       "id": "471ea8bf94e6"
     },
     {
+      "title": "The report into OpenAI’s escaping models reveals a deeper problem",
+      "url": "https://www.transformernews.ai/p/openai-escaping-models-report-reveals-deeper-problem",
+      "source": "Transformer",
+      "category": "analysis",
+      "weight": 4,
+      "summary": "The new details from the OpenAI Hugging Face incident are scary. The limits of the investigation are terrifying",
+      "published": "2026-08-27T16:34:30+00:00",
+      "cluster_size": 1,
+      "also": [],
+      "score": 2.558,
+      "id": "814c6a8e74b2"
+    },
+    {
       "title": "The Ox Alpha mystery ends with Z.ai",
       "url": "https://www.therundown.ai/articles/the-ox-alpha-mystery-ends-with-z-ai",
       "source": "The Rundown",
@@ -4181,19 +4202,6 @@
       "also": [],
       "score": 2.555,
       "id": "f6978193f906"
-    },
-    {
-      "title": "Tidy",
-      "url": "https://www.producthunt.com/products/tidy-6",
-      "source": "Product Hunt",
-      "category": "community",
-      "weight": 3,
-      "summary": "Fix grammar in any Mac app with free on-device AI Discussion | Link",
-      "published": "2026-09-01T19:04:06+00:00",
-      "cluster_size": 1,
-      "also": [],
-      "score": 2.555,
-      "id": "5a04f9e6f69c"
     },
     {
       "title": "The inside story on why OpenAI agents hacked Hugging Face",
@@ -4324,6 +4332,19 @@
       "also": [],
       "score": 2.552,
       "id": "9d44f7e4dc2b"
+    },
+    {
+      "title": "Tidy",
+      "url": "https://www.producthunt.com/products/tidy-6",
+      "source": "Product Hunt",
+      "category": "community",
+      "weight": 3,
+      "summary": "Fix grammar in any Mac app with free on-device AI Discussion | Link",
+      "published": "2026-09-01T19:04:06+00:00",
+      "cluster_size": 1,
+      "also": [],
+      "score": 2.552,
+      "id": "5a04f9e6f69c"
     },
     {
       "title": "I spent a day at a robot “carnival” in Shanghai. Here’s what I saw.",
@@ -4474,7 +4495,7 @@
       "source": "GNews: LLM releases",
       "category": "agents",
       "weight": 4,
-      "summary": "Moonshot’s Kimi K3 pushes Chinese AI into Fable-level territory Fortune",
+      "summary": "Moonshot’s Kimi K3 pushes Chinese AI into Fable-level territory fortune.com",
       "published": "2026-07-16T07:00:00+00:00",
       "cluster_size": 1,
       "also": [],
@@ -5090,7 +5111,7 @@
       "published": "2026-09-01T17:15:18+00:00",
       "cluster_size": 1,
       "also": [],
-      "score": 2.526,
+      "score": 2.522,
       "id": "ab514fb2d1d5"
     },
     {
@@ -5103,7 +5124,7 @@
       "published": "2026-09-01T00:00:00+00:00",
       "cluster_size": 1,
       "also": [],
-      "score": 2.318,
+      "score": 2.316,
       "id": "85562dc16345"
     },
     {
@@ -5116,7 +5137,7 @@
       "published": "2026-08-31T19:13:31+00:00",
       "cluster_size": 1,
       "also": [],
-      "score": 2.278,
+      "score": 2.277,
       "id": "352eee837854"
     },
     {
@@ -5129,7 +5150,7 @@
       "published": "2026-08-31T17:22:47+00:00",
       "cluster_size": 1,
       "also": [],
-      "score": 2.265,
+      "score": 2.263,
       "id": "d583af35fcc8"
     },
     {
@@ -5142,7 +5163,7 @@
       "published": "2026-08-31T16:33:38+00:00",
       "cluster_size": 1,
       "also": [],
-      "score": 2.259,
+      "score": 2.257,
       "id": "27457e289e19"
     },
     {
@@ -5326,45 +5347,6 @@
       "also": [],
       "score": 2.052,
       "id": "5309d9655463"
-    },
-    {
-      "title": "Granite 4.2 LLMs: How They're Built",
-      "url": "https://huggingface.co/blog/ibm-granite/granite-4-2",
-      "source": "Hugging Face Blog",
-      "category": "vendors",
-      "weight": 3,
-      "summary": "",
-      "published": "2026-08-25T15:14:14+00:00",
-      "cluster_size": 1,
-      "also": [],
-      "score": 2.052,
-      "id": "74043a2c13e4"
-    },
-    {
-      "title": "Leading Publishers Bring Blockbuster PC Games and Technology to NVIDIA RTX Spark",
-      "url": "https://blogs.nvidia.com/blog/gamescom-rtx-spark-pc-games-technology/",
-      "source": "NVIDIA Blog",
-      "category": "vendors",
-      "weight": 3,
-      "summary": "NVIDIA is bringing the next wave of RTX gaming to the Gamescom conference running this week in Cologne, Germany, with support for new games, anti-cheat technologies and increased visual quality. Electronic Arts, Embark and Ubisoft are among the latest game publishers and...",
-      "published": "2026-08-25T15:30:48+00:00",
-      "cluster_size": 1,
-      "also": [],
-      "score": 2.052,
-      "id": "67c0d574508d"
-    },
-    {
-      "title": "Super-intelligence or Superstition? Exploring Psychological Factors Influencing Belief in AI Predictions about Personal Behavior",
-      "url": "https://arxiv.org/abs/2408.06602",
-      "source": "Lobsters AI",
-      "category": "community",
-      "weight": 3,
-      "summary": "Comments",
-      "published": "2026-08-25T15:03:24+00:00",
-      "cluster_size": 1,
-      "also": [],
-      "score": 2.052,
-      "id": "1de5adf1c71a"
     }
   ],
   "repos": [
@@ -5372,7 +5354,7 @@
       "full_name": "obra/superpowers",
       "url": "https://github.com/obra/superpowers",
       "description": "An agentic skills framework & software development methodology that works.",
-      "stars": 281331,
+      "stars": 281335,
       "language": "Shell",
       "section": "Hot LLM tooling",
       "category": "repos",
@@ -5388,7 +5370,7 @@
       "full_name": "mattpocock/skills",
       "url": "https://github.com/mattpocock/skills",
       "description": "Skills for Real Engineers. Straight from my .agents directory.",
-      "stars": 247364,
+      "stars": 247382,
       "language": "Shell",
       "section": "Hot LLM tooling",
       "category": "repos",
@@ -5399,7 +5381,7 @@
       "full_name": "affaan-m/ECC",
       "url": "https://github.com/affaan-m/ECC",
       "description": "The agent harness performance optimization system. Skills, instincts, memory, security, and research-first development for Claude Code, Codex, Opencode, Cursor and beyond.",
-      "stars": 247178,
+      "stars": 247187,
       "language": "JavaScript",
       "section": "Hot LLM tooling",
       "category": "repos",
@@ -5415,7 +5397,7 @@
       "full_name": "NousResearch/hermes-agent",
       "url": "https://github.com/NousResearch/hermes-agent",
       "description": "The agent that grows with you",
-      "stars": 240834,
+      "stars": 240836,
       "language": "Python",
       "section": "Hot LLM tooling",
       "category": "repos",
@@ -5431,28 +5413,12 @@
       "full_name": "anomalyco/opencode",
       "url": "https://github.com/anomalyco/opencode",
       "description": "The open source coding agent.",
-      "stars": 203566,
+      "stars": 203570,
       "language": "TypeScript",
       "section": "Hot LLM tooling",
       "category": "repos",
-      "updated": "2026-09-04T00:30:28Z",
+      "updated": "2026-09-04T00:41:38Z",
       "topics": []
-    },
-    {
-      "full_name": "n8n-io/n8n",
-      "url": "https://github.com/n8n-io/n8n",
-      "description": "Fair-code workflow automation platform with native AI capabilities. Combine visual building with custom code, self-host or cloud, 400+ integrations.",
-      "stars": 203262,
-      "language": "TypeScript",
-      "section": "Self-hosted gems",
-      "category": "repos",
-      "updated": "2026-09-04T00:29:02Z",
-      "topics": [
-        "ai",
-        "apis",
-        "automation",
-        "cli"
-      ]
     },
     {
       "full_name": "Significant-Gravitas/AutoGPT",
@@ -5462,7 +5428,7 @@
       "language": "Python",
       "section": "Agent frameworks",
       "category": "agents",
-      "updated": "2026-09-04T00:27:29Z",
+      "updated": "2026-09-04T00:36:56Z",
       "topics": [
         "agentic-ai",
         "agents",
@@ -5474,7 +5440,7 @@
       "full_name": "anthropics/skills",
       "url": "https://github.com/anthropics/skills",
       "description": "Public repository for Agent Skills",
-      "stars": 173645,
+      "stars": 173647,
       "language": "Python",
       "section": "Hot LLM tooling",
       "category": "repos",
@@ -5487,11 +5453,11 @@
       "full_name": "langgenius/dify",
       "url": "https://github.com/langgenius/dify",
       "description": "Build Agentic workflows, RAG pipelines, with rich AI model and tool support on one collaborative workspace. Deploy on cloud, VPC, or self-hosted, so teams move from prototype to production without...",
-      "stars": 154371,
+      "stars": 154372,
       "language": "TypeScript",
       "section": "Hot LLM tooling",
       "category": "repos",
-      "updated": "2026-09-04T00:14:41Z",
+      "updated": "2026-09-04T00:35:42Z",
       "topics": [
         "agent",
         "agentic-ai",
@@ -5507,7 +5473,7 @@
       "language": "Python",
       "section": "Agent frameworks",
       "category": "agents",
-      "updated": "2026-09-03T23:13:06Z",
+      "updated": "2026-09-04T00:37:04Z",
       "topics": [
         "agents",
         "chatgpt",
@@ -5516,10 +5482,26 @@
       ]
     },
     {
+      "full_name": "open-webui/open-webui",
+      "url": "https://github.com/open-webui/open-webui",
+      "description": "User-friendly AI Interface (Supports Ollama, OpenAI API, ...)",
+      "stars": 150844,
+      "language": "Python",
+      "section": "Self-hosted gems",
+      "category": "repos",
+      "updated": "2026-09-04T00:36:30Z",
+      "topics": [
+        "ai",
+        "llm",
+        "llm-ui",
+        "llm-webui"
+      ]
+    },
+    {
       "full_name": "msitarzewski/agency-agents",
       "url": "https://github.com/msitarzewski/agency-agents",
       "description": "A complete AI agency at your fingertips - From frontend wizards to Reddit community ninjas, from whimsy injectors to reality checkers. Each agent is a specialized expert with personality, processes,...",
-      "stars": 149908,
+      "stars": 149910,
       "language": "Shell",
       "section": "Hot LLM tooling",
       "category": "repos",
@@ -5546,7 +5528,7 @@
       "full_name": "anthropics/claude-code",
       "url": "https://github.com/anthropics/claude-code",
       "description": "Claude Code is an agentic coding tool that lives in your terminal, understands your codebase, and helps you code faster by executing routine tasks, explaining complex code, and handling git workflows...",
-      "stars": 143955,
+      "stars": 143956,
       "language": "Python",
       "section": "Hot LLM tooling",
       "category": "repos",
@@ -5557,7 +5539,7 @@
       "full_name": "Shubhamsaboo/awesome-llm-apps",
       "url": "https://github.com/Shubhamsaboo/awesome-llm-apps",
       "description": "100+ AI Agents, Agent Skills and RAG Apps - Free and Open Source.",
-      "stars": 135930,
+      "stars": 135933,
       "language": "Python",
       "section": "Agent frameworks",
       "category": "agents",
@@ -5570,26 +5552,10 @@
       ]
     },
     {
-      "full_name": "Stirling-Tools/Stirling-PDF",
-      "url": "https://github.com/Stirling-Tools/Stirling-PDF",
-      "description": "#1 PDF Application on GitHub that lets you edit PDFs on any device anywhere",
-      "stars": 91244,
-      "language": "Java",
-      "section": "Self-hosted gems",
-      "category": "repos",
-      "updated": "2026-09-04T00:25:32Z",
-      "topics": [
-        "docker",
-        "hacktoberfest",
-        "java",
-        "pdf"
-      ]
-    },
-    {
       "full_name": "ruvnet/ruflo",
       "url": "https://github.com/ruvnet/ruflo",
       "description": "🌊 The original agent meta-harness. Deploy intelligent multi-player swarms, coordinate autonomous workflows, and build conversational AI systems. Features adaptive memory, self-learning intelligence,...",
-      "stars": 70359,
+      "stars": 70361,
       "language": "TypeScript",
       "section": "Agent frameworks",
       "category": "agents",
@@ -5618,26 +5584,10 @@
       ]
     },
     {
-      "full_name": "usememos/memos",
-      "url": "https://github.com/usememos/memos",
-      "description": "Open-source, self-hosted note-taking tool built for quick capture. Markdown-native, lightweight, and fully yours.",
-      "stars": 62754,
-      "language": "Go",
-      "section": "Self-hosted gems",
-      "category": "repos",
-      "updated": "2026-09-04T00:20:20Z",
-      "topics": [
-        "docker",
-        "foss",
-        "go",
-        "markdown"
-      ]
-    },
-    {
       "full_name": "usestrix/strix",
       "url": "https://github.com/usestrix/strix",
       "description": "Open-source AI penetration testing tool to find and fix your app’s vulnerabilities.",
-      "stars": 60395,
+      "stars": 60396,
       "language": "Python",
       "section": "Agent frameworks",
       "category": "agents",
@@ -5666,26 +5616,10 @@
       ]
     },
     {
-      "full_name": "go-gitea/gitea",
-      "url": "https://github.com/go-gitea/gitea",
-      "description": "Git with a cup of tea! Painless self-hosted all-in-one software development service, including Git hosting, code review, team collaboration, package registry and CI/CD",
-      "stars": 57802,
-      "language": "Go",
-      "section": "Self-hosted gems",
-      "category": "repos",
-      "updated": "2026-09-04T00:28:59Z",
-      "topics": [
-        "bitbucket",
-        "cicd",
-        "devops",
-        "docker-registry-v2"
-      ]
-    },
-    {
       "full_name": "rohitg00/ai-engineering-from-scratch",
       "url": "https://github.com/rohitg00/ai-engineering-from-scratch",
       "description": "Learn it. Build it. Ship it for others.",
-      "stars": 52279,
+      "stars": 52281,
       "language": "Python",
       "section": "Agent frameworks",
       "category": "agents",
@@ -5714,22 +5648,6 @@
       ]
     },
     {
-      "full_name": "ClickHouse/ClickHouse",
-      "url": "https://github.com/ClickHouse/ClickHouse",
-      "description": "ClickHouse® is a real-time analytics database management system",
-      "stars": 49634,
-      "language": "C++",
-      "section": "Self-hosted gems",
-      "category": "repos",
-      "updated": "2026-09-04T00:30:20Z",
-      "topics": [
-        "ai",
-        "analytics",
-        "big-data",
-        "clickhouse"
-      ]
-    },
-    {
       "full_name": "mudler/LocalAI",
       "url": "https://github.com/mudler/LocalAI",
       "description": "LocalAI is the open-source AI engine. Run any model - LLMs, vision, voice, image, video - on any hardware. No GPU required.",
@@ -5737,7 +5655,7 @@
       "language": "Go",
       "section": "Agent frameworks",
       "category": "agents",
-      "updated": "2026-09-03T22:15:08Z",
+      "updated": "2026-09-04T00:38:30Z",
       "topics": [
         "agents",
         "ai",
@@ -5749,7 +5667,7 @@
       "full_name": "elder-plinius/CL4R1T4S",
       "url": "https://github.com/elder-plinius/CL4R1T4S",
       "description": "LEAKED SYSTEM PROMPTS FOR CHATGPT, CLAUDE, GEMINI, GROK, PERPLEXITY, CURSOR, LOVABLE, REPLIT, AND MORE! - AI SYSTEMS TRANSPARENCY FOR ALL! 👐",
-      "stars": 48832,
+      "stars": 48835,
       "language": "",
       "section": "Agent frameworks",
       "category": "agents",
@@ -5762,6 +5680,22 @@
       ]
     },
     {
+      "full_name": "community-scripts/ProxmoxVE",
+      "url": "https://github.com/community-scripts/ProxmoxVE",
+      "description": "Proxmox VE Helper-Scripts (Community Edition)",
+      "stars": 29484,
+      "language": "Shell",
+      "section": "Self-hosted gems",
+      "category": "repos",
+      "updated": "2026-09-04T00:41:33Z",
+      "topics": [
+        "alpine",
+        "authentification",
+        "container",
+        "debian"
+      ]
+    },
+    {
       "full_name": "ArchiveBox/ArchiveBox",
       "url": "https://github.com/ArchiveBox/ArchiveBox",
       "description": "🗃 Open source self-hosted web archiving. Takes URLs/browser history/bookmarks/Pocket/Pinboard/etc., saves HTML, JS, PDFs, media, and more...",
@@ -5769,7 +5703,7 @@
       "language": "Python",
       "section": "Self-hosted gems",
       "category": "repos",
-      "updated": "2026-09-04T00:28:52Z",
+      "updated": "2026-09-04T00:35:03Z",
       "topics": [
         "archivebox",
         "backups",
@@ -5794,42 +5728,74 @@
       ]
     },
     {
-      "full_name": "rmyndharis/OpenWA",
-      "url": "https://github.com/rmyndharis/OpenWA",
-      "description": "Free, Open Source, Self-Hosted WhatsApp API Gateway",
-      "stars": 13721,
+      "full_name": "oomol-lab/open-connector",
+      "url": "https://github.com/oomol-lab/open-connector",
+      "description": "Open-source auth gateway connecting 1000+ SaaS providers to AI agents through SDK, CLI, MCP, HTTP, and OpenAPI.",
+      "stars": 5529,
       "language": "TypeScript",
       "section": "Self-hosted gems",
       "category": "repos",
-      "updated": "2026-09-04T00:15:46Z",
+      "updated": "2026-09-04T00:34:03Z",
       "topics": [
-        "api",
-        "bot",
-        "gateway",
-        "self-hosted"
+        "agent-tools",
+        "ai-agents",
+        "api-gateway",
+        "automation"
       ]
     },
     {
-      "full_name": "LearningCircuit/local-deep-research",
-      "url": "https://github.com/LearningCircuit/local-deep-research",
-      "description": "~95% on SimpleQA (e.g. Qwen3.6-27B on a 3090). Supports all local and cloud LLMs (llama.cpp, Ollama, Google, ...). 10+ search engines - arXiv, PubMed, your private documents. Everything Local &...",
-      "stars": 9035,
+      "full_name": "psviderski/uncloud",
+      "url": "https://github.com/psviderski/uncloud",
+      "description": "A lightweight tool for deploying and managing containerised applications across a network of Docker hosts. Bridging the gap between Docker and Kubernetes ✨",
+      "stars": 5477,
+      "language": "Go",
+      "section": "Self-hosted gems",
+      "category": "repos",
+      "updated": "2026-09-04T00:40:03Z",
+      "topics": [
+        "containers",
+        "deployment",
+        "devops",
+        "docker"
+      ]
+    },
+    {
+      "full_name": "ArcReel/ArcReel",
+      "url": "https://github.com/ArcReel/ArcReel",
+      "description": "AI Agent 驱动的开源可自部署视频工作台：将小说与剧本转为角色、场景、道具资产、分镜、视频和剪映草稿，支持跨镜头一致性、多供应商与费用追踪 | Self-hosted AI video workspace for stories, storyboards and short-form video production",
+      "stars": 4340,
       "language": "Python",
       "section": "Self-hosted gems",
       "category": "repos",
-      "updated": "2026-09-04T00:17:27Z",
+      "updated": "2026-09-04T00:37:51Z",
       "topics": [
-        "academia",
-        "anthropic",
-        "arxiv",
-        "brave"
+        "agentic-workflow",
+        "ai-agent",
+        "ai-animation",
+        "ai-video-generator"
+      ]
+    },
+    {
+      "full_name": "deeplethe/utopia",
+      "url": "https://github.com/deeplethe/utopia",
+      "description": "World's first open-source enterprise world model.",
+      "stars": 3627,
+      "language": "Rust",
+      "section": "Self-hosted gems",
+      "category": "repos",
+      "updated": "2026-09-04T00:39:30Z",
+      "topics": [
+        "agent-memory",
+        "bitemporal",
+        "graphrag",
+        "knowledge-base"
       ]
     },
     {
       "full_name": "ShawnPana/phone-harness",
       "url": "https://github.com/ShawnPana/phone-harness",
       "description": "let your agent control your phone",
-      "stars": 2317,
+      "stars": 2318,
       "language": "Python",
       "section": "New AI repos",
       "category": "repos",
@@ -5849,12 +5815,28 @@
       "language": "Haskell",
       "section": "Self-hosted gems",
       "category": "repos",
-      "updated": "2026-09-04T00:30:37Z",
+      "updated": "2026-09-04T00:39:30Z",
       "topics": [
         "haskell",
         "logs",
         "metrics",
         "monitoring"
+      ]
+    },
+    {
+      "full_name": "Quenary/tugtainer",
+      "url": "https://github.com/Quenary/tugtainer",
+      "description": "An application for automated Docker container updates with a web UI",
+      "stars": 1520,
+      "language": "Python",
+      "section": "Self-hosted gems",
+      "category": "repos",
+      "updated": "2026-09-04T00:35:11Z",
+      "topics": [
+        "angular",
+        "auto-update",
+        "container-management",
+        "container-monitoring"
       ]
     },
     {
@@ -5893,11 +5875,11 @@
       "full_name": "artifact-keeper/artifact-keeper",
       "url": "https://github.com/artifact-keeper/artifact-keeper",
       "description": "Open-source universal artifact registry. Drop-in Artifactory/Nexus alternative with 40+ package formats, security scanning, WASM plugins, and edge replication.",
-      "stars": 1002,
+      "stars": 1003,
       "language": "Rust",
       "section": "Self-hosted gems",
       "category": "repos",
-      "updated": "2026-09-04T00:28:17Z",
+      "updated": "2026-09-04T00:35:00Z",
       "topics": [
         "artifact-registry",
         "artifactory-alternative",
@@ -5941,7 +5923,7 @@
       "full_name": "2akouwu/reverify",
       "url": "https://github.com/2akouwu/reverify",
       "description": "Anti-hallucination for AI agents that read binaries. The model proposes, deterministic tools decide: every claim is VERIFIED or REFUTED against the real bytes, with evidence, and grounded facts...",
-      "stars": 761,
+      "stars": 767,
       "language": "Python",
       "section": "New AI repos",
       "category": "repos",
@@ -5973,7 +5955,7 @@
       "full_name": "NxcoreAI/EverRoom",
       "url": "https://github.com/NxcoreAI/EverRoom",
       "description": "EverRoom - A workspace that remembers your projects, decisions, and sources.",
-      "stars": 712,
+      "stars": 713,
       "language": "TypeScript",
       "section": "New AI repos",
       "category": "repos",
@@ -6005,7 +5987,7 @@
       "full_name": "xzf-thu/VoiceMem",
       "url": "https://github.com/xzf-thu/VoiceMem",
       "description": "Infrastructure for the next generation of voice agents, designed to provide universal memory. It is divided into a left brain and a right brain, storing information and emotions respectively, while a...",
-      "stars": 624,
+      "stars": 625,
       "language": "Python",
       "section": "New AI repos",
       "category": "repos",
@@ -6173,16 +6155,16 @@
   ],
   "categories": {
     "analysis": 81,
-    "agents": 67,
-    "vendors": 73,
-    "news": 73,
-    "community": 39,
+    "vendors": 72,
+    "agents": 68,
+    "news": 74,
+    "community": 38,
     "research": 67
   },
   "stats": {
     "items": 400,
     "raw": 450,
-    "merged": 26,
+    "merged": 23,
     "repos": 43,
     "releases": 15,
     "sources": 43
