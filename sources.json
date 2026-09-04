@@ -70,7 +70,16 @@
     { "name": "arXiv cs.LG", "url": "http://export.arxiv.org/rss/cs.LG", "category": "research", "weight": 4, "limit": 15 },
     { "name": "arXiv cs.CL", "url": "http://export.arxiv.org/rss/cs.CL", "category": "research", "weight": 3, "limit": 12 },
     { "name": "arXiv cs.MA", "url": "http://export.arxiv.org/rss/cs.MA", "category": "research", "weight": 5, "limit": 12 },
-    { "name": "arXiv cs.SE", "url": "http://export.arxiv.org/rss/cs.SE", "category": "research", "weight": 3, "limit": 10 }
+    { "name": "arXiv cs.SE", "url": "http://export.arxiv.org/rss/cs.SE", "category": "research", "weight": 3, "limit": 10 },
+    { "name": "LessWrong", "url": "https://www.lesswrong.com/feed.xml", "category": "research", "weight": 3, "limit": 10 },
+    { "name": "Alignment Forum", "url": "https://www.alignmentforum.org/feed.xml", "category": "research", "weight": 3, "limit": 8 },
+
+    { "name": "Next Platform", "url": "https://www.nextplatform.com/feed/", "category": "hardware", "weight": 3, "limit": 8 },
+    { "name": "ServeTheHome", "url": "https://www.servethehome.com/feed/", "category": "hardware", "weight": 3, "limit": 8 },
+    { "name": "Tom's Hardware", "url": "https://www.tomshardware.com/feeds/all", "category": "hardware", "weight": 3, "limit": 10 },
+    { "name": "IEEE Spectrum AI", "url": "https://spectrum.ieee.org/feeds/topic/artificial-intelligence.rss", "category": "hardware", "weight": 3, "limit": 8 },
+    { "name": "404 Media", "url": "https://www.404media.co/rss/", "category": "news", "weight": 4, "limit": 10 },
+    { "name": "TLDR AI", "url": "https://tldr.tech/rss/ai", "category": "news", "weight": 3, "limit": 8 }
   ],
 
   "json_sources": [

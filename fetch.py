@@ -47,8 +47,12 @@ MIN_SHARED_TOKENS = 2
 # generic wording like "large language models".
 RARE_DF = 12
 
-# Hard cap on stories in the payload.
-MAX_ITEMS = 400
+# Hard cap on stories in the payload. Was 400, raised to 500 when batch 3
+# took the source count to 65: a fixed cap means every source added thins every
+# source already there, and 18 of 66 had been squeezed to a single story. The
+# wire cost is small because Pages gzips -- 500 stories is roughly 113 KB
+# gzipped against 90 KB for 400.
+MAX_ITEMS = 500
 # Every source gets at least this many slots before that cap applies. See
 # apply_source_floor: recency-weighted ranking structurally starves anything
 # that posts slower than daily, and a configured source that silently renders
