@@ -74,7 +74,7 @@
     { "name": "LessWrong", "url": "https://www.lesswrong.com/feed.xml", "category": "research", "weight": 3, "limit": 10 },
     { "name": "Alignment Forum", "url": "https://www.alignmentforum.org/feed.xml", "category": "research", "weight": 3, "limit": 8 },
 
-    { "name": "Next Platform", "url": "https://www.nextplatform.com/feed/", "category": "hardware", "weight": 3, "limit": 8 },
+    { "name": "Next Platform", "url": "https://www.nextplatform.com/index?lab_viewport=rss", "category": "hardware", "weight": 3, "limit": 8 },
     { "name": "ServeTheHome", "url": "https://www.servethehome.com/feed/", "category": "hardware", "weight": 3, "limit": 8 },
     { "name": "Tom's Hardware", "url": "https://www.tomshardware.com/feeds/all", "category": "hardware", "weight": 3, "limit": 10 },
     { "name": "IEEE Spectrum AI", "url": "https://spectrum.ieee.org/feeds/topic/artificial-intelligence.rss", "category": "hardware", "weight": 3, "limit": 8 },
