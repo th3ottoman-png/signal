@@ -18,6 +18,23 @@ permissions:
   id-token: write
 
 jobs:
+  test:
+    # Separate job on purpose. A failing UI test must go red without blocking
+    # the feed refresh below: the data still needs to update even if the page
+    # rendering it has a regression.
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Set up Node
+        uses: actions/setup-node@v4
+        with:
+          node-version: lts/*
+
+      - name: Run tests
+        run: node tests/run.js
+
   build-and-deploy:
     runs-on: ubuntu-latest
     environment:
