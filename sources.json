@@ -54,7 +54,7 @@
     { "name": "Eugene Yan", "url": "https://eugeneyan.com/rss/", "category": "analysis", "weight": 4, "limit": 8 },
 
     { "name": "Hacker News", "url": "https://hnrss.org/frontpage", "category": "community", "weight": 4, "limit": 20 },
-    { "name": "HN Best", "url": "https://hnrss.org/best?points=100", "category": "community", "weight": 5, "limit": 20 },
+    { "name": "HN Best", "url": "https://hnrss.org/newest?points=100", "category": "community", "weight": 5, "limit": 20 },
     { "name": "Lobsters AI", "url": "https://lobste.rs/t/ai.rss", "category": "community", "weight": 3, "limit": 15 },
     { "name": "Product Hunt", "url": "https://www.producthunt.com/feed", "category": "community", "weight": 3, "limit": 12 },
     { "name": "Dev.to AI", "url": "https://dev.to/feed/tag/ai", "category": "community", "weight": 2, "limit": 10 },

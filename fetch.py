@@ -242,8 +242,17 @@ def collect_news(sources):
             results[name] = items
             if err:
                 print(f"  [fail] {name:<30} {err}")
-            else:
+            elif items:
                 print(f"  [ok]   {name:<30} {len(items)} items")
+            else:
+                # Distinct from [ok] on purpose. A feed that parses cleanly to
+                # zero items used to report success with a bare "0 items",
+                # indistinguishable from a healthy fetch in a log skim. Four
+                # arXiv feeds sat empty this way and the only clue was a quiet
+                # category count. Not an error: arXiv publishes nothing over
+                # the weekend, so this fires legitimately. It just has to be
+                # visible. Grep for "[empty]" the same way you grep "[fail]".
+                print(f"  [empty]{name:<30} 0 items")
 
     ordered = []
     for src in sources:
@@ -596,7 +605,10 @@ def main():
         try:
             got = fetch_hf_papers(js)
             raw.extend(got)
-            print(f"  [ok]   {js['name']:<30} {len(got)} items")
+            # Same reasoning as the [empty] marker in collect_news: a clean
+            # fetch of nothing must be visible, not filed as success.
+            tag = "[ok]   " if got else "[empty]"
+            print(f"  {tag}{js['name']:<30} {len(got)} items")
         except Exception as exc:
             print(f"  [fail] {js['name']:<30} {type(exc).__name__}: {exc}")
 
