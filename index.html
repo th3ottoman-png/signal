@@ -1,11 +1,11 @@
 <!DOCTYPE html>
-<html lang="en" data-page-node-id="2Gt88tIITWDoVLtCjZaI4Q">
-<head data-page-node-id="zFwMwngQh140M2KWsgIV7d">
-<meta charset="utf-8" data-page-node-id="W8pbGd0PZoUM5ajkLhIFHE">
-<meta name="viewport" content="width=device-width, initial-scale=1" data-page-node-id="3tpwq2DpOqqoatCxFzr1d9">
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
 <title>Signal</title>
-<meta name="description" content="AI news, agents, research and releases. Clustered, auto-refreshing." data-page-node-id="378hXAjX85zr3kLo8DeO75">
-<link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100' data-page-node-id="46ruIeR7d9Ex1WHlf9SREX"><text y='.9em' font-size='90' data-page-node-id="nRCd222rNGyGuuVdUHUnmM">&#x1F4E1;</text></svg>">
+<meta name="description" content="AI news, agents, research and releases. Clustered, auto-refreshing.">
+<link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>&#x1F4E1;</text></svg>">
 <style>
   :root {
     --bg: #0a0d13;
@@ -22,6 +22,7 @@
     --green: #3fb950;
     --amber: #d29922;
     --violet: #a371f7;
+    --mono: ui-monospace, SFMono-Regular, Menlo, Consolas, monospace;
   }
 
   * { box-sizing: border-box; margin: 0; padding: 0; }
@@ -120,32 +121,93 @@
   }
   .nav-item.active .count { color: var(--accent); }
 
-  .side-foot {
-    margin-top: 20px;
-    padding: 12px 10px 0;
-    border-top: 1px solid var(--border-soft);
+  /* System status pod. Replaces the old sidebar footer: the live line and a
+     refresh button stay visible, everything else lives behind the gear. */
+  .pod {
+    margin-top: 18px;
+    position: relative;
+    padding: 10px 11px;
+    background: #10161f;
+    border: 1px solid var(--border);
+    border-radius: 10px;
     font-size: 11.5px;
     color: var(--dim);
-    line-height: 1.65;
   }
-  .side-foot b { color: var(--muted); font-weight: 600; }
+  .pod-live { display: flex; align-items: center; gap: 6px; flex-wrap: wrap; }
+  .pod-live b { color: var(--muted); font-weight: 600; font-variant-numeric: tabular-nums; }
+  .pod-btns { display: flex; gap: 6px; margin-top: 9px; }
+  .pod-btn {
+    flex: 1;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 5px;
+    background: #131a26;
+    border: 1px solid var(--border);
+    color: var(--muted);
+    padding: 6px 0;
+    border-radius: 7px;
+    font-size: 11.5px;
+    font-family: inherit;
+    font-weight: 500;
+    cursor: pointer;
+    transition: background .12s, color .12s, border-color .12s;
+  }
+  .pod-btn:hover { background: var(--card-hover); color: var(--text); border-color: #2b3547; }
+
+  .popover {
+    position: absolute;
+    left: 0; right: 0;
+    bottom: calc(100% + 8px);
+    background: #141a24;
+    border: 1px solid var(--border);
+    border-radius: 11px;
+    padding: 13px 14px;
+    box-shadow: 0 16px 44px rgba(0, 0, 0, .5);
+    z-index: 40;
+    display: none;
+  }
+  .popover.open { display: block; }
+  .pop-title {
+    font-size: 10.5px;
+    font-weight: 650;
+    letter-spacing: .09em;
+    text-transform: uppercase;
+    color: var(--dim);
+    margin-bottom: 9px;
+  }
+  .pop-row { font-size: 12px; color: var(--muted); margin-bottom: 9px; }
+  .pop-row b { color: var(--text); font-weight: 600; }
+  .pop-hints {
+    margin-top: 11px;
+    padding-top: 10px;
+    border-top: 1px solid var(--border-soft);
+    font-size: 11px;
+    color: var(--dim);
+    line-height: 1.9;
+  }
+  .pop-hints kbd {
+    background: #161d29;
+    border: 1px solid var(--border);
+    border-radius: 5px;
+    padding: 1px 5px;
+    font-size: 10px;
+    font-family: var(--mono);
+    color: var(--muted);
+  }
 
   /* Where read/saved marks live, plus the manual transfer controls.
      Only meaningful on a static host: with the Python server there is a real
      backend and state syncs on its own. */
-  .side-state {
-    margin-top: 11px;
-    padding-top: 10px;
-    border-top: 1px solid var(--border-soft);
-  }
-  .side-state-row { margin-bottom: 8px; cursor: help; }
+  .side-state-row { cursor: help; font-size: 12px; color: var(--muted); margin-bottom: 9px; }
+  .side-state-row b { color: var(--text); font-weight: 600; }
   .side-state-btns { display: flex; gap: 6px; }
   .mini {
     flex: 1;
     background: #131a26;
     border: 1px solid var(--border);
     color: var(--muted);
-    padding: 5px 0;
+    padding: 6px 0;
     border-radius: 6px;
     font-size: 11px;
     font-family: inherit;
@@ -173,9 +235,28 @@
     box-shadow: 0 10px 30px rgba(0, 0, 0, .45);
   }
   #toast.show { opacity: 1; transform: translate(-50%, 0); }
+  #toast.has-act { pointer-events: auto; display: flex; align-items: center; gap: 13px; }
+  .toast-act {
+    background: none;
+    border: 1px solid var(--border);
+    color: var(--accent);
+    font-family: inherit;
+    font-size: 12px;
+    font-weight: 600;
+    padding: 3px 11px;
+    border-radius: 6px;
+    cursor: pointer;
+  }
+  .toast-act:hover { background: var(--accent-glow); }
 
   /* ---------------- main ---------------- */
-  main { flex: 1; min-width: 0; display: flex; flex-direction: column; }
+  main {
+    flex: 1;
+    min-width: 0;
+    display: flex;
+    flex-direction: column;
+    transition: margin-right .28s cubic-bezier(.32, .72, .28, 1);
+  }
 
   .topbar {
     position: sticky;
@@ -222,7 +303,7 @@
     padding: 1px 6px;
     font-size: 10.5px;
     color: var(--dim);
-    font-family: ui-monospace, Menlo, monospace;
+    font-family: var(--mono);
   }
 
   .toggle {
@@ -249,6 +330,58 @@
     font-variant-numeric: tabular-nums;
   }
   .status b { color: var(--muted); font-weight: 600; }
+
+  /* Triage sub-bar: one-click signal filters, density, inbox-zero. */
+  .subbar {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    padding: 9px 26px;
+    border-bottom: 1px solid var(--border-soft);
+    flex-wrap: wrap;
+  }
+  .subbar .spacer { flex: 1; min-width: 12px; }
+
+  .qchip {
+    display: inline-flex;
+    align-items: center;
+    gap: 6px;
+    background: #111721;
+    border: 1px solid var(--border);
+    color: var(--muted);
+    padding: 5px 11px;
+    border-radius: 99px;
+    font-size: 12px;
+    font-family: inherit;
+    font-weight: 500;
+    cursor: pointer;
+    white-space: nowrap;
+    transition: all .12s;
+  }
+  .qchip:hover { color: var(--text); border-color: #2c3646; }
+  .qchip.on { background: var(--accent-glow); border-color: var(--accent); color: var(--accent); font-weight: 600; }
+
+  .dens {
+    display: inline-flex;
+    background: #111721;
+    border: 1px solid var(--border);
+    border-radius: 9px;
+    padding: 2px;
+    gap: 2px;
+  }
+  .dens button {
+    background: none;
+    border: none;
+    color: var(--dim);
+    font-size: 12.5px;
+    font-family: inherit;
+    padding: 4px 11px;
+    border-radius: 7px;
+    cursor: pointer;
+    transition: background .12s, color .12s;
+  }
+  .dens button:hover { color: var(--text); }
+  .dens button.on { background: #1c2534; color: var(--accent); }
 
   /* ---------------- filter row ---------------- */
   .filters {
@@ -282,9 +415,14 @@
   .chip .dot { width: 7px; height: 7px; border-radius: 50%; flex: none; }
 
   /* ---------------- content ---------------- */
-  .content { flex: 1; padding: 22px 26px 60px; max-width: 940px; }
+  .content { flex: 1; padding: 22px 26px 60px; max-width: 980px; }
 
   .list { display: flex; flex-direction: column; gap: 9px; }
+  .list.bento {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(320px, 1fr));
+    gap: 12px;
+  }
 
   .item {
     background: var(--card);
@@ -314,6 +452,14 @@
   .item:hover { background: var(--card-hover); border-color: #27313f; }
   .item.read { opacity: .42; }
   .item.read:hover { opacity: .72; }
+  .item.focused {
+    border-color: var(--accent);
+    box-shadow: 0 0 0 3px var(--accent-glow);
+  }
+
+  /* A story carried by three or more outlets reads as a briefing, not a row. */
+  .item.briefing { background: linear-gradient(180deg, #171f2e 0%, var(--card) 96px); }
+  .item.briefing::before { top: 0; bottom: 0; width: 3px; }
 
   .item-top {
     display: flex;
@@ -341,6 +487,19 @@
     border-color: rgba(63, 185, 80, 0.28);
   }
 
+  .pdf {
+    font-family: var(--mono);
+    font-size: 10.5px;
+    font-weight: 650;
+    color: var(--accent);
+    background: var(--accent-glow);
+    border: 1px solid rgba(90, 169, 255, 0.28);
+    padding: 1px 7px;
+    border-radius: 5px;
+    text-decoration: none;
+  }
+  .pdf:hover { background: rgba(90, 169, 255, 0.2); }
+
   .actions {
     margin-left: auto;
     display: flex;
@@ -348,7 +507,7 @@
     opacity: 0;
     transition: opacity .13s;
   }
-  .item:hover .actions { opacity: 1; }
+  .item:hover .actions, .crow:hover .actions { opacity: 1; }
 
   .act {
     background: none;
@@ -384,22 +543,92 @@
     overflow: hidden;
   }
 
-  .also {
-    margin-top: 9px;
+  /* Expandable coverage stack under a briefing card. */
+  .cov-toggle {
+    margin-top: 10px;
+    background: none;
+    border: 1px dashed #2a3547;
+    color: var(--muted);
+    padding: 3px 11px;
+    border-radius: 99px;
     font-size: 11.5px;
+    font-family: inherit;
+    cursor: pointer;
+    display: inline-flex;
+    align-items: center;
+    gap: 7px;
+    transition: color .12s, border-color .12s;
+  }
+  .cov-toggle:hover { color: var(--text); border-color: #3a4763; }
+  .cov-toggle .chev {
+    font-size: 9px;
+    display: inline-block;
+    transition: transform .15s ease;
+  }
+  .cov-toggle.open .chev { transform: rotate(90deg); }
+
+  .cov-list {
+    margin-top: 9px;
+    border-left: 2px solid var(--border);
+    padding-left: 13px;
+    display: flex;
+    flex-direction: column;
+    gap: 7px;
+  }
+  .cov-list[hidden] { display: none; }
+  .cov-row { text-decoration: none; display: flex; gap: 10px; align-items: baseline; }
+  .cov-src {
+    flex: none;
+    max-width: 130px;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    font-size: 11.5px;
+    font-weight: 650;
+  }
+  .cov-title { font-size: 12.5px; color: var(--muted); line-height: 1.45; }
+  .cov-row:hover .cov-title { color: var(--accent); }
+
+  .abstract { margin-top: 9px; }
+  .abstract summary {
+    cursor: pointer;
+    font-size: 12px;
     color: var(--dim);
+    font-weight: 600;
+    letter-spacing: .01em;
+  }
+  .abstract summary:hover { color: var(--accent); }
+  .abstract p {
+    margin-top: 7px;
+    font-size: 13px;
+    color: var(--muted);
     line-height: 1.6;
   }
-  .also b { color: var(--muted); font-weight: 600; }
-  .also a { color: var(--dim); text-decoration: none; }
-  .also a:hover { color: var(--accent); text-decoration: underline; }
 
   /* repo / release specifics */
   .meta { display: flex; align-items: center; gap: 13px; margin-top: 9px; font-size: 12px; color: var(--muted); flex-wrap: wrap; }
   .meta b { color: var(--text); font-weight: 600; font-variant-numeric: tabular-nums; }
   .lang-dot { width: 8px; height: 8px; border-radius: 50%; display: inline-block; margin-right: 4px; }
+  .pill {
+    background: rgba(210, 153, 34, 0.12);
+    border: 1px solid rgba(210, 153, 34, 0.26);
+    color: var(--amber);
+    font-size: 11.5px;
+    font-weight: 650;
+    padding: 2px 9px;
+    border-radius: 99px;
+    font-variant-numeric: tabular-nums;
+  }
+  .topic {
+    background: #10161f;
+    border: 1px solid var(--border);
+    color: var(--dim);
+    font-size: 10.5px;
+    padding: 1px 8px;
+    border-radius: 99px;
+  }
   .ver {
-    font-family: ui-monospace, Menlo, monospace;
+    font-family: var(--mono);
     font-size: 11.5px;
     background: #10161f;
     border: 1px solid var(--border);
@@ -408,6 +637,212 @@
     color: var(--violet);
   }
   .ver.pre { color: var(--amber); border-color: rgba(210,153,34,.32); }
+
+  .owner { color: var(--muted); font-weight: 500; }
+  .slash { color: var(--dim); font-weight: 400; padding: 0 1px; }
+  .name { color: var(--text); font-weight: 650; }
+
+  .repo-tools { display: flex; gap: 6px; margin-top: 11px; opacity: .5; transition: opacity .12s; }
+  .item:hover .repo-tools { opacity: 1; }
+  .micro {
+    background: none;
+    border: 1px solid var(--border);
+    color: var(--dim);
+    font-size: 11px;
+    font-family: inherit;
+    padding: 3px 10px;
+    border-radius: 6px;
+    cursor: pointer;
+    transition: color .12s, border-color .12s, background .12s;
+  }
+  .micro:hover { color: var(--accent); border-color: rgba(90, 169, 255, .4); background: var(--accent-glow); }
+
+  .changelog {
+    margin-top: 10px;
+    background: #10151d;
+    border: 1px solid var(--border-soft);
+    border-radius: 9px;
+  }
+  .changelog summary {
+    cursor: pointer;
+    padding: 8px 12px;
+    font-size: 12.5px;
+    font-weight: 600;
+    color: var(--muted);
+  }
+  .changelog summary:hover { color: var(--text); }
+  .notes { padding: 2px 13px 12px; max-height: 320px; overflow-y: auto; }
+  .note-line {
+    font-size: 11px;
+    font-weight: 650;
+    letter-spacing: .07em;
+    text-transform: uppercase;
+    color: var(--dim);
+    margin-top: 10px;
+  }
+  .note-para {
+    font-size: 12.5px;
+    color: var(--muted);
+    line-height: 1.6;
+    margin-top: 6px;
+  }
+  .note-li {
+    position: relative;
+    padding-left: 15px;
+    font-size: 12.5px;
+    color: var(--muted);
+    line-height: 1.6;
+    margin-top: 5px;
+  }
+  .note-li::before {
+    content: "";
+    position: absolute;
+    left: 2px; top: 9px;
+    width: 5px; height: 5px;
+    border-radius: 50%;
+    background: var(--dim);
+  }
+  .note-li b { color: var(--green); font-family: var(--mono); font-size: 11.5px; font-weight: 650; }
+
+  /* ---------------- compact density ---------------- */
+  .crow {
+    display: flex;
+    align-items: center;
+    gap: 9px;
+    padding: 6px 11px;
+    border-radius: 8px;
+    cursor: pointer;
+    font-size: 13px;
+    transition: background .1s;
+  }
+  .crow:hover { background: var(--card-hover); }
+  .crow.read { opacity: .45; }
+  .crow.read:hover { opacity: .75; }
+  .crow.focused { background: var(--accent-glow); box-shadow: inset 0 0 0 1px rgba(90, 169, 255, .35); }
+  .crow .cd { width: 7px; height: 7px; border-radius: 50%; flex: none; }
+  .crow .csrc {
+    flex: none;
+    max-width: 118px;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    font-size: 11.5px;
+    color: var(--dim);
+  }
+  .crow .ct {
+    flex: 1;
+    min-width: 0;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    color: var(--text);
+  }
+  .crow.read .ct { color: var(--muted); }
+  .crow .cx { flex: none; font-size: 11.5px; color: var(--dim); font-variant-numeric: tabular-nums; }
+  .crow .cw { flex: none; font-size: 11.5px; color: var(--dim); font-variant-numeric: tabular-nums; min-width: 52px; text-align: right; }
+
+  /* ---------------- inspector ---------------- */
+  .scrim {
+    position: fixed;
+    inset: 0;
+    background: rgba(4, 6, 10, .55);
+    opacity: 0;
+    pointer-events: none;
+    transition: opacity .22s ease;
+    z-index: 50;
+  }
+  .scrim.show { opacity: 1; pointer-events: auto; }
+
+  .inspector {
+    position: fixed;
+    top: 0; right: 0; bottom: 0;
+    width: min(430px, 100vw);
+    background: var(--side);
+    border-left: 1px solid var(--border);
+    transform: translateX(105%);
+    transition: transform .28s cubic-bezier(.32, .72, .28, 1);
+    z-index: 60;
+    overflow-y: auto;
+    padding: 20px 22px 26px;
+  }
+  .inspector.open { transform: none; }
+
+  .insp-head { display: flex; align-items: center; justify-content: space-between; margin-bottom: 14px; }
+  .insp-kind {
+    font-size: 10.5px;
+    font-weight: 650;
+    letter-spacing: .09em;
+    text-transform: uppercase;
+    color: var(--dim);
+  }
+  .insp-x {
+    background: #131a26;
+    border: 1px solid var(--border);
+    color: var(--muted);
+    width: 28px; height: 28px;
+    border-radius: 8px;
+    cursor: pointer;
+    font-size: 13px;
+    line-height: 1;
+  }
+  .insp-x:hover { color: var(--text); border-color: #2b3547; }
+
+  .inspector h2 {
+    font-size: 19px;
+    line-height: 1.35;
+    letter-spacing: -0.015em;
+    margin-bottom: 11px;
+  }
+  .inspector h2.mono { font-family: var(--mono); font-size: 17px; }
+  .insp-meta {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    flex-wrap: wrap;
+    font-size: 12px;
+    color: var(--dim);
+    margin-bottom: 16px;
+  }
+  .insp-src { font-weight: 650; }
+  .insp-sec {
+    font-size: 10.5px;
+    font-weight: 650;
+    letter-spacing: .09em;
+    text-transform: uppercase;
+    color: var(--dim);
+    margin: 20px 0 9px;
+  }
+  .insp-summary { font-size: 13.5px; color: var(--muted); line-height: 1.7; }
+  .insp-actions {
+    display: flex;
+    gap: 8px;
+    margin-top: 24px;
+    padding-top: 14px;
+    border-top: 1px solid var(--border-soft);
+  }
+  .insp-actions .toggle { flex: 1; }
+  .insp-actions .act {
+    background: #131a26;
+    border: 1px solid var(--border);
+    font-size: 14px;
+    padding: 7px 13px;
+    opacity: 1;
+  }
+
+  .rel {
+    display: block;
+    text-decoration: none;
+    background: var(--card);
+    border: 1px solid var(--border-soft);
+    border-radius: 9px;
+    padding: 9px 12px;
+    margin-bottom: 7px;
+    cursor: pointer;
+    transition: background .12s, border-color .12s;
+  }
+  .rel:hover { background: var(--card-hover); border-color: #27313f; }
+  .rel-t { font-size: 13px; color: var(--text); line-height: 1.4; }
+  .rel-m { font-size: 11.5px; color: var(--dim); margin-top: 3px; }
 
   /* ---------------- misc ---------------- */
   .empty { text-align: center; padding: 84px 20px; color: var(--muted); }
@@ -444,13 +879,20 @@
   }
   .banner h4 { font-size: 13.5px; color: var(--text); margin-bottom: 5px; }
   .banner code {
-    font-family: ui-monospace, Menlo, monospace;
+    font-family: var(--mono);
     background: #0c1119;
     border: 1px solid var(--border);
     padding: 1px 6px;
     border-radius: 4px;
     font-size: 12px;
     color: var(--accent);
+  }
+
+  /* Wide screens get a real three-pane split: the content column gives up
+     width rather than sitting under the inspector. */
+  @media (min-width: 1280px) {
+    body.insp-open main { margin-right: 430px; }
+    .scrim { display: none; }
   }
 
   @media (max-width: 860px) {
@@ -461,91 +903,121 @@
       padding: 12px;
       display: flex; gap: 6px; overflow-x: auto;
     }
-    .brand, .nav-label, .side-foot { display: none; }
+    .brand, .nav-label { display: none; }
     .nav-item { width: auto; white-space: nowrap; }
     .nav-item .count { margin-left: 5px; }
-    /* .side-foot is hidden above, so the transfer controls sit outside it and
-       ride at the end of the scrolling nav strip. On a static host this strip
-       is the only way to move marks off the phone, so it cannot vanish. */
-    .side-state {
-      margin-top: 0; padding-top: 0; border-top: none;
+    /* The pod rides at the end of the scrolling nav strip. On a static host
+       this strip is the only way to move marks off a phone, so the gear and
+       the popover behind it cannot vanish. */
+    .pod {
+      margin-top: 0; padding: 0; background: none; border: none;
       display: flex; align-items: center; gap: 6px; flex: none;
     }
-    .side-state-row { display: none; }
-    .mini { flex: none; padding: 10px 14px; font-size: 12.5px; }
+    .pod-live { display: none; }
+    .pod-btns { margin-top: 0; }
+    .pod-btn { flex: none; padding: 8px 12px; font-size: 12.5px; }
+    .popover {
+      position: fixed;
+      left: 12px; right: 12px; bottom: 12px;
+      top: auto;
+    }
     .topbar { padding: 11px 16px; }
+    .subbar { padding: 8px 16px; }
     .content { padding: 16px 16px 48px; }
     .status { display: none; }
+    .inspector { width: 100vw; }
   }
 </style>
 </head>
-<body data-page-node-id="qlCQOZ8HGvZUtixc4LPfp9">
+<body>
 
-<aside data-page-node-id="dkGfWoaDbl5hFLjcfYgqKb">
-  <div class="brand" data-page-node-id="Q30ITdzWflPvVfccJzZ2ab">
-    <span data-page-node-id="ZwjCGCKCLMHxeqzjo9oPOZ">&#x1F4E1;</span>
-    <div data-page-node-id="nEIyt9GFCV113YOz3DHsJz">
+<aside>
+  <div class="brand">
+    <span>&#x1F4E1;</span>
+    <div>
       Signal
-      <span class="sub" data-page-node-id="EjupBcpVdoccZqqoz0Nche"><span class="dot" data-page-node-id="tNArcX0Hm3BVHLtWFb6HRN"></span> Live</span>
+      <span class="sub"><span class="dot"></span> Live</span>
     </div>
   </div>
 
-  <div class="nav-label" data-page-node-id="LeSuHjGsZr9mz3YQw7b04G">Discover</div>
-  <button class="nav-item active" data-cat="top" data-page-node-id="k3sDrzGpY6ISCkmSZ1QjnR"><span class="ico" data-page-node-id="kAAUwhi8sWUpD3kVR94wx8">&#x2726;</span>Top<span class="count" data-count="top" data-page-node-id="cPwEn4a977QtTBBe2qbMLW">0</span></button>
-  <button class="nav-item" data-cat="agents" data-page-node-id="Ktl6GdADHVAKmm5VpHIgcF"><span class="ico" data-page-node-id="imRPjEWtPDzM2BtbnvOwKf">&#x1F916;</span>Agents<span class="count" data-count="agents" data-page-node-id="tRSpk7o3ffljBGeZe4NExz">0</span></button>
-  <button class="nav-item" data-cat="news" data-page-node-id="Tb7tshhzfBmg3eHiBUZWiI"><span class="ico" data-page-node-id="j5PAZ4KVjHgPsxNThTQv2Y">&#x1F4F0;</span>News<span class="count" data-count="news" data-page-node-id="8JFu2Oh3Q1Hv4Bz23MClE5">0</span></button>
-  <button class="nav-item" data-cat="vendors" data-page-node-id="a6u8a0NqUuooVD0e3fbyv2"><span class="ico" data-page-node-id="0MZE6QEtHSEWUSsOLSU1MC">&#x1F3E2;</span>Vendors<span class="count" data-count="vendors" data-page-node-id="9QHKqkU3MeldCbeR00IMDP">0</span></button>
-  <button class="nav-item" data-cat="analysis" data-page-node-id="jfrk5iIz7C3H45Ot6pFhQC"><span class="ico" data-page-node-id="ktYr68KLcFQxAp1ST8vUb0">&#x1F9E0;</span>Analysis<span class="count" data-count="analysis" data-page-node-id="C388fdQa5Mnz56p3iHYd2f">0</span></button>
-  <button class="nav-item" data-cat="research" data-page-node-id="6vQBVWMBWytjq3eYnI46pv"><span class="ico" data-page-node-id="NTFXVjSBDF3SM8hlkE5y1Z">&#x1F52C;</span>Research<span class="count" data-count="research" data-page-node-id="iRJV4NhmvauY0ze4PCcShN">0</span></button>
-  <button class="nav-item" data-cat="community" data-page-node-id="tudT3XHkcuvFB0Q12aHGFd"><span class="ico" data-page-node-id="8Ij9N66ntp31DzEcE5Ug4P">&#x1F4AC;</span>Community<span class="count" data-count="community" data-page-node-id="M1lvk62XHVSpYI5azppcaj">0</span></button>
-  <button class="nav-item" data-cat="hardware" data-page-node-id="HwRd7Qm2vXnKp5tLb9cJfZ"><span class="ico" data-page-node-id="Qn5vT8sYmLdXb2pKw6rJhN">&#x1F5A5;</span>Hardware<span class="count" data-count="hardware" data-page-node-id="Zk3mP9wTnQvLd7sXb4cRjY">0</span></button>
+  <div class="nav-label">Discover</div>
+  <button class="nav-item active" data-cat="top"><span class="ico">&#x2726;</span>Top<span class="count" data-count="top">0</span></button>
+  <button class="nav-item" data-cat="agents"><span class="ico">&#x1F916;</span>Agents<span class="count" data-count="agents">0</span></button>
+  <button class="nav-item" data-cat="news"><span class="ico">&#x1F4F0;</span>News<span class="count" data-count="news">0</span></button>
+  <button class="nav-item" data-cat="vendors"><span class="ico">&#x1F3E2;</span>Vendors<span class="count" data-count="vendors">0</span></button>
+  <button class="nav-item" data-cat="analysis"><span class="ico">&#x1F9E0;</span>Analysis<span class="count" data-count="analysis">0</span></button>
+  <button class="nav-item" data-cat="research"><span class="ico">&#x1F52C;</span>Research<span class="count" data-count="research">0</span></button>
+  <button class="nav-item" data-cat="community"><span class="ico">&#x1F4AC;</span>Community<span class="count" data-count="community">0</span></button>
+  <button class="nav-item" data-cat="hardware"><span class="ico">&#x1F5A5;</span>Hardware<span class="count" data-count="hardware">0</span></button>
 
-  <div class="nav-label" data-page-node-id="la9OA30AiFFvUwPgPZlW9Y">Build</div>
-  <button class="nav-item" data-cat="repos" data-page-node-id="kLsUDLEl4lTgjDWhMC7p6o"><span class="ico" data-page-node-id="ZvqUEFNYA6742QToQ7HfXT">&#x2B50;</span>Repos<span class="count" data-count="repos" data-page-node-id="XkpMQ7StAFCUGaaPsGUpx7">0</span></button>
-  <button class="nav-item" data-cat="releases" data-page-node-id="uCPJTr4p59vYrP8JqBVNeq"><span class="ico" data-page-node-id="uG2cBvoBFGKzyrSpXOGviP">&#x1F4E6;</span>Releases<span class="count" data-count="releases" data-page-node-id="XyYPNfCnD9dj47QdWNlEri">0</span></button>
-  <button class="nav-item" data-cat="saved" data-page-node-id="Flw18bGshZefJvqvVrNDs6"><span class="ico" data-page-node-id="WBf3RCHUMKriz54eBvGnXy">&#x1F516;</span>Saved<span class="count" data-count="saved" data-page-node-id="8IAyQJ5HMnLE3TDCFAvBGN">0</span></button>
+  <div class="nav-label">Build</div>
+  <button class="nav-item" data-cat="repos"><span class="ico">&#x2B50;</span>Repos<span class="count" data-count="repos">0</span></button>
+  <button class="nav-item" data-cat="releases"><span class="ico">&#x1F4E6;</span>Releases<span class="count" data-count="releases">0</span></button>
+  <button class="nav-item" data-cat="saved"><span class="ico">&#x1F516;</span>Saved<span class="count" data-count="saved">0</span></button>
 
-  <div class="side-foot" data-page-node-id="DfSWdimtpbCDOc2tEzCHNJ">
-    <div data-page-node-id="LVQGQBAQEJS3mtJv2w3b7L">Updated <b id="foot-updated" data-page-node-id="8XmCYLiMWqtKEW2jrr8GNq">--</b></div>
-    <div data-page-node-id="wBrDcS0cGb254Q6J8MsAlk">Next refresh <b id="foot-next" data-page-node-id="mjc1PjhMqEfahEtvB1Ajpy">--</b></div>
-    <div style="margin-top:7px" data-page-node-id="3GCoBTqorZjO5DBk8L3sZo"><b id="foot-sources" data-page-node-id="bBzN15I4vtLGRJWRY6JfxA">--</b> sources</div>
-  </div>
-
-  <!-- Deliberately a sibling of .side-foot, not a child. The mobile layout
-       hides .side-foot entirely, and these are the only way to carry marks
-       between devices on a static host, so they must survive on a phone. -->
-  <div class="side-state">
-    <div class="side-state-row" id="state-where">State: --</div>
-    <div class="side-state-btns">
-      <button class="mini" id="btn-export" title="Download your read + saved marks as a JSON file">Export</button>
-      <button class="mini" id="btn-import" title="Merge read + saved marks from a previously exported file">Import</button>
+  <div class="pod">
+    <div class="pod-live">
+      <span class="dot"></span>
+      <b id="foot-sources">--</b> sources &middot; updated <b id="foot-updated">--</b>
     </div>
-    <input type="file" id="file-import" accept="application/json,.json" hidden>
+    <div class="pod-btns">
+      <button class="pod-btn" id="btn-refresh" title="Force a refresh now (server mode)">&#x21BB; Refresh</button>
+      <button class="pod-btn" id="btn-sync" title="Data &amp; sync">&#x2699;&#xFE0F; Sync</button>
+    </div>
+
+    <div class="popover" id="sync-pop">
+      <div class="pop-title">Data &amp; Sync</div>
+      <div class="side-state-row" id="state-where">State: --</div>
+      <div class="pop-row">Next refresh <b id="foot-next">--</b></div>
+      <div class="side-state-btns">
+        <button class="mini" id="btn-export" title="Download your read + saved marks as a JSON file">Export</button>
+        <button class="mini" id="btn-import" title="Merge read + saved marks from a previously exported file">Import</button>
+      </div>
+      <input type="file" id="file-import" accept="application/json,.json" hidden>
+      <div class="pop-hints">
+        <kbd>/</kbd> search &middot; <kbd>j</kbd><kbd>k</kbd> move &middot; <kbd>Space</kbd> open inspector<br>
+        <kbd>s</kbd> save &middot; <kbd>m</kbd> read &middot; <kbd>Shift</kbd>+<kbd>M</kbd> mark visible read
+      </div>
+    </div>
   </div>
 </aside>
 
-<main data-page-node-id="18VcGvI7NerXXmWAugHPOP">
-  <div class="topbar" data-page-node-id="hOLGvUoX6fZusW1FySdNt8">
-    <div class="topbar-row" data-page-node-id="LWC6Z4xH2Dt3ou66kyzCHg">
-      <div class="search" data-page-node-id="yW1eqgUBlKWItMG4KwcmCE">
-        <span class="icon" data-page-node-id="D2shYLHiOelcKoFbHeM8lR">&#x2315;</span>
-        <input id="q" type="text" placeholder="Search headlines, sources, repos..." autocomplete="off" data-page-node-id="KiybDrLm3EqvrjECZFwtst">
-        <kbd data-page-node-id="5aLGD09kEGF4Ylae2OAwRg">/</kbd>
+<main>
+  <div class="topbar">
+    <div class="topbar-row">
+      <div class="search">
+        <span class="icon">&#x2315;</span>
+        <input id="q" type="text" placeholder="Search headlines, sources, repos..." autocomplete="off">
+        <kbd>/</kbd>
       </div>
-      <button class="toggle" id="btn-filters" data-page-node-id="NZ01MDhqIPspIHjZbcHkbf">Filters</button>
-      <button class="toggle" id="btn-unread" data-page-node-id="DIcohM4gi25b8XrGsOxN0b">Unread</button>
-      <span class="status" id="status" data-page-node-id="tbcW5eIbpYEfv0k3OEtDt1"></span>
+      <button class="toggle" id="btn-filters">Filters</button>
+      <span class="status" id="status"></span>
+    </div>
+    <div class="subbar">
+      <button class="qchip" data-quick="multi" title="Stories carried by two or more outlets">&#x1F525; Multi-Source</button>
+      <button class="qchip" data-quick="fresh" title="Published in the last six hours">&#x26A1; Last 6h</button>
+      <button class="qchip" data-quick="high" title="Top of the ranking: score 5 and above">&#x2605; High Signal</button>
+      <span class="spacer"></span>
+      <div class="dens">
+        <button data-density="compact" title="Compact rows">&#x2630;</button>
+        <button data-density="cards" title="Cards">&#x25A4;</button>
+      </div>
+      <button class="toggle" id="btn-markread" title="Mark everything currently visible as read (Shift+M)">&#x2713; Mark read</button>
+      <button class="toggle" id="btn-unread" title="Show unread only">Unread</button>
     </div>
   </div>
 
-  <div class="filters" id="filters" data-page-node-id="qCTXacnkk14fpQiFQOexmf"></div>
+  <div class="filters" id="filters"></div>
 
-  <div class="content" data-page-node-id="Au311pUV5g9QhXBWAVyBDS">
-    <div id="banner-slot" data-page-node-id="w9mwcCi1ADTFXDhfWIWuJD"></div>
-    <div class="list" id="list" data-page-node-id="odWMqB7OhsYbGMJVbSzAxA"></div>
-    <button class="more" id="more" style="display:none" data-page-node-id="vtVtlx1mGZV98w4tQt1UFr">Show more</button>
+  <div class="content">
+    <div id="banner-slot"></div>
+    <div class="list" id="list"></div>
+    <button class="more" id="more" style="display:none">Show more</button>
   </div>
 </main>
+
+<div class="scrim" id="scrim"></div>
+<div class="inspector" id="inspector"></div>
 
 <script>
 const PAGE = 30;
@@ -617,7 +1089,12 @@ let CAT = "top";
 let QUERY = "";
 let UNREAD_ONLY = false;
 let SRC_FILTER = new Set();
+const QUICK = new Set();          // "multi" | "fresh" | "high"
+let DENSITY = "cards";            // "cards" | "compact"
 let SHOWN = PAGE;
+let FOCUS_IDX = -1;               // keyboard cursor over the rendered slice
+let INSPECTOR = null;             // entry open in the right pane
+let CARD_INDEX = new Map();       // _id -> entry, for the rendered slice only
 let STATE = { read: new Set(), saved: new Set() };
 let API = true;
 // "server" = a backend is answering, state syncs on its own.
@@ -761,7 +1238,9 @@ function importState(file) {
 /* ---------------- toast ---------------- */
 
 let toastTimer = null;
-function toast(msg) {
+// Optional second and third args add an action button. Only used for the one
+// destructive-feeling action in the UI, where "oops" needs a way back.
+function toast(msg, actionLabel, actionFn) {
   let el = $("toast");
   if (!el) {
     el = document.createElement("div");
@@ -769,9 +1248,25 @@ function toast(msg) {
     document.body.appendChild(el);
   }
   el.textContent = msg;
+  el.classList.remove("has-act");
+  if (actionLabel && typeof actionFn === "function") {
+    const b = document.createElement("button");
+    b.className = "toast-act";
+    b.textContent = actionLabel;
+    b.addEventListener("click", () => {
+      el.classList.remove("show");
+      el.classList.remove("has-act");
+      actionFn();
+    });
+    el.appendChild(b);
+    el.classList.add("has-act");
+  }
   el.classList.add("show");
   clearTimeout(toastTimer);
-  toastTimer = setTimeout(() => el.classList.remove("show"), 2600);
+  toastTimer = setTimeout(() => {
+    el.classList.remove("show");
+    el.classList.remove("has-act");
+  }, actionLabel ? 6000 : 2600);
 }
 
 function renderStateWhere() {
@@ -817,10 +1312,28 @@ function searchHit(x) {
   return hay.includes(QUERY);
 }
 
+// "High Signal" cuts on the ranking score, not on source weight. Every source
+// in the live config carries a weight of 2 to 5, so a weight threshold of 1.2
+// matches 100% of the feed and the chip would do nothing. Score blends
+// recency, coverage and weight, and 5.0 sits at roughly the 85th percentile
+// of a real 500-item run: about one story in six clears it.
+const HIGH_SIGNAL_SCORE = 5.0;
+
+function freshWithin(x, hours) {
+  const t = new Date(x._date || "").getTime();
+  if (isNaN(t)) return false;
+  return (Date.now() - t) <= hours * 3600000;
+}
+
 function visible() {
   let rows = currentSet().filter(searchHit);
   if (SRC_FILTER.size) rows = rows.filter(x => !x.source || SRC_FILTER.has(x.source));
   if (UNREAD_ONLY) rows = rows.filter(x => !STATE.read.has(x._id));
+  // Triage chips. A field that does not exist on this kind simply cannot
+  // clear the filter, which is the right answer for repos and releases.
+  if (QUICK.has("multi")) rows = rows.filter(x => (x.cluster_size || 1) >= 2);
+  if (QUICK.has("fresh")) rows = rows.filter(x => freshWithin(x, 6));
+  if (QUICK.has("high")) rows = rows.filter(x => Number(x.score || 0) >= HIGH_SIGNAL_SCORE);
   if (CAT === "top") rows.sort((a, b) => (b.score || 0) - (a.score || 0));
   else if (CAT !== "saved" && CAT !== "repos") {
     rows.sort((a, b) => String(b._date || "").localeCompare(String(a._date || "")));
@@ -828,7 +1341,11 @@ function visible() {
   return rows;
 }
 
-/* ---------------- render ---------------- */
+function entryById(id) {
+  return CARD_INDEX.get(id) || allEntries().all.find(x => x._id === id) || null;
+}
+
+/* ---------------- rendering ---------------- */
 
 function actionsHtml(x) {
   const saved = STATE.saved.has(x._id);
@@ -839,27 +1356,57 @@ function actionsHtml(x) {
   </span>`;
 }
 
+function pdfUrl(x) {
+  const u = String(x.url || "");
+  if (!/arxiv\.org\/abs\//.test(u)) return "";
+  return u.replace("arxiv.org/abs/", "arxiv.org/pdf/");
+}
+
+// The coverage stack: every outlet that carried the story, each with the
+// headline it chose. The primary story leads, the merged duplicates follow.
+function coverageRows(x) {
+  const entries = [{ source: x.source, url: x.url, title: x.title }].concat(x.also || []);
+  return entries.map(e => `<a class="cov-row" href="${esc(e.url)}" target="_blank" rel="noopener">
+        <span class="cov-src" style="color:${srcColor(e.source)}">${esc(e.source)}</span>
+        <span class="cov-title">${esc(e.title)}</span>
+      </a>`).join("");
+}
+
+function coverageHtml(x, hidden) {
+  if ((x.cluster_size || 1) < 2) return "";
+  const n = (x.also || []).length;
+  return `<button class="cov-toggle" data-act="cov" data-id="${x._id}">
+      <span class="chev">&#x25B8;</span> ${n} more outlet${n === 1 ? "" : "s"}
+    </button>
+    <div class="cov-list"${hidden ? " hidden" : ""}>${coverageRows(x)}</div>`;
+}
+
 function itemCard(x) {
   const n = x.cluster_size || 1;
-  let also = "";
-  if (x.also && x.also.length) {
-    also = `<div class="also">Also covered by <b>${n - 1}</b> more: ${
-      x.also.slice(0, 5).map(a => `<a href="${esc(a.url)}" target="_blank" rel="noopener" style="color:${srcColor(a.source)}">${esc(a.source)}</a>`).join(", ")
-    }${x.also.length > 5 ? " &amp; others" : ""}</div>`;
-  }
   const read = STATE.read.has(x._id);
   const sc = srcColor(x.source);
-  return `<div class="item ${read ? "read" : "unread"}" data-id="${x._id}" data-url="${esc(x.url)}" style="--item-color:${sc}">
+  const pdf = pdfUrl(x);
+  const paper = !!pdf;
+  const summary = x.summary || "";
+
+  // Papers get a collapsible abstract instead of a clamped paragraph, so the
+  // full thing is readable without leaving the feed.
+  const body = paper && summary
+    ? `<details class="abstract"><summary>Abstract</summary><p>${esc(summary)}</p></details>`
+    : summary ? `<p>${esc(summary)}</p>` : "";
+
+  return `<div class="item ${n >= 3 ? "briefing " : ""}${read ? "read" : "unread"}" data-id="${x._id}" data-url="${esc(x.url)}" style="--item-color:${sc}">
     <div class="item-top">
       <span class="src" style="color:${sc}">${esc(x.source)}</span>
       <span class="sep">&middot;</span>
       <span class="when">${ago(x.published)}</span>
       ${n > 1 ? `<span class="coverage ${n >= 5 ? "hot" : ""}">${n} outlets</span>` : ""}
+      ${pdf ? `<a class="pdf" href="${esc(pdf)}" target="_blank" rel="noopener" title="Open the arXiv PDF">PDF</a>` : ""}
       ${actionsHtml(x)}
     </div>
     <h3>${esc(x.title)}</h3>
-    ${x.summary ? `<p>${esc(x.summary)}</p>` : ""}
-    ${also}
+    ${body}
+    ${coverageHtml(x, true)}
   </div>`;
 }
 
@@ -867,20 +1414,52 @@ function repoCard(x) {
   const color = LANG_COLORS[x.language] || "#545e70";
   const read = STATE.read.has(x._id);
   const sc = srcColor(x.section || "GitHub");
-  return `<div class="item ${read ? "read" : "unread"}" data-id="${x._id}" data-url="${esc(x.url)}" style="--item-color:${sc}">
+  const parts = String(x.full_name || "").split("/");
+  const owner = parts[0] || x.full_name;
+  const name = parts[1] || "";
+  return `<div class="item repo ${read ? "read" : "unread"}" data-id="${x._id}" data-url="${esc(x.url)}" style="--item-color:${sc}">
     <div class="item-top">
       <span class="src" style="color:${sc}">${esc(x.section || "GitHub")}</span>
       <span class="sep">&middot;</span>
       <span class="when">${ago(x.updated)}</span>
       ${actionsHtml(x)}
     </div>
-    <h3>${esc(x.full_name)}</h3>
+    <h3 class="mono"><span class="owner">${esc(owner)}</span>${name ? `<span class="slash">/</span><span class="name">${esc(name)}</span>` : ""}</h3>
     ${x.description ? `<p>${esc(x.description)}</p>` : ""}
     <div class="meta">
-      <span><b>&#9733; ${kfmt(x.stars)}</b> stars</span>
+      <span class="pill">&#9733; ${kfmt(x.stars)}</span>
       ${x.language ? `<span><span class="lang-dot" style="background:${color}"></span>${esc(x.language)}</span>` : ""}
+      ${(x.topics || []).slice(0, 3).map(t => `<span class="topic">${esc(t)}</span>`).join("")}
+    </div>
+    <div class="repo-tools">
+      <button class="micro" data-act="copy" data-copy="${esc(x.url)}" title="Copy the repo URL">Copy URL</button>
+      <button class="micro" data-act="copy" data-copy="git clone ${esc(x.url)}" title="Copy a git clone command">Clone</button>
     </div>
   </div>`;
+}
+
+// Release bodies arrive as one flat string. Split it into something a
+// developer can scan: bullets become bullets, conventional-commit prefixes
+// get picked out, and short label-style lines become section heads.
+function formatNotes(body) {
+  return String(body || "").split(/\r?\n/).map(line => {
+    const l = line.trim();
+    if (!l) return "";
+    if (/^[-*+]\s+/.test(l)) {
+      const inner = esc(l.replace(/^[-*+]\s+/, ""));
+      const marked = inner.replace(
+        /^(feat|fix|docs|chore|refactor|perf|test|build|ci|style|revert|release)(\([^)]*\))?(!)?:/i,
+        m => `<b>${m}</b>`
+      );
+      return `<div class="note-li">${marked}</div>`;
+    }
+    // A short line with no terminal punctuation reads as a section label
+    // ("What's Changed", "Full Changelog"). Anything longer is body prose.
+    if (l.length <= 50 && !/[.!?,;:]$/.test(l)) {
+      return `<div class="note-line">${esc(l)}</div>`;
+    }
+    return `<div class="note-para">${esc(l)}</div>`;
+  }).join("");
 }
 
 function releaseCard(x) {
@@ -888,7 +1467,7 @@ function releaseCard(x) {
   // Coloured by repo, not by the word "Release". Every release has the same
   // label, so keying off it would paint the whole section one colour and
   // defeat the point. The repo is the thing that actually differs.
-  return `<div class="item ${read ? "read" : "unread"}" data-id="${x._id}" data-url="${esc(x.url)}" style="--item-color:${srcColor(x.repo)}">
+  return `<div class="item release ${read ? "read" : "unread"}" data-id="${x._id}" data-url="${esc(x.url)}" style="--item-color:${srcColor(x.repo)}">
     <div class="item-top">
       <span class="src">Release</span>
       <span class="sep">&middot;</span>
@@ -896,9 +1475,35 @@ function releaseCard(x) {
       <span class="ver ${x.prerelease ? "pre" : ""}">${esc(x.tag_name)}</span>
       ${actionsHtml(x)}
     </div>
-    <h3>${esc(x.repo)} <span style="color:var(--dim);font-weight:400">&mdash;</span> ${esc(x.name || x.tag_name)}</h3>
-    ${x.body ? `<p>${esc(x.body)}</p>` : ""}
+    <h3 class="mono">${esc(x.repo)}</h3>
+    ${x.body
+      ? `<details class="changelog"><summary>${esc(x.name || x.tag_name)}</summary><div class="notes">${formatNotes(x.body)}</div></details>`
+      : `<p>${esc(x.name || x.tag_name)}</p>`}
   </div>`;
+}
+
+function compactRow(x) {
+  const sc = srcColor(x.source || x.section || x.repo || "GitHub");
+  const read = STATE.read.has(x._id);
+  const title = x._kind === "repo" ? x.full_name
+    : x._kind === "release" ? x.repo
+    : x.title;
+  const extra = x._kind === "repo" ? `<span class="cx">&#9733; ${kfmt(x.stars)}</span>`
+    : x._kind === "release" ? `<span class="cx">${esc(x.tag_name)}</span>`
+    : (x.cluster_size || 1) > 1 ? `<span class="cx">+${x.cluster_size - 1}</span>` : "";
+  return `<div class="crow ${read ? "read" : ""}" data-id="${x._id}" style="--item-color:${sc}">
+    <span class="cd" style="background:${sc}"></span>
+    <span class="csrc">${esc(x.source || x.section || x.repo || "")}</span>
+    <span class="ct">${esc(title)}</span>
+    ${extra}
+    <span class="cw">${ago(x._date)}</span>
+  </div>`;
+}
+
+function cardHtml(x) {
+  if (x._kind === "repo") return repoCard(x);
+  if (x._kind === "release") return releaseCard(x);
+  return itemCard(x);
 }
 
 function render() {
@@ -912,16 +1517,32 @@ function render() {
       <h3>Nothing here</h3>
       <p>${QUERY ? `No matches for "${esc(QUERY)}".` : "This section is empty right now."}</p>
     </div>`;
+    list.classList.remove("bento");
     $("more").style.display = "none";
+    CARD_INDEX = new Map();
     return;
   }
 
   const slice = rows.slice(0, SHOWN);
-  list.innerHTML = slice.map(x =>
-    x._kind === "repo" ? repoCard(x)
-    : x._kind === "release" ? releaseCard(x)
-    : itemCard(x)
-  ).join("");
+  CARD_INDEX = new Map();
+  slice.forEach(x => CARD_INDEX.set(x._id, x));
+
+  let html;
+  if (DENSITY === "compact") {
+    html = slice.map((x, i) => {
+      const row = compactRow(x);
+      return i === FOCUS_IDX ? row.replace('class="crow', 'class="crow focused') : row;
+    }).join("");
+    list.classList.remove("bento");
+  } else {
+    html = slice.map((x, i) => {
+      const card = cardHtml(x);
+      return i === FOCUS_IDX ? card.replace('class="item', 'class="item focused') : card;
+    }).join("");
+    list.classList.toggle("bento", CAT === "repos");
+  }
+
+  list.innerHTML = html;
 
   $("more").style.display = rows.length > SHOWN ? "block" : "none";
   $("more").textContent = `Show more (${rows.length - SHOWN} remaining)`;
@@ -938,6 +1559,7 @@ function renderCounts() {
   set("analysis", by("analysis"));
   set("research", by("research"));
   set("community", by("community"));
+  set("hardware", by("hardware"));
   set("repos", e.repos.length);
   set("releases", e.rels.length);
   set("saved", STATE.saved.size);
@@ -952,6 +1574,15 @@ function renderFilters() {
   $("filters").innerHTML =
     `<button class="chip ${SRC_FILTER.size === 0 ? "on" : ""}" data-src="__all">All sources</button>` +
     names.map(n => `<button class="chip ${SRC_FILTER.has(n) ? "on" : ""}" data-src="${esc(n)}"><span class="dot" style="background:${srcColor(n)}"></span>${esc(n)} <span class="n">${counts[n]}</span></button>`).join("");
+}
+
+function renderSubbar() {
+  document.querySelectorAll("[data-quick]").forEach(b => {
+    b.classList.toggle("on", QUICK.has(b.dataset.quick));
+  });
+  document.querySelectorAll("[data-density]").forEach(b => {
+    b.classList.toggle("on", DENSITY === b.dataset.density);
+  });
 }
 
 function renderStatus() {
@@ -988,6 +1619,213 @@ async function pollStatus() {
   }
 }
 
+/* ---------------- marks ---------------- */
+
+function refreshUI() {
+  persist();
+  renderCounts();
+  render();
+  renderStatus();
+}
+
+function toggleSaved(x) {
+  if (STATE.saved.has(x._id)) STATE.saved.delete(x._id); else STATE.saved.add(x._id);
+  refreshUI();
+  if (INSPECTOR && INSPECTOR._id === x._id) renderInspector(INSPECTOR);
+  toast(STATE.saved.has(x._id) ? "Saved" : "Removed from saved");
+}
+
+function toggleRead(x) {
+  if (STATE.read.has(x._id)) STATE.read.delete(x._id); else STATE.read.add(x._id);
+  refreshUI();
+  if (INSPECTOR && INSPECTOR._id === x._id) renderInspector(INSPECTOR);
+}
+
+// Inbox zero for the current view. With 65+ feeds, being able to declare a
+// category done in one click is the whole point, and "the current view" means
+// everything passing the filters, not just the page rendered so far. On Top
+// that can be several hundred marks at once, so the toast carries an undo.
+function markVisibleRead() {
+  const ids = visible().filter(x => !STATE.read.has(x._id)).map(x => x._id);
+  if (!ids.length) { toast("Everything here is already read"); return; }
+  ids.forEach(id => STATE.read.add(id));
+  refreshUI();
+  toast(`Marked ${ids.length} read`, "Undo", () => {
+    ids.forEach(id => STATE.read.delete(id));
+    refreshUI();
+    toast(`Restored ${ids.length} marks`);
+  });
+}
+
+async function copyText(text, msg) {
+  try {
+    await navigator.clipboard.writeText(text);
+    toast(msg);
+    return;
+  } catch (e) {
+    try {
+      const ta = document.createElement("textarea");
+      ta.value = text;
+      document.body.appendChild(ta);
+      ta.select();
+      document.execCommand("copy");
+      ta.remove();
+      toast(msg);
+    } catch (e2) { toast("Copy failed"); }
+  }
+}
+
+async function forceRefresh() {
+  try {
+    const r = await fetch("api/refresh", { method: "POST" });
+    if (!r.ok) throw new Error(r.status);
+    toast("Refresh started");
+    setTimeout(pollStatus, 1500);
+  } catch (e) {
+    toast("Refresh needs the Python server running");
+  }
+}
+
+/* ---------------- inspector ---------------- */
+
+const STOP = new Set(("a an the and or of for to in on at by with from as is are was were be been being this that these those it its into over under after before new news now more most than then when while who whom which what how why not no yes you your we our us they their he she his her i me my mine will can could may might would should does did do has have had about").split(" "));
+
+function words(s) {
+  return String(s || "").toLowerCase().split(/[^a-z0-9+#]+/).filter(w => w.length > 2 && !STOP.has(w));
+}
+
+// Pick 2-3 other entries that share rare vocabulary with this one. Rare terms
+// weigh more, so two stories about "Anthropic" do not match on "release".
+function relatedTo(x) {
+  const mine = new Set(words(x.title || x.full_name || x.repo || ""));
+  if (!mine.size) return [];
+  const pool = allEntries().all.filter(y =>
+    y._id !== x._id && (y.title || y.full_name || y.repo));
+  if (!pool.length) return [];
+
+  const df = new Map();
+  const sets = pool.map(y => {
+    const s = new Set(words(y.title || y.full_name || y.repo || ""));
+    s.forEach(w => df.set(w, (df.get(w) || 0) + 1));
+    return s;
+  });
+
+  const scored = pool.map((y, i) => {
+    let sc = 0;
+    mine.forEach(w => { if (sets[i].has(w)) sc += 1 / Math.log2(2 + (df.get(w) || 0)); });
+    return { y, sc };
+  }).filter(r => r.sc > 0);
+
+  scored.sort((a, b) => b.sc - a.sc);
+  return scored.slice(0, 3).map(r => r.y);
+}
+
+function labelOf(x) {
+  return x._kind === "repo" ? (x.full_name || "")
+    : x._kind === "release" ? (x.repo || "")
+    : (x.title || "");
+}
+
+function inspectorMeta(x) {
+  if (x._kind === "repo") {
+    return `<span class="insp-src" style="color:${srcColor(x.section || "GitHub")}">${esc(x.section || "GitHub")}</span>
+      <span class="sep">&middot;</span><span>${ago(x.updated)}</span>
+      <span class="sep">&middot;</span><span>&#9733; ${kfmt(x.stars)}</span>
+      ${x.language ? `<span class="sep">&middot;</span><span>${esc(x.language)}</span>` : ""}`;
+  }
+  if (x._kind === "release") {
+    return `<span class="ver ${x.prerelease ? "pre" : ""}">${esc(x.tag_name)}</span>
+      <span class="sep">&middot;</span><span>${ago(x.published)}</span>
+      <span class="sep">&middot;</span><span>${esc(x.repo || "")}</span>`;
+  }
+  const n = x.cluster_size || 1;
+  return `<span class="insp-src" style="color:${srcColor(x.source)}">${esc(x.source)}</span>
+    <span class="sep">&middot;</span><span>${ago(x.published)}</span>
+    ${n > 1 ? `<span class="coverage ${n >= 5 ? "hot" : ""}">${n} outlets</span>` : ""}
+    ${x.score != null ? `<span class="sep">&middot;</span><span>score ${Number(x.score).toFixed(1)}</span>` : ""}`;
+}
+
+function inspectorBody(x) {
+  if (x._kind === "repo") {
+    return `${x.description ? `<p class="insp-summary">${esc(x.description)}</p>` : ""}
+      ${(x.topics || []).length ? `<div class="insp-sec">Topics</div><div class="meta">${x.topics.slice(0, 8).map(t => `<span class="topic">${esc(t)}</span>`).join("")}</div>` : ""}`;
+  }
+  if (x._kind === "release") {
+    return `<div class="insp-sec">Release notes</div>
+      <div class="notes">${x.body ? formatNotes(x.body) : `<div class="insp-summary">No notes published for this tag.</div>`}</div>`;
+  }
+  const pdf = pdfUrl(x);
+  const summary = x.summary ? `<p class="insp-summary">${esc(x.summary)}</p>` : "";
+  const covBlock = (x.cluster_size || 1) > 1
+    ? `<div class="insp-sec">Coverage &middot; ${(x.also || []).length + 1} outlets</div><div class="cov-list">${coverageRows(x)}</div>`
+    : "";
+  return summary + covBlock +
+    (pdf ? `<div class="insp-sec">Paper</div><a class="rel" href="${esc(pdf)}" target="_blank" rel="noopener"><div class="rel-t">Open the PDF on arXiv</div><div class="rel-m">${esc(pdf)}</div></a>` : "");
+}
+
+function renderInspector(x) {
+  const saved = STATE.saved.has(x._id);
+  const read = STATE.read.has(x._id);
+  const kind = x._kind === "repo" ? "Repo"
+    : x._kind === "release" ? "Release"
+    : (x.category || "Story");
+  const rel = relatedTo(x);
+
+  $("inspector").innerHTML = `
+    <div class="insp-head">
+      <span class="insp-kind">${esc(kind)}</span>
+      <button class="insp-x" data-act="close" title="Close (Esc)">&#x2715;</button>
+    </div>
+    <h2 class="${x._kind === "item" ? "" : "mono"}">${esc(labelOf(x))}</h2>
+    <div class="insp-meta">${inspectorMeta(x)}</div>
+    ${inspectorBody(x)}
+    ${rel.length ? `<div class="insp-sec">Related in this feed</div>${rel.map(r => `
+      <a class="rel" data-act="goto" data-id="${r._id}">
+        <div class="rel-t">${esc(labelOf(r))}</div>
+        <div class="rel-m">${esc(r.source || r.section || r.repo || "")} &middot; ${ago(r._date)}</div>
+      </a>`).join("")}` : ""}
+    <div class="insp-actions">
+      <button class="toggle" data-act="open">Open original &#8599;</button>
+      <button class="act ${saved ? "on" : ""}" data-act="save" title="Save">${saved ? "&#9733;" : "&#9734;"}</button>
+      <button class="act ${read ? "done" : ""}" data-act="read" title="Mark read">${read ? "&#10003;" : "&#9675;"}</button>
+    </div>`;
+}
+
+function openInspector(x) {
+  INSPECTOR = x;
+  renderInspector(x);
+  $("inspector").classList.add("open");
+  $("scrim").classList.add("show");
+  document.body.classList.add("insp-open");
+}
+
+function closeInspector() {
+  INSPECTOR = null;
+  $("inspector").classList.remove("open");
+  $("scrim").classList.remove("show");
+  document.body.classList.remove("insp-open");
+}
+
+/* ---------------- keyboard cursor ---------------- */
+
+function moveFocus(delta) {
+  const cards = $("list").querySelectorAll(".item, .crow");
+  if (!cards.length) return;
+  FOCUS_IDX = Math.max(0, Math.min(cards.length - 1, FOCUS_IDX + delta));
+  for (let i = 0; i < cards.length; i++) {
+    cards[i].classList.toggle("focused", i === FOCUS_IDX);
+  }
+  if (cards[FOCUS_IDX] && cards[FOCUS_IDX].scrollIntoView) {
+    cards[FOCUS_IDX].scrollIntoView({ block: "nearest" });
+  }
+}
+
+function focusedEntry() {
+  const el = $("list").querySelector(".focused");
+  if (!el || !el.dataset) return null;
+  return entryById(el.dataset.id);
+}
+
 /* ---------------- events ---------------- */
 
 document.querySelector("aside").addEventListener("click", e => {
@@ -997,7 +1835,28 @@ document.querySelector("aside").addEventListener("click", e => {
   document.querySelectorAll(".nav-item").forEach(n => n.classList.toggle("active", n === btn));
   SRC_FILTER.clear();
   SHOWN = PAGE;
+  FOCUS_IDX = -1;
+  closeInspector();
   renderFilters(); render();
+});
+
+document.querySelector(".subbar").addEventListener("click", e => {
+  const q = e.target.closest("[data-quick]");
+  if (q) {
+    const k = q.dataset.quick;
+    if (QUICK.has(k)) QUICK.delete(k); else QUICK.add(k);
+    SHOWN = PAGE;
+    FOCUS_IDX = -1;
+    renderSubbar(); render();
+    return;
+  }
+  const d = e.target.closest("[data-density]");
+  if (d) {
+    DENSITY = d.dataset.density;
+    SHOWN = PAGE;
+    FOCUS_IDX = -1;
+    renderSubbar(); render();
+  }
 });
 
 $("filters").addEventListener("click", e => {
@@ -1015,23 +1874,63 @@ $("list").addEventListener("click", e => {
   const act = e.target.closest(".act");
   if (act) {
     e.stopPropagation();
-    const id = act.dataset.id;
-    if (act.dataset.act === "save") {
-      if (STATE.saved.has(id)) STATE.saved.delete(id); else STATE.saved.add(id);
-    } else {
-      if (STATE.read.has(id)) STATE.read.delete(id); else STATE.read.add(id);
-    }
-    persist(); renderCounts(); render();
+    const x = entryById(act.dataset.id);
+    if (!x) return;
+    if (act.dataset.act === "save") toggleSaved(x); else toggleRead(x);
     return;
   }
-  const card = e.target.closest(".item");
-  if (card && card.dataset.url) {
-    STATE.read.add(card.dataset.id);
-    persist();
-    window.open(card.dataset.url, "_blank", "noopener");
-    renderCounts(); render();
+
+  const cov = e.target.closest(".cov-toggle");
+  if (cov) {
+    e.stopPropagation();
+    const stack = cov.nextElementSibling;
+    if (stack && stack.classList.contains("cov-list")) {
+      const showing = stack.hidden;
+      stack.hidden = !showing;
+      cov.classList.toggle("open", showing);
+    }
+    return;
+  }
+
+  const micro = e.target.closest(".micro");
+  if (micro) {
+    e.stopPropagation();
+    copyText(micro.dataset.copy || "", "Copied to clipboard");
+    return;
+  }
+
+  // Anything else with an href (PDF button, coverage links) is on its way out
+  // of the page already, and a <summary> toggles its own <details>.
+  if (e.target.closest("a, summary, details")) return;
+
+  const card = e.target.closest(".item, .crow");
+  if (card) {
+    const x = entryById(card.dataset.id);
+    if (x) openInspector(x);
   }
 });
+
+$("inspector").addEventListener("click", e => {
+  const b = e.target.closest("[data-act]");
+  if (!b || !INSPECTOR) return;
+  const a = b.dataset.act;
+  if (a === "close") { closeInspector(); return; }
+  if (a === "open") {
+    STATE.read.add(INSPECTOR._id);
+    refreshUI();
+    window.open(INSPECTOR.url, "_blank", "noopener");
+    closeInspector();
+    return;
+  }
+  if (a === "save") { toggleSaved(INSPECTOR); return; }
+  if (a === "read") { toggleRead(INSPECTOR); return; }
+  if (a === "goto") {
+    const x = entryById(b.dataset.id);
+    if (x) { INSPECTOR = x; renderInspector(x); }
+  }
+});
+
+$("scrim").addEventListener("click", closeInspector);
 
 $("more").addEventListener("click", () => { SHOWN += PAGE; render(); });
 
@@ -1048,18 +1947,56 @@ $("btn-unread").addEventListener("click", () => {
   render();
 });
 
+$("btn-markread").addEventListener("click", markVisibleRead);
+
 $("btn-filters").addEventListener("click", () => {
   const open = $("filters").classList.toggle("open");
   $("btn-filters").classList.toggle("on", open);
 });
 
+$("btn-refresh").addEventListener("click", forceRefresh);
+
+$("btn-sync").addEventListener("click", e => {
+  e.stopPropagation();
+  $("sync-pop").classList.toggle("open");
+});
+
+document.addEventListener("click", e => {
+  const pop = $("sync-pop");
+  if (!pop.classList.contains("open")) return;
+  if (!e.target.closest("#sync-pop") && !e.target.closest("#btn-sync")) {
+    pop.classList.remove("open");
+  }
+});
+
 document.addEventListener("keydown", e => {
-  if (e.key === "/" && document.activeElement !== $("q")) {
-    e.preventDefault(); $("q").focus();
+  const ae = document.activeElement;
+  const inField = ae && (ae.tagName === "INPUT" || ae.tagName === "TEXTAREA" || ae.isContentEditable);
+
+  if (e.key === "/" && ae !== $("q")) {
+    e.preventDefault(); $("q").focus(); return;
   }
-  if (e.key === "Escape" && document.activeElement === $("q")) {
-    $("q").value = ""; QUERY = ""; render(); $("q").blur();
+  if (e.key === "Escape") {
+    if (INSPECTOR) { closeInspector(); return; }
+    if (ae === $("q")) { $("q").value = ""; QUERY = ""; render(); $("q").blur(); }
+    return;
   }
+  if (inField) return;
+
+  if (e.shiftKey && (e.key === "M" || e.key === "m")) {
+    e.preventDefault(); markVisibleRead(); return;
+  }
+  if (e.key === "j" || e.key === "ArrowDown") { e.preventDefault(); moveFocus(1); return; }
+  if (e.key === "k" || e.key === "ArrowUp") { e.preventDefault(); moveFocus(-1); return; }
+  if (ae && ae.tagName === "BUTTON") return;
+
+  if (e.key === "Enter" || e.key === " ") {
+    const x = focusedEntry();
+    if (x) { e.preventDefault(); openInspector(x); }
+    return;
+  }
+  if (e.key === "s") { const x = focusedEntry(); if (x) toggleSaved(x); return; }
+  if (e.key === "m") { const x = focusedEntry(); if (x) toggleRead(x); }
 });
 
 $("btn-export").addEventListener("click", exportState);
@@ -1079,6 +2016,7 @@ $("file-import").addEventListener("change", e => {
 async function boot() {
   await loadState();
   renderStateWhere();
+  renderSubbar();
   try {
     const r = await fetch("data/feed.json", { cache: "no-store" });
     if (!r.ok) throw new Error("HTTP " + r.status);

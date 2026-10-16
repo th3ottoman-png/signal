@@ -87,11 +87,42 @@ def http_json(url):
 
 # ---------------------------------------------------------------- text
 
-def strip_tags(text):
+# Changelog structure survives as line breaks: list items become "- " lines so
+# the UI can render them as bullets, and the rest of the block tags become
+# plain newlines.
+BULLET_TAG = re.compile(r"<li\b[^>]*>", re.I)
+BREAK_TAG = re.compile(r"<(?:br|/p|/h[1-6]|/div|/tr|p|h[1-6]|div)\b[^>]*>", re.I)
+
+
+def strip_tags(text, keep_lines=False):
+    """Strip HTML down to text.
+
+    keep_lines=False (the default) flattens everything to one line, which is
+    what a headline summary wants. keep_lines=True preserves the block
+    structure, which is what a changelog needs: collapsing every run of
+    whitespace turned release notes into a single unreadable paragraph.
+    """
     if not text:
         return ""
     text = re.sub(r"<script.*?</script>", " ", text, flags=re.S | re.I)
     text = re.sub(r"<style.*?</style>", " ", text, flags=re.S | re.I)
+
+    if keep_lines:
+        text = BULLET_TAG.sub("\n- ", text)
+        text = BREAK_TAG.sub("\n", text)
+        text = re.sub(r"<[^>]+>", " ", text)
+        text = html.unescape(text)
+        lines = []
+        for line in text.splitlines():
+            line = re.sub(r"[ \t]+", " ", line).strip()
+            if not line:
+                continue
+            # A changelog that was already written in markdown arrives as
+            # "- - feat: x" once the <li> marker is added on top.
+            line = re.sub(r"^(-\s+)+", "- ", line)
+            lines.append(line)
+        return "\n".join(lines)
+
     text = re.sub(r"<[^>]+>", " ", text)
     text = html.unescape(text)
     return re.sub(r"\s+", " ", text).strip()
@@ -329,7 +360,7 @@ def collect_releases(repos):
                 continue
             title = (find_text(node, "title") or "").strip()
             link = pick_link(node) or ""
-            body = strip_tags(find_text(node, "content", "summary"))
+            body = strip_tags(find_text(node, "content", "summary"), keep_lines=True)
             return {
                 "repo": full,
                 "tag_name": title,
@@ -337,7 +368,7 @@ def collect_releases(repos):
                 "url": link,
                 "published": iso(parse_date(find_text(node, "updated", "published"))),
                 "prerelease": bool(PRERELEASE_HINT.search(title)),
-                "body": truncate(body, 400),
+                "body": truncate(body, 800),
             }
         print(f"  [skip] {full:<34} no releases")
         return None
