@@ -7,22 +7,82 @@
 <meta name="description" content="AI news, agents, research and releases. Clustered, auto-refreshing.">
 <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>&#x1F4E1;</text></svg>">
 <style>
+  /* Light is the default, dark rides on [data-theme="dark"]. Every colour in
+     this file is one of these tokens: no rule below may hardcode a hex value,
+     or it silently stays dark in the light theme. */
   :root {
+    --bg: #f2f4f7;
+    --side: #ffffff;
+    --card: #ffffff;
+    --card-hover: #f5f7fa;
+    --sunken: #eff1f6;
+    --input: #ffffff;
+    --raised: #ffffff;
+    --hover: #eceff4;
+    --hover-strong: #e2e6ee;
+    --border: #dfe3ea;
+    --border-soft: #e8ebf1;
+    --border-hover: #c3cad6;
+    --topbar: rgba(242, 244, 247, 0.9);
+    --text: #131820;
+    --muted: #57606f;
+    --dim: #646c7a;
+    --sep: #9aa3b2;
+    --accent: #125cbe;
+    --accent-glow: rgba(18, 92, 190, 0.09);
+    --accent-soft: rgba(18, 92, 190, 0.10);
+    --accent-border: rgba(18, 92, 190, 0.30);
+    --accent-ring: rgba(18, 92, 190, 0.38);
+    --green: #177a33;
+    --green-soft: rgba(23, 122, 51, 0.11);
+    --green-border: rgba(23, 122, 51, 0.32);
+    --amber: #8f6000;
+    --amber-soft: rgba(143, 96, 0, 0.10);
+    --amber-border: rgba(143, 96, 0, 0.30);
+    --violet: #6639ba;
+    --briefing: #f7f9fd;
+    --scrim: rgba(20, 24, 32, 0.40);
+    --shadow: 0 10px 30px rgba(20, 24, 32, 0.14);
+    --shadow-pop: 0 16px 44px rgba(20, 24, 32, 0.18);
+    --read-opacity: 0.55;
+    --mono: ui-monospace, SFMono-Regular, Menlo, Consolas, monospace;
+  }
+
+  :root[data-theme="dark"] {
     --bg: #0a0d13;
     --side: #0d1117;
     --card: #141a24;
     --card-hover: #18202d;
+    --sunken: #10161f;
+    --input: #111721;
+    --raised: #161d29;
+    --hover: #131a26;
+    --hover-strong: #202a38;
     --border: #1e2635;
     --border-soft: #171e2a;
+    --border-hover: #2a3444;
+    --topbar: rgba(10, 13, 19, 0.88);
     --text: #e8ebf0;
     --muted: #7d8799;
-    --dim: #545e70;
+    --dim: #7d8a9e;
+    --sep: #4a566a;
     --accent: #5aa9ff;
     --accent-glow: rgba(90, 169, 255, 0.10);
+    --accent-soft: rgba(90, 169, 255, 0.13);
+    --accent-border: rgba(90, 169, 255, 0.25);
+    --accent-ring: rgba(90, 169, 255, 0.35);
     --green: #3fb950;
+    --green-soft: rgba(63, 185, 80, 0.14);
+    --green-border: rgba(63, 185, 80, 0.28);
     --amber: #d29922;
+    --amber-soft: rgba(210, 153, 34, 0.12);
+    --amber-border: rgba(210, 153, 34, 0.28);
     --violet: #a371f7;
-    --mono: ui-monospace, SFMono-Regular, Menlo, Consolas, monospace;
+    --briefing: #171f2e;
+    --scrim: rgba(4, 6, 10, 0.55);
+    --shadow: 0 10px 30px rgba(0, 0, 0, 0.45);
+    --shadow-pop: 0 16px 44px rgba(0, 0, 0, 0.5);
+    --read-opacity: 0.42;
   }
 
   * { box-sizing: border-box; margin: 0; padding: 0; }
@@ -109,7 +169,7 @@
     text-align: left;
     transition: background .12s, color .12s;
   }
-  .nav-item:hover { background: #131a26; color: var(--text); }
+  .nav-item:hover { background: var(--input); color: var(--text); }
   .nav-item.active { background: var(--accent-glow); color: var(--accent); font-weight: 600; }
   .nav-item .ico { width: 15px; text-align: center; font-size: 13px; opacity: .85; }
   .nav-item .count {
@@ -127,7 +187,7 @@
     margin-top: 18px;
     position: relative;
     padding: 10px 11px;
-    background: #10161f;
+    background: var(--sunken);
     border: 1px solid var(--border);
     border-radius: 10px;
     font-size: 11.5px;
@@ -142,7 +202,7 @@
     align-items: center;
     justify-content: center;
     gap: 5px;
-    background: #131a26;
+    background: var(--input);
     border: 1px solid var(--border);
     color: var(--muted);
     padding: 6px 0;
@@ -153,17 +213,17 @@
     cursor: pointer;
     transition: background .12s, color .12s, border-color .12s;
   }
-  .pod-btn:hover { background: var(--card-hover); color: var(--text); border-color: #2b3547; }
+  .pod-btn:hover { background: var(--card-hover); color: var(--text); border-color: var(--border-hover); }
 
   .popover {
     position: absolute;
     left: 0; right: 0;
     bottom: calc(100% + 8px);
-    background: #141a24;
+    background: var(--raised);
     border: 1px solid var(--border);
     border-radius: 11px;
     padding: 13px 14px;
-    box-shadow: 0 16px 44px rgba(0, 0, 0, .5);
+    box-shadow: var(--shadow-pop);
     z-index: 40;
     display: none;
   }
@@ -187,7 +247,7 @@
     line-height: 1.9;
   }
   .pop-hints kbd {
-    background: #161d29;
+    background: var(--sunken);
     border: 1px solid var(--border);
     border-radius: 5px;
     padding: 1px 5px;
@@ -204,7 +264,7 @@
   .side-state-btns { display: flex; gap: 6px; }
   .mini {
     flex: 1;
-    background: #131a26;
+    background: var(--input);
     border: 1px solid var(--border);
     color: var(--muted);
     padding: 6px 0;
@@ -215,14 +275,14 @@
     cursor: pointer;
     transition: background .12s, color .12s, border-color .12s;
   }
-  .mini:hover { background: var(--card-hover); color: var(--text); border-color: #2b3547; }
+  .mini:hover { background: var(--card-hover); color: var(--text); border-color: var(--border-hover); }
 
   #toast {
     position: fixed;
     left: 50%;
     bottom: 26px;
     transform: translate(-50%, 14px);
-    background: #18202e;
+    background: var(--raised);
     border: 1px solid var(--border);
     color: var(--text);
     padding: 9px 16px;
@@ -232,7 +292,7 @@
     opacity: 0;
     pointer-events: none;
     transition: opacity .18s ease, transform .18s ease;
-    box-shadow: 0 10px 30px rgba(0, 0, 0, .45);
+    box-shadow: var(--shadow);
   }
   #toast.show { opacity: 1; transform: translate(-50%, 0); }
   #toast.has-act { pointer-events: auto; display: flex; align-items: center; gap: 13px; }
@@ -262,7 +322,7 @@
     position: sticky;
     top: 0;
     z-index: 20;
-    background: rgba(10, 13, 19, 0.88);
+    background: var(--topbar);
     backdrop-filter: blur(14px);
     -webkit-backdrop-filter: blur(14px);
     border-bottom: 1px solid var(--border-soft);
@@ -274,7 +334,7 @@
   .search { position: relative; flex: 1; max-width: 460px; }
   .search input {
     width: 100%;
-    background: #111721;
+    background: var(--input);
     border: 1px solid var(--border);
     color: var(--text);
     padding: 9px 36px 9px 34px;
@@ -297,7 +357,7 @@
   .search kbd {
     position: absolute; right: 10px; top: 50%;
     transform: translateY(-50%);
-    background: #161d29;
+    background: var(--sunken);
     border: 1px solid var(--border);
     border-radius: 5px;
     padding: 1px 6px;
@@ -307,7 +367,7 @@
   }
 
   .toggle {
-    background: #111721;
+    background: var(--input);
     border: 1px solid var(--border);
     color: var(--muted);
     padding: 8px 13px;
@@ -319,7 +379,7 @@
     white-space: nowrap;
     transition: all .13s;
   }
-  .toggle:hover { color: var(--text); border-color: #2c3646; }
+  .toggle:hover { color: var(--text); border-color: var(--border-hover); }
   .toggle.on { background: var(--accent-glow); border-color: var(--accent); color: var(--accent); font-weight: 600; }
 
   .status {
@@ -346,7 +406,7 @@
     display: inline-flex;
     align-items: center;
     gap: 6px;
-    background: #111721;
+    background: var(--input);
     border: 1px solid var(--border);
     color: var(--muted);
     padding: 5px 11px;
@@ -358,12 +418,12 @@
     white-space: nowrap;
     transition: all .12s;
   }
-  .qchip:hover { color: var(--text); border-color: #2c3646; }
+  .qchip:hover { color: var(--text); border-color: var(--border-hover); }
   .qchip.on { background: var(--accent-glow); border-color: var(--accent); color: var(--accent); font-weight: 600; }
 
   .dens {
     display: inline-flex;
-    background: #111721;
+    background: var(--input);
     border: 1px solid var(--border);
     border-radius: 9px;
     padding: 2px;
@@ -381,7 +441,7 @@
     transition: background .12s, color .12s;
   }
   .dens button:hover { color: var(--text); }
-  .dens button.on { background: #1c2534; color: var(--accent); }
+  .dens button.on { background: var(--hover-strong); color: var(--accent); }
 
   /* ---------------- filter row ---------------- */
   .filters {
@@ -397,7 +457,7 @@
     display: inline-flex;
     align-items: center;
     gap: 6px;
-    background: #111721;
+    background: var(--input);
     border: 1px solid var(--border);
     color: var(--muted);
     padding: 4px 10px;
@@ -408,7 +468,7 @@
     margin: 0 5px 5px 0;
     transition: all .12s;
   }
-  .chip:hover { color: var(--text); border-color: #2c3646; }
+  .chip:hover { color: var(--text); border-color: var(--border-hover); }
   .chip.on { background: var(--accent-glow); border-color: var(--accent); color: var(--accent); }
   .chip .n { color: var(--dim); font-size: 11px; }
   .chip.on .n { color: var(--accent); }
@@ -449,8 +509,8 @@
     transition: opacity .15s;
   }
   .item.unread::before { opacity: .85; }
-  .item:hover { background: var(--card-hover); border-color: #27313f; }
-  .item.read { opacity: .42; }
+  .item:hover { background: var(--card-hover); border-color: var(--border-hover); }
+  .item.read { opacity: var(--read-opacity); }
   .item.read:hover { opacity: .72; }
   .item.focused {
     border-color: var(--accent);
@@ -458,7 +518,7 @@
   }
 
   /* A story carried by three or more outlets reads as a briefing, not a row. */
-  .item.briefing { background: linear-gradient(180deg, #171f2e 0%, var(--card) 96px); }
+  .item.briefing { background: linear-gradient(180deg, var(--briefing) 0%, var(--card) 96px); }
   .item.briefing::before { top: 0; bottom: 0; width: 3px; }
 
   .item-top {
@@ -469,22 +529,22 @@
     font-size: 11.5px;
   }
   .src { color: var(--muted); font-weight: 600; letter-spacing: .01em; }
-  .sep { color: #2f3949; }
+  .sep { color: var(--sep); }
   .when { color: var(--dim); font-variant-numeric: tabular-nums; }
 
   .coverage {
-    background: rgba(90, 169, 255, 0.13);
+    background: var(--accent-soft);
     color: var(--accent);
-    border: 1px solid rgba(90, 169, 255, 0.22);
+    border: 1px solid var(--accent-border);
     padding: 1px 7px;
     border-radius: 99px;
     font-size: 10.5px;
     font-weight: 650;
   }
   .coverage.hot {
-    background: rgba(63, 185, 80, 0.14);
+    background: var(--green-soft);
     color: var(--green);
-    border-color: rgba(63, 185, 80, 0.28);
+    border-color: var(--green-border);
   }
 
   .pdf {
@@ -493,12 +553,12 @@
     font-weight: 650;
     color: var(--accent);
     background: var(--accent-glow);
-    border: 1px solid rgba(90, 169, 255, 0.28);
+    border: 1px solid var(--accent-border);
     padding: 1px 7px;
     border-radius: 5px;
     text-decoration: none;
   }
-  .pdf:hover { background: rgba(90, 169, 255, 0.2); }
+  .pdf:hover { background: var(--accent-soft); }
 
   .actions {
     margin-left: auto;
@@ -520,7 +580,7 @@
     line-height: 1;
     transition: color .12s, background .12s;
   }
-  .act:hover { color: var(--text); background: #202a38; }
+  .act:hover { color: var(--text); background: var(--hover-strong); }
   .act.on { color: var(--amber); }
   .act.done { color: var(--green); }
 
@@ -547,7 +607,7 @@
   .cov-toggle {
     margin-top: 10px;
     background: none;
-    border: 1px dashed #2a3547;
+    border: 1px dashed var(--border);
     color: var(--muted);
     padding: 3px 11px;
     border-radius: 99px;
@@ -559,7 +619,7 @@
     gap: 7px;
     transition: color .12s, border-color .12s;
   }
-  .cov-toggle:hover { color: var(--text); border-color: #3a4763; }
+  .cov-toggle:hover { color: var(--text); border-color: var(--accent-border); }
   .cov-toggle .chev {
     font-size: 9px;
     display: inline-block;
@@ -610,8 +670,8 @@
   .meta b { color: var(--text); font-weight: 600; font-variant-numeric: tabular-nums; }
   .lang-dot { width: 8px; height: 8px; border-radius: 50%; display: inline-block; margin-right: 4px; }
   .pill {
-    background: rgba(210, 153, 34, 0.12);
-    border: 1px solid rgba(210, 153, 34, 0.26);
+    background: var(--amber-soft);
+    border: 1px solid var(--amber-border);
     color: var(--amber);
     font-size: 11.5px;
     font-weight: 650;
@@ -620,7 +680,7 @@
     font-variant-numeric: tabular-nums;
   }
   .topic {
-    background: #10161f;
+    background: var(--sunken);
     border: 1px solid var(--border);
     color: var(--dim);
     font-size: 10.5px;
@@ -630,13 +690,13 @@
   .ver {
     font-family: var(--mono);
     font-size: 11.5px;
-    background: #10161f;
+    background: var(--sunken);
     border: 1px solid var(--border);
     padding: 1px 7px;
     border-radius: 5px;
     color: var(--violet);
   }
-  .ver.pre { color: var(--amber); border-color: rgba(210,153,34,.32); }
+  .ver.pre { color: var(--amber); border-color: var(--amber-border); }
 
   .owner { color: var(--muted); font-weight: 500; }
   .slash { color: var(--dim); font-weight: 400; padding: 0 1px; }
@@ -655,11 +715,11 @@
     cursor: pointer;
     transition: color .12s, border-color .12s, background .12s;
   }
-  .micro:hover { color: var(--accent); border-color: rgba(90, 169, 255, .4); background: var(--accent-glow); }
+  .micro:hover { color: var(--accent); border-color: var(--accent-border); background: var(--accent-glow); }
 
   .changelog {
     margin-top: 10px;
-    background: #10151d;
+    background: var(--sunken);
     border: 1px solid var(--border-soft);
     border-radius: 9px;
   }
@@ -716,9 +776,9 @@
     transition: background .1s;
   }
   .crow:hover { background: var(--card-hover); }
-  .crow.read { opacity: .45; }
+  .crow.read { opacity: var(--read-opacity); }
   .crow.read:hover { opacity: .75; }
-  .crow.focused { background: var(--accent-glow); box-shadow: inset 0 0 0 1px rgba(90, 169, 255, .35); }
+  .crow.focused { background: var(--accent-glow); box-shadow: inset 0 0 0 1px var(--accent-ring); }
   .crow .cd { width: 7px; height: 7px; border-radius: 50%; flex: none; }
   .crow .csrc {
     flex: none;
@@ -745,7 +805,7 @@
   .scrim {
     position: fixed;
     inset: 0;
-    background: rgba(4, 6, 10, .55);
+    background: var(--scrim);
     opacity: 0;
     pointer-events: none;
     transition: opacity .22s ease;
@@ -776,7 +836,7 @@
     color: var(--dim);
   }
   .insp-x {
-    background: #131a26;
+    background: var(--input);
     border: 1px solid var(--border);
     color: var(--muted);
     width: 28px; height: 28px;
@@ -785,7 +845,7 @@
     font-size: 13px;
     line-height: 1;
   }
-  .insp-x:hover { color: var(--text); border-color: #2b3547; }
+  .insp-x:hover { color: var(--text); border-color: var(--border-hover); }
 
   .inspector h2 {
     font-size: 19px;
@@ -822,7 +882,7 @@
   }
   .insp-actions .toggle { flex: 1; }
   .insp-actions .act {
-    background: #131a26;
+    background: var(--input);
     border: 1px solid var(--border);
     font-size: 14px;
     padding: 7px 13px;
@@ -840,7 +900,7 @@
     cursor: pointer;
     transition: background .12s, border-color .12s;
   }
-  .rel:hover { background: var(--card-hover); border-color: #27313f; }
+  .rel:hover { background: var(--card-hover); border-color: var(--border-hover); }
   .rel-t { font-size: 13px; color: var(--text); line-height: 1.4; }
   .rel-m { font-size: 11.5px; color: var(--dim); margin-top: 3px; }
 
@@ -854,7 +914,7 @@
     display: block;
     width: 100%;
     margin-top: 16px;
-    background: #111721;
+    background: var(--input);
     border: 1px solid var(--border);
     color: var(--muted);
     padding: 11px;
@@ -864,10 +924,10 @@
     cursor: pointer;
     transition: all .13s;
   }
-  .more:hover { color: var(--text); border-color: #2c3646; background: #141b26; }
+  .more:hover { color: var(--text); border-color: var(--border-hover); background: var(--card-hover); }
 
   .banner {
-    background: #141a24;
+    background: var(--raised);
     border: 1px solid var(--border);
     border-left: 3px solid var(--amber);
     border-radius: 9px;
@@ -880,7 +940,7 @@
   .banner h4 { font-size: 13.5px; color: var(--text); margin-bottom: 5px; }
   .banner code {
     font-family: var(--mono);
-    background: #0c1119;
+    background: var(--sunken);
     border: 1px solid var(--border);
     padding: 1px 6px;
     border-radius: 4px;
@@ -991,6 +1051,7 @@
         <kbd>/</kbd>
       </div>
       <button class="toggle" id="btn-filters">Filters</button>
+      <button class="toggle" id="btn-theme" title="Switch between night and day"></button>
       <span class="status" id="status"></span>
     </div>
     <div class="subbar">
@@ -1046,20 +1107,32 @@ function idOf(s) {
 // Thirteen vivid, hue-separated tones. Sized against the real 43-source
 // corpus: 13 was the smallest palette that keeps 9 of the 10 highest-volume
 // sources on distinct colours, so the busiest names rarely share a tone.
-// All 13 clear WCAG AA against the card background (lowest 5.19:1).
-const SRC_PALETTE = [
+// All 13 clear WCAG AA against the dark card background (lowest 5.19:1).
+const SRC_PALETTE_DARK = [
   "#ff8787", "#ffa94d", "#ffd43b", "#d4e157", "#69db7c", "#38d9a9", "#22d3ee",
   "#4dabf7", "#748ffc", "#9775fa", "#c792ea", "#e599f7", "#ff6fae"
 ];
 
+// The same thirteen hues, darkened for a white card. The dark palette is
+// pastel by design and several of those tones (the yellow and the lime)
+// fall under 2:1 against white, so they would be unreadable in the light
+// theme. Same hash, same index, same source lands on the same hue in both.
+// Every entry clears 4.5:1 against white, the page, the card hover tint and
+// the briefing tint, so a source name stays legible wherever it lands.
+const SRC_PALETTE_LIGHT = [
+  "#c92a2a", "#ba3d0b", "#ab4e08", "#4a720c", "#237a36", "#077855", "#0b7285",
+  "#1864ab", "#3b5bdb", "#5f3dc4", "#862e9c", "#a21caf", "#be185d"
+];
+
 function srcColor(name) {
+  const palette = THEME === "dark" ? SRC_PALETTE_DARK : SRC_PALETTE_LIGHT;
   let h = 2166136261;
   const s = String(name == null ? "" : name);
   for (let i = 0; i < s.length; i++) {
     h ^= s.charCodeAt(i);
     h = Math.imul(h, 16777619);
   }
-  return SRC_PALETTE[(h >>> 0) % SRC_PALETTE.length];
+  return palette[(h >>> 0) % palette.length];
 }
 
 function ago(v) {
@@ -1096,6 +1169,10 @@ let FOCUS_IDX = -1;               // keyboard cursor over the rendered slice
 let INSPECTOR = null;             // entry open in the right pane
 let CARD_INDEX = new Map();       // _id -> entry, for the rendered slice only
 let STATE = { read: new Set(), saved: new Set() };
+// Mirrors <html data-theme>. Read by srcColor, which has to pick the right
+// palette without touching the DOM: the test harness stubs document without
+// a documentElement.
+let THEME = "light";
 let API = true;
 // "server" = a backend is answering, state syncs on its own.
 // "seeded"  = static host, fresh browser bootstrapped from a committed file.
@@ -1267,6 +1344,38 @@ function toast(msg, actionLabel, actionFn) {
     el.classList.remove("show");
     el.classList.remove("has-act");
   }, actionLabel ? 6000 : 2600);
+}
+
+/* ---------------- theme ----------------
+   Light is the default: the page spent its life dark-only and that is not for
+   everyone. The choice is a browser preference, not feed state, so it lives
+   in localStorage rather than going up to the server with the read marks. */
+
+function applyTheme(next) {
+  THEME = next === "dark" ? "dark" : "light";
+  const root = document.documentElement;
+  if (root && root.setAttribute) root.setAttribute("data-theme", THEME);
+  try { localStorage.setItem("signal_theme", THEME); } catch (e) { /* private mode */ }
+
+  const b = $("btn-theme");
+  if (b) {
+    // The button names the theme it switches to, not the one you are in.
+    b.innerHTML = THEME === "dark" ? "&#9728; Day" : "&#9790; Night";
+    b.title = THEME === "dark" ? "Switch to the light theme" : "Switch to the dark theme";
+  }
+}
+
+function initTheme() {
+  let saved = null;
+  try { saved = localStorage.getItem("signal_theme"); } catch (e) { /* private mode */ }
+  applyTheme(saved === "dark" ? "dark" : "light");
+}
+
+function toggleTheme() {
+  applyTheme(THEME === "dark" ? "light" : "dark");
+  // Card colours come from the palette, so the whole list has to be rebuilt.
+  render();
+  if (INSPECTOR) renderInspector(INSPECTOR);
 }
 
 function renderStateWhere() {
@@ -1954,6 +2063,8 @@ $("btn-filters").addEventListener("click", () => {
   $("btn-filters").classList.toggle("on", open);
 });
 
+$("btn-theme").addEventListener("click", toggleTheme);
+
 $("btn-refresh").addEventListener("click", forceRefresh);
 
 $("btn-sync").addEventListener("click", e => {
@@ -2014,6 +2125,7 @@ $("file-import").addEventListener("change", e => {
 /* ---------------- boot ---------------- */
 
 async function boot() {
+  initTheme();
   await loadState();
   renderStateWhere();
   renderSubbar();
