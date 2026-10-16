@@ -9,41 +9,62 @@
 <style>
   /* Light is the default, dark rides on [data-theme="dark"]. Every colour in
      this file is one of these tokens: no rule below may hardcode a hex value,
-     or it silently stays dark in the light theme. */
+     or it silently stays dark in the light theme.
+
+     The day palette is lifted from build.nvidia.com: eight earthy, heavily
+     desaturated tones rather than the usual saturated web blues. Kept verbatim
+     below as --nv-0..7 so the provenance survives. Two of the eight cannot be
+     used as type and are noted where that bites. */
   :root {
-    --bg: #f2f4f7;
-    --side: #ffffff;
+    --nv-0: #11160c;  /* near-black olive  */
+    --nv-1: #756868;  /* warm grey         */
+    --nv-2: #14423d;  /* deep teal         */
+    --nv-3: #663d3d;  /* dark maroon       */
+    --nv-4: #aa6d3f;  /* orange-tan        */
+    --nv-5: #334c0c;  /* olive             */
+    --nv-6: #0f1123;  /* near-black navy   */
+    --nv-7: #3547a5;  /* blue              */
+
+    /* Warm cream surfaces. The NVIDIA palette has no light tones, so these
+       are tinted off-white rather than borrowed; they carry the warmth of
+       nv-1/nv-4 without muddying them. */
+    --bg: #f5f3ef;
+    --side: #fbf9f5;
     --card: #ffffff;
-    --card-hover: #f5f7fa;
-    --sunken: #eff1f6;
+    --card-hover: #faf8f4;
+    --sunken: #efece5;
     --input: #ffffff;
     --raised: #ffffff;
-    --hover: #eceff4;
-    --hover-strong: #e2e6ee;
-    --border: #dfe3ea;
-    --border-soft: #e8ebf1;
-    --border-hover: #c3cad6;
-    --topbar: rgba(242, 244, 247, 0.9);
-    --text: #131820;
-    --muted: #57606f;
-    --dim: #646c7a;
-    --sep: #9aa3b2;
-    --accent: #125cbe;
-    --accent-glow: rgba(18, 92, 190, 0.09);
-    --accent-soft: rgba(18, 92, 190, 0.10);
-    --accent-border: rgba(18, 92, 190, 0.30);
-    --accent-ring: rgba(18, 92, 190, 0.38);
-    --green: #177a33;
-    --green-soft: rgba(23, 122, 51, 0.11);
-    --green-border: rgba(23, 122, 51, 0.32);
-    --amber: #8f6000;
-    --amber-soft: rgba(143, 96, 0, 0.10);
-    --amber-border: rgba(143, 96, 0, 0.30);
-    --violet: #6639ba;
-    --briefing: #f7f9fd;
-    --scrim: rgba(20, 24, 32, 0.40);
-    --shadow: 0 10px 30px rgba(20, 24, 32, 0.14);
-    --shadow-pop: 0 16px 44px rgba(20, 24, 32, 0.18);
+    --hover: #f1eee5;
+    --hover-strong: #e9e4d8;
+    --border: #ded9cd;
+    --border-soft: #e8e3d8;
+    --border-hover: #c6bfb1;
+    --topbar: rgba(245, 243, 239, 0.9);
+    --text: var(--nv-0);
+    /* nv-1 is the palette's only mid tone, so it has to serve as --dim. That
+       leaves no room for a --muted below it, hence this darker warm grey. */
+    --muted: #5c5252;
+    --dim: var(--nv-1);
+    --sep: #a2968a;
+    --accent: var(--nv-7);
+    --accent-glow: rgba(53, 71, 165, 0.09);
+    --accent-soft: rgba(53, 71, 165, 0.10);
+    --accent-border: rgba(53, 71, 165, 0.30);
+    --accent-ring: rgba(53, 71, 165, 0.38);
+    --green: var(--nv-5);
+    --green-soft: rgba(51, 76, 12, 0.11);
+    --green-border: rgba(51, 76, 12, 0.32);
+    /* nv-4 is a mid tone: 4.2:1 on white, so it fails as type. It survives as
+       the fill and border of the prerelease pill; the text is nv-4 darkened. */
+    --amber: #8a5528;
+    --amber-soft: rgba(170, 109, 63, 0.12);
+    --amber-border: rgba(170, 109, 63, 0.32);
+    --violet: var(--nv-2);
+    --briefing: #fbf9f5;
+    --scrim: rgba(17, 22, 12, 0.40);
+    --shadow: 0 10px 30px rgba(17, 22, 12, 0.14);
+    --shadow-pop: 0 16px 44px rgba(17, 22, 12, 0.18);
     --read-opacity: 0.55;
     --mono: ui-monospace, SFMono-Regular, Menlo, Consolas, monospace;
   }
@@ -1113,15 +1134,20 @@ const SRC_PALETTE_DARK = [
   "#4dabf7", "#748ffc", "#9775fa", "#c792ea", "#e599f7", "#ff6fae"
 ];
 
-// The same thirteen hues, darkened for a white card. The dark palette is
-// pastel by design and several of those tones (the yellow and the lime)
-// fall under 2:1 against white, so they would be unreadable in the light
-// theme. Same hash, same index, same source lands on the same hue in both.
-// Every entry clears 4.5:1 against white, the page, the card hover tint and
-// the briefing tint, so a source name stays legible wherever it lands.
+// The day counterpart: the eight build.nvidia.com tones, plus five siblings
+// in the same hue families to fill the remaining slots. The dark palette is
+// pastel by design and 11 of its 13 tones fall under 4.5:1 on a cream card,
+// so a shared palette is not viable; same hash, same index, so a source
+// lands on the same slot in both and keeps its identity across the switch.
+//
+// Seven of the eight go in verbatim. Two do not survive as type:
+//   nv-4 #aa6d3f is a mid tone (4.2:1 on white), so slot 4 carries it
+//   darkened to #8a5528. nv-6 #0f1123 is fine but sits next to nv-0.
+// The five siblings are darker or lighter steps of the teal, maroon, olive,
+// blue and tan families, all of which clear 4.5:1 on every card surface.
 const SRC_PALETTE_LIGHT = [
-  "#c92a2a", "#ba3d0b", "#ab4e08", "#4a720c", "#237a36", "#077855", "#0b7285",
-  "#1864ab", "#3b5bdb", "#5f3dc4", "#862e9c", "#a21caf", "#be185d"
+  "#11160c", "#756868", "#14423d", "#663d3d", "#8a5528", "#334c0c", "#0f1123",
+  "#3547a5", "#0d2f2b", "#523030", "#3d5c0e", "#2c3c8f", "#1a5c53"
 ];
 
 function srcColor(name) {

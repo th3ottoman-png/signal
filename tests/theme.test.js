@@ -68,6 +68,14 @@ function tokenMap(css, selector) {
   const re = /--([\w-]+)\s*:\s*([^;]+);/g;
   let m;
   while ((m = re.exec(body))) map[m[1]] = m[2].trim();
+
+  // Resolve one level of var() indirection. The day palette is kept as named
+  // --nv-N entries with the semantic tokens pointing at them, so --text reads
+  // as "var(--nv-0)" and has to be followed before any maths can be done.
+  for (const k of Object.keys(map)) {
+    const v = /^var\(--([\w-]+)\)$/.exec(map[k]);
+    if (v && map[v[1]]) map[k] = map[v[1]];
+  }
   return map;
 }
 
@@ -122,6 +130,13 @@ module.exports.run = async t => {
       const same = mustDiffer.filter(k => unchanged.includes(k));
       t.eq('surfaces actually change between themes', same, []);
     }
+
+    // The day palette is borrowed from build.nvidia.com and kept verbatim as
+    // --nv-0..7. If someone edits a value the whole look drifts, so pin them.
+    const NV = ['#11160c', '#756868', '#14423d', '#663d3d',
+      '#aa6d3f', '#334c0c', '#0f1123', '#3547a5'];
+    const missingNv = NV.filter((h, i) => !(light && light['nv-' + i] === h));
+    t.eq('the eight build.nvidia.com tones are intact', missingNv, []);
 
     t.ok('topbar has a theme button', /id="btn-theme"/.test(html),
       'no #btn-theme, the toggle has no handle');
